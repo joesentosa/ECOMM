@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -238,3 +238,19 @@ Route::get('/clear-cache', function() {
     Artisan::call('route:clear');
     return "Cache is cleared";
 })->name('clear.cache');
+
+// admin route
+Route::prefix('/admin')->group(function(){
+    Route::get('/',[AdminController::class,'IndexAdmin']);
+    Route::get('/barang',[AdminController::class,'BarangAdmin'])->name('barang');
+    Route::get('/brand',[AdminController::class,'BrandAdmin'])->name('brand');
+    Route::get('/kategori',[AdminController::class,'KategoriAdmin'])->name('kategori');
+    Route::get('/useradmin',[AdminController::class,'AdminUser'])->name('useradmin');
+    Route::get('/customer',[AdminController::class,'Customer'])->name('customer');
+    Route::get('/horder',[AdminController::class,'HorderAdmin'])->name('horder');
+    Route::get('/dorder',[AdminController::class,'DorderAdmin'])->name('dorder');
+    Route::get('/shipping',[AdminController::class,'ShippingAdmin'])->name('shipping');
+    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo');
+    Route::get('/wishlist',[AdminController::class,'WishlistAdmin'])->name('wishlist');
+});
+// end admin route

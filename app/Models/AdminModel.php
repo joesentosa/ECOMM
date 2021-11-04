@@ -10,27 +10,22 @@ class AdminModel extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public $table       = "barang";
-    public $primaryKey  = "id_barang";
+    public $table       = "admin";
+    public $primaryKey  = "id";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['namaBarang','stok','harga','berat','gambar','deskripsi','fk_id_brand','fk_id_kategori','fk_id_promo','created_at','updated_at','deleted_at'];
+    protected $fillable = ['username','email','no_tlp','password','created_at','updated_at','deleted_at'];
 
-    public function saveData($nama,$stok,$harga,$berat,$gambar,$deskripsi,$idbrand,$idkategori,$idpromo,$idreview){
-        $barang                 = new BarangModel();
-        $barang->id_barang      = null;
-        $barang->namaBarang     = $nama;
-        $barang->stok           = $stok;
-        $barang->harga          = $harga;
-        $barang->berat          = $berat;
-        $barang->gambar         = $gambar;
-        $barang->deskripsi      = $deskripsi;
-        $barang->fk_id_brand    = $idbrand;
-        $barang->fk_id_kategori = $idkategori;
-        $barang->fk_id_promo    = $idpromo;        
-        $barang->created_at     = null;
-        $barang->updated_at     = null;
-        $barang->deleted_at     = null;
-        $barang->save();
+    public function saveData($username,$email,$tlp,$password){
+        $admin             = new AdminModel();
+        $admin->id         = null;
+        $admin->username   = $username;
+        $admin->email      = $email;
+        $admin->no_tlp     = $tlp;
+        $admin->password   = $password;        
+        $admin->created_at = null;
+        $admin->updated_at = null;
+        $admin->deleted_at = null;
+        $admin->save();
     }
 }
