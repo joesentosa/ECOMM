@@ -23,7 +23,7 @@ class CreateHorder extends Migration
             $table->bigInteger('fk_id_shipping');
             $table->bigInteger('fk_id_dorder');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

@@ -20,7 +20,7 @@ class CreateShipping extends Migration
             $table->string('jenisLayanan',30);
             $table->bigInteger('tarif');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

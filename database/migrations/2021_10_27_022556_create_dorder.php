@@ -19,7 +19,7 @@ class CreateDorder extends Migration
             $table->bigInteger('total');
             $table->bigInteger('fk_id_barang');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

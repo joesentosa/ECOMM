@@ -24,7 +24,7 @@ class CreateCustomer extends Migration
             $table->string('kodeZip',5)->nullable();
             $table->string('password',100);            
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

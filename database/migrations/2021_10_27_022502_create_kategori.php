@@ -18,7 +18,7 @@ class CreateKategori extends Migration
             $table->string('nama_kategori',50);
             $table->bigInteger('fk_id_brand');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReview extends Migration
+class CreateAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateReview extends Migration
      */
     public function up()
     {
-        Schema::create('review', function (Blueprint $table) {
-            $table->increments('id_review');
-            $table->binary('deskripsi_review');            
+        Schema::create('admin', function (Blueprint $table) {
+            $table->id();
+            $table->string('username',50);
+            $table->string('email',255);
+            $table->string('no_tlp',14);
+            $table->string('password',100);
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();            
         });
     }
 
@@ -28,6 +31,6 @@ class CreateReview extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('review');
+        Schema::dropIfExists('admin');
     }
 }

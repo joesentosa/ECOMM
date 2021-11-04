@@ -16,16 +16,16 @@ class CreateBarang extends Migration
         Schema::create('barang', function (Blueprint $table) {
             $table->increments('id_barang');
             $table->string('namaBarang',100);
-            $table->smallInteger('jumlah');
+            $table->smallInteger('stok');
             $table->bigInteger('harga');            
             $table->smallInteger('berat');
+            $table->text('review');
             $table->string('gambar',255);
             $table->bigInteger('fk_id_brand');
             $table->bigInteger('fk_id_kategori');
-            $table->bigInteger('fk_id_promo');
-            $table->bigInteger('fk_id_review');
+            $table->bigInteger('fk_id_promo');            
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

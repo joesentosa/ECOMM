@@ -19,7 +19,7 @@ class CreatePromo extends Migration
             $table->dateTime('expiredDate');
             $table->bigInteger('hargaPromo');            
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 
