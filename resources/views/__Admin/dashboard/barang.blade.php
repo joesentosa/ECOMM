@@ -2,10 +2,8 @@
 @section('title', 'Master Barang')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/jsgrid.css">
 <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">
 @endsection
 
@@ -22,13 +20,15 @@
 @endsection
 
 @section('content')
-<!-- Container-fluid starts-->
 <div class="container-fluid">
   <div class="row">
-      <div class="col-lg-12 xl-100">
-        <div class="row">            
+    <div class="col-sm-12">
+        <div class="card">          
+          <div class="card-body">
+              <div id="basicScenario"></div>
+          </div>
         </div>
-      </div>                                             
+    </div>      
   </div>
 </div>
 @endsection
@@ -39,18 +39,14 @@
 <script src="{{route('/')}}/assets/js/typeahead/typeahead.custom.js"></script>
 <script src="{{route('/')}}/assets/js/typeahead-search/handlebars.js"></script>
 <script src="{{route('/')}}/assets/js/typeahead-search/typeahead-custom.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
 <script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
 <script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
 <script src="{{route('/')}}/assets/js/dashboard/default.js"></script>
 <script src="{{route('/')}}/assets/js/notify/index.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<!-- table design settings-->
+<script src="{{route('/')}}/assets/js/jsgrid/jsgrid.min.js"></script>
+<script src="{{route('/')}}/assets/js/jsgrid/griddata.js"></script>
+<script src="{{route('/')}}/assets/js/jsgrid/jsgrid.js"></script>
+<!-- end table design settings-->
 @endsection
 
