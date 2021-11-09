@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/home', [UserController::class, 'homepage']);
 
 
 Route::get('/', function(){
@@ -28,7 +31,7 @@ Route::prefix('dashboard')->group(function () {
 Route::prefix('widgets')->group(function () {
     Route::view('general-widget', 'widgets.general-widget')->name('general-widget');
     Route::view('chart-widget', 'widgets.chart-widget')->name('chart-widget');
-});	
+});
 
 Route::prefix('ui-elements')->group(function () {
     Route::view('state-color', 'ui-elements.state-color')->name('state-color');
@@ -81,7 +84,7 @@ Route::prefix('icons')->group(function () {
     Route::view('pe7-icon', 'icons.pe7-icon')->name('pe7-icon');
     Route::view('typicons-icon', 'icons.typicons-icon')->name('typicons-icon');
     Route::view('ionic-icon', 'icons.ionic-icon')->name('ionic-icon');
-});     
+});
 
 Route::prefix('perk-ui')->group(function () {
     Route::view('animate', 'perk-ui.animate')->name('animate');
@@ -124,7 +127,7 @@ Route::prefix('forms')->group(function () {
     Route::view('form-wizard-four', 'forms.form-wizard-four')->name('form-wizard-four');
 });
 
-Route::prefix('tables')->group(function () { 
+Route::prefix('tables')->group(function () {
     Route::view('bootstrap-basic-table', 'tables.bootstrap-basic-table')->name('bootstrap-basic-table');
     Route::view('bootstrap-sizing-table', 'tables.bootstrap-sizing-table')->name('bootstrap-sizing-table');
     Route::view('bootstrap-border-table', 'tables.bootstrap-border-table')->name('bootstrap-border-table');
@@ -148,9 +151,9 @@ Route::prefix('tables')->group(function () {
     Route::view('datatable-ext-row-reorder', 'tables.datatable-ext-row-reorder')->name('datatable-ext-row-reorder');
     Route::view('datatable-ext-scroller', 'tables.datatable-ext-scroller')->name('datatable-ext-scroller');
     Route::view('jsgrid-table', 'tables.jsgrid-table')->name('jsgrid-table');
-});     
+});
 
-Route::prefix('charts')->group(function () { 
+Route::prefix('charts')->group(function () {
     Route::view('chart-apex', 'charts.chart-apex')->name('chart-apex');
     Route::view('chart-google', 'charts.chart-google')->name('chart-google');
     Route::view('chart-sparkline', 'charts.chart-sparkline')->name('chart-sparkline');
@@ -161,9 +164,9 @@ Route::prefix('charts')->group(function () {
     Route::view('chartjs', 'charts.chartjs')->name('chartjs');
     Route::view('chartist', 'charts.chartist')->name('chartist');
     Route::view('chart-peity', 'charts.chart-peity')->name('chart-peity');
-});     
+});
 
-Route::prefix('apps')->group(function () { 
+Route::prefix('apps')->group(function () {
     Route::view('product', 'apps.product')->name('product');
     Route::view('product-page', 'apps.product-page')->name('product-page');
     Route::view('list-products', 'apps.list-products')->name('list-products');
@@ -188,9 +191,9 @@ Route::prefix('apps')->group(function () {
     Route::view('job-apply', 'apps.job-apply')->name('job-apply');
     Route::view('learning-list-view', 'apps.learning-list-view')->name('learning-list-view');
     Route::view('learning-detailed', 'apps.learning-detailed')->name('learning-detailed');
-});     
+});
 
-Route::prefix('new-apps')->group(function () { 
+Route::prefix('new-apps')->group(function () {
     Route::view('user-profile', 'new_apps.user-profile')->name('user-profile');
     Route::view('edit-profile', 'new_apps.edit-profile')->name('edit-profile');
     Route::view('user-cards', 'new_apps.user-cards')->name('user-cards');
@@ -214,7 +217,7 @@ Route::prefix('new-apps')->group(function () {
     Route::view('vector-map', 'new_apps.vector-map')->name('vector-map');
 });
 
-Route::prefix('pages')->group(function () { 
+Route::prefix('pages')->group(function () {
     Route::view('sample-page', 'pages.sample-page')->name('sample-page');
     Route::view('support-ticket', 'pages.support-ticket')->name('support-ticket');
     Route::view('search', 'pages.search')->name('search');
