@@ -3,7 +3,7 @@
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
-    <!-- Plugins css start-->
+<!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">

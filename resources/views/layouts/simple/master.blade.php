@@ -61,8 +61,7 @@
                        <div class="modal-header"></div>
                        <div class="contain p-30">
                           <div class="text-center">
-                             <h3>Welcome to creative admin</h3>
-                             <p>start your project with developer friendly admin </p>
+                             <h3>Welcome to admin</h3>                             
                              <button class="btn btn-primary btn-lg txt-white" type="button" data-dismiss="modal" aria-label="Close">Get Started</button>
                           </div>
                        </div>
