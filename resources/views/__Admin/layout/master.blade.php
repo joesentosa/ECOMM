@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="{{route('/')}}/assets/images/favicon.png" type="image/x-icon">
     <title>@yield('title')</title>
     @include('__Admin.layout.css')
-    @yield('style')
-
+    @yield('style')    
   </head>
   <body class="@if(url()->current() == route('button-builder'))  button-builder @endif">
     <!-- Loader starts-->

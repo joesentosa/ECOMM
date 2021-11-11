@@ -51,6 +51,19 @@
                <li><a href="{{route('wishlist')}}">Wishlist</a></li>                        
             </ul>
          </li>
+         <li>
+            <a class="bar-icons" href="#">
+               <i class="fas fa-bar-chart"></i><span>Laporan</span>
+            </a>
+            <ul class="iconbar-mainmenu custom-scrollbar">
+               <li class="iconbar-header">Laporan</li>  
+               <li><a href="{{route('promo')}}">Penjualan</a></li>                        
+               <li><a href="{{route('wishlist')}}">Barang Terlaris</a></li>                        
+               <li><a href="{{route('wishlist')}}">Pendapatan per Bulan</a></li>           
+               <li><a href="{{route('wishlist')}}">Invoice</a></li>                                     
+               <li><a href="{{route('wishlist')}}">Barang Terlaris</a></li>                        
+            </ul>
+         </li>
       </ul>
    </div>
 </div>

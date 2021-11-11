@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/themify.css">
 <!-- Flag icon-->
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/flag-icon.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <!-- Feather icon-->
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/feather-icon.css">
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/animate.css">
@@ -21,3 +22,5 @@
 <link id="color" rel="stylesheet" href="{{route('/')}}/assets/css/color-1.css" media="screen">
 <!-- Responsive css-->
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/responsive.css">
+
+<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/style_custom_btn.css">

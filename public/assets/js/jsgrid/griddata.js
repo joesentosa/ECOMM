@@ -870,5 +870,5 @@
             "Name": "Solomon Green",
             "RegisterDate": "2013-09-04T01:44:47-07:00"
         }
-     ];
+    ];
 }());

@@ -15,8 +15,7 @@ class CreateKategori extends Migration
     {
         Schema::create('kategori', function (Blueprint $table) {
             $table->increments('id_kategori');
-            $table->string('nama_kategori',50);
-            $table->bigInteger('fk_id_brand');
+            $table->string('nama_kategori',50);        
             $table->timestamps();
             $table->softDeletes();
         });
