@@ -1,7 +1,7 @@
-@extends('User.master')
+@extends('__User.master')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/owlcarousel.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
 @endsection
 
 @section('style')
@@ -15,17 +15,17 @@
     <div class="container">
         <div class="card-body">
             <div class="owl-carousel owl-theme" id="owl-carousel-14">
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/1.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/2.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/3.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/4.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/5.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/6.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/7.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/8.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/9.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/10.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/slider/11.jpg" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/1.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/2.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/3.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/4.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/5.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/6.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/7.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/8.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/9.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/10.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/slider/11.jpg')}}" alt=""></div>
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@
                          <li>                                       </li>
                       </ul>
                       <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-                      <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+                      <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
                    </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                          <li>                                       </li>
                       </ul>
                       <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-                      <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+                      <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
                    </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                          <li>                                       </li>
                       </ul>
                       <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-                      <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+                      <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
                    </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                                              <li>                                       </li>
                                           </ul>
                                           <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-                                          <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+                                          <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
                                        </div>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                              <li>                                       </li>
                                           </ul>
                                           <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-                                          <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+                                          <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
                                        </div>
                                     </div>
                                 </div>
@@ -159,6 +159,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/owlcarousel/owl.carousel.js"></script>
-<script src="{{route('/')}}/assets/js/owlcarousel/owl-custom.js"></script>
+<script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/owlcarousel/owl-custom.js')}}"></script>
 @endsection

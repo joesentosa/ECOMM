@@ -1,7 +1,7 @@
 <div class="page-main-header">
   <div class="main-header-right">
     <div class="main-header-left text-center">
-      <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{route('/')}}/assets/images/logo/logo.png" alt=""></a></div>
+      <div class="logo-wrapper"><a href="{{url('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
     </div>
     <div class="mobile-sidebar">
       <div class="media-body text-right switch-sm">
@@ -25,7 +25,7 @@
           </form>
         </li>
         <!-- <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>                 -->
-        <li class="onhover-dropdown"> <span class="media user-header"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/user.png" alt=""></span>
+        <li class="onhover-dropdown"> <span class="media user-header"><img class="img-fluid" src="{{asset('assets/images/dashboard/user.png')}}" alt=""></span>
           <ul class="onhover-show-div profile-dropdown">
             <li class="gradient-primary">
               <h5 class="f-w-600 mb-0">Elana Saint</h5>

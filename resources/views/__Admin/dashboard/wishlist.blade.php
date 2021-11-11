@@ -2,9 +2,9 @@
 @section('title', 'Master Wishlist')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-design-icon.css')}}">
 @endsection
 
 @section('style')
@@ -60,20 +60,19 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/typeahead/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.bundle.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.custom.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/typeahead-custom.js"></script>
-<!-- <script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script> -->
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="{{route('/')}}/assets/js/dashboard/default.js"></script>
-<script src="{{route('/')}}/assets/js/notify/index.js"></script>
+<script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/typeahead-custom.js')}}"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+<script src="{{asset('assets/js/dashboard/default.js')}}"></script>
+<script src="{{asset('assets/js/notify/index.js')}}"></script>
 
-<script src="{{route('/')}}/assets/js/js_general.js"></script>
+<script src="{{asset('assets/js/js_general.js')}}"></script>
 
 <!-- table design settings-->
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>

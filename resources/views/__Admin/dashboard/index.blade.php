@@ -2,11 +2,11 @@
 @section('title', 'Dashboard')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
 <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chartist.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-design-icon.css')}}">
 @endsection
 
 @section('style')
@@ -94,23 +94,23 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/typeahead/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.bundle.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.custom.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/typeahead-custom.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="{{route('/')}}/assets/js/dashboard/default.js"></script>
-<script src="{{route('/')}}/assets/js/notify/index.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/typeahead-custom.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+<script src="{{asset('assets/js/dashboard/default.js')}}"></script>
+<script src="{{asset('assets/js/notify/index.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
 @endsection
 

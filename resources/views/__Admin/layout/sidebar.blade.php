@@ -7,9 +7,9 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master Barang</li>
-               <li><a href="{{route('barang')}}">Barang</a></li>
-               <li><a href="{{route('brand')}}">Brand</a></li>
-               <li><a href="{{route('kategori')}}">Kategori</a></li>               
+               <li><a href="{{route('barang.admin')}}">Barang</a></li>
+               <li><a href="{{route('brand.admin')}}">Brand</a></li>
+               <li><a href="{{route('kategori.admin')}}">Kategori</a></li>               
             </ul>
          </li>
          <li>
@@ -18,8 +18,8 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master User</li>
-               <li><a href="{{route('useradmin')}}">Admin</a></li>
-               <li><a href="{{route('customer')}}">Customer</a></li>               
+               <li><a href="{{route('user.admin')}}">Admin</a></li>
+               <li><a href="{{route('customer.admin')}}">Customer</a></li>               
             </ul>
          </li>
          <li>
@@ -28,8 +28,8 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master Order</li>
-               <li><a href="{{route('horder')}}">Header Order</a></li>
-               <li><a href="{{route('dorder')}}">Detail Order</a></li>               
+               <li><a href="{{route('horder.admin')}}">Header Order</a></li>
+               <li><a href="{{route('dorder.admin')}}">Detail Order</a></li>               
             </ul>
          </li>
          <li>
@@ -38,7 +38,7 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master Shipping</li>  
-               <li><a href="{{route('shipping')}}">Shipping</a></li>                        
+               <li><a href="{{route('shipping.admin')}}">Shipping</a></li>                        
             </ul>
          </li>
          <li>
@@ -47,8 +47,8 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master</li>  
-               <li><a href="{{route('promo')}}">Promo</a></li>                        
-               <li><a href="{{route('wishlist')}}">Wishlist</a></li>                        
+               <li><a href="{{route('promo.admin')}}">Promo</a></li>                        
+               <li><a href="{{route('wishlist.admin')}}">Wishlist</a></li>                        
             </ul>
          </li>
          <li>
@@ -57,11 +57,11 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Laporan</li>  
-               <li><a href="{{route('promo')}}">Penjualan</a></li>                        
-               <li><a href="{{route('wishlist')}}">Barang Terlaris</a></li>                        
-               <li><a href="{{route('wishlist')}}">Pendapatan per Bulan</a></li>           
-               <li><a href="{{route('wishlist')}}">Invoice</a></li>                                     
-               <li><a href="{{route('wishlist')}}">Barang Terlaris</a></li>                        
+               <li><a href="{{route('promo.admin')}}">Penjualan</a></li>                        
+               <li><a href="{{route('wishlist.admin')}}">Barang Terlaris</a></li>                        
+               <li><a href="{{route('wishlist.admin')}}">Pendapatan per Bulan</a></li>           
+               <li><a href="{{route('wishlist.admin')}}">Invoice</a></li>                                     
+               <li><a href="{{route('wishlist.admin')}}">Barang Terlaris</a></li>                        
             </ul>
          </li>
       </ul>
