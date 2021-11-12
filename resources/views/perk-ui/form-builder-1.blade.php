@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Builders</li>	
+    <li class="breadcrumb-item">Builders</li>
 	<li class="breadcrumb-item active">Form Builder 1</li>
 @endsection
 
@@ -57,9 +57,9 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
 <script src="{{route('/')}}/assets/js/form-builder/form-builder-1/require.js"></script>
 <script src="{{route('/')}}/assets/js/form-builder/form-builder-1/main-built.js"></script>
 @endsection

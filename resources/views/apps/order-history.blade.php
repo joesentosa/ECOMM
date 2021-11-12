@@ -2,7 +2,7 @@
 @section('title', 'Order History')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 @endsection
 
 @section('style')
@@ -53,7 +53,7 @@
                            <td></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/1.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/1.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Long Top</a>
@@ -68,7 +68,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/13.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/13.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Fancy watch</a>
@@ -83,7 +83,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/4.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/4.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Man shoes</a>
@@ -108,7 +108,7 @@
                            <td></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/10.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/10.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis side bag</a>
@@ -123,7 +123,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/12.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/12.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis Slipper</a>
@@ -138,7 +138,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/3.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/3.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Fancy ledis Jacket</a>
@@ -153,7 +153,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/2.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/2.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis Handbag</a>
@@ -178,7 +178,7 @@
                            <td></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/15.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/15.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Iphone6 mobile</a>
@@ -193,7 +193,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/14.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/14.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Watch</a>
@@ -208,7 +208,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/11.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/11.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Slipper</a>
@@ -250,7 +250,7 @@
                      </thead>
                      <tbody>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/1.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/1.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Long Top</a>
@@ -265,7 +265,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/13.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/13.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Fancy watch</a>
@@ -280,7 +280,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/4.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/4.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Man shoes</a>
@@ -295,7 +295,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/10.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/10.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis side bag</a>
@@ -310,7 +310,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/12.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/12.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis Slipper</a>
@@ -325,7 +325,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/3.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/3.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Fancy ledis Jacket</a>
@@ -340,7 +340,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/2.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/2.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Ledis Handbag</a>
@@ -355,7 +355,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/15.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/15.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Iphone6 mobile</a>
@@ -370,7 +370,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/14.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/14.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Watch</a>
@@ -385,7 +385,7 @@
                            <td><i data-feather="more-vertical"></i></td>
                         </tr>
                         <tr>
-                           <td><img class="img-fluid img-50" src="{{route('/')}}/assets/images/product/11.png" alt="#"></td>
+                           <td><img class="img-fluid img-50" src="{{asset('assets/images/product/11.png')}}" alt="#"></td>
                            <td>
                               <div class="product-name">
                                  <a href="#">Slipper</a>
@@ -410,6 +410,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-<script src="{{route('/')}}/assets/js/datatable/datatables/datatable.custom.js"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/datatable/datatables/datatable.custom.js')}}"></script>
 @endsection

@@ -84,6 +84,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/chartjs/chart.min.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartjs/chart.custom.js"></script>
+<script src="{{asset('assets/js/chart/chartjs/chart.min.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartjs/chart.custom.js')}}"></script>
 @endsection

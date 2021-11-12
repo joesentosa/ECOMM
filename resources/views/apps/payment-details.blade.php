@@ -2,7 +2,7 @@
 @section('title', 'Payment Details')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 @endsection
 
 @section('style')
@@ -29,7 +29,7 @@
             </div>
             <div class="card-body">
                <div class="row">
-                  <div class="col-md-4 text-center"><img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/card.png" alt=""></div>
+                  <div class="col-md-4 text-center"><img class="img-fluid" src="{{asset('assets/images/ecommerce/card.png')}}" alt=""></div>
                   <div class="col-md-8">
                      <form class="theme-form mega-form">
                         <div class="form-group">
@@ -184,9 +184,9 @@
                   </div>
                   <div class="form-group col-12">
                      <ul class="payment-opt">
-                        <li><img src="{{route('/')}}/assets/images/ecommerce/mastercard.png" alt=""></li>
-                        <li><img src="{{route('/')}}/assets/images/ecommerce/visa.png" alt=""></li>
-                        <li><img src="{{route('/')}}/assets/images/ecommerce/paypal.png" alt=""></li>
+                        <li><img src="{{asset('assets/images/ecommerce/mastercard.png')}}" alt=""></li>
+                        <li><img src="{{asset('assets/images/ecommerce/visa.png')}}" alt=""></li>
+                        <li><img src="{{asset('assets/images/ecommerce/paypal.png')}}" alt=""></li>
                      </ul>
                   </div>
                   <div class="col-12">
@@ -242,6 +242,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection

@@ -12,7 +12,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Bootstrap Notify</li>
 @endsection
 
@@ -426,7 +426,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="{{route('/')}}/assets/js/notify/notify-script.js"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+<script src="{{asset('assets/js/notify/notify-script.js')}}"></script>
 @endsection
 

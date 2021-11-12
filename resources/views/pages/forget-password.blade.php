@@ -14,7 +14,7 @@
          <div class="col-md-12 p-0">
             <div class="auth-innerright auth-minibox">
                <div class="reset-password-box">
-                  <div class="text-center"><a href="index.html"><img src="{{route('/')}}/assets/images/other-images/poco-logo1.png" alt=""></a></div>
+                  <div class="text-center"><a href="index.html"><img src="{{asset('assets/images/other-images/poco-logo1.png')}}" alt=""></a></div>
                   <div class="card mt-4 mb-0">
                      <div class="card-body">
                         <h4>Reset Your Password</h4>

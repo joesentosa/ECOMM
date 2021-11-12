@@ -12,8 +12,8 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">UI Kits</li>	
-	<li class="breadcrumb-item">Icons</li>	
+	<li class="breadcrumb-item">UI Kits</li>
+	<li class="breadcrumb-item">Icons</li>
 	<li class="breadcrumb-item active">Themify icon</li>
 @endsection
 
@@ -391,8 +391,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="{{route('/')}}/assets/js/icons/icons-notify.js"></script>
-<script src="{{route('/')}}/assets/js/icons/icon-clipart.js"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+<script src="{{asset('assets/js/icons/icons-notify.js')}}"></script>
+<script src="{{asset('assets/js/icons/icon-clipart.js')}}"></script>
 @endsection
 

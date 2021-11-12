@@ -2,7 +2,7 @@
 @section('title', 'General')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/daterange-picker.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/daterange-picker.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Date Range Picker</li>
 @endsection
 
@@ -78,7 +78,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datepicker/daterange-picker/moment.min.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/daterange-picker/daterangepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/daterange-picker/daterange-picker.custom.js"></script>
+<script src="{{asset('assets/js/datepicker/daterange-picker/moment.min.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/daterange-picker/daterangepicker.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/daterange-picker/daterange-picker.custom.js')}}"></script>
 @endsection

@@ -2,7 +2,7 @@
 @section('title', 'Calendar Events')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/calendar.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/calendar.css')}}">
 @endsection
 
 @section('style')
@@ -56,8 +56,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/jquery.ui.min.js"></script>
-<script src="{{route('/')}}/assets/js/calendar/moment.min.js"></script>
-<script src="{{route('/')}}/assets/js/calendar/fullcalendar.min.js"></script>
-<script src="{{route('/')}}/assets/js/calendar/fullcalendar-custom.js"></script>
+<script src="{{asset('assets/js/jquery.ui.min.js')}}"></script>
+<script src="{{asset('assets/js/calendar/moment.min.js')}}"></script>
+<script src="{{asset('assets/js/calendar/fullcalendar.min.js')}}"></script>
+<script src="{{asset('assets/js/calendar/fullcalendar-custom.js')}}"></script>
 @endsection

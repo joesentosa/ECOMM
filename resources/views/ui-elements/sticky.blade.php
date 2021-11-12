@@ -2,7 +2,7 @@
 @section('title', 'Sticky')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/sticky.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/sticky.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Sticky</li>
 @endsection
 
@@ -35,7 +35,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/jquery.ui.min.js"></script>
-<script src="{{route('/')}}/assets/js/sticky/sticky.js"></script>
+<script src="{{asset('assets/js/jquery.ui.min.js')}}"></script>
+<script src="{{asset('assets/js/sticky/sticky.js')}}"></script>
 @endsection
 

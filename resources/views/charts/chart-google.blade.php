@@ -154,6 +154,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/google/google-chart-loader.js"></script>
-<script src="{{route('/')}}/assets/js/chart/google/google-chart.js"></script>
+<script src="{{asset('assets/js/chart/google/google-chart-loader.js')}}"></script>
+<script src="{{asset('assets/js/chart/google/google-chart.js')}}"></script>
 @endsection

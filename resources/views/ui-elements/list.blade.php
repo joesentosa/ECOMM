@@ -12,7 +12,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Lists</li>
 @endsection
 
@@ -195,8 +195,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
 @endsection
 

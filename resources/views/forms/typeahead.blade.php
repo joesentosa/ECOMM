@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Typeahead</li>
 @endsection
 
@@ -180,7 +180,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/typeahead/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.bundle.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.custom.js"></script>
+<script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
 @endsection

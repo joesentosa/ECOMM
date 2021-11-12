@@ -1,7 +1,7 @@
 <div class="page-main-header">
   <div class="main-header-right">
      <div class="main-header-left text-center">
-        <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{route('/')}}/assets/images/logo/logo.png" alt=""></a></div>
+        <div class="logo-wrapper"><a href="{{url('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
      </div>
      <div class="mobile-sidebar d-none">
         <div class="media-body text-right switch-sm">
@@ -27,7 +27,7 @@
            </li>
            <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
            <li class="onhover-dropdown">
-              <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/bookmark.png" alt="">
+              <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/bookmark.png')}}" alt="">
               <div class="onhover-show-div bookmark-flip">
                  <div class="flip-card">
                     <div class="flip-card-inner">
@@ -69,7 +69,7 @@
               </div>
            </li>
            <li class="onhover-dropdown">
-              <img class="img-fluid img-shadow-secondary" src="{{route('/')}}/assets/images/dashboard/like.png" alt="">
+              <img class="img-fluid img-shadow-secondary" src="{{asset('assets/images/dashboard/like.png')}}" alt="">
               <ul class="onhover-show-div droplet-dropdown">
                  <li class="gradient-primary text-center">
                     <h5 class="f-w-700">Grid Dashboard</h5>
@@ -91,7 +91,7 @@
               </ul>
            </li>
            <li class="onhover-dropdown">
-              <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/notification.png" alt="">
+              <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/notification.png')}}" alt="">
               <ul class="onhover-show-div notification-dropdown">
                  <li class="gradient-primary">
                     <h5 class="f-w-700">Notifications</h5>
@@ -118,9 +118,9 @@
                  <li class="bg-light txt-dark"><a href="#">All </a> notification</li>
               </ul>
            </li>
-           <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="{{route('/')}}/assets/images/dashboard/chat.png" alt=""></a></li>
+           <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="{{asset('assets/images/dashboard/chat.png')}}" alt=""></a></li>
            <li class="onhover-dropdown">
-              <span class="media user-header"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/user.png" alt=""></span>
+              <span class="media user-header"><img class="img-fluid" src="{{asset('assets/images/dashboard/user.png')}}" alt=""></span>
               <ul class="onhover-show-div profile-dropdown">
                  <li class="gradient-primary">
                     <h5 class="f-w-600 mb-0">Elana Saint</h5>
@@ -136,7 +136,7 @@
         <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
      </div>
      <script id="result-template" type="text/x-handlebars-template">
-        <div class="ProfileCard u-cf">                        
+        <div class="ProfileCard u-cf">
         <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
         <div class="ProfileCard-details">
         <div class="ProfileCard-realName">{{@name}}</div>

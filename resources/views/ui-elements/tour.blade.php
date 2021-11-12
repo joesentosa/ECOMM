@@ -2,7 +2,7 @@
 @section('title', 'Tour')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/tour.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/tour.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Tour</li>
 @endsection
 
@@ -245,7 +245,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/tour/intro.js"></script>
-<script src="{{route('/')}}/assets/js/tour/intro-init.js"></script>
+<script src="{{asset('assets/js/tour/intro.js')}}"></script>
+<script src="{{asset('assets/js/tour/intro-init.js')}}"></script>
 @endsection
 

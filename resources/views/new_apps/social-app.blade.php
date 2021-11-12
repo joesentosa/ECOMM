@@ -27,7 +27,7 @@
             <div class="card hovercard text-center">
                <div class="cardheader socialheader"></div>
                <div class="user-image">
-                  <div class="avatar"><img alt="" src="{{route('/')}}/assets/images/user/1.jpg"></div>
+                  <div class="avatar"><img alt="" src="{{asset('assets/images/user/1.jpg')}}"></div>
                   <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"></i></div>
                   <ul class="share-icons">
                      <li><a class="social-icon bg-primary" href="#"><i class="fa fa-smile-o"></i></a></li>
@@ -67,7 +67,7 @@
                               <div class="collapse show" id="collapseicon" aria-labelledby="collapseicon" data-parent="#accordion">
                                  <div class="card-body socialprofile filter-cards-view">
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="">
                                        <div class="media-body">
                                           <h6 class="font-primary f-w-600">My Page</h6>
                                           <span class="d-block"><span><i class="fa fa-comments-o"> </i><span class="px-2">Messages<span class="badge badge-pill badge-light">9</span></span></span></span><span class="d-block"><span><i class="fa fa-bell-o"> </i><span class="px-2">Notification<span class="badge badge-pill badge-light">9</span></span></span></span>
@@ -83,11 +83,11 @@
                                     <div class="text-center">35 New Likes This Week</div>
                                     <div class="customers text-center social-group">
                                        <ul>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/3.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Johny Waston"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/5.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Andew Jon"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/3.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Johny Waston"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/5.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Andew Jon"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
                                           <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/2.png" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Bucky Barnes"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/8.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Jason Borne"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/8.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Jason Borne"></li>
                                           <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/11.png" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
                                        </ul>
                                     </div>
@@ -118,17 +118,17 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Bucky Barnes</span><span class="d-block">winter@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Sarah Loren</span><span class="d-block">barnes@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/6.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/6.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Jason Borne</span><span class="d-block">jasonb@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/8.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/8.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Comeren Diaz</span><span class="d-block">comere@gmail.com</span></div>
                                     </div>
@@ -138,7 +138,7 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Andew Jon</span><span class="d-block">andrewj@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Johny Waston</span><span class="d-block">johny@gmail.com</span></div>
                                     </div>
@@ -153,17 +153,17 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Bucky Barnes</span><span class="d-block">winter@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Sarah Loren</span><span class="d-block">barnes@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/6.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/6.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Jason Borne</span><span class="d-block">jasonb@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/8.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/8.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Comeren Diaz</span><span class="d-block">comere@gmail.com</span></div>
                                     </div>
@@ -173,7 +173,7 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Andew Jon</span><span class="d-block">andrewj@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Johny Waston</span><span class="d-block">johny@gmail.com</span></div>
                                     </div>
@@ -196,7 +196,7 @@
                               <div class="collapse show" id="collapseicon12" aria-labelledby="collapseicon12" data-parent="#accordion">
                                  <div class="card-body social-status filter-cards-view">
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Andew Jon</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -204,7 +204,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/3.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/3.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Johny Waston</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -212,7 +212,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/5.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/5.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Comeren Diaz</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -220,7 +220,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Sarah Loren</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -228,7 +228,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/3.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/3.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Johny Waston</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -236,7 +236,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/5.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/5.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Comeren Diaz</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -257,7 +257,7 @@
                            <div class="card-body">
                               <div class="new-users-social">
                                  <div class="media">
-                                    <img class="rounded-circle image-radius m-r-15" src="{{route('/')}}/assets/images/user/1.jpg" alt="">
+                                    <img class="rounded-circle image-radius m-r-15" src="{{asset('assets/images/user/1.jpg')}}" alt="">
                                     <div class="media-body">
                                        <h6 class="mb-0 f-w-700">ELANA</h6>
                                        <p>January, 12,2021</p>
@@ -268,14 +268,14 @@
                               <img class="img-fluid" alt="" src="{{route('/')}}/assets/images/social-app/timeline-1.png">
                               <div class="timeline-content">
                                  <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce
                                     placerat enim et odio molestie sagittis.
                                  </p>
                                  <div class="like-content"><span><i class="fa fa-heart font-danger"></i></span><span class="pull-right comment-number"><span>20 </span><span><i class="fa fa-share-alt mr-0"></i></span></span><span class="pull-right comment-number"><span>10 </span><span><i class="fa fa-comments-o"></i></span></span></div>
                                  <div class="social-chat">
                                     <div class="your-msg">
                                        <div class="media">
-                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                           <div class="media-body">
                                              <span class="f-w-600">Jason Borne <span>1 Year Ago <i class="fa fa-reply font-primary"></i></span></span>
                                              <p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
@@ -302,7 +302,7 @@
                                     </div>
                                     <div class="your-msg">
                                        <div class="media">
-                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                           <div class="media-body">
                                              <span class="f-w-600">Issa Bell <span>1 Year Ago <i class="fa fa-reply font-primary"></i></span></span>
                                              <p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
@@ -313,7 +313,7 @@
                                  </div>
                                  <div class="comments-box">
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                        <div class="media-body">
                                           <div class="input-group text-box">
                                              <input class="form-control input-txt-bx" type="text" name="message-to-send" placeholder="Post Your commnets">
@@ -333,7 +333,7 @@
                            <div class="card-body">
                               <div class="new-users-social">
                                  <div class="media">
-                                    <img class="rounded-circle image-radius m-r-15" src="{{route('/')}}/assets/images/user/1.jpg" alt="">
+                                    <img class="rounded-circle image-radius m-r-15" src="{{asset('assets/images/user/1.jpg')}}" alt="">
                                     <div class="media-body">
                                        <h6 class="mb-0 f-w-700">ELANA</h6>
                                        <p>January, 12,2021</p>
@@ -344,14 +344,14 @@
                               <img class="img-fluid" alt="" src="{{route('/')}}/assets/images/social-app/timeline-2.png">
                               <div class="timeline-content">
                                  <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce
                                     placerat enim et odio molestie sagittis.
                                  </p>
                                  <div class="like-content"><span><i class="fa fa-heart font-danger"></i></span><span class="pull-right comment-number"><span>20 </span><span><i class="fa fa-share-alt mr-0"></i></span></span><span class="pull-right comment-number"><span>10 </span><span><i class="fa fa-comments-o"></i></span></span></div>
                                  <div class="social-chat">
                                     <div class="your-msg">
                                        <div class="media">
-                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                           <div class="media-body">
                                              <span class="f-w-600">Jason Borne <span>1 Year Ago <i class="fa fa-reply font-primary"></i></span></span>
                                              <p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
@@ -360,7 +360,7 @@
                                     </div>
                                     <div class="your-msg">
                                        <div class="media">
-                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                          <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                           <div class="media-body">
                                              <span class="f-w-600">Issa Bell <span>1 Year Ago <i class="fa fa-reply font-primary"></i></span></span>
                                              <p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
@@ -371,7 +371,7 @@
                                  </div>
                                  <div class="comments-box">
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/1.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/1.jpg')}}">
                                        <div class="media-body">
                                           <div class="input-group text-box">
                                              <input class="form-control input-txt-bx" type="text" name="message-to-send" placeholder="Post Your commnets">
@@ -402,20 +402,20 @@
                                  <div class="card-body filter-cards-view">
                                     <span class="f-w-600">About Me :</span>
                                     <p>
-                                       Hi, I’m elana, I’m 30 and I work as a 
-                                       web Designer for the “Daydreams” 
+                                       Hi, I’m elana, I’m 30 and I work as a
+                                       web Designer for the “Daydreams”
                                        Agency in Pier 56.
                                     </p>
                                     <span class="f-w-600">Favourite TV shows :</span>
                                     <p>
                                        Breaking Good, RedDevil, People of
-                                       Interest, The Running Dead, 
+                                       Interest, The Running Dead,
                                        Found, American Guy.
                                     </p>
                                     <span class="f-w-600">Favourite Music Bands :</span>
                                     <p>
                                        Breaking Good, RedDevil, People of
-                                       Interest, The Running Dead, 
+                                       Interest, The Running Dead,
                                        Found, American Guy.
                                     </p>
                                     <div class="social-network theme-form"><span class="f-w-600">Social Networks</span>
@@ -445,11 +445,11 @@
                                        <div class="media-body"><span class="d-block">Sarah Loren</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}">
                                        <div class="media-body"><span class="d-block">Jason Borne</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}">
                                        <div class="media-body"><span class="d-block">Comeren Diaz</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
@@ -478,11 +478,11 @@
                                        <div class="media-body"><span class="d-block">Bucky Barnes</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}">
                                        <div class="media-body"><span class="d-block">Comeren Diaz</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}">
                                        <div class="media-body"><span class="d-block">Jason Borne</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
@@ -544,18 +544,18 @@
                               </div>
                               <div class="collapse show" id="collapseicon13" data-parent="#accordion" aria-labelledby="collapseicon13">
                                  <div class="card-body avatar-showcase filter-cards-view">
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/3.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/5.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/3.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/5.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/2.png" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/3.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/6.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/10.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/6.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/10.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/14.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/4.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/4.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/11.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/8.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/8.jpg')}}" alt="#"></div>
                                  </div>
                               </div>
                            </div>
@@ -583,7 +583,7 @@
                               <div class="collapse show" id="collapseicon5" aria-labelledby="collapseicon5" data-parent="#accordion">
                                  <div class="card-body socialprofile filter-cards-view">
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="">
                                        <div class="media-body">
                                           <h6 class="font-primary f-w-600">My Page</h6>
                                           <span class="d-block"><span><i class="fa fa-comments-o"> </i><span class="px-2">Messages<span class="badge badge-pill badge-light">9</span></span></span></span><span class="d-block"><span><i class="fa fa-bell-o"></i><span class="px-2">Notification<span class="badge badge-pill badge-light">9</span></span></span></span>
@@ -599,11 +599,11 @@
                                     <div class="text-center">35 New Likes This Week</div>
                                     <div class="customers text-center social-group">
                                        <ul>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/3.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Johny Waston"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/5.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Andew Jon"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/3.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Johny Waston"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/5.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Andew Jon"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
                                           <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/2.png" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Bucky Barnes"></li>
-                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/8.jpg" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Jason Borne"></li>
+                                          <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{asset('assets/images/user/8.jpg')}}" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Jason Borne"></li>
                                           <li class="d-inline-block"><img class="img-40 rounded-circle" src="{{route('/')}}/assets/images/user/11.png" alt="" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Comeren Diaz"></li>
                                        </ul>
                                     </div>
@@ -634,17 +634,17 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Bucky Barnes</span><span class="d-block">winter@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Sarah Loren</span><span class="d-block">barnes@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/6.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/6.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Jason Borne</span><span class="d-block">jasonb@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/8.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/8.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Comeren Diaz</span><span class="d-block">comere@gmail.com</span></div>
                                     </div>
@@ -654,7 +654,7 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Andew Jon</span><span class="d-block">andrewj@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Johny Waston</span><span class="d-block">johny@gmail.com</span></div>
                                     </div>
@@ -669,17 +669,17 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Bucky Barnes</span><span class="d-block">winter@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Sarah Loren</span><span class="d-block">barnes@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/6.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/6.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Jason Borne</span><span class="d-block">jasonb@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/8.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/8.jpg')}}" alt="">
                                        <div class="social-status social-offline"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Comeren Diaz</span><span class="d-block">comere@gmail.com</span></div>
                                     </div>
@@ -689,7 +689,7 @@
                                        <div class="media-body"><span class="f-w-600 d-block">Andew Jon</span><span class="d-block">andrewj@gmail.com</span></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="social-status social-busy"></div>
                                        <div class="media-body"><span class="f-w-600 d-block">Johny Waston</span><span class="d-block">johny@gmail.com</span></div>
                                     </div>
@@ -712,7 +712,7 @@
                               <div class="collapse show" id="collapseicon14" aria-labelledby="collapseicon14" data-parent="#accordion">
                                  <div class="card-body social-status filter-cards-view">
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/10.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/10.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Andew Jon</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -720,7 +720,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/3.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/3.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Johny Waston</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -728,7 +728,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/5.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/5.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Comeren Diaz</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -736,7 +736,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/4.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/4.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Sarah Loren</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -744,7 +744,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/3.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/3.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Johny Waston</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -752,7 +752,7 @@
                                        </div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 rounded-circle m-r-15" src="{{route('/')}}/assets/images/user/5.jpg" alt="">
+                                       <img class="img-50 rounded-circle m-r-15" src="{{asset('assets/images/user/5.jpg')}}" alt="">
                                        <div class="media-body">
                                           <span class="f-w-600 d-block">Comeren Diaz</span>
                                           <p>Commented on Shaun Park's <a href="#">Photo</a></p>
@@ -787,22 +787,22 @@
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg"><span class="d-block f-w-600">Dion Cast</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}"><span class="d-block f-w-600">Dion Cast</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/4.jpg"><span class="d-block f-w-600">Karlene Lex</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/4.jpg')}}"><span class="d-block f-w-600">Karlene Lex</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/8.jpg"><span class="d-block f-w-600">Vella Chism</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/8.jpg')}}"><span class="d-block f-w-600">Vella Chism</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg"><span class="d-block f-w-600">Wai Schalk</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}"><span class="d-block f-w-600">Wai Schalk</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
@@ -957,22 +957,22 @@
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg"><span class="d-block f-w-600">Dion Cast</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}"><span class="d-block f-w-600">Dion Cast</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/4.jpg"><span class="d-block f-w-600">Karlene Lex</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/4.jpg')}}"><span class="d-block f-w-600">Karlene Lex</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/8.jpg"><span class="d-block f-w-600">Vella Chism</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/8.jpg')}}"><span class="d-block f-w-600">Vella Chism</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
                                     <li>
-                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg"><span class="d-block f-w-600">Wai Schalk</span>
+                                       <div class="add-friend text-center"><img class="img-60 img-fluid rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}"><span class="d-block f-w-600">Wai Schalk</span>
                                           <button class="btn btn-primary btn-xs">Add Friend</button>
                                        </div>
                                     </li>
@@ -1049,20 +1049,20 @@
                                  <div class="card-body filter-cards-view">
                                     <span class="f-w-600">About Me :</span>
                                     <p>
-                                       Hi, I’m elana, I’m 30 and I work as a 
-                                       web Designer for the “Daydreams” 
+                                       Hi, I’m elana, I’m 30 and I work as a
+                                       web Designer for the “Daydreams”
                                        Agency in Pier 56.
                                     </p>
                                     <span class="f-w-600">Favourite TV shows :</span>
                                     <p>
                                        Breaking Good, RedDevil, People of
-                                       Interest, The Running Dead, 
+                                       Interest, The Running Dead,
                                        Found, American Guy.
                                     </p>
                                     <span class="f-w-600">Favourite Music Bands :</span>
                                     <p>
                                        Breaking Good, RedDevil, People of
-                                       Interest, The Running Dead, 
+                                       Interest, The Running Dead,
                                        Found, American Guy.
                                     </p>
                                     <div class="social-network theme-form"><span class="f-w-600">Social Networks</span>
@@ -1092,11 +1092,11 @@
                                        <div class="media-body"><span class="d-block">Sarah Loren</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}">
                                        <div class="media-body"><span class="d-block">Jason Borne</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}">
                                        <div class="media-body"><span class="d-block">Comeren Diaz</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
@@ -1125,11 +1125,11 @@
                                        <div class="media-body"><span class="d-block">Bucky Barnes</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/10.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/10.jpg')}}">
                                        <div class="media-body"><span class="d-block">Comeren Diaz</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
-                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/3.jpg">
+                                       <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" src="{{asset('assets/images/user/3.jpg')}}">
                                        <div class="media-body"><span class="d-block">Jason Borne</span><a href="#">Add Friend</a></div>
                                     </div>
                                     <div class="media">
@@ -1191,18 +1191,18 @@
                               </div>
                               <div class="collapse show" id="collapseicon15" data-parent="#accordion" aria-labelledby="collapseicon15">
                                  <div class="card-body avatar-showcase filter-cards-view">
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/3.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/5.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/3.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/5.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/2.png" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/3.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/6.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/10.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/6.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/10.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/14.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/1.jpg" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/4.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/4.jpg')}}" alt="#"></div>
                                     <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/11.png" alt="#"></div>
-                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{route('/')}}/assets/images/user/8.jpg" alt="#"></div>
+                                    <div class="d-inline-block friend-pic"><img class="img-50 rounded-circle" src="{{asset('assets/images/user/8.jpg')}}" alt="#"></div>
                                  </div>
                               </div>
                            </div>
@@ -1219,8 +1219,8 @@
             <div class="row">
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
-                     <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/1.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/3.jpg" alt=""></div>
+                     <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/1.jpg')}}" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/3.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1250,8 +1250,8 @@
                </div>
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
-                     <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/2.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/16.jpg" alt=""></div>
+                     <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/2.jpg')}}" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/16.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1281,8 +1281,8 @@
                </div>
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
-                     <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/3.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/11.jpg" alt=""></div>
+                     <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/3.jpg')}}" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/11.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1312,8 +1312,8 @@
                </div>
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
-                     <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/7.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/16.jpg" alt=""></div>
+                     <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/7.jpg')}}" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/16.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1343,8 +1343,8 @@
                </div>
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
-                     <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/5.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/11.jpg" alt=""></div>
+                     <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/5.jpg')}}" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/11.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1375,7 +1375,7 @@
                <div class="col-md-6 col-lg-6 col-xl-4">
                   <div class="card custom-card">
                      <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/6.jpg" alt=""></div>
-                     <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/3.jpg" alt=""></div>
+                     <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/3.jpg')}}" alt=""></div>
                      <ul class="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -1476,8 +1476,8 @@
                            </figcaption>
                         </figure>
                         <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                           <a href="{{route('/')}}/assets/images/big-lightgallry/011.jpg" itemprop="contentUrl" data-size="1600x950">
-                              <img src="{{route('/')}}/assets/images/lightgallry/011.jpg" itemprop="thumbnail" alt="Image description">
+                           <a href="{{asset('assets/images/big-lightgallry/011.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                              <img src="{{asset('assets/images/lightgallry/011.jpg')}}" itemprop="thumbnail" alt="Image description">
                               <div class="caption">
                                  <h4>Sarah Loren</h4>
                                  <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -1489,8 +1489,8 @@
                            </figcaption>
                         </figure>
                         <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                           <a href="{{route('/')}}/assets/images/big-lightgallry/010.jpg" itemprop="contentUrl" data-size="1600x950">
-                              <img src="{{route('/')}}/assets/images/lightgallry/010.jpg" itemprop="thumbnail" alt="Image description">
+                           <a href="{{asset('assets/images/big-lightgallry/010.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                              <img src="{{asset('assets/images/lightgallry/010.jpg')}}" itemprop="thumbnail" alt="Image description">
                               <div class="caption">
                                  <h4>Andew Jon</h4>
                                  <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -1502,8 +1502,8 @@
                            </figcaption>
                         </figure>
                         <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                           <a href="{{route('/')}}/assets/images/big-lightgallry/08.jpg" itemprop="contentUrl" data-size="1600x950">
-                              <img src="{{route('/')}}/assets/images/lightgallry/08.jpg" itemprop="thumbnail" alt="Image description">
+                           <a href="{{asset('assets/images/big-lightgallry/08.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                              <img src="{{asset('assets/images/lightgallry/08.jpg')}}" itemprop="thumbnail" alt="Image description">
                               <div class="caption">
                                  <h4>Bucky Barnes</h4>
                                  <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -1571,8 +1571,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.js"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
 <script src="{{route('/')}}/assets/js/tooltip-init.js"></script>
 @endsection

@@ -2,7 +2,7 @@
 @section('title', 'Scrollable')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/scrollable.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/scrollable.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Scrollable</li>
 @endsection
 
@@ -27,7 +27,7 @@
             </div>
             <div class="card-body">
                <div class="scroll-bar-wrap">
-                  <div class="click-drag-handler scroll-demo p-0"><img src="{{route('/')}}/assets/images/banner/2.jpg" alt="" width="800" height="600"></div>
+                  <div class="click-drag-handler scroll-demo p-0"><img src="{{asset('assets/images/banner/2.jpg')}}" alt="" width="800" height="600"></div>
                </div>
             </div>
          </div>
@@ -39,7 +39,7 @@
             </div>
             <div class="card-body">
                <div class="scroll-bar-wrap">
-                  <div class="scrollbar-margins large-margin scroll-demo p-0"><img src="{{route('/')}}/assets/images/banner/3.jpg" alt="girl" width="800" height="600"></div>
+                  <div class="scrollbar-margins large-margin scroll-demo p-0"><img src="{{asset('assets/images/banner/3.jpg')}}" alt="girl" width="800" height="600"></div>
                </div>
             </div>
          </div>
@@ -51,7 +51,7 @@
             </div>
             <div class="card-body">
                <div class="scroll-bar-wrap">
-                  <div class="both-side-scroll scroll-demo p-0"><img src="{{route('/')}}/assets/images/banner/1.jpg" alt="girl" width="800" height="600"></div>
+                  <div class="both-side-scroll scroll-demo p-0"><img src="{{asset('assets/images/banner/1.jpg')}}" alt="girl" width="800" height="600"></div>
                </div>
             </div>
          </div>
@@ -143,7 +143,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/scrollable/perfect-scrollbar.min.js"></script>
-<script src="{{route('/')}}/assets/js/scrollable/scrollable-custom.js"></script>
+<script src="{{asset('assets/js/scrollable/perfect-scrollbar.min.js')}}"></script>
+<script src="{{asset('assets/js/scrollable/scrollable-custom.js')}}"></script>
 @endsection
 

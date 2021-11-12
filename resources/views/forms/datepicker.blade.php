@@ -2,7 +2,7 @@
 @section('title', 'Date Picker')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Date Picker</li>
 @endsection
 
@@ -102,7 +102,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
 @endsection

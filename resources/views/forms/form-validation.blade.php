@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Controls</li>	
+    <li class="breadcrumb-item">Form Controls</li>
 	<li class="breadcrumb-item active">Validation Forms</li>
 @endsection
 
@@ -220,5 +220,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/form-validation-custom.js"></script>
+<script src="{{asset('assets/js/form-validation-custom.js')}}"></script>
 @endsection

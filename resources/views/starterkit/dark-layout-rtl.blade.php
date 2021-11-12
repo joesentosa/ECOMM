@@ -2,11 +2,11 @@
 @section('title', 'Dark with RTL - Premium Admin Template')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
     <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chartist.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-design-icon.css')}}">
 @endsection
 
 @section('style')
@@ -229,7 +229,7 @@ View More&lt;/button&gt;
                <h5>Weather Overview</h5>
             </div>
             <div class="card-body weather-bottom-bg p-0">
-               <div class="cloud"><img src="{{route('/')}}/assets/images/cloud.png" alt=""></div>
+               <div class="cloud"><img src="{{asset('assets/images/cloud.png')}}" alt=""></div>
                <div class="cloud-rain"></div>
                <div class="media weather-details">
                   <span class="weather-title"><i class="fa fa-circle-o d-block text-right"></i><span>16</span></span>
@@ -239,7 +239,7 @@ View More&lt;/button&gt;
                      <h6 class="mb-0">Wind : 50km/h  </h6>
                   </div>
                </div>
-               <img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/weather-image.png" alt="">
+               <img class="img-fluid" src="{{asset('assets/images/dashboard/weather-image.png')}}" alt="">
             </div>
          </div>
       </div>
@@ -272,7 +272,7 @@ View More&lt;/button&gt;
                      <tbody>
                         <tr>
                            <td>
-                              <div class="activity-image"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/clipboard.png" alt=""></div>
+                              <div class="activity-image"><img class="img-fluid" src="{{asset('assets/images/dashboard/clipboard.png')}}" alt=""></div>
                            </td>
                            <td>
                               <div class="activity-details">
@@ -289,7 +289,7 @@ View More&lt;/button&gt;
                         </tr>
                         <tr>
                            <td>
-                              <div class="activity-image activity-secondary"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/greeting.png" alt=""></div>
+                              <div class="activity-image activity-secondary"><img class="img-fluid" src="{{asset('assets/images/dashboard/greeting.png')}}" alt=""></div>
                            </td>
                            <td>
                               <div class="activity-details">
@@ -315,7 +315,7 @@ View More&lt;/button&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="activity-image"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/clipboard.png" alt=""&gt;
+&lt;div class="activity-image"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/clipboard.png')}}" alt=""&gt;
 &lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
@@ -332,7 +332,7 @@ View More&lt;/button&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="activity-image activity-secondary"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/greeting.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="activity-image activity-secondary"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/greeting.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;div class="activity-details"&gt;
@@ -385,7 +385,7 @@ View More&lt;/button&gt;
                      <tbody>
                         <tr>
                            <td>
-                              <div class="recent-images"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-1.png" alt=""></div>
+                              <div class="recent-images"><img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-1.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="default-text mb-0 f-w-700 f-18">Nick Stone</h5>
@@ -399,7 +399,7 @@ View More&lt;/button&gt;
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-primary"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-2.png" alt=""></div>
+                              <div class="recent-images-primary"><img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-2.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-primary mb-0 f-w-700 f-18">Milano Esco</h5>
@@ -413,7 +413,7 @@ View More&lt;/button&gt;
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-secondary"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-3.png" alt=""></div>
+                              <div class="recent-images-secondary"><img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-3.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-secondary mb-0 f-w-700 f-18">Charlie Pol</h5>
@@ -427,7 +427,7 @@ View More&lt;/button&gt;
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-warning"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-4.png" alt=""></div>
+                              <div class="recent-images-warning"><img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-4.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-warning mb-0 f-w-700 f-18">Jordi Esol</h5>
@@ -451,7 +451,7 @@ View More&lt;/button&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-1.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-1.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="default-text mb-0 f-w-700 f-18"&gt;Nick Stone&lt;/h5&gt;
@@ -465,7 +465,7 @@ View More&lt;/button&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-primary"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-2.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-primary"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-2.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-primary mb-0 f-w-700 f-18"&gt;Milano Esco&lt;/h5&gt;
@@ -479,7 +479,7 @@ View More&lt;/button&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-secondary"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-3.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-secondary"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-3.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-secondary mb-0 f-w-700 f-18"&gt;Charlie Pol&lt;/h5&gt;
@@ -493,7 +493,7 @@ View More&lt;/button&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-warning"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/recent-user-4.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-warning"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard/recent-user-4.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-warning mb-0 f-w-700 f-18"&gt;Jordi Esol&lt;/h5&gt;
@@ -532,26 +532,26 @@ View More&lt;/button&gt;
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/typeahead/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.bundle.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead/typeahead.custom.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/handlebars.js"></script>
-<script src="{{route('/')}}/assets/js/typeahead-search/typeahead-custom.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/apex-chart.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="{{route('/')}}/assets/js/dashboard/default.js"></script>
-<script src="{{route('/')}}/assets/js/notify/index.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
+<script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/handlebars.js')}}"></script>
+<script src="{{asset('assets/js/typeahead-search/typeahead-custom.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist-plugin-tooltip.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+<script src="{{asset('assets/js/dashboard/default.js')}}"></script>
+<script src="{{asset('assets/js/notify/index.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
 @endsection
 

@@ -2,7 +2,7 @@
 @section('title', 'Summer Note')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/summernote.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/summernote.css')}}">
 @endsection
 
 @section('style')
@@ -85,6 +85,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/editor/summernote/summernote.js"></script>
-<script src="{{route('/')}}/assets/js/editor/summernote/summernote.custom.js"></script>
+<script src="{{asset('assets/js/editor/summernote/summernote.js')}}"></script>
+<script src="{{asset('assets/js/editor/summernote/summernote.custom.js')}}"></script>
 @endsection

@@ -130,6 +130,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/knob/knob.min.js"></script>
-<script src="{{route('/')}}/assets/js/chart/knob/knob-chart.js"></script>
+<script src="{{asset('assets/js/chart/knob/knob.min.js')}}"></script>
+<script src="{{asset('assets/js/chart/knob/knob-chart.js')}}"></script>
 @endsection

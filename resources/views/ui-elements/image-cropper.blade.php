@@ -2,7 +2,7 @@
 @section('title', 'Image Cropper')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/image-cropper.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/image-cropper.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Image Cropper</li>
 @endsection
 
@@ -29,7 +29,7 @@
                <div class="card-body">
                   <div class="row">
                      <div class="col-xl-9 col-md-12">
-                        <div class="img-container"><img id="image" src="{{route('/')}}/assets/images/other-images/img-cropper.jpg" alt="Picture"></div>
+                        <div class="img-container"><img id="image" src="{{asset('assets/images/other-images/img-cropper.jpg')}}" alt="Picture"></div>
                      </div>
                      <div class="col-xl-3 col-md-12">
                         <!-- <h3>Preview:</h3>-->
@@ -317,7 +317,7 @@
                         <h5>Disabled Zoom</h5>
                      </div>
                      <div class="card-body">
-                        <div class="img-container"><img class="crop-zoomable img-fluid" src="{{route('/')}}/assets/images/other-images/img-cropper.jpg" alt=""></div>
+                        <div class="img-container"><img class="crop-zoomable img-fluid" src="{{asset('assets/images/other-images/img-cropper.jpg')}}" alt=""></div>
                      </div>
                   </div>
                </div>
@@ -327,7 +327,7 @@
                         <h5>Autocrop Disable</h5>
                      </div>
                      <div class="card-body">
-                        <div class="img-container"><img class="crop-auto img-fluid" src="{{route('/')}}/assets/images/other-images/img-cropper.jpg" alt=""></div>
+                        <div class="img-container"><img class="crop-auto img-fluid" src="{{asset('assets/images/other-images/img-cropper.jpg')}}" alt=""></div>
                      </div>
                   </div>
                </div>
@@ -337,7 +337,7 @@
                         <h5>Disabled Image Drag</h5>
                      </div>
                      <div class="card-body">
-                        <div class="img-container"><img class="crop-drag img-fluid" src="{{route('/')}}/assets/images/other-images/img-cropper.jpg" alt=""></div>
+                        <div class="img-container"><img class="crop-drag img-fluid" src="{{asset('assets/images/other-images/img-cropper.jpg')}}" alt=""></div>
                      </div>
                   </div>
                </div>
@@ -347,7 +347,7 @@
                         <h5>Minimum Zone Size</h5>
                      </div>
                      <div class="card-body">
-                        <div class="img-container"><img class="crop-min img-fluid" src="{{route('/')}}/assets/images/other-images/img-cropper.jpg" alt=""></div>
+                        <div class="img-container"><img class="crop-min img-fluid" src="{{asset('assets/images/other-images/img-cropper.jpg')}}" alt=""></div>
                      </div>
                   </div>
                </div>
@@ -359,7 +359,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/image-cropper/cropper.js"></script>
-<script src="{{route('/')}}/assets/js/image-cropper/cropper-main.js"></script>
+<script src="{{asset('assets/js/image-cropper/cropper.js')}}"></script>
+<script src="{{asset('assets/js/image-cropper/cropper-main.js')}}"></script>
 @endsection
 

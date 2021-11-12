@@ -2,12 +2,12 @@
 @section('title', 'Crypto Widget')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
     <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/owlcarousel.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/tour.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/ionic-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chartist.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/tour.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/ionic-icon.css')}}">
 @endsection
 
 @section('style')
@@ -409,20 +409,20 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/apex-chart.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/owlcarousel/owl.carousel.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/dashboard/crypto-custom.js"></script>
-<script src="{{route('/')}}/assets/js/tour/intro.js"></script>
-<script src="{{route('/')}}/assets/js/tour/intro-init.js"></script>
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist-plugin-tooltip.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+<script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/dashboard/crypto-custom.js')}}"></script>
+<script src="{{asset('assets/js/tour/intro.js')}}"></script>
+<script src="{{asset('assets/js/tour/intro-init.js')}}"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection
 

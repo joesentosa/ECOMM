@@ -43,6 +43,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/timeline/timeline-v-2/jquery.timeliny.min.js"></script>
-<script src="{{route('/')}}/assets/js/timeline/timeline-v-2/timeline-v-2-custom.js"></script>
+<script src="{{asset('assets/js/timeline/timeline-v-2/jquery.timeliny.min.js')}}"></script>
+<script src="{{asset('assets/js/timeline/timeline-v-2/timeline-v-2-custom.js')}}"></script>
 @endsection

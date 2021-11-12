@@ -57,19 +57,19 @@
                      <figcaption itemprop="caption description">Image caption  7</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/08.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/08.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/08.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/08.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  8</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/09.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/09.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/09.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/09.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  9</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/010.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/010.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/010.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/010.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  10</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/011.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/011.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/011.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/011.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  11</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
@@ -113,11 +113,11 @@
                      <figcaption itemprop="caption description">Image caption  21</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/010.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/010.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/010.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/010.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  22</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-lightgallry/011.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/lightgallry/011.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-lightgallry/011.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/lightgallry/011.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  23</figcaption>
                   </figure>
                   <figure class="reveal col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
@@ -258,9 +258,9 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.js"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
 <script src="{{route('/')}}/assets/js/animation/scroll-reveal/scrollreveal.min.js"></script>
 <script src="{{route('/')}}/assets/js/modernizr.js"></script>
 <script src="{{route('/')}}/assets/js/animation/scroll-reveal/reveal-custom.js"></script>

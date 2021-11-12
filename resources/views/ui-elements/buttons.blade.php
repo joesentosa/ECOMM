@@ -2,7 +2,7 @@
 @section('title', 'Default Style')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Default Style</li>
 @endsection
 
@@ -53,7 +53,7 @@
 &lt;button type="button" class="btn btn-info"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-light"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -90,7 +90,7 @@
 &lt;button type=&quot;button&quot; class=&quot;btn btn-square btn-info&quot;&gt;Info button&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-square btn-warning&quot;&gt;warning button&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-square btn-danger&quot;&gt;danger button&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-square btn-light&quot;&gt;light button&lt;/button&gt; 
+&lt;button type=&quot;button&quot; class=&quot;btn btn-square btn-light&quot;&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt; </code></pre>
                </div>
             </div>
@@ -127,7 +127,7 @@
 &lt;button type="button" class="btn btn-pill btn-info"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-pill btn-warning"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-pill btn-danger"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-pill btn-light"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-pill btn-light"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;                             </code></pre>
                </div>
             </div>
@@ -266,7 +266,7 @@
 &lt;button type="button" class="btn btn-info btn-lg"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning btn-lg"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger btn-lg"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-light btn-lg"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light btn-lg"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -303,7 +303,7 @@
 &lt;button type="button" class="btn btn-info btn-sm"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning btn-sm"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger btn-sm"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-light btn-sm"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light btn-sm"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -340,7 +340,7 @@
 &lt;button type="button" class="btn btn-info btn-xs"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning btn-xs"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger btn-xs"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-light btn-xs"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light btn-xs"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -377,7 +377,7 @@
 &lt;button type="button" class="btn btn-info active"&gt;Active&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning active"&gt;Active&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger active"&gt;Active&lt;/button&gt;
-&lt;button type="button" class="btn btn-light active"&gt;Active&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light active"&gt;Active&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -414,7 +414,7 @@
 &lt;button type="button" class="btn btn-info disabled"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning disabled"&gt;Disabled&lt;/button&gt;
 &lt;button type="button" class="btn btn-danger disabled"&gt;Disabled&lt;/button&gt;
-&lt;button type="button" class="btn btn-light disabled"&gt;Disabled&lt;/button&gt; 
+&lt;button type="button" class="btn btn-light disabled"&gt;Disabled&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -451,7 +451,7 @@
 &lt;button type="button" class="btn btn-outline-info"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-outline-warning"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-outline-danger"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-outline-light txt-dark"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-outline-light txt-dark"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -488,7 +488,7 @@
 &lt;button type="button" class="btn btn-outline-info-2x"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-outline-warning-2x"&gt;warning button&lt;/button&gt;
 &lt;button type="button" class="btn btn-outline-danger-2x"&gt;danger button&lt;/button&gt;
-&lt;button type="button" class="btn btn-outline-light-2x txt-dark"&gt;light button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-outline-light-2x txt-dark"&gt;light button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -523,7 +523,7 @@
 &lt;button type="button" class="btn btn-success-gradien"&gt;Success button&lt;/button&gt;
 &lt;button type="button" class="btn btn-info-gradien"&gt;Info button&lt;/button&gt;
 &lt;button type="button" class="btn btn-warning-gradien"&gt;warning button&lt;/button&gt;
-&lt;button type="button" class="btn btn-danger-gradien"&gt;danger button&lt;/button&gt; 
+&lt;button type="button" class="btn btn-danger-gradien"&gt;danger button&lt;/button&gt;
 &lt;!-- Cod Box Copy end --&gt;</code></pre>
                </div>
             </div>
@@ -534,8 +534,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/button-tooltip-custom.js"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/button-tooltip-custom.js')}}"></script>
 @endsection
 

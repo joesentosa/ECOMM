@@ -25,7 +25,7 @@
             <div class="col-xl-12">
                <div class="card">
                   <div class="blog-box blog-list row">
-                     <div class="col-sm-5"><img class="img-fluid sm-100-w" src="{{route('/')}}/assets/images/faq/1.jpg" alt=""></div>
+                     <div class="col-sm-5"><img class="img-fluid sm-100-w" src="{{asset('assets/images/faq/1.jpg')}}" alt=""></div>
                      <div class="col-sm-7">
                         <div class="blog-details">
                            <div class="blog-date digits"><span>05</span> January 2021</div>
@@ -46,7 +46,7 @@
             <div class="col-xl-12">
                <div class="card">
                   <div class="blog-box blog-list row">
-                     <div class="col-sm-5"><img class="img-fluid sm-100-w" src="{{route('/')}}/assets/images/faq/2.jpg" alt=""></div>
+                     <div class="col-sm-5"><img class="img-fluid sm-100-w" src="{{asset('assets/images/faq/2.jpg')}}" alt=""></div>
                      <div class="col-sm-7">
                         <div class="blog-details">
                            <div class="blog-date digits"><span>10</span> March 2021</div>
@@ -68,7 +68,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/3.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/3.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>
@@ -92,7 +92,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/1.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/1.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>
@@ -116,7 +116,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/4.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/4.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>
@@ -140,7 +140,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/2.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/2.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>
@@ -164,7 +164,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/4.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/4.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>
@@ -188,7 +188,7 @@
                <div class="card">
                   <div class="blog-box blog-grid text-center product-box">
                      <div class="product-img">
-                        <img class="img-fluid top-radius-blog" src="{{route('/')}}/assets/images/faq/3.jpg" alt="">
+                        <img class="img-fluid top-radius-blog" src="{{asset('assets/images/faq/3.jpg')}}" alt="">
                         <div class="product-hover">
                            <ul>
                               <li><i class="icon-link"></i></li>

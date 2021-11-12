@@ -2,7 +2,7 @@
 @section('title', 'MDE Editor')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/simple-mde.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/simple-mde.css')}}">
 @endsection
 
 @section('style')
@@ -60,6 +60,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/editor/simple-mde/simplemde.min.js"></script>
-<script src="{{route('/')}}/assets/js/editor/simple-mde/simplemde.custom.js"></script>
+<script src="{{asset('assets/js/editor/simple-mde/simplemde.min.js')}}"></script>
+<script src="{{asset('assets/js/editor/simple-mde/simplemde.custom.js')}}"></script>
 @endsection

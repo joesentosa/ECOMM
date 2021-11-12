@@ -217,12 +217,12 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/flot-chart/excanvas.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.time.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.categories.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.stack.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.pie.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/jquery.flot.symbol.js"></script>
-<script src="{{route('/')}}/assets/js/chart/flot-chart/flot-script.js"></script>
+<script src="{{asset('assets/js/chart/flot-chart/excanvas.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.time.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.categories.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.stack.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/jquery.flot.symbol.js')}}"></script>
+<script src="{{asset('assets/js/chart/flot-chart/flot-script.js')}}"></script>
 @endsection

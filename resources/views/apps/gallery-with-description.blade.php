@@ -2,7 +2,7 @@
 @section('title', 'Gallery Grid With Desc')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/photoswipe.css')}}">
 @endsection
 
 @section('style')
@@ -28,8 +28,8 @@
             </div>
             <div class="my-gallery card-body row gallery-with-description" itemscope="">
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/01.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/01.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/01.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/01.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -41,8 +41,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/02.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/02.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/02.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/02.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -54,8 +54,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/03.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/03.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/03.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/03.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -67,8 +67,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/04.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/04.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/04.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/04.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -80,8 +80,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/01.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/01.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/01.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/01.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -93,8 +93,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/02.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/02.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/02.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/02.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -106,8 +106,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/03.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/03.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/03.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/03.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -119,8 +119,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/04.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/04.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/04.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/04.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -132,8 +132,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/01.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/01.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/01.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/01.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -145,8 +145,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/02.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/02.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/02.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/02.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -158,8 +158,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/03.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/03.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/03.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/03.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -171,8 +171,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/04.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/04.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/04.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/04.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -184,8 +184,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/01.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/01.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/01.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/01.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -197,8 +197,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/02.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/02.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/02.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/02.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -210,8 +210,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/03.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/03.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/03.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/03.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -223,8 +223,8 @@
                   </figcaption>
                </figure>
                <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="">
-                  <a href="{{route('/')}}/assets/images/big-lightgallry/04.jpg" itemprop="contentUrl" data-size="1600x950">
-                     <img src="{{route('/')}}/assets/images/lightgallry/04.jpg" itemprop="thumbnail" alt="Image description">
+                  <a href="{{asset('assets/images/big-lightgallry/04.jpg')}}" itemprop="contentUrl" data-size="1600x950">
+                     <img src="{{asset('assets/images/lightgallry/04.jpg')}}" itemprop="thumbnail" alt="Image description">
                      <div class="caption">
                         <h4>Portfolio Title</h4>
                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -288,7 +288,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.js"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
 @endsection

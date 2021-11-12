@@ -2,7 +2,7 @@
 @section('title', 'Material-Design Icons')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/material-design-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-design-icon.css')}}">
 @endsection
 
 @section('style')
@@ -13,8 +13,8 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">UI Kits</li>	
-	<li class="breadcrumb-item">Icons</li>	
+	<li class="breadcrumb-item">UI Kits</li>
+	<li class="breadcrumb-item">Icons</li>
 	<li class="breadcrumb-item active">Material-Design Icons</li>
 @endsection
 
@@ -2377,7 +2377,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
 <script src="{{route('/')}}/assets/js/icons/icons-notify.js"></script>
 <script src="{{route('/')}}/assets/js/icons/icon-clipart.js"></script>
 @endsection

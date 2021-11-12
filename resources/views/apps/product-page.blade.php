@@ -2,8 +2,8 @@
 @section('title', 'Product Page')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/owlcarousel.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/rating.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/rating.css')}}">
 @endsection
 
 @section('style')
@@ -25,24 +25,24 @@
       <div class="row product-page-main">
          <div class="col-xl-4">
             <div class="product-slider owl-carousel owl-theme" id="sync1">
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/01.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/02.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/03.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/04.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/05.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/06.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/07.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/08.jpg" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/01.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/02.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/03.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/04.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/05.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/06.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/07.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/08.jpg')}}" alt=""></div>
             </div>
             <div class="owl-carousel owl-theme" id="sync2">
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/01.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/02.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/03.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/04.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/05.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/06.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/07.jpg" alt=""></div>
-               <div class="item"><img src="{{route('/')}}/assets/images/ecommerce/08.jpg" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/01.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/02.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/03.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/04.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/05.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/06.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/07.jpg')}}" alt=""></div>
+               <div class="item"><img src="{{asset('assets/images/ecommerce/08.jpg')}}" alt=""></div>
             </div>
          </div>
          <div class="col-xl-8">
@@ -139,8 +139,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/owlcarousel/owl.carousel.js"></script>
-<script src="{{route('/')}}/assets/js/rating/jquery.barrating.js"></script>
-<script src="{{route('/')}}/assets/js/rating/rating-script.js"></script>
-<script src="{{route('/')}}/assets/js/ecommerce.js"></script>
+<script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/rating/jquery.barrating.js')}}"></script>
+<script src="{{asset('assets/js/rating/rating-script.js')}}"></script>
+<script src="{{asset('assets/js/ecommerce.js')}}"></script>
 @endsection

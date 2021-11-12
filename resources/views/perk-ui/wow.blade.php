@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Animation</li>	
+    <li class="breadcrumb-item">Animation</li>
 	<li class="breadcrumb-item active">Wow Animation</li>
 @endsection
 
@@ -291,9 +291,9 @@
 
 @section('script')
 <script src="{{route('/')}}/assets/js/isotope.pkgd.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
-<script src="{{route('/')}}/assets/js/photoswipe/photoswipe.js"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
 <script src="{{route('/')}}/assets/js/animation/wow/wow.min.js"></script>
 <script src="{{route('/')}}/assets/js/animation/wow/wow-init.js"></script>
 @endsection

@@ -12,7 +12,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Navs</li>
 @endsection
 
@@ -243,6 +243,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection
 

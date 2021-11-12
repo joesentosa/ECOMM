@@ -2,7 +2,7 @@
 @section('title', 'Time Picker')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/timepicker.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/timepicker.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Time Picker</li>
 @endsection
 
@@ -90,7 +90,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/time-picker/jquery-clockpicker.min.js"></script>
-<script src="{{route('/')}}/assets/js/time-picker/highlight.min.js"></script>
-<script src="{{route('/')}}/assets/js/time-picker/clockpicker.js"></script>
+<script src="{{asset('assets/js/time-picker/jquery-clockpicker.min.js')}}"></script>
+<script src="{{asset('assets/js/time-picker/highlight.min.js')}}"></script>
+<script src="{{asset('assets/js/time-picker/clockpicker.js')}}"></script>
 @endsection

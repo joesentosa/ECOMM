@@ -1,7 +1,7 @@
 <div class="page-main-header">
    <div class="main-header-right">
       <div class="main-header-left text-center">
-         <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{route('/')}}/assets/images/logo/logo.png" alt=""></a></div>
+         <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
       </div>
       <div class="mobile-sidebar">
          <div class="media-body text-right switch-sm">
@@ -26,7 +26,7 @@
             </li>
             <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/bookmark.png" alt="">
+               <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/bookmark.png')}}" alt="">
                <div class="onhover-show-div bookmark-flip">
                   <div class="flip-card">
                      <div class="flip-card-inner">
@@ -68,7 +68,7 @@
                </div>
             </li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-secondary" src="{{route('/')}}/assets/images/dashboard/like.png" alt="">
+               <img class="img-fluid img-shadow-secondary" src="{{asset('assets/images/dashboard/like.png')}}" alt="">
                <ul class="onhover-show-div droplet-dropdown">
                   <li class="gradient-primary text-center">
                      <h6>Grid Dashboard</h6>
@@ -90,7 +90,7 @@
                </ul>
             </li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/notification.png" alt="">
+               <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/notification.png')}}" alt="">
                <ul class="onhover-show-div notification-dropdown">
                   <li class="gradient-primary">
                      <h6>Notifications</h6>
@@ -135,7 +135,7 @@
          <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
       </div>
       <script id="result-template" type="text/x-handlebars-template">
-         <div class="ProfileCard u-cf">                        
+         <div class="ProfileCard u-cf">
          <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
          <div class="ProfileCard-details">
          <div class="ProfileCard-realName">{{@name}}</div>

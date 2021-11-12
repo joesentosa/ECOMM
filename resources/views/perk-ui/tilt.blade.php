@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Animation</li>	
+    <li class="breadcrumb-item">Animation</li>
 	<li class="breadcrumb-item active">Tilt Animation</li>
 @endsection
 
@@ -148,7 +148,7 @@
                <h5>Disable X axis</h5>
             </div>
             <div class="card-body">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/08.jpg" data-tilt-speed="250" data-tilt-max="10" data-tilt-axis="y" data-tilt-perspective="250" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/08.jpg')}}" data-tilt-speed="250" data-tilt-max="10" data-tilt-axis="y" data-tilt-perspective="250" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">The most basic usage:</h6>
                   <span>Setting this option will disable the X-Axis on the tilt element.</span>
@@ -166,5 +166,5 @@
 @section('script')
 <script src="{{route('/')}}/assets/js/animation/tilt/tilt.jquery.js"></script>
 <script src="{{route('/')}}/assets/js/animation/tilt/tilt-custom.js"></script>
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection

@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Clipboard</li>
 @endsection
 
@@ -96,6 +96,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard-script.js"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard-script.js')}}"></script>
 @endsection

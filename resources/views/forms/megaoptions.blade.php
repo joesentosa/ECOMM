@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Controls</li>	
+    <li class="breadcrumb-item">Form Controls</li>
 	<li class="breadcrumb-item active">Mega options</li>
 @endsection
 
@@ -471,5 +471,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection

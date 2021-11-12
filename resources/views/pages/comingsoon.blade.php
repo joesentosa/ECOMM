@@ -11,7 +11,7 @@
 <div class="container-fluid p-0">
    <div class="comingsoon">
       <div class="comingsoon-inner text-center">
-         <img src="{{route('/')}}/assets/images/other-images/coming-soon-Logo.png" alt="">
+         <img src="{{asset('assets/images/other-images/coming-soon-Logo.png')}}" alt="">
          <h5>WE ARE COMING SOON</h5>
          <div class="countdown" id="clockdiv">
             <ul>
@@ -27,5 +27,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/countdown.js"></script>
+<script src="{{asset('assets/js/countdown.js')}}"></script>
 @endsection

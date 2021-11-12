@@ -145,8 +145,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/morris-chart/raphael.js"></script>
-<script src="{{route('/')}}/assets/js/chart/morris-chart/morris.js"> </script>
-<script src="{{route('/')}}/assets/js/chart/morris-chart/prettify.min.js"></script>
-<script src="{{route('/')}}/assets/js/chart/morris-chart/morris-script.js"></script>
+<script src="{{asset('assets/js/chart/morris-chart/raphael.js')}}"></script>
+<script src="{{asset('assets/js/chart/morris-chart/morris.js')}}"> </script>
+<script src="{{asset('assets/js/chart/morris-chart/prettify.min.js')}}"></script>
+<script src="{{asset('assets/js/chart/morris-chart/morris-script.js')}}"></script>
 @endsection

@@ -2,7 +2,7 @@
 @section('title', 'JS Grid Tables')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/jsgrid.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/jsgrid.css')}}">
 @endsection
 
 @section('style')
@@ -73,7 +73,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/jsgrid/jsgrid.min.js"></script>
-<script src="{{route('/')}}/assets/js/jsgrid/griddata.js"></script>
-<script src="{{route('/')}}/assets/js/jsgrid/jsgrid.js"></script>
+<script src="{{asset('assets/js/jsgrid/jsgrid.min.js')}}"></script>
+<script src="{{asset('assets/js/jsgrid/griddata.js')}}"></script>
+<script src="{{asset('assets/js/jsgrid/jsgrid.js')}}"></script>
 @endsection

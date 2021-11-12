@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Cards</li>	
+    <li class="breadcrumb-item">Cards</li>
 	<li class="breadcrumb-item active">Draggable Card</li>
 @endsection
 
@@ -87,7 +87,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/jquery.ui.min.js"></script>
+<script src="{{asset('assets/js/jquery.ui.min.js')}}"></script>
 <script src="{{route('/')}}/assets/js/dragable/sortable.js"></script>
 <script src="{{route('/')}}/assets/js/dragable/sortable-custom.js"></script>
 @endsection

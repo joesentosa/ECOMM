@@ -96,6 +96,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/sparkline/sparkline.js"></script>
-<script src="{{route('/')}}/assets/js/chart/sparkline/sparkline-script.js"></script>
+<script src="{{asset('assets/js/chart/sparkline/sparkline.js')}}"></script>
+<script src="{{asset('assets/js/chart/sparkline/sparkline-script.jss')}}"></script>
 @endsection

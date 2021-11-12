@@ -2,8 +2,8 @@
 @section('title', 'Responsive')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatable-extension.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatable-extension.css')}}">
 @endsection
 
 @section('style')
@@ -1667,9 +1667,9 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-<script src="{{route('/')}}/assets/js/datatable/datatable-extension/dataTables.buttons.min.js"></script>
-<script src="{{route('/')}}/assets/js/datatable/datatable-extension/jszip.min.js"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/datatable/datatable-extension/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('assets/js/datatable/datatable-extension/jszip.min.js')}}"></script>
 <script src="{{route('/')}}/assets/js/datatable/datatable-extension/buttons.colVis.min.js"></script>
 <script src="{{route('/')}}/assets/js/datatable/datatable-extension/pdfmake.min.js"></script>
 <script src="{{route('/')}}/assets/js/datatable/datatable-extension/vfs_fonts.js"></script>

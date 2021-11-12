@@ -2,7 +2,7 @@
 @section('title', 'Range Slider')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/range-slider.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/range-slider.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Range Slider</li>
 @endsection
 
@@ -84,7 +84,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/range-slider/ion.rangeSlider.min.js"></script>
-<script src="{{route('/')}}/assets/js/range-slider/rangeslider-script.js"></script>
+<script src="{{asset('assets/js/range-slider/ion.rangeSlider.min.js')}}"></script>
+<script src="{{asset('assets/js/range-slider/rangeslider-script.js')}}"></script>
 @endsection
 

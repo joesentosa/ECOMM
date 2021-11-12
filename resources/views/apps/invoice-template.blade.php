@@ -2,7 +2,7 @@
 @section('title', 'Invoice')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/print.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/print.css')}}">
 @endsection
 
 @section('style')
@@ -30,7 +30,7 @@
                         <div class="row">
                            <div class="col-sm-6">
                               <div class="media">
-                                 <div class="media-left"><img class="media-object img-60" src="{{route('/')}}/assets/images/other-images/logo-login.png" alt=""></div>
+                                 <div class="media-left"><img class="media-object img-60" src="{{asset('assets/images/other-images/logo-login.png')}}" alt=""></div>
                                  <div class="media-body m-l-20">
                                     <h4 class="media-heading">Poco</h4>
                                     <p>hello@Poco.in<br><span class="digits">289-335-6503</span></p>
@@ -52,7 +52,7 @@
                      <div class="row">
                         <div class="col-md-4">
                            <div class="media">
-                              <div class="media-left"><img class="media-object rounded-circle img-60" src="{{route('/')}}/assets/images/user/1.jpg" alt=""></div>
+                              <div class="media-left"><img class="media-object rounded-circle img-60" src="{{asset('assets/images/user/1.jpg')}}" alt=""></div>
                               <div class="media-body m-l-20">
                                  <h4 class="media-heading">Johan Deo</h4>
                                  <p>JohanDeo@gmail.com<br><span class="digits">555-555-5555</span></p>
@@ -181,7 +181,7 @@
                            </div>
                            <div class="col-md-4">
                               <form class="text-right">
-                                 <input type="image" src="{{route('/')}}/assets/images/other-images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                 <input type="image" src="{{asset('assets/images/other-images/paypal.png')}}" name="submit" alt="PayPal - The safer, easier way to pay online!">
                               </form>
                            </div>
                         </div>
@@ -203,8 +203,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/print.js"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/print.js')}}"></script>
 @endsection

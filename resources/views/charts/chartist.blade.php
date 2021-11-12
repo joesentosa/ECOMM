@@ -2,7 +2,7 @@
 @section('title', 'Chartist Chart')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chartist.css')}}">
 @endsection
 
 @section('style')
@@ -145,7 +145,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist-custom.js"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist-plugin-tooltip.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist-custom.js')}}"></script>
 @endsection

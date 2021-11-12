@@ -187,7 +187,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/1.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/1.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">UI/UX IT Frontend Developer</a><span class="badge badge-primary pull-right">New</span></h6>
                         <p>(L6) Salt Lake City, UT<span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i></span></p>
@@ -204,7 +204,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/2.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/2.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">React/React Native Developer</a><span class="badge badge-primary pull-right">New</span></h6>
                         <p>San Diego, CA <span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-o"></i></span></p>
@@ -219,7 +219,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/3.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/3.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">Senior UX designer</a><span class="pull-right">2 days ago</span></h6>
                         <p>Minneapolis, MN<span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-half-o"></i><i class="fa fa-star font-warning-o"></i></span></p>
@@ -233,7 +233,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/4.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/4.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">Front end web developer</a><span class="pull-right">3 days ago</span></h6>
                         <p>Cisco <span>Lelystad, Netherlands </span><span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-half-o"></i></span></p>
@@ -247,7 +247,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/5.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/5.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">Graphic designer</a><span class="pull-right">3 days ago</span></h6>
                         <p>Infosys <span>Lelystad, Netherlands </span><span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-half-o"></i><i class="fa fa-star font-warning-o"></i></span></p>
@@ -261,7 +261,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/6.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/6.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">Designer, CRM</a><span class="pull-right">3 days ago</span></h6>
                         <p>Citrix <span>Lelystad, Netherlands </span><span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-o"></i><i class="fa fa-star font-warning-o"></i></span></p>
@@ -276,7 +276,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/2.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/2.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">UI designer E-commerce</a><span class="pull-right">5 days ago</span></h6>
                         <p>Ericsson <span>Lelystad, Netherlands </span><span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-o"></i></span></p>
@@ -290,7 +290,7 @@
             <div class="job-search">
                <div class="card-body">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/3.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/3.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">Senior UX designer</a><span class="pull-right">5 days ago</span></h6>
                         <p>Minneapolis, MN <span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-half-o"></i><i class="fa fa-star font-warning-o"></i></span></p>

@@ -12,7 +12,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Tooltip</li>
 @endsection
 
@@ -73,6 +73,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/tooltip-init.js"></script>
+<script src="{{asset('assets/js/tooltip-init.js')}}"></script>
 @endsection
 

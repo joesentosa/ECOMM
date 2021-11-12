@@ -2,7 +2,7 @@
 @section('title', 'Rating')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/rating.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/rating.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Rating</li>
 @endsection
 
@@ -189,7 +189,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/rating/jquery.barrating.js"></script>
-<script src="{{route('/')}}/assets/js/rating/rating-script.js"></script>
+<script src="{{asset('assets/js/rating/jquery.barrating.js')}}"></script>
+<script src="{{asset('assets/js/rating/rating-script.js')}}"></script>
 @endsection
 

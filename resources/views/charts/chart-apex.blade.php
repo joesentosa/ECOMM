@@ -63,7 +63,7 @@
          <div class="card">
             <div class="card-header">
                <h5>
-                  3d Bubble Chart 
+                  3d Bubble Chart
                </h5>
             </div>
             <div class="card-body p-0">
@@ -156,7 +156,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/apex-chart/apex-chart.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/chart-custom.js"></script>
+<script src="{{asset('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/chart-custom.js')}}"></script>
 @endsection

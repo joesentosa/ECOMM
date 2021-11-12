@@ -193,7 +193,7 @@
             <div class="col-xl-3 xl-50 col-md-6">
                <div class="card features-faq product-box">
                   <div class="faq-image product-img">
-                     <img class="img-fluid" src="{{route('/')}}/assets/images/faq/1.jpg" alt="">
+                     <img class="img-fluid" src="{{asset('assets/images/faq/1.jpg')}}" alt="">
                      <div class="product-hover">
                         <ul>
                            <li><i class="icon-link"></i></li>
@@ -211,7 +211,7 @@
             <div class="col-xl-3 xl-50 col-md-6">
                <div class="card features-faq product-box">
                   <div class="faq-image product-img">
-                     <img class="img-fluid" src="{{route('/')}}/assets/images/faq/2.jpg" alt="">
+                     <img class="img-fluid" src="{{asset('assets/images/faq/2.jpg')}}" alt="">
                      <div class="product-hover">
                         <ul>
                            <li><i class="icon-link"></i></li>
@@ -229,7 +229,7 @@
             <div class="col-xl-3 xl-50 col-md-6">
                <div class="card features-faq product-box">
                   <div class="faq-image product-img">
-                     <img class="img-fluid" src="{{route('/')}}/assets/images/faq/3.jpg" alt="">
+                     <img class="img-fluid" src="{{asset('assets/images/faq/3.jpg')}}" alt="">
                      <div class="product-hover">
                         <ul>
                            <li><i class="icon-link"></i></li>
@@ -247,7 +247,7 @@
             <div class="col-xl-3 xl-50 col-md-6">
                <div class="card features-faq product-box">
                   <div class="faq-image product-img">
-                     <img class="img-fluid" src="{{route('/')}}/assets/images/faq/4.jpg" alt="">
+                     <img class="img-fluid" src="{{asset('assets/images/faq/4.jpg')}}" alt="">
                      <div class="product-hover">
                         <ul>
                            <li><i class="icon-link"></i></li>

@@ -114,13 +114,13 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/vector-map/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-uk-mill-en.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-au-mill.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-chicago-mill-en.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-in-mill.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map/jquery-jvectormap-asia-mill.js"></script>
-<script src="{{route('/')}}/assets/js/vector-map/map-vector.js"></script>
+<script src="{{asset('assets/js/vector-map/jquery-jvectormap-2.0.2.min.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-us-aea-en.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-uk-mill-en.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-au-mill.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-chicago-mill-en.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-in-mill.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map/jquery-jvectormap-asia-mill.js')}}"></script>
+<script src="{{asset('assets/js/vector-map/map-vector.js')}}"></script>
 @endsection

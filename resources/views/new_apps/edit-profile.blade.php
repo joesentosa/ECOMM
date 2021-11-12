@@ -30,7 +30,7 @@
                <div class="card-body">
                   <form class="theme-form">
                      <div class="row mb-2">
-                        <div class="col-auto"><img class="img-70 rounded-circle" alt="" src="{{route('/')}}/assets/images/user/7.jpg"></div>
+                        <div class="col-auto"><img class="img-70 rounded-circle" alt="" src="{{asset('assets/images/user/7.jpg')}}"></div>
                         <div class="col">
                            <h3 class="mb-1">MARK JECNO</h3>
                            <p class="mb-4">DESIGNER</p>

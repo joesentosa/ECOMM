@@ -7,8 +7,8 @@
     <meta name="description" content="Poco admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Poco admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{route('/')}}/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="{{route('/')}}/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
     <title>Poco - @yield('title')</title>
     @include('layouts.dark.css')
     @yield('style')
@@ -75,6 +75,6 @@
         @include('layouts.dark.footer')
       </div>
     </div>
-    @include('layouts.dark.script')  
+    @include('layouts.dark.script')
   </body>
 </html>

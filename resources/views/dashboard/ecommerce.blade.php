@@ -2,9 +2,9 @@
 @section('title', 'E-commerce')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
     <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/chartist.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/chartist.css')}}">
 @endsection
 
 @section('style')
@@ -157,7 +157,7 @@
                      <tbody>
                         <tr>
                            <td>
-                              <div class="recent-images"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/1.png" alt=""></div>
+                              <div class="recent-images"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/1.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="default-text mb-0 f-w-700 f-18">Earton Men Running Shoes</h5>
@@ -171,7 +171,7 @@
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-primary"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/2.png" alt=""></div>
+                              <div class="recent-images-primary"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/2.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-primary mb-0 f-w-700 f-18">Kanvas Katha Women Bag</h5>
@@ -185,7 +185,7 @@
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-secondary"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/3.png" alt=""></div>
+                              <div class="recent-images-secondary"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/3.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-secondary mb-0 f-w-700 f-18">Unisex Aviator Sunglasses</h5>
@@ -199,7 +199,7 @@
                         </tr>
                         <tr>
                            <td>
-                              <div class="recent-images-warning"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/4.png" alt=""></div>
+                              <div class="recent-images-warning"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/4.png')}}" alt=""></div>
                            </td>
                            <td>
                               <h5 class="font-warning mb-0 f-w-700 f-18">Men’s Cotton Round T-shirt</h5>
@@ -222,7 +222,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/1.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/1.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="default-text mb-0 f-w-700 f-18"&gt;Earton Men Running Shoes&lt;/h5&gt;
@@ -236,7 +236,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-primary"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/2.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-primary"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/2.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-primary mb-0 f-w-700 f-18"&gt;Kanvas Katha Women Bag&lt;/h5&gt;
@@ -250,7 +250,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-secondary"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/3.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-secondary"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/3.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-secondary mb-0 f-w-700 f-18"&gt;Unisex Aviator Sunglasses&lt;/h5&gt;
@@ -264,7 +264,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
-&lt;div class="recent-images-warning"&gt;&lt;img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/4.png" alt=""&gt;&lt;/div&gt;
+&lt;div class="recent-images-warning"&gt;&lt;img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/4.png')}}" alt=""&gt;&lt;/div&gt;
 &lt;/td&gt;
 &lt;td&gt;
 &lt;h5 class="font-warning mb-0 f-w-700 f-18"&gt;Men&rsquo;s Cotton Round T-shirt&lt;/h5&gt;
@@ -299,7 +299,7 @@
                   <li>                                       </li>
                </ul>
                <span class="overview-dots full-lg-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small"></span></span></span>
-               <div class="p-watch"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard-ecommerce/watch.png" alt=""></div>
+               <div class="p-watch"><img class="img-fluid" src="{{asset('assets/images/dashboard-ecommerce/watch.png')}}" alt=""></div>
             </div>
          </div>
       </div>
@@ -365,17 +365,17 @@
 @section('script')
 
 <!-- Plugins JS start-->
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist.js"></script>
-<script src="{{route('/')}}/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/apex-chart.js"></script>
-<script src="{{route('/')}}/assets/js/chart/apex-chart/stock-prices.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/dashboard/ecommerce-custom.js"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist.js')}}"></script>
+<script src="{{asset('assets/js/chart/chartist/chartist-plugin-tooltip.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+<script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/dashboard/ecommerce-custom.js')}}"></script>
 <!-- Plugins JS Ends-->
 @endsection
 

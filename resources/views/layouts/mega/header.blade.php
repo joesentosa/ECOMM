@@ -1,7 +1,7 @@
 <div class="page-main-header mega-menu-header">
    <div class="main-header-right">
       <div class="main-header-left text-center">
-         <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{route('/')}}/assets/images/logo/logo.png" alt=""></a></div>
+         <div class="logo-wrapper"><a href="{{utl('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
       </div>
       <div class="mobile-sidebar d-none">
          <div class="media-body text-right switch-sm">
@@ -116,19 +116,19 @@
                                        <div>
                                           <div class="galleria row">
                                              <div class="col-6">
-                                                <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/1.jpg" alt=""></a>
+                                                <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/1.jpg')}}" alt=""></a>
                                                 <h4 class="username text-ellipsis">Airi Satou<small>Algerian</small></h4>
                                              </div>
                                              <div class="col-6">
-                                                <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/2.jpg" alt=""></a>
+                                                <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/2.jpg')}}" alt=""></a>
                                                 <h4 class="username text-ellipsis">Fiona Green<small>Korean</small></h4>
                                              </div>
                                              <div class="col-6 mb-0">
-                                                <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/3.jpg" alt=""></a>
+                                                <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/3.jpg')}}" alt=""></a>
                                                 <h4 class="username text-ellipsis mb-0">Gavin Joyce<small>Indian</small></h4>
                                              </div>
                                              <div class="col-6 mb-0">
-                                                <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/4.jpg" alt=""></a>
+                                                <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/4.jpg')}}" alt=""></a>
                                                 <h4 class="username text-ellipsis mb-0">Howard Hatfield<small>Japanese</small></h4>
                                              </div>
                                           </div>
@@ -185,7 +185,7 @@
             </li>
             <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/bookmark.png" alt="">
+               <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/bookmark.png')}}" alt="">
                <div class="onhover-show-div bookmark-flip">
                   <div class="flip-card">
                      <div class="flip-card-inner">
@@ -227,7 +227,7 @@
                </div>
             </li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-secondary" src="{{route('/')}}/assets/images/dashboard/like.png" alt="">
+               <img class="img-fluid img-shadow-secondary" src="{{asset('assets/images/dashboard/like.png')}}" alt="">
                <ul class="onhover-show-div droplet-dropdown">
                   <li class="gradient-primary text-center">
                      <h5 class="f-w-700">Grid Dashboard</h5>
@@ -249,7 +249,7 @@
                </ul>
             </li>
             <li class="onhover-dropdown">
-               <img class="img-fluid img-shadow-warning" src="{{route('/')}}/assets/images/dashboard/notification.png" alt="">
+               <img class="img-fluid img-shadow-warning" src="{{asset('assets/images/dashboard/notification.png')}}" alt="">
                <ul class="onhover-show-div notification-dropdown">
                   <li class="gradient-primary">
                      <h5 class="f-w-700">Notifications</h5>
@@ -294,7 +294,7 @@
          <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
       </div>
       <script id="result-template" type="text/x-handlebars-template">
-         <div class="ProfileCard u-cf">                        
+         <div class="ProfileCard u-cf">
          <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
          <div class="ProfileCard-details">
          <div class="ProfileCard-realName">{{@name}}</div>

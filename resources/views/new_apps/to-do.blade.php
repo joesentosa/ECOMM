@@ -2,7 +2,7 @@
 @section('title', 'To-Do')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/todo.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/todo.css')}}">
 @endsection
 
 @section('style')
@@ -123,5 +123,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/todo/todo.js"></script>
+<script src="{{asset('assets/js/todo/todo.js')}}"></script>
 @endsection

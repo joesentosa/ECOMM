@@ -2,8 +2,8 @@
 @section('title', 'Add Post')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/select2.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/dropzone.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/select2.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/dropzone.css')}}">
 @endsection
 
 @section('style')
@@ -85,14 +85,14 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/select2/select2.full.min.js"></script>
-<script src="{{route('/')}}/assets/js/select2/select2-custom.js"></script>
-<script src="{{route('/')}}/assets/js/dropzone/dropzone.js"></script>
-<script src="{{route('/')}}/assets/js/dropzone/dropzone-script.js"></script>
-<script src="{{route('/')}}/assets/js/chat-menu.js"></script>
-<script src="{{route('/')}}/assets/js/email-app.js"></script>
-<script src="{{route('/')}}/assets/js/form-validation-custom.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/ckeditor.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/styles.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/adapters/jquery.js"></script>
+<script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
+<script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
+<script src="{{asset('assets/js/dropzone/dropzone.js')}}"></script>
+<script src="{{asset('assets/js/dropzone/dropzone-script.js')}}"></script>
+<script src="{{asset('assets/js/chat-menu.js')}}"></script>
+<script src="{{asset('assets/js/email-app.js')}}"></script>
+<script src="{{asset('assets/js/form-validation-custom.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/styles.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/adapters/jquery.js')}}"></script>
 @endsection

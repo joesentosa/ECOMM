@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Touchspin</li>
 @endsection
 
@@ -262,7 +262,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/touchspin/vendors.min.js"></script>
-<script src="{{route('/')}}/assets/js/touchspin/touchspin.js"></script>
-<script src="{{route('/')}}/assets/js/touchspin/input-groups.min.js"></script>
+<script src="{{asset('assets/js/touchspin/vendors.min.js')}}"></script>
+<script src="{{asset('assets/js/touchspin/touchspin.js')}}"></script>
+<script src="{{asset('assets/js/touchspin/input-groups.min.js')}}"></script>
 @endsection

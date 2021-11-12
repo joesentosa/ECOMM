@@ -23,7 +23,7 @@
       <div class="col-sm-12">
          <div class="blog-single">
             <div class="blog-box blog-details">
-               <img class="img-fluid w-100" src="{{route('/')}}/assets/images/blog/blog-single.jpg" alt="blog-main">
+               <img class="img-fluid w-100" src="{{asset('assets/images/blog/blog-single.jpg')}}" alt="blog-main">
                <div class="blog-details">
                   <ul class="blog-social">
                      <li class="digits">25 July 2018</li>
@@ -47,7 +47,7 @@
                <ul>
                   <li>
                      <div class="media align-self-center">
-                        <img class="align-self-center" src="{{route('/')}}/assets/images/blog/comment.jpg" alt="Generic placeholder image">
+                        <img class="align-self-center" src="{{asset('assets/images/blog/comment.jpg')}}" alt="Generic placeholder image">
                         <div class="media-body">
                            <div class="row">
                               <div class="col-md-4">
@@ -68,7 +68,7 @@
                      <ul>
                         <li>
                            <div class="media">
-                              <img class="align-self-center" src="{{route('/')}}/assets/images/blog/9.jpg" alt="Generic placeholder image">
+                              <img class="align-self-center" src="{{asset('assets/images/blog/9.jpg')}}" alt="Generic placeholder image">
                               <div class="media-body">
                                  <div class="row">
                                     <div class="col-xl-12">
@@ -83,7 +83,7 @@
                   </li>
                   <li>
                      <div class="media">
-                        <img class="align-self-center" src="{{route('/')}}/assets/images/blog/4.jpg" alt="Generic placeholder image">
+                        <img class="align-self-center" src="{{asset('assets/images/blog/4.jpg')}}" alt="Generic placeholder image">
                         <div class="media-body">
                            <div class="row">
                               <div class="col-md-4">
@@ -102,7 +102,7 @@
                   </li>
                   <li>
                      <div class="media">
-                        <img class="align-self-center" src="{{route('/')}}/assets/images/blog/12.png" alt="Generic placeholder image">
+                        <img class="align-self-center" src="{{asset('assets/images/blog/12.png')}}" alt="Generic placeholder image">
                         <div class="media-body">
                            <div class="row">
                               <div class="col-md-4">
@@ -121,7 +121,7 @@
                   </li>
                   <li>
                      <div class="media">
-                        <img class="align-self-center" src="{{route('/')}}/assets/images/blog/14.png" alt="Generic placeholder image">
+                        <img class="align-self-center" src="{{asset('assets/images/blog/14.png')}}" alt="Generic placeholder image">
                         <div class="media-body">
                            <div class="row">
                               <div class="col-md-4">

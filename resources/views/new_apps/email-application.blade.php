@@ -27,7 +27,7 @@
                   <div class="card-body">
                      <div class="email-app-sidebar">
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6 class="f-w-600">MARKJENCO</h6>
                               <p>Markjecno@gmail.com</p>
@@ -76,49 +76,49 @@
                      </div>
                      <div class="inbox">
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Pork Lorn  <small><span class="digits">(15</span> July <span class="digits">2018)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media active">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Lorm lpsa  <small><span class="digits">(20</span> January)</small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Hileri makr  <small><span class="digits">(20</span> Aug<span class="digits"> 2018)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Lion Lorpa  <small><span class="digits">(02</span> Jun <span class="digits">2016)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6 class="mt-0">Solvn Relto  <small><span class="digits">(25</span> July <span class="digits">2015)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Repro Soft  <small><span class="digits">(15</span> July <span class="digits">2018)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
                            </div>
                         </div>
                         <div class="media">
-                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt=""></div>
+                           <div class="media-size-email"><img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt=""></div>
                            <div class="media-body">
                               <h6>Lion Lorpa  <small><span class="digits">(02</span> Jun <span class="digits">2016)</span></small></h6>
                               <p>Mattis luctus. Donec nisi diam,</p>
@@ -170,7 +170,7 @@
                                  <div class="row">
                                     <div class="col-md-6 xl-100 col-sm-12">
                                        <div class="media">
-                                          <img class="mr-3 rounded-circle" src="{{route('/')}}/assets/images/user/user.png" alt="">
+                                          <img class="mr-3 rounded-circle" src="{{asset('assets/images/user/user.png')}}" alt="">
                                           <div class="media-body">
                                              <h6>Lorm lpsa  <small><span class="digits">(20</span> January) <span class="digits">6:00</span> AM</small></h6>
                                              <p>Mattis luctus. Donec nisi diam text.</p>
@@ -199,9 +199,9 @@
                                  </div>
                                  <div class="attachment">
                                     <ul class="list-inline">
-                                       <li class="list-inline-item"><img class="img-fluid" src="{{route('/')}}/assets/images/email/1.jpg" alt=""></li>
-                                       <li class="list-inline-item"><img class="img-fluid" src="{{route('/')}}/assets/images/email/2.jpg" alt=""></li>
-                                       <li class="list-inline-item"><img class="img-fluid" src="{{route('/')}}/assets/images/email/3.jpg" alt=""></li>
+                                       <li class="list-inline-item"><img class="img-fluid" src="{{asset('assets/images/email/1.jpg')}}" alt=""></li>
+                                       <li class="list-inline-item"><img class="img-fluid" src="{{asset('assets/images/email/2.jpg')}}" alt=""></li>
+                                       <li class="list-inline-item"><img class="img-fluid" src="{{asset('assets/images/email/3.jpg')}}" alt=""></li>
                                     </ul>
                                  </div>
                                  <hr>
@@ -226,8 +226,8 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/email-app.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/ckeditor.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/styles.js"></script>
-<script src="{{route('/')}}/assets/js/editor/ckeditor/adapters/jquery.js"></script>
+<script src="{{asset('assets/js/email-app.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/styles.js')}}"></script>
+<script src="{{asset('assets/js/editor/ckeditor/adapters/jquery.js')}}"></script>
 @endsection

@@ -3,11 +3,11 @@
 
 @section('css')
 <!-- Plugins css start-->
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/owlcarousel.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
 <link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/whether-icon.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/ionic-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/ionic-icon.css')}}">
 <!-- Plugins css Ends-->
 @endsection
 
@@ -81,7 +81,7 @@
       </div>
       <div class="col-xl-6 xl-50 xl-100 box-col-12">
         <div class="weather-widget">
-          <div class="card">                                 
+          <div class="card">
             <div class="weather-widget-top">
               <div class="media">
                 <div class="media-body">
@@ -482,7 +482,7 @@
             <h5 class="text-uppercase"> Use of Internet on devices</h5>
           </div>
           <div class="card-body">
-            <div class="row">     
+            <div class="row">
               <div class="col-md-4 col-sm-12">
                 <div class="browser-widget b-r-light">
                   <div class="media">
@@ -1112,18 +1112,18 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/owlcarousel/owl.carousel.js"></script>
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
-<script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
 <script src="{{route('/')}}/assets/js/general-widget.js"></script>
-<script src="{{route('/')}}/assets/js/height-equal.js"></script>
+<script src="{{asset('assets/js/height-equal.js')}}"></script>
 <!-- Plugins JS Ends-->
 
 @endsection

@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Date Time Picker</li>
 @endsection
 
@@ -121,7 +121,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datepicker/date-time-picker/moment.min.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-time-picker/tempusdominus-bootstrap-4.min.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-time-picker/datetimepicker.custom.js"></script>
+<script src="{{asset('assets/js/datepicker/date-time-picker/moment.min.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-time-picker/tempusdominus-bootstrap-4.min.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-time-picker/datetimepicker.custom.js')}}"></script>
 @endsection

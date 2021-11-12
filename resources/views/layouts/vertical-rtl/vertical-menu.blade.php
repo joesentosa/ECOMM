@@ -443,19 +443,19 @@
                            <div>
                               <div class="galleria row">
                                  <div class="col-6">
-                                    <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/1.jpg" alt=""></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/1.jpg')}}" alt=""></a>
                                     <h4 class="username text-ellipsis">Airi Satou<small>Algerian</small></h4>
                                  </div>
                                  <div class="col-6">
-                                    <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/2.jpg" alt=""></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/2.jpg'}}" alt=""></a>
                                     <h4 class="username text-ellipsis">Fiona Green<small>Korean</small></h4>
                                  </div>
                                  <div class="col-6 mb-0">
-                                    <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/3.jpg" alt=""></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/3.jpg')}}" alt=""></a>
                                     <h4 class="username text-ellipsis mb-0">Gavin Joyce<small>Indian</small></h4>
                                  </div>
                                  <div class="col-6 mb-0">
-                                    <a href="javascript:void(0)"><img src="{{route('/')}}/assets/images/slider/4.jpg" alt=""></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('assets/images/slider/4.jpg'}}" alt=""></a>
                                     <h4 class="username text-ellipsis mb-0">Howard Hatfield<small>Japanese</small></h4>
                                  </div>
                               </div>

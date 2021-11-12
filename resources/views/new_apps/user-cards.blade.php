@@ -22,8 +22,8 @@
    <div class="row">
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
-            <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/1.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/3.jpg" alt=""></div>
+            <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/1.jpg')}}" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/3.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -53,8 +53,8 @@
       </div>
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
-            <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/2.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/16.jpg" alt=""></div>
+            <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/2.jpg')}}" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/16.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -84,8 +84,8 @@
       </div>
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
-            <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/3.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/11.jpg" alt=""></div>
+            <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/3.jpg')}}" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/11.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -115,8 +115,8 @@
       </div>
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
-            <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/7.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/16.jpg" alt=""></div>
+            <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/7.jpg')}}" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/16.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -146,8 +146,8 @@
       </div>
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
-            <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/5.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/11.jpg" alt=""></div>
+            <div class="card-header"><img class="img-fluid" src="{{asset('assets/images/user-card/5.jpg')}}" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/11.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -178,7 +178,7 @@
       <div class="col-md-6 col-lg-6 col-xl-4 box-col-6">
          <div class="card custom-card">
             <div class="card-header"><img class="img-fluid" src="{{route('/')}}/assets/images/user-card/6.jpg" alt=""></div>
-            <div class="card-profile"><img class="rounded-circle" src="{{route('/')}}/assets/images/avtar/3.jpg" alt=""></div>
+            <div class="card-profile"><img class="rounded-circle" src="{{asset('assets/images/avtar/3.jpg')}}" alt=""></div>
             <ul class="card-social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>

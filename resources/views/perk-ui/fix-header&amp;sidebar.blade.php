@@ -2,7 +2,7 @@
 @section('title', 'Fix Header & Sidebar')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Menu Options</li>	
+    <li class="breadcrumb-item">Menu Options</li>
 	<li class="breadcrumb-item active">Fix Header & Sidebar</li>
 @endsection
 
@@ -63,7 +63,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/prism/prism.min.js"></script>
-<script src="{{route('/')}}/assets/js/clipboard/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/custom-card/custom-card.js"></script>
+<script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
+<script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
 @endsection

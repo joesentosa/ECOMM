@@ -2,7 +2,7 @@
 @section('title', 'Styling')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 @endsection
 
 @section('style')
@@ -3477,6 +3477,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{route('/')}}/assets/js/datatable/datatables/datatable.custom.js"></script>
 @endsection

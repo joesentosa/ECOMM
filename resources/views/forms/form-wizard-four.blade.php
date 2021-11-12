@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Layout</li>	
+    <li class="breadcrumb-item">Form Layout</li>
 	<li class="breadcrumb-item active">Form Wizard 4</li>
 @endsection
 
@@ -108,5 +108,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/form-wizard/form-wizard-five.js"></script>
+<script src="{{asset('assets/js/form-wizard/form-wizard-five.js')}}"></script>
 @endsection

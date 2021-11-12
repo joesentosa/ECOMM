@@ -89,6 +89,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/timeline/timeline-v-1/main.js"></script>
-<script src="{{route('/')}}/assets/js/modernizr.js"></script>
+<script src="{{asset('assets/js/timeline/timeline-v-1/main.js')}}"></script>
+<script src="{{asset('assets/js/modernizr.js')}}"></script>
 @endsection

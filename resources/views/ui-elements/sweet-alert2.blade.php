@@ -2,7 +2,7 @@
 @section('title', 'Sweet Alert')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/sweetalert2.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/sweetalert2.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Sweet Alert</li>
 @endsection
 
@@ -65,7 +65,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/sweet-alert/sweetalert.min.js"></script>
-<script src="{{route('/')}}/assets/js/sweet-alert/app.js"></script>
+<script src="{{asset('assets/js/sweet-alert/sweetalert.min.js')}}"></script>
+<script src="{{asset('assets/js/sweet-alert/app.js')}}"></script>
 @endsection
 

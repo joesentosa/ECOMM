@@ -2,8 +2,8 @@
 @section('title', 'Apply')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/select2.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/date-picker.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/select2.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
 @endsection
 
 @section('style')
@@ -195,7 +195,7 @@
             <div class="job-search">
                <div class="card-body pb-0">
                   <div class="media">
-                     <img class="img-40 img-fluid m-r-20" src="{{route('/')}}/assets/images/job-search/1.jpg" alt="">
+                     <img class="img-40 img-fluid m-r-20" src="{{asset('assets/images/job-search/1.jpg')}}" alt="">
                      <div class="media-body">
                         <h6 class="f-w-600"><a href="#">UI Designer</a><span class="pull-right">
                            <button class="btn btn-primary" type="button"><span><i class="fa fa-check text-white"></i></span> Save this job</button></span>
@@ -482,9 +482,9 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/select2/select2.full.min.js"></script>
-<script src="{{route('/')}}/assets/js/select2/select2-custom.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="{{route('/')}}/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+<script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
+<script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
+<script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
+<script src="{{route('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
+<script src="{{route('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
 @endsection

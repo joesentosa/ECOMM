@@ -27,7 +27,7 @@
             <div class="card hovercard text-center">
                <div class="cardheader"></div>
                <div class="user-image">
-                  <div class="avatar"><img alt="" src="{{route('/')}}/assets/images/user/7.jpg"></div>
+                  <div class="avatar"><img alt="" src="{{asset('assets/images/user/7.jpg')}}"></div>
                   <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"></i></div>
                </div>
                <div class="info">
@@ -104,7 +104,7 @@
                   <div class="row">
                      <div class="col-sm-8">
                         <div class="media">
-                           <img class="img-thumbnail rounded-circle mr-3" src="{{route('/')}}/assets/images/user/7.jpg" alt="Generic placeholder image">
+                           <img class="img-thumbnail rounded-circle mr-3" src="{{asset('assets/images/user/7.jpg')}}" alt="Generic placeholder image">
                            <div class="media-body align-self-center">
                               <h5 class="mt-0 user-name">JOHAN DIO</h5>
                            </div>
@@ -145,7 +145,7 @@
                   <div class="row">
                      <div class="col-sm-8">
                         <div class="media">
-                           <img class="img-thumbnail rounded-circle mr-3" src="{{route('/')}}/assets/images/user/7.jpg" alt="Generic placeholder image">
+                           <img class="img-thumbnail rounded-circle mr-3" src="{{asset('assets/images/user/7.jpg')}}" alt="Generic placeholder image">
                            <div class="media-body align-self-center">
                               <h5 class="mt-0 user-name">JOHAN DIO</h5>
                            </div>
@@ -188,7 +188,7 @@
                   <div class="row">
                      <div class="col-sm-8">
                         <div class="media">
-                           <img class="img-thumbnail rounded-circle mr-3" src="{{route('/')}}/assets/images/user/7.jpg" alt="Generic placeholder image">
+                           <img class="img-thumbnail rounded-circle mr-3" src="{{asset('assets/images/user/7.jpg')}}" alt="Generic placeholder image">
                            <div class="media-body align-self-center">
                               <h5 class="mt-0 user-name">JOHAN DIO</h5>
                            </div>
@@ -221,7 +221,7 @@
                   <div class="row">
                      <div class="col-sm-8">
                         <div class="media">
-                           <img class="img-thumbnail rounded-circle mr-3" src="{{route('/')}}/assets/images/user/7.jpg" alt="Generic placeholder image">
+                           <img class="img-thumbnail rounded-circle mr-3" src="{{asset('assets/images/user/7.jpg')}}" alt="Generic placeholder image">
                            <div class="media-body align-self-center">
                               <h5 class="mt-0 user-name">JOHAN DIO</h5>
                            </div>
@@ -299,10 +299,10 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/counter/jquery.waypoints.min.js"></script>
- <script src="{{route('/')}}/assets/js/counter/jquery.counterup.min.js"></script>
- <script src="{{route('/')}}/assets/js/counter/counter-custom.js"></script>
- <script src="{{route('/')}}/assets/js/photoswipe/photoswipe.min.js"></script>
- <script src="{{route('/')}}/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
- <script src="{{route('/')}}/assets/js/photoswipe/photoswipe.js"></script>
+<script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
+ <script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
+ <script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
+ <script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+ <script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+ <script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
 @endsection

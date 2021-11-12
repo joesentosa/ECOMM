@@ -2,9 +2,9 @@
 @section('title', 'Product list')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/datatables.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/owlcarousel.css">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/rating.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/rating.css')}}">
 @endsection
 
 @section('style')
@@ -45,7 +45,7 @@
                      </thead>
                      <tbody>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-1.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-1.png')}}" alt=""></td>
                            <td>
                               <h6> Red Lipstick </h6>
                               <span>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</span>
@@ -59,7 +59,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-2.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-2.png')}}" alt=""></td>
                            <td>
                               <h6> Pink Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -73,7 +73,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-3.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-3.png')}}" alt=""></td>
                            <td>
                               <h6> Gray Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -87,7 +87,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-4.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-4.png')}}" alt=""></td>
                            <td>
                               <h6> Green Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -101,7 +101,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-5.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-5.png')}}" alt=""></td>
                            <td>
                               <h6> Black Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -115,7 +115,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-6.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-6.png')}}" alt=""></td>
                            <td>
                               <h6> White Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -129,7 +129,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-1.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-1.png')}}" alt=""></td>
                            <td>
                               <h6> light Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -143,7 +143,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-2.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-2.png')}}" alt=""></td>
                            <td>
                               <h6> Gliter Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -157,7 +157,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-3.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-3.png')}}" alt=""></td>
                            <td>
                               <h6> green Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -171,7 +171,7 @@
                            </td>
                         </tr>
                         <tr>
-                           <td><img src="{{route('/')}}/assets/images/ecommerce/product-table-4.png" alt=""></td>
+                           <td><img src="{{asset('assets/images/ecommerce/product-table-4.png')}}" alt=""></td>
                            <td>
                               <h6> Yellow Lipstick </h6>
                               <p>Interchargebla lens Digital Camera with APS-C-X Trans CMOS Sens</p>
@@ -196,10 +196,10 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/owlcarousel/owl.carousel.js"></script>
-<script src="{{route('/')}}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-<script src="{{route('/')}}/assets/js/rating/jquery.barrating.js"></script>
-<script src="{{route('/')}}/assets/js/rating/rating-script.js"></script>
-<script src="{{route('/')}}/assets/js/ecommerce.js"></script>
-<script src="{{route('/')}}/assets/js/product-list-custom.js"></script>
+<script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/rating/jquery.barrating.js')}}"></script>
+<script src="{{asset('assets/js/rating/rating-script.js')}}"></script>
+<script src="{{asset('assets/js/ecommerce.js')}}"></script>
+<script src="{{asset('assets/js/product-list-custom.js')}}"></script>
 @endsection

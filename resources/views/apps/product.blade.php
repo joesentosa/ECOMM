@@ -24,7 +24,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/01.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -48,7 +48,7 @@
             <div class="product-box">
                <div class="product-img">
                   <div class="ribbon ribbon-danger">Sale</div>
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/02.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -71,7 +71,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/03.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -95,7 +95,7 @@
             <div class="product-box">
                <div class="product-img">
                   <div class="ribbon ribbon-success ribbon-right">50%</div>
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/04.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -118,7 +118,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/05.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/05.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -142,7 +142,7 @@
             <div class="product-box">
                <div class="ribbon ribbon-secondary ribbon-vertical-left"><i class="icon-gift"></i></div>
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/06.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/06.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -165,7 +165,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/07.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/07.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -188,7 +188,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/08.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/08.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -211,7 +211,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/09.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/09.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -234,7 +234,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/10.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/10.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -257,7 +257,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/11.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/11.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -280,7 +280,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/12.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/12.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -304,7 +304,7 @@
             <div class="product-box">
                <div class="product-img">
                   <div class="ribbon ribbon-bookmark ribbon-vertical-right ribbon-info"><i class="icofont icofont-love"></i></div>
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/01.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -327,7 +327,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/02.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -351,7 +351,7 @@
             <div class="product-box">
                <div class="product-img">
                   <div class="ribbon ribbon-clip ribbon-warning">Hot</div>
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/03.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -374,7 +374,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/04.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -397,7 +397,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/05.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/05.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -420,7 +420,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/06.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/06.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -443,7 +443,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/07.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/07.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -466,7 +466,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/08.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/08.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -489,7 +489,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/09.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/09.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -512,7 +512,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/10.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/10.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -535,7 +535,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/11.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/11.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>
@@ -558,7 +558,7 @@
          <div class="card">
             <div class="product-box">
                <div class="product-img">
-                  <img class="img-fluid" src="{{route('/')}}/assets/images/ecommerce/12.jpg" alt="">
+                  <img class="img-fluid" src="{{asset('assets/images/ecommerce/12.jpg')}}" alt="">
                   <div class="product-hover">
                      <ul>
                         <li><i class="icon-shopping-cart"></i></li>

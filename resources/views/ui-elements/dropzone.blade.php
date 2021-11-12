@@ -2,7 +2,7 @@
 @section('title', 'Dropzone')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/dropzone.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/dropzone.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Dropzone</li>
 @endsection
 
@@ -73,7 +73,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/dropzone/dropzone.js"></script>
-<script src="{{route('/')}}/assets/js/dropzone/dropzone-script.js"></script>
+<script src="{{asset('assets/js/dropzone/dropzone.js')}}"></script>
+<script src="{{asset('assets/js/dropzone/dropzone-script.js')}}"></script>
 @endsection
 

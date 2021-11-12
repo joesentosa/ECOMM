@@ -2,7 +2,7 @@
 @section('title', 'Tree View')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/tree.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/tree.css')}}">
 @endsection
 
 @section('style')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">Ui Elements</li>	
+	<li class="breadcrumb-item">Ui Elements</li>
 	<li class="breadcrumb-item active">Tree View</li>
 @endsection
 
@@ -225,7 +225,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/tree/jstree.min.js"></script>
-<script src="{{route('/')}}/assets/js/tree/tree.js"></script>
+<script src="{{asset('assets/js/tree/jstree.min.js')}}"></script>
+<script src="{{asset('assets/js/tree/tree.js')}}"></script>
 @endsection
 

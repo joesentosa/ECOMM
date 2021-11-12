@@ -2,7 +2,7 @@
 @section('title', 'Select2')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/select2.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/select2.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Widgets</li>	
+    <li class="breadcrumb-item">Form Widgets</li>
 	<li class="breadcrumb-item active">Select2</li>
 @endsection
 
@@ -332,6 +332,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/select2/select2.full.min.js"></script>
-<script src="{{route('/')}}/assets/js/select2/select2-custom.js"></script>
+<script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
+<script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
 @endsection

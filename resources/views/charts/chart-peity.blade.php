@@ -125,6 +125,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/chart/peity-chart/peity.jquery.js"></script>
-<script src="{{route('/')}}/assets/js/chart/peity-chart/peity-custom.js"></script>
+<script src="{{asset('assets/js/chart/peity-chart/peity.jquery.js')}}"></script>
+<script src="{{asset('assets/js/chart/peity-chart/peity-custom.js')}}"></script>
 @endsection

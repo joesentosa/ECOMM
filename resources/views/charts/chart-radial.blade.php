@@ -80,5 +80,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/radial-chart-tooltip.js"></script>
+<script src="{{asset('assets/js/radial-chart-tooltip.js')}}"></script>
 @endsection

@@ -13,8 +13,8 @@
 @endsection
 
 @section('breadcrumb-items')
-	<li class="breadcrumb-item">UI Kits</li>	
-	<li class="breadcrumb-item">Icons</li>	
+	<li class="breadcrumb-item">UI Kits</li>
+	<li class="breadcrumb-item">Icons</li>
 	<li class="breadcrumb-item active">Whether Icon</li>
 @endsection
 
@@ -2140,7 +2140,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/notify/bootstrap-notify.min.js"></script>
+<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
 <script src="{{route('/')}}/assets/js/icons/icons-notify.js"></script>
 <script src="{{route('/')}}/assets/js/icons/whether-icon-clipart.js"></script>
 @endsection
