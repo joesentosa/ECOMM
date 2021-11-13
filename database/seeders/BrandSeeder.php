@@ -200,7 +200,9 @@ class BrandSeeder extends Seeder
         BrandModel::insert([
             'id_brand'  => 28,
             'namaBrand' => 'Funsty',
-            'gambar'    => 'assets/images/logo/logo_funsty.png'
+            'gambar'    => 'assets/images/logo/logo_funsty.png',
+            'created_at'=> Carbon::now()->format('Y-m-d'),
+            'updated_at'=> Carbon::now()->format('Y-m-d')
         ]);
         BrandModel::insert([
             'id_brand'  => 29,

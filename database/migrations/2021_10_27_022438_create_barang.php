@@ -22,8 +22,7 @@ class CreateBarang extends Migration
             $table->text('review');
             $table->string('gambar',255);
             $table->bigInteger('fk_id_brand');
-            $table->bigInteger('fk_id_kategori');
-            $table->bigInteger('fk_id_promo');            
+            $table->bigInteger('fk_id_kategori');                       
             $table->timestamps();
             $table->softDeletes();
         });
