@@ -12,7 +12,7 @@
 <script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
 <script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
 <script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
-<script src="{{route('/')}}/assets/js/button-tooltip-custom.js"></script>
+<script src="{{asset('assets/js/button-tooltip-custom.js')}}"></script>
 <script src="{{asset('assets/js/chat-menu.js')}}"></script>
 <!-- Plugins JS Ends-->
 <!-- Theme js-->

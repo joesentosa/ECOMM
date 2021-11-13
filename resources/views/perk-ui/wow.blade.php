@@ -2,7 +2,7 @@
 @section('title', 'Wow Animation')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/photoswipe.css')}}">
 @endsection
 
 @section('style')
@@ -29,135 +29,135 @@
             <div class="card-body">
                <div class="row gallery grid my-gallery" id="aniimated-thumbnials" itemscope="">
                   <figure class="grid-item col-md-3 col-6 wow rollIn" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/1.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/1.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/1.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/1.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  1</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInDown center" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/2.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/2.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/2.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/2.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  2</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow lightSpeedIn" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/3.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/3.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/3.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/3.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  3</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/4.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/4.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/4.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/4.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  4</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow pulse" itemprop="associatedMedia" data-wow-iteration="5" data-wow-duration="0.15s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/5.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/5.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/5.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/5.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  5</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/6.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/6.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/6.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/6.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  6</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInLeft" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/7.jpg" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/7.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/7.jpg')}}" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/7.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  7</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow flipInX center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/8.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/8.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/8.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/8.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  8</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/9.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/9.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/9.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/9.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  9</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/10.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/10.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/10.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/10.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  10</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow shake" itemprop="associatedMedia" data-wow-iteration="5" data-wow-duration="0.15s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/11.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/11.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/11.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/11.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  11</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow swing center" itemprop="associatedMedia" data-wow-iteration="2" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/12.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/12.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/12.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/12.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  12</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/14.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/14.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/14.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/14.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  13</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInUp center" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/15.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/15.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/15.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/15.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  14</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow lightSpeedIn" itemprop="associatedMedia" data-wow-delay="0.5s" data-wow-duration="0.15s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/13.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/13.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/13.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/13.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  15</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/4.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/4.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/4.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/4.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  16</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow pulse" itemprop="associatedMedia" data-wow-iteration="5" data-wow-duration="0.25s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/5.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/5.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/5.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/5.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  17</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow flip" itemprop="associatedMedia" data-wow-iteration="2" data-wow-duration="0.15s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/9.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/9.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/9.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/9.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  18</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow lightSpeedIn center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/6.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/6.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/6.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/6.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  19</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounce" itemprop="associatedMedia" data-wow-iteration="5" data-wow-duration="0.15s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/7.jpg" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/7.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/7.jpg')}}" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/7.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  20</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInUp center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/8.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/8.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/8.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/8.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  21</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/9.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/9.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/9.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/9.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  22</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/10.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/10.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/10.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/10.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  23</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/10.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/10.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/10.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/10.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  24</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/11.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/11.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/11.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/11.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  25</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInDown center" itemprop="associatedMedia" data-wow-delay="1s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/12.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/12.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/12.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/12.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  26</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight" itemprop="associatedMedia" data-wow-delay="1.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/14.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/14.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/14.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/14.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  27</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInRight center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/15.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/15.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/15.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/15.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  28</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow rollIn" itemprop="associatedMedia" data-wow-delay="0.5s" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/13.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/13.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/13.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/13.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  29</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow bounceInLeft center" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/4.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/4.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/4.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/4.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  30</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow lightSpeedIn" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/5.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/5.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/5.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/5.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  31</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow pulse" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/6.jpg" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/6.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/6.jpg')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/6.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  32</figcaption>
                   </figure>
                   <figure class="grid-item col-md-3 col-6 wow slideInRight" itemprop="associatedMedia" itemscope="">
-                     <a href="{{route('/')}}/assets/images/big-masonry/7.jpg" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{route('/')}}/assets/images/masonry/7.jpg" itemprop="thumbnail" alt="Image description"></a>
+                     <a href="{{asset('assets/images/big-masonry/7.jpg')}}" itemprop="contentUrl" data-size="11600x950"><img class="img-thumbnail" src="{{asset('assets/images/masonry/7.jpg')}}" itemprop="thumbnail" alt="Image description"></a>
                      <figcaption itemprop="caption description">Image caption  33</figcaption>
                   </figure>
                </div>
@@ -290,11 +290,11 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/isotope.pkgd.js"></script>
+<script src="{{asset('assets/js/isotope.pkgd.js')}}"></script>
 <script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
 <script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
 <script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
-<script src="{{route('/')}}/assets/js/animation/wow/wow.min.js"></script>
-<script src="{{route('/')}}/assets/js/animation/wow/wow-init.js"></script>
+<script src="{{asset('assets/js/animation/wow/wow.min.js')}}"></script>
+<script src="{{asset('assets/js/animation/wow/wow-init.js')}}"></script>
 @endsection
 

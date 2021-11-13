@@ -420,7 +420,7 @@
                         <tr>
                            <td>
                               <div class="media">
-                                 <img class="rounded-circle img-30 mr-3" src="{{route('/')}}/assets/images/user/11.png" alt="Generic placeholder image">
+                                 <img class="rounded-circle img-30 mr-3" src="{{asset('assets/images/user/11.png')}}" alt="Generic placeholder image">
                                  <div class="media-body align-self-center">
                                     <div>Jena Gaines</div>
                                  </div>
@@ -442,7 +442,7 @@
                         <tr>
                            <td>
                               <div class="media">
-                                 <img class="rounded-circle img-30 mr-3" src="{{route('/')}}/assets/images/user/12.png" alt="Generic placeholder image">
+                                 <img class="rounded-circle img-30 mr-3" src="{{asset('assets/images/user/12.png')}}" alt="Generic placeholder image">
                                  <div class="media-body align-self-center">
                                     <div>Quinn Flynn</div>
                                  </div>
@@ -486,7 +486,7 @@
                         <tr>
                            <td>
                               <div class="media">
-                                 <img class="rounded-circle img-30 mr-3" src="{{route('/')}}/assets/images/user/2.png" alt="Generic placeholder image">
+                                 <img class="rounded-circle img-30 mr-3" src="{{asset('assets/images/user/2.png')}}" alt="Generic placeholder image">
                                  <div class="media-body align-self-center">
                                     <div>Haley Kennedy</div>
                                  </div>
@@ -508,7 +508,7 @@
                         <tr>
                            <td>
                               <div class="media">
-                                 <img class="rounded-circle img-30 mr-3" src="{{route('/')}}/assets/images/user/3.png" alt="Generic placeholder image">
+                                 <img class="rounded-circle img-30 mr-3" src="{{asset('assets/images/user/3.png')}}" alt="Generic placeholder image">
                                  <div class="media-body align-self-center">
                                     <div>Tatyana Fitzpatrick</div>
                                  </div>
@@ -684,7 +684,7 @@
                         <tr>
                            <td>
                               <div class="media">
-                                 <img class="rounded-circle img-30 mr-3" src="{{route('/')}}/assets/images/user/11.png" alt="Generic placeholder image">
+                                 <img class="rounded-circle img-30 mr-3" src="{{asset('assets/images/user/11.png')}}" alt="Generic placeholder image">
                                  <div class="media-body align-self-center">
                                     <div>Caesar Vance</div>
                                  </div>
@@ -729,5 +729,5 @@
 <script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
 <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{route('/')}}/assets/js/support-ticket-custom.js"></script>
+<script src="{{asset('assets/js/support-ticket-custom.js')}}"></script>
 @endsection

@@ -1,7 +1,7 @@
 <div class="page-main-header">
    <div class="main-header-right">
       <div class="main-header-left text-center">
-         <div class="logo-wrapper"><a href="{{route('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
+         <div class="logo-wrapper"><a href="{{url('/')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
       </div>
       <div class="mobile-sidebar">
          <div class="media-body text-right switch-sm">
@@ -117,9 +117,9 @@
                   <li class="bg-light txt-dark"><a href="#">All </a> notification</li>
                </ul>
             </li>
-            <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="{{route('/')}}/assets/images/dashboard/chat.png" alt=""></a></li>
+            <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="{{asset('assets/images/dashboard/chat.png')}}" alt=""></a></li>
             <li class="onhover-dropdown">
-               <span class="media user-header"><img class="img-fluid" src="{{route('/')}}/assets/images/dashboard/user.png" alt=""></span>
+               <span class="media user-header"><img class="img-fluid" src="{{asset('assets/images/dashboard/user.png')}}" alt=""></span>
                <ul class="onhover-show-div profile-dropdown">
                   <li class="gradient-primary">
                      <h6 class="mb-0">Elana Saint</h6>

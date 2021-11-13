@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/date-picker.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/whether-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/whether-icon.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/ionic-icon.css')}}">
 <!-- Plugins css Ends-->
 @endsection
@@ -1122,7 +1122,7 @@
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.js')}}"></script>
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.en.js')}}"></script>
 <script src="{{asset('assets/js/datepicker/date-picker/datepicker.custom.js')}}"></script>
-<script src="{{route('/')}}/assets/js/general-widget.js"></script>
+<script src="{{asset('assets/js/general-widget.js')}}"></script>
 <script src="{{asset('assets/js/height-equal.js')}}"></script>
 <!-- Plugins JS Ends-->
 

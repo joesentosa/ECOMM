@@ -2,7 +2,7 @@
 @section('title', 'User Profile')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/photoswipe.css')}}">
 @endsection
 
 @section('style')
@@ -119,7 +119,7 @@
                   <div class="img-container">
                      <div class="my-gallery" id="aniimated-thumbnials" itemscope="">
                         <figure itemprop="associatedMedia" itemscope="">
-                           <a href="{{route('/')}}/assets/images/other-images/profile-style-img3.png" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid rounded" src="{{route('/')}}/assets/images/other-images/profile-style-img3.png" itemprop="thumbnail" alt="gallery"></a>
+                           <a href="{{asset('assets/images/other-images/profile-style-img3.png')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid rounded" src="{{asset('assets/images/other-images/profile-style-img3.png')}}" itemprop="thumbnail" alt="gallery"></a>
                            <figcaption itemprop="caption description">Image caption  1</figcaption>
                         </figure>
                      </div>
@@ -159,11 +159,11 @@
                   <p>you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                   <div class="row mt-4 pictures my-gallery" id="aniimated-thumbnials-2" itemscope="">
                      <figure class="col-sm-6" itemprop="associatedMedia" itemscope="">
-                        <a href="{{route('/')}}/assets/images/other-images/profile-style-img3.png" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid" src="{{route('/')}}/assets/images/other-images/profile-style-img.png" itemprop="thumbnail" alt="gallery"></a>
+                        <a href="{{asset('assets/images/other-images/profile-style-img3.png')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid" src="{{asset('assets/images/other-images/profile-style-img.png')}}" itemprop="thumbnail" alt="gallery"></a>
                         <figcaption itemprop="caption description">Image caption  1</figcaption>
                      </figure>
                      <figure class="col-sm-6" itemprop="associatedMedia" itemscope="">
-                        <a href="{{route('/')}}/assets/images/other-images/profile-style-img3.png" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid" src="{{route('/')}}/assets/images/other-images/profile-style-img.png" itemprop="thumbnail" alt="gallery"></a>
+                        <a href="{{asset('assets/images/other-images/profile-style-img3.png')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid" src="{{asset('assets/images/other-images/profile-style-img.png')}}" itemprop="thumbnail" alt="gallery"></a>
                         <figcaption itemprop="caption description">Image caption  2</figcaption>
                      </figure>
                   </div>
@@ -236,7 +236,7 @@
                      <div class="col-lg-12 col-xl-4">
                         <div class="my-gallery" id="aniimated-thumbnials-3" itemscope="">
                            <figure itemprop="associatedMedia" itemscope="">
-                              <a href="{{route('/')}}/assets/images/blog/img.png" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid rounded" src="{{route('/')}}/assets/images/blog/img.png" itemprop="thumbnail" alt="gallery"></a>
+                              <a href="{{asset('assets/images/blog/img.png')}}" itemprop="contentUrl" data-size="1600x950"><img class="img-fluid rounded" src="{{asset('assets/images/blog/img.png')}}" itemprop="thumbnail" alt="gallery"></a>
                               <figcaption itemprop="caption description">Image caption  1</figcaption>
                            </figure>
                         </div>

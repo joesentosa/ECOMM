@@ -13,7 +13,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Menu Options</li>	
+    <li class="breadcrumb-item">Menu Options</li>
 	<li class="breadcrumb-item active">Hide Menu On Scroll</li>
 @endsection
 
@@ -186,6 +186,6 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/hide-on-scroll.js"></script>
+<script src="{{asset('assets/js/hide-on-scroll.js')}}"></script>
 @endsection
 

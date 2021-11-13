@@ -2378,7 +2378,7 @@
 
 @section('script')
 <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
-<script src="{{route('/')}}/assets/js/icons/icons-notify.js"></script>
-<script src="{{route('/')}}/assets/js/icons/icon-clipart.js"></script>
+<script src="{{asset('assets/js/icons/icons-notify.js')}}"></script>
+<script src="{{asset('assets/js/icons/icon-clipart.js')}}"></script>
 @endsection
 

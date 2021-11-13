@@ -2,7 +2,7 @@
 @section('title', 'Button Builder')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/button-builder.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/button-builder.css')}}">
 @endsection
 
 @section('style')
@@ -14,7 +14,7 @@
 
 @section('breadcrumb-items')
 	<li class="breadcrumb-item">Perk UI</li>
-    <li class="breadcrumb-item">Builders</li>	
+    <li class="breadcrumb-item">Builders</li>
 	<li class="breadcrumb-item active">Button Builder</li>
 @endsection
 
@@ -1988,9 +1988,9 @@
                            </div>
                            <div class="box" id="htmlBox">
                               <div class="code-wrapper bg-transparent">
-                                 <pre class="well"><code class="language-markup button-html" id="htmlCode">&lt;a href="#" class="btn btn-success 
-btn-lg"&gt;&lt;i class="icon-edit 
-icon-white"&gt;&lt;/i&gt; Bootstrap 
+                                 <pre class="well"><code class="language-markup button-html" id="htmlCode">&lt;a href="#" class="btn btn-success
+btn-lg"&gt;&lt;i class="icon-edit
+icon-white"&gt;&lt;/i&gt; Bootstrap
 Button Generator&lt;/a&gt;</code></pre>
                                  <div class="copy"><a id="copyHTML" href="javascript:void(0);" data-clipboard-action="copy" data-clipboard-target="#htmlCode">Click Here to Copy HTML</a></div>
                                  <p class="sucess-msg" id="htmlAlert"><em>Copied to clipboard...</em></p>
@@ -2028,8 +2028,8 @@ border-color: #00c292 #00c292 #00c292;
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/button-builder/colorpicker.js"></script>
-<script src="{{route('/')}}/assets/js/button-builder/clipboard.min.js"></script>
-<script src="{{route('/')}}/assets/js/button-builder/generator.js"></script>
-<script src="{{route('/')}}/assets/js/button-builder/extend-1.0.js"></script>
+<script src="{{asset('assets/js/button-builder/colorpicker.js')}}"></script>
+<script src="{{asset('assets/js/button-builder/clipboard.min.js')}}"></script>
+<script src="{{asset('assets/js/button-builder/generator.js')}}"></script>
+<script src="{{asset('assets/js/button-builder/extend-1.0.js')}}"></script>
 @endsection

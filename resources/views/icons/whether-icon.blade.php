@@ -2,7 +2,7 @@
 @section('title', 'Whether Icon')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/whether-icon.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/whether-icon.css')}}">
 @endsection
 
 @section('style')
@@ -2141,6 +2141,6 @@
 
 @section('script')
 <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
-<script src="{{route('/')}}/assets/js/icons/icons-notify.js"></script>
-<script src="{{route('/')}}/assets/js/icons/whether-icon-clipart.js"></script>
+<script src="{{asset('assets/js/icons/icons-notify.js')}}"></script>
+<script src="{{asset('assets/js/icons/whether-icon-clipart.js')}}"></script>
 @endsection

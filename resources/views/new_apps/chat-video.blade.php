@@ -300,5 +300,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/fullscreen.js"></script>
+<script src="{{asset('assets/js/fullscreen.js')}}"></script>
 @endsection

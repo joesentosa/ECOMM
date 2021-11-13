@@ -88,6 +88,6 @@
 
 @section('script')
 <script src="{{asset('assets/js/jquery.ui.min.js')}}"></script>
-<script src="{{route('/')}}/assets/js/dragable/sortable.js"></script>
-<script src="{{route('/')}}/assets/js/dragable/sortable-custom.js"></script>
+<script src="{{asset('assets/js/dragable/sortable.js')}}"></script>
+<script src="{{asset('assets/js/dragable/sortable-custom.js')}}"></script>
 @endsection

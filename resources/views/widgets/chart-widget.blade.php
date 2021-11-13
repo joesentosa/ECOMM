@@ -206,7 +206,7 @@
 <script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
 <script src="{{asset('assets/js/custom-card/custom-card.js')}}"></script>
-<script src="{{route('/')}}/assets/js/chart-widget.js"></script>
+<script src="{{asset('assets/js/chart-widget.js')}}"></script>
 <!-- Plugins JS Ends-->
 @endsection
 

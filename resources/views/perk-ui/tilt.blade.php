@@ -28,7 +28,7 @@
             <div class="card-body">
                <div class="row">
                   <div class="col-md-6 offset-md-3">
-                     <div><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/02.jpg" data-tilt-perspective="300" data-tilt-speed="400" data-tilt-max="5" alt=""></div>
+                     <div><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/02.jpg')}}" data-tilt-perspective="300" data-tilt-speed="400" data-tilt-max="5" alt=""></div>
                      <div>
                         <h6 class="sub-title mt-4 mb-0">The most basic usage:</h6>
                         <ul>
@@ -51,7 +51,7 @@
                <h5>Parallax hover tilt effect </h5>
             </div>
             <div class="card-body">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/03.jpg" data-tilt-perspective="300" data-tilt-speed="400" data-tilt-max="5" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/03.jpg')}}" data-tilt-perspective="300" data-tilt-speed="400" data-tilt-max="5" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">How to Use:</h6>
                   <ol class="mb-0">
@@ -76,7 +76,7 @@
                <h5>Glare effect:</h5>
             </div>
             <div class="card-body">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/04.jpg" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-perspective="200" data-tilt-speed="300" data-tilt-max="10" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/04.jpg')}}" data-tilt-glare="true" data-tilt-maxglare=".5" data-tilt-perspective="200" data-tilt-speed="300" data-tilt-max="10" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">How to Use:</h6>
                   <div class="line">
@@ -95,7 +95,7 @@
                <h5>Keep floating:</h5>
             </div>
             <div class="card-body">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/05.jpg" data-tilt-reset="false" data-tilt-speed="200" data-tilt-max="5" data-tilt-perspective="150" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/05.jpg')}}" data-tilt-reset="false" data-tilt-speed="200" data-tilt-max="5" data-tilt-perspective="150" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">How to Use:</h6>
                   <div class="line">
@@ -114,7 +114,7 @@
                <h5>Scale on hover</h5>
             </div>
             <div class="card-body o-hidden">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/06.jpg" data-tilt-speed="1000" data-tilt-max="20" data-tilt-scale="1.01" data-tilt-perspective="250" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/06.jpg')}}" data-tilt-speed="1000" data-tilt-max="20" data-tilt-scale="1.01" data-tilt-perspective="250" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">How to Use:</h6>
                   <span>Setting this option will scale tilt element on hover.</span>
@@ -131,7 +131,7 @@
                <h5>Disable Y axis</h5>
             </div>
             <div class="card-body">
-               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{route('/')}}/assets/images/lightgallry/07.jpg" data-tilt-speed="100" data-tilt-max="10" data-tilt-axis="x" data-tilt-perspective="250" alt=""></div>
+               <div class="tilt-image"><img class="img-fluid img-thumbnail js-tilt" src="{{asset('assets/images/lightgallry/07.jpg')}}" data-tilt-speed="100" data-tilt-max="10" data-tilt-axis="x" data-tilt-perspective="250" alt=""></div>
                <div>
                   <h6 class="sub-title mt-4">The most basic usage:</h6>
                   <span>Setting this option will disable the Y-Axis on the tilt element.</span>
@@ -164,7 +164,7 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/animation/tilt/tilt.jquery.js"></script>
-<script src="{{route('/')}}/assets/js/animation/tilt/tilt-custom.js"></script>
+<script src="{{asset('assets/js/animation/tilt/tilt.jquery.js')}}"></script>
+<script src="{{asset('assets/js/animation/tilt/tilt-custom.js')}}"></script>
 <script src="{{asset('assets/js/height-equal.js')}}"></script>
 @endsection

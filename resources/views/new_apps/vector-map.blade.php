@@ -2,7 +2,7 @@
 @section('title', 'Vector Maps')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/vector-map.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/vector-map.css')}}">
 @endsection
 
 @section('style')

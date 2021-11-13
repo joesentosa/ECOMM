@@ -2,7 +2,7 @@
 @section('title', 'Map JS')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/mapsjs-ui.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mapsjs-ui.css')}}">
 @endsection
 
 @section('style')
@@ -202,9 +202,9 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/map-js/mapsjs-core.js"></script>
-<script src="{{route('/')}}/assets/js/map-js/mapsjs-service.js"></script>
-<script src="{{route('/')}}/assets/js/map-js/mapsjs-ui.js"></script>
-<script src="{{route('/')}}/assets/js/map-js/mapsjs-mapevents.js"></script>
-<script src="{{route('/')}}/assets/js/map-js/custom.js"></script>
+<script src="{{asset('assets/js/map-js/mapsjs-core.js')}}"></script>
+<script src="{{asset('assets/js/map-js/mapsjs-service.js')}}"></script>
+<script src="{{asset('assets/js/map-js/mapsjs-ui.js')}}"></script>
+<script src="{{asset('assets/js/map-js/mapsjs-mapevents.js')}}"></script>
+<script src="{{asset('assets/js/map-js/custom.js')}}"></script>
 @endsection

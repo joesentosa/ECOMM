@@ -110,5 +110,5 @@
 @endsection
 
 @section('script')
-<script src="{{route('/')}}/assets/js/internationalization/language-picker.js"></script>
+<script src="{{asset('assets/js/internationalization/language-picker.js')}}"></script>
 @endsection

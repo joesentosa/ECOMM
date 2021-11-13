@@ -24,7 +24,7 @@
                      </div>
                   </li>
                   <li class="clearfix">
-                     <img class="rounded-small user-image" src="{{route('/')}}/assets/images/user/2.png" alt="">
+                     <img class="rounded-small user-image" src="{{asset('assets/images/user/2.png')}}" alt="">
                      <div class="status-circle away"></div>
                      <div class="about">
                         <div class="name">Ain Chavez</div>

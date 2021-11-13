@@ -60,6 +60,6 @@
 <script src="{{asset('assets/js/counter/jquery.waypoints.min.js')}}"></script>
 <script src="{{asset('assets/js/counter/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('assets/js/counter/counter-custom.js')}}"></script>
-<script src="{{route('/')}}/assets/js/form-builder/form-builder-1/require.js"></script>
-<script src="{{route('/')}}/assets/js/form-builder/form-builder-1/main-built.js"></script>
+<script src="{{asset('assets/js/form-builder/form-builder-1/require.js')}}"></script>
+<script src="{{assets('assets/js/form-builder/form-builder-1/main-built.js')}}"></script>
 @endsection

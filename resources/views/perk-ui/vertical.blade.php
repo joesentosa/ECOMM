@@ -3,7 +3,7 @@
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/prism.css')}}">
-<link rel="stylesheet" type="text/css" href="{{route('/')}}/assets/css/vertical-menu.css">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/vertical-menu.css')}}">
 @endsection
 
 @section('style')
