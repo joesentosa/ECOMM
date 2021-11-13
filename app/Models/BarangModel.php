@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BarangModel extends Model
 {
@@ -32,6 +33,10 @@ class BarangModel extends Model
         $barang->updated_at     = null;
         $barang->deleted_at     = null;
         $barang->save();
+    }
+    public function getAll(){
+        return BarangModel::join('brand','fk_id_brand','=','brand.id_brand')
+                        ->join('kategori','fk_id_kategori','=','kategori.id_kategori');
     }
 
 }

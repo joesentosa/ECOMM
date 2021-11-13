@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BrandModel;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function IndexAdmin(){return view('__Admin.dashboard.index');}
     public function BarangAdmin(){return view('__Admin.dashboard.barang');}
-    public function BrandAdmin(){return view('__Admin.dashboard.brand');}
+    public function BrandAdmin(){
+        $dtbrand = new BrandModel();                
+        return view('__Admin.dashboard.brand',['data' => $dtbrand->getAll()]);
+    }
     public function KategoriAdmin(){return view('__Admin.dashboard.kategori');}
     public function AdminUser(){return view('__Admin.dashboard.useradmin');}
     public function Customer(){return view('__Admin.dashboard.customer');}

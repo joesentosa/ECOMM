@@ -88,12 +88,16 @@
               </tr>
             </thead>
             <tbody>
+              @isset($data)
+              @foreach($data as $item)
               <tr>
-                <td style="text-align: center;">1</td>
-                <td>Cooler Master</td>
-                <td>-</td>
-                <td></td>                                       
-              </tr>              
+                <td style="text-align: center;">{{$item->id_brand}}</td>
+                <td>{{$item->namaBrand}}</td>
+                <td><img src="{{$item->gambar}}"></td>
+                <td></td>     
+              </tr>
+              @endforeach
+              @endisset              
             </tbody>
         </table>
       </div>
