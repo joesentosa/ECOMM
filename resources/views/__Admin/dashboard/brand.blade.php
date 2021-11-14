@@ -71,7 +71,7 @@
           <div class="container_button"></div>          
         </div>
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn-add" data-toggle='modal' data-target='#form_brand_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_brand_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
@@ -89,14 +89,18 @@
             </thead>
             <tbody>
               @isset($data)
-              @foreach($data as $item)
-              <tr>
-                <td style="text-align: center;">{{$item->id_brand}}</td>
-                <td>{{$item->namaBrand}}</td>
-                <td><img src="{{$item->gambar}}"></td>
-                <td></td>     
-              </tr>
-              @endforeach
+                @foreach($data as $item)
+                <tr>
+                  <td style="text-align: center;">{{$item->id_brand}}</td>
+                  <td>{{$item->namaBrand}}</td>                    
+                  @if(strpos($item->gambar,'https'))                    
+                    <td class="d-flex justify-content-center"><img src="{{$item->gambar}}" style="width:150px; height:10%;background-size: cover;"></td>
+                  @else                               
+                    <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>
+                  @endif
+                  <td></td>     
+                </tr>
+                @endforeach
               @endisset              
             </tbody>
         </table>
@@ -121,7 +125,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" enctype="multipart/form-data" id="brand_insert" class="form theme-form">
+        <form method="POST" enctype="multipart/form-data" action="/admin/insertbrand" id="brand_insert" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -131,6 +135,17 @@
               </div>             
             </div>            
           </div>    
+          <div class="row">
+            <div class="col-12">
+              <label for="basic-url">Url Image</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" name="urlimageinsert" aria-describedby="basic-addon3">
+              </div>
+            </div>
+          </div> 
           <div class="row">
             <div class="col-md-12 d-flex flex-row-reverse">              
               <button type="button" class="btn btn-danger btn-xs remove-preview-insert">
@@ -143,7 +158,7 @@
               <div class="uploadOuter">                                            
                 <span class="dragBox">
                   Drag and Drop image here
-                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert"  />
+                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert" name="uploadFile_insert"  />
                 </span>
               </div>
               <div id="preview_insert"></div>
@@ -177,16 +192,27 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" enctype="multipart/form-data" id="barang_update" class="form theme-form">
+        <form method="POST" enctype="multipart/form-data" action="/admin/updatebrand" id="barang_update" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label for="nmbrand_insert">Nama Brand</label>
-                <input class="form-control" id="nmbrand_insert" type="text" placeholder="Masukkan Nama Brand" name="nmbrand_insert">
+                <input class="form-control" id="nmbrand_update" type="text" placeholder="Masukkan Nama Brand" name="nmbrand_update">
               </div>             
             </div>            
-          </div>    
+          </div>   
+          <div class="row">
+            <div class="col-12">
+              <label for="basic-url">Url Image</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" name="urlimageupdate" aria-describedby="basic-addon3">
+              </div>
+            </div>
+          </div> 
           <div class="row">
             <div class="col-md-12 d-flex flex-row-reverse">              
               <button type="button" class="btn btn-danger btn-xs remove-preview-update">
@@ -199,12 +225,13 @@
               <div class="uploadOuter">                                            
                 <span class="dragBox">
                   Drag and Drop image here
-                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="dragUpdate()" ondrop="dropUpdate()" id="uploadFile_update"  />
+                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="dragUpdate()" ondrop="dropUpdate()" name="uploadFile_update" id="uploadFile_update"/>
                 </span>
               </div>
               <div id="preview_update"></div>
             </div>
-          </div>
+          </div>          
+          <input type="hidden" name="id_hidden" id="id_hidden">
           <div class="row">
             <div class="col-md-12 d-flex justify-content-end p-4">
               <input type="submit" value="Update" class="btn btn-primary">
@@ -259,7 +286,7 @@
     ],              
     'responsive'  : true,
     'paging'      : true,
-    'pageLength'  : 10,
+    'pageLength'  : 5,
     'destroy'     : false,
     'lengthChange': false,
     'searching'   : true,
@@ -272,7 +299,60 @@
       'print'
     ]
   }
-  GeneralSettingsTable('tableBrand',settingstable,true,'container_button');
+  const settingsbrand = GeneralSettingsTable('tableBrand',settingstable,true,'container_button');
+
+  // display data di table ke input form modal
+  $('#tableBrand tbody').on('click','#btnupdate_brand',function(){      
+    const data = settingsbrand.row($(this).parents('tr')).data();
+    clearInput();
+    // fill data
+    $(`input[name=id_hidden]`).val(data[0]);
+    $(`input[name=nmbrand_update]`).val(data[1]);
+    // $(`#preview_update`).append(data[2]);    
+    // ============================================
+  });
+
+  function clearInput(){
+    $(`input[name=id_hidden]`).val('');
+    $(`input[name=nmbrand_update]`).val('');
+    $(`#preview_update`).html(''); 
+  }
+
+  // delete brand
+  $('#tableBrand tbody').on('click','#btndelete_brand',function(){
+    const data = settingsbrand.row($(this).parents('tr')).data();
+    $.ajax({
+        type: 'POST',
+        url:"/admin/deletebrand",
+        data:{
+          'id_brand'    : data[0],
+          '_token'           : $('input[name="_token"]').val()
+        },
+        success: function(res){
+          if (res.status == 200) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'berhasil Ditambahkan',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            setTimeout(function(){
+              location.reload();
+            }, 200);
+          }
+          else{
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Tidak berhasil Ditambahkan',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        }
+    });            
+  });
 </script>
 @endsection
 

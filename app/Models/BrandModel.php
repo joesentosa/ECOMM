@@ -17,17 +17,24 @@ class BrandModel extends Model
     public $timestamps  = true;
     protected $fillable = ['namaBrand','gambar','created_at','updated_at'];
 
-    public function saveData($nama,$gambar){
+    public function insertBrand($filename,$nmbrand){
         $brand                 = new BrandModel();
         $brand->id_brand       = null;
-        $brand->namaBrand      = $nama; 
-        $brand->gambar         = $gambar;       
-        $brand->created_at     = null;
-        $brand->updated_at     = null;
-        $brand->deleted_at     = null;
+        $brand->namaBrand      = $nmbrand; 
+        $brand->gambar         = $filename;               
         $brand->save();
     }
     public function getAll(){
         return BrandModel::all();
+    }
+
+    public function updateBrand($filename,$nmbrand,$id_hidden){
+        $data = BrandModel::find($id_hidden);
+        $data->namaBrand = $nmbrand;
+        $data->gambar = $filename;
+        $data->save();
+    }
+    public function deleteBrand($id_brand){
+        return BrandModel::find($id_brand)->delete();
     }
 }

@@ -72,7 +72,7 @@
           <div class="container_button"></div>          
         </div>
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn-add" data-toggle='modal' data-target='#form_barang_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_barang_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
@@ -80,69 +80,71 @@
       </div>
       <div class="table-responsive">
         <table class="display no-wrap" id="tableBarang" style="width:100%;">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Barang</th>
-                <th>Stok</th>
-                <th>Harga</th>
-                <th>Berat</th>
-                <th>Review</th>
-                <th>Gambar</th>
-                <th>Brand</th>
-                <th>Kategori</th>
-                <th>Promo</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align: center;">1</td>
-                <td>Cooler Master MH752 + USB 7.1 Surround Sound Gaming Headset</td>
-                <td>50</td>
-                <td>Rp. 1.190.000</td>
-                <td>2 kg</td>
-                <td id="tdreview">
-                  Headphone
-                  Driver Diameter: 40mm
-                  Frequency Response: 20-20,000 Hz
-                  Impedance: 26 Ω
-                  Sensitivities (@1KHz): 97dB ± 3dB
-                  Cable Length: 1.5m 3.5mm connector (removable), 1.5m USB cable (removable)
-                  Connector: 3.5mm 4-pole jack, USB Type A
-                  Headband Material: Steel and plastic headband, PU leather and foam cushion
-                  Headphone Ear Cushion Material: PU Leather and foam cushion
-
-                  Microphone
-                  Pick-up Pattern: Omni-Directional
-                  Frequency Response: 100-10,000 Hz
-                  Sensitivity: -42 ± 3dB (@ 1KHz)
-                  Signal to Noise Ratio: 55 dB
-                  Type: Detachable flexible microphone
-                  Volume Control: Up/Down Buttons (control box)
-                  Microphone Control: Up/down buttons
-                  Control Box – Microphone Control: Mute Switch
-                  Virtual 7.1 surround sound: On/off button with indicative LED
-                  Dimensions: 149 mm x 85 mm x 215 mm
-                  Weight: 340 g
-                  Headphone Type: Over Ear Headphones
-
-                  Content package
-                  Headset MH752
-                  USB Soundcard
-                  Detachable Microphone
-                  Detachable 3.5mm Cable
-                  Pouch bag
-                  Quick start guide
-                </td>
-                <td></td>
-                <td>Cooler Master</td>
-                <td>Headphone</td>
-                <td></td>        
-                <td></td>                        
-              </tr>              
-            </tbody>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th>Stok</th>
+              <th>Harga</th>
+              <th>Berat</th>
+              <th>Review</th>
+              <th>Gambar</th>
+              <th>Brand</th>
+              <th>Kategori</th>              
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @isset($data)
+              @foreach($data as $item)
+                <tr>
+                  <td style="text-align: center;">{{$item->id_barang}}</td>
+                  <td>{{$item->namaBarang}}</td>
+                  <td>{{$item->stok}}</td>
+                  <td>{{$item->harga}}</td>
+                  <td>{{$item->berat}} kg</td>
+                  <td id="tdreview">
+                    <button data-id="{{$item->id_barang}}" class="btn-primary view_data"><i class="fas fa-eye"></i></button>                    
+                    {{$item->review}}                              
+                  </td>
+                  @if(strpos($item->gambar,'https'))
+                    <td class="d-flex justify-content-center"><img src="{{$item->gambar}}" style="width:150px; height:10%;background-size: cover;"></td>
+                  @else
+                    <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>
+                  @endif                  
+                  <td>{{$item->namaBrand}}</td>
+                  <td>{{$item->nama_kategori}}</td>                       
+                  <td></td>                        
+                </tr>  
+              @endforeach
+            @endisset                        
+          </tbody>
         </table>
+
+        <!-- modal review -->
+        <div id="data" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  <i class="fas fa-gamepad"></i>
+                  Detail Barang
+                </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="detail_data">  
+              </div>  
+              <div class="modal-footer">  
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+              </div> 
+            </div>
+          </div>
+        </div>
+        <!-- end modal review -->
+
       </div>
     </div>
   </div>
@@ -164,7 +166,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" enctype="multipart/form-data" id="barang_insert" class="form theme-form">
+        <form method="POST" enctype="multipart/form-data" action="/admin/insertbarang" id="barang_insert" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-8">
@@ -177,13 +179,11 @@
               <div class="col-form-label">Brand</div>
               <select class="form-control form-control-primary btn-square" name="cb_brand">
                 <option value="opt1">Pilih Brand</option>
-                <option value="opt2">Type 2</option>
-                <option value="opt3">Type 3</option>
-                <option value="opt4">Type 4</option>
-                <option value="opt5">Type 5</option>
-                <option value="opt6">Type 6</option>
-                <option value="opt7">Type 7</option>
-                <option value="opt8">Type 8</option>
+                @isset($brand)
+                  @foreach($brand as $item)
+                    <option value="{{$item->id_brand}}">{{$item->namaBrand}}</option>
+                  @endforeach
+                @endisset    
               </select>
             </div>
           </div>
@@ -197,14 +197,12 @@
             <div class="col-md-6">
               <div class="col-form-label">Kategori</div>
               <select class="form-control form-control-primary btn-square" name="cb_kategori">
-                <option value="opt1">Pilih Kategori</option>
-                <option value="opt2">Type 2</option>
-                <option value="opt3">Type 3</option>
-                <option value="opt4">Type 4</option>
-                <option value="opt5">Type 5</option>
-                <option value="opt6">Type 6</option>
-                <option value="opt7">Type 7</option>
-                <option value="opt8">Type 8</option>
+                <option value="#">Pilih Kategori</option>   
+                @isset($kategori)                                                        
+                  @foreach($kategori as $item)
+                    <option value="{{$item->id_kategori}}">{{$item->nama_kategori}}</option>   
+                  @endforeach
+                @endisset
               </select>
             </div>
           </div>
@@ -226,10 +224,21 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="reviewbarang_insert">Review Barang</label>
-                <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" name="reviewbarang_insert"></textarea>                
+                <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" id="reviewbarang_insert" name="reviewbarang_insert"></textarea>                
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="basic-url">Url Image</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" name="urlimageinsert" aria-describedby="basic-addon3">
+              </div>
+            </div>
+          </div> 
           <div class="row">
             <div class="col-md-12 d-flex flex-row-reverse">              
               <button type="button" class="btn btn-danger btn-xs remove-preview-insert">
@@ -242,7 +251,7 @@
               <div class="uploadOuter">                                            
                 <span class="dragBox">
                   Drag and Drop image here
-                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert"  />
+                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert" name="uploadFile_insert"  />
                 </span>
               </div>
               <div id="preview_insert"></div>
@@ -260,6 +269,7 @@
   </div>
 </div>
 <!-- end Main Modal insert -->
+
 <!-- Main Modal update -->
 <div class="modal fade bd-example-modal-lg" id="form_barang_update" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -276,7 +286,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" enctype="multipart/form-data" id="barang_update" class="form theme-form">
+        <form method="POST" enctype="multipart/form-data" action="/admin/updatebarang" id="barang_update" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-8">
@@ -287,15 +297,13 @@
             </div>
             <div class="col-md-4">
               <div class="col-form-label">Brand</div>
-              <select class="form-control form-control-primary btn-square" name="cb_brand">
-                <option value="opt1">Pilih Brand</option>
-                <option value="opt2">Type 2</option>
-                <option value="opt3">Type 3</option>
-                <option value="opt4">Type 4</option>
-                <option value="opt5">Type 5</option>
-                <option value="opt6">Type 6</option>
-                <option value="opt7">Type 7</option>
-                <option value="opt8">Type 8</option>
+              <select class="form-control form-control-primary btn-square" name="cb_brand" id="cb_brand">
+                <option value="#">Pilih Brand</option>
+                @isset($brand)
+                  @foreach($brand as $item)
+                    <option value="{{$item->namaBrand}}">{{$item->namaBrand}}</option>
+                  @endforeach
+                @endisset
               </select>
             </div>
           </div>
@@ -308,15 +316,13 @@
             </div>
             <div class="col-md-6">
               <div class="col-form-label">Kategori</div>
-              <select class="form-control form-control-primary btn-square" name="cb_kategori">
+              <select class="form-control form-control-primary btn-square" id="cb_kategori" name="cb_kategori">
                 <option value="opt1">Pilih Kategori</option>
-                <option value="opt2">Type 2</option>
-                <option value="opt3">Type 3</option>
-                <option value="opt4">Type 4</option>
-                <option value="opt5">Type 5</option>
-                <option value="opt6">Type 6</option>
-                <option value="opt7">Type 7</option>
-                <option value="opt8">Type 8</option>
+                @isset($kategori)
+                  @foreach($kategori as $item)
+                    <option value="{{$item->nama_kategori}}">{{$item->nama_kategori}}</option>
+                  @endforeach
+                @endisset
               </select>
             </div>
           </div>
@@ -324,7 +330,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="stokbarang_update">Stok Barang</label>
-                <input class="form-control digits" id="stokbarang_update" type="number" placeholder="Masukkan Stok Barang" name="stokbarang_Update">
+                <input class="form-control digits" id="stokbarang_update" type="number" placeholder="Masukkan Stok Barang" id="stokbarang_update" name="stokbarang_update">
               </div>
             </div>            
             <div class="col-md-6">
@@ -338,10 +344,21 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="reviewbarang_update">Review Barang</label>
-                <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" name="reviewbarang_update"></textarea>                
+                <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" id="reviewbarang_update" name="reviewbarang_update"></textarea>                
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="basic-url">Url Image</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" name="urlimageupdate" aria-describedby="basic-addon3">
+              </div>
+            </div>
+          </div> 
           <div class="row">
             <div class="col-md-12 d-flex flex-row-reverse">              
               <button type="button" class="btn btn-danger btn-xs remove-preview-update">
@@ -354,7 +371,7 @@
               <div class="uploadOuter">                                              
                 <span class="dragBox">
                   Drag and Drop image here
-                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile_update"/>
+                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile_update" name="uploadFile_update"/>
                 </span>
               </div>
               <div id="preview_update"></div>
@@ -365,6 +382,9 @@
               <input type="submit" value="Update" class="btn btn-primary">
             </div>
           </div>
+
+          <input type="text" name="id_hidden" id="id_hidden">
+
         </form>
         <!-- end form -->
       </div>
@@ -412,12 +432,12 @@
         "defaultContent": "<button type='button' id='btnupdate_barang' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_barang_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_barang' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
         "orderable": false
       },
-      { "width": "10px", "targets": 0, "orderable": false },
+      { "width": "10px", "targets": 0},
       { "width": "200px", "targets": 1 },
       { "width": "10px", "targets": 2 },
       { "width": "100px", "targets": 3 },
       { "width": "10px", "targets": 4 },
-      { "width": "150px","targets":10}   
+      { "width": "150px","targets":9}   
     ],          
     "order": [[1, 'asc']],
     'responsive'  : false,
@@ -435,7 +455,39 @@
       'print'
     ]
   }
-  GeneralSettingsTable('tableBarang',settingstable,true,'container_button');  
+  const settingsBarang = GeneralSettingsTable('tableBarang',settingstable,true,'container_button');  
+  
+
+  $('.view_data').click(function(){      
+		var data_id = $(this).data("id")    
+		$.ajax({
+			url: "/admin/getReview/"+data_id,
+			method: "get",			
+			success: function(data){          
+				$("#detail_data").html(data.data.review)
+				$("#data").modal('show')
+			}
+		})
+	});
+
+  // display data di table ke input form modal
+  $('#tableBarang tbody').on('click','#btnupdate_barang',function(){      
+    const data = settingsBarang.row($(this).parents('tr')).data();     
+    let tmpberat = data[4].split(" ");   
+    let tmpreview = data[5].split("</button>");
+  
+    // fill data
+    $(`input[name=nmbarang_update]`).val(data[1]);
+    $(`input[name=hargaBarang_update]`).val(data[3]);
+    $('#cb_brand').val(data[7]).change();
+    $('#cb_kategori').val(data[8]).change();
+    $(`input[name=stokbarang_update]`).val(data[2]);
+    $(`input[name=beratbarang_update]`).val(tmpberat[0]);
+    $(`textarea#reviewbarang_update`).val(tmpreview[1]);
+    $(`input[name=id_hidden]`).val(data[0]);     
+    // ============================================
+  });
+
 </script>
 @endsection
 

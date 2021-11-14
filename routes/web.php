@@ -25,6 +25,20 @@ Route::prefix('/admin')->group(function(){
     Route::get('/shipping',[AdminController::class,'ShippingAdmin'])->name('shipping.admin');
     Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');
     Route::get('/wishlist',[AdminController::class,'WishlistAdmin'])->name('wishlist.admin');
+
+    Route::get('/getReview/{id}',[AdminController::class,"reviewBarang"]);
+
+    Route::post('/updatebrand',[AdminController::class,"updatebrand"]);
+    Route::post('/insertbrand',[AdminController::class,"insertbrand"]);
+    Route::post('/deletebrand',[AdminController::class,"deletebrand"]);
+
+    Route::post('/insertbarang',[AdminController::class,"insertbarang"]);
+    Route::post('/updatebarang',[AdminController::class,"updatebarang"]);
+
+    Route::post('/insertkategori',[AdminController::class,"insertkategori"]);
+    Route::post('/updatekategori',[AdminController::class,"updatekategori"]);
+    // Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
+    Route::get('/login',[AdminController::class,"loginAdmin"]);
 });
 // end admin route
 

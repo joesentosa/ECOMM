@@ -15,28 +15,40 @@ class BarangModel extends Model
     public $primaryKey  = "id_barang";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['namaBarang','stok','harga','berat','gambar','deskripsi','fk_id_brand','fk_id_kategori','fk_id_promo','created_at','updated_at','deleted_at'];
+    protected $fillable = ['namaBarang','stok','harga','berat','review','gambar','fk_id_brand','fk_id_kategori','created_at','updated_at'];
 
-    public function saveData($nama,$stok,$harga,$berat,$gambar,$deskripsi,$idbrand,$idkategori,$idpromo,$idreview){
+    public function insertBarang($nama,$stok,$harga,$berat,$review,$gambar,$idbrand,$idkategori){
         $barang                 = new BarangModel();
         $barang->id_barang      = null;
         $barang->namaBarang     = $nama;
         $barang->stok           = $stok;
         $barang->harga          = $harga;
         $barang->berat          = $berat;
-        $barang->gambar         = $gambar;
-        $barang->deskripsi      = $deskripsi;
+        $barang->review         = $review;
+        $barang->gambar         = $gambar;        
         $barang->fk_id_brand    = $idbrand;
-        $barang->fk_id_kategori = $idkategori;
-        $barang->fk_id_promo    = $idpromo;        
-        $barang->created_at     = null;
-        $barang->updated_at     = null;
-        $barang->deleted_at     = null;
+        $barang->fk_id_kategori = $idkategori;                     
         $barang->save();
     }
-    public function getAll(){
-        return BarangModel::join('brand','fk_id_brand','=','brand.id_brand')
-                        ->join('kategori','fk_id_kategori','=','kategori.id_kategori');
+    // updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_Update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
+    public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang,$filename, $cb_brand,$cb_kategori){
+        $barang                 = BarangModel::find($id_hidden);
+        $barang->namaBarang     = $nmbarang;
+        $barang->stok           = $stokbarang;
+        $barang->harga          = $hargaBarang;
+        $barang->berat          = $beratbarang;
+        $barang->review         = $reviewbarang;
+        $barang->gambar         = $filename;        
+        $barang->fk_id_brand    = $cb_brand;
+        $barang->fk_id_kategori = $cb_kategori; 
+        $barang->save();
     }
-
+    public function getAllById(){
+        return BarangModel::join('brand','brand.id_brand','=','barang.fk_id_brand')
+                        ->join('kategori','kategori.id_kategori','=','barang.fk_id_kategori')
+                        ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
+    }    
+    public function getAll(){
+        return BarangModel::all();
+    }
 }

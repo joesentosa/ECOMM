@@ -15,16 +15,20 @@ class KategoriModel extends Model
     public $primaryKey  = "id_kategori";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['nama_kategori','fk_id_brand','created_at','updated_at','deleted_at'];
+    protected $fillable = ['nama_kategori','created_at','updated_at'];
 
-    public function saveData($kategori,$idbrand){
+    public function insertKategori($nmKategori){
         $kategori               = new KategoriModel();
         $kategori->id_kategori  = null; 
-        $kategori->nama_kategori= $kategori;
-        $kategori->fk_id_brand  = $idbrand;        
-        $kategori->created_at   = null;
-        $kategori->updated_at   = null;
-        $kategori->deleted_at   = null;
+        $kategori->nama_kategori= $nmKategori;                
+        $kategori->save();
+    }
+    public function getAll(){
+        return KategoriModel::all();
+    }
+    public function updateKategori($nmkategori,$id_hidden){
+        $kategori               = KategoriModel::find($id_hidden);        
+        $kategori->nama_kategori= $nmkategori;                
         $kategori->save();
     }
 }

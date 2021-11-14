@@ -29,7 +29,7 @@
           <div class="container_button"></div>          
         </div>
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn-add" data-toggle='modal' data-target='#form_kategori_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_kategori_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
@@ -45,11 +45,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td>Headphone</td>
-              <td></td>                                                     
-            </tr>              
+            @isset($data)
+              @foreach($data as $item)
+                <tr>
+                  <td style="text-align: center;">{{$item->id_kategori}}</td>
+                  <td>{{$item->nama_kategori}}</td>
+                  <td></td>                                                     
+                </tr>              
+              @endforeach
+            @endisset            
           </tbody>
         </table>
       </div>
@@ -72,7 +76,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="kategori_insert" class="form theme-form">
+        <form method="POST" id="kategori_insert" action="/admin/insertkategori" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -86,7 +90,7 @@
             <div class="col-md-12 d-flex justify-content-end p-4">
               <input type="submit" value="insert" class="btn btn-primary">
             </div>
-          </div>
+          </div>          
         </form>
         <!-- end form -->
       </div>
@@ -110,7 +114,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="kategori_update" class="form theme-form">
+        <form method="POST" id="kategori_update" action="/admin/updatekategori" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -125,6 +129,7 @@
               <input type="submit" value="Update" class="btn btn-primary">
             </div>
           </div>
+          <input type="hidden" name="id_hidden" id="id_hidden">
         </form>
         <!-- end form -->
       </div>
@@ -161,7 +166,7 @@
         "defaultContent": "<button type='button' id='btnupdate_kategori' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_kategori_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_kategori' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
         "orderable": false
       },
-      { "width": "10px", "targets": 0, "orderable": false },
+      { "width": "10px", "targets": 0 },
       { "width": "300px", "targets": 1 },
       { "width": "100px", "targets": 2 },        
     ],          
@@ -181,7 +186,21 @@
       'print'
     ]
   }
-  GeneralSettingsTable('tablekategori',settingstable,true,'container_button');
+  const settingskategori = GeneralSettingsTable('tablekategori',settingstable,true,'container_button');
+
+   // display data di table ke input form modal
+  $('#tablekategori tbody').on('click','#btnupdate_kategori',function(){      
+    const data = settingskategori.row($(this).parents('tr')).data();    
+    clearInput();
+    // fill data
+    $(`input[name=id_hidden]`).val(data[0]);
+    $(`input[name=nmkategori_update]`).val(data[1]);     
+    // ============================================
+  });
+  function clearInput(){
+    $(`input[name=id_hidden]`).val('');
+    $(`input[name=nmkategori_update]`).val('');     
+  }
 </script>
 @endsection
 
