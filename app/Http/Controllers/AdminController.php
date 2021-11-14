@@ -118,4 +118,12 @@ class AdminController extends Controller
         $dtkategori->updateKategori($req->nmkategori_update,$req->id_hidden);        
         return back();
     }
+    public function deletekategori(Request $req){
+        $dtkategori = new KategoriModel();
+        $dtkategori->deleteKategori($req->id_kategori);
+        return response()->json([
+            'status' => 200,            
+        ]);
+    }
+
 }

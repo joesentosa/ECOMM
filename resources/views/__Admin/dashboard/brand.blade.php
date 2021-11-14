@@ -333,7 +333,7 @@
             Swal.fire({
               position: 'top-end',
               icon: 'success',
-              title: 'berhasil Ditambahkan',
+              title: 'berhasil Dihapus',
               showConfirmButton: false,
               timer: 1500
             });
@@ -345,7 +345,7 @@
             Swal.fire({
               position: 'top-end',
               icon: 'error',
-              title: 'Tidak berhasil Ditambahkan',
+              title: 'Tidak berhasil Dihapus',
               showConfirmButton: false,
               timer: 1500
             });

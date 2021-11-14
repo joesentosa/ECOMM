@@ -201,6 +201,43 @@
     $(`input[name=id_hidden]`).val('');
     $(`input[name=nmkategori_update]`).val('');     
   }
+
+  // delete kategori
+  $('#tablekategori tbody').on('click','#btndelete_kategori',function(){
+    const data = settingskategori.row($(this).parents('tr')).data();
+    console.log(data);
+    $.ajax({
+        type: 'POST',
+        url:"/admin/deletekategori",
+        data:{
+          'id_kategori' : data[0],
+          '_token'      : $('input[name="_token"]').val()
+        },
+        success: function(res){
+          if (res.status == 200) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'berhasil Di hapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            setTimeout(function(){
+              location.reload();
+            }, 200);
+          }
+          else{
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Tidak berhasil Di hapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        }
+    });            
+  });
 </script>
 @endsection
 

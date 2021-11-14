@@ -37,7 +37,7 @@ Route::prefix('/admin')->group(function(){
 
     Route::post('/insertkategori',[AdminController::class,"insertkategori"]);
     Route::post('/updatekategori',[AdminController::class,"updatekategori"]);
-    // Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
+    Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
     Route::get('/login',[AdminController::class,"loginAdmin"]);
 });
 // end admin route

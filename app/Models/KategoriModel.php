@@ -31,4 +31,8 @@ class KategoriModel extends Model
         $kategori->nama_kategori= $nmkategori;                
         $kategori->save();
     }
+    public function deleteKategori($id_kategori){
+        return KategoriModel::find($id_kategori)->delete();
+    }
+
 }
