@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticates;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AdminModel extends Model
+class AdminModel extends Authenticates
 {
     use HasFactory;
     use SoftDeletes;
@@ -23,10 +23,10 @@ class AdminModel extends Model
         $admin->username   = $username;
         $admin->email      = $email;
         $admin->no_tlp     = $tlp;
-        $admin->password   = $password;        
+        $admin->password   = $password;
         $admin->created_at = null;
         $admin->updated_at = null;
         $admin->deleted_at = null;
         $admin->save();
-    }    
+    }
 }

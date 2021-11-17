@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -13,7 +14,9 @@ Route::get('/home', [UserController::class, 'homepage']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
 // admin route
-Route::prefix('/admin')->group(function(){
+Route::middleware('adminauth')
+    ->prefix('admin')
+    ->group(function(){
     Route::get('/',[AdminController::class,'IndexAdmin']);
     Route::get('/barang',[AdminController::class,'BarangAdmin'])->name('barang.admin');
     Route::get('/brand',[AdminController::class,'BrandAdmin'])->name('brand.admin');
@@ -38,10 +41,16 @@ Route::prefix('/admin')->group(function(){
     Route::post('/insertkategori',[AdminController::class,"insertkategori"]);
     Route::post('/updatekategori',[AdminController::class,"updatekategori"]);
     Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
-    Route::get('/login',[AdminController::class,"loginAdmin"]);
+    Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');
 });
 // end admin route
 
+// pragma region authRoute
+Route::prefix('auth')->group(function(){
+    Route::post('admin', [AuthController::class, 'admin_auth'])->name("admin.auth");
+    Route::post('user', [AuthController::class, 'user_auth'])->name("user.auth");
+});
+// pragma endregion
 
 // Route::get('/', function(){
 //     return redirect()->route('default');
