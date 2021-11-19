@@ -19,9 +19,8 @@
     <!-- login page start-->
 
     @if($errors->has('status'))
-        <!-- @dd($errors->message) -->
-    @endif
 
+    @endif
 
     <div class="row d-flex justify-content-center" style="margin-top:18%;">
         <div class="col-lg-6 col-md-12">

@@ -24,7 +24,7 @@ class AuthController extends Controller
             return redirect('admin');
         }
 
-        return back()->withErrors([
+        return redirect('admin')->withErrors([
             'status' => 'The provided credentials not valid.',
         ]);
     }

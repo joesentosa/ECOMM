@@ -17,12 +17,12 @@ class CreateBarang extends Migration
             $table->increments('id_barang');
             $table->string('namaBarang',100);
             $table->smallInteger('stok');
-            $table->bigInteger('harga');            
+            $table->bigInteger('harga');
             $table->smallInteger('berat');
             $table->text('review');
-            $table->text('gambar');
+            $table->integer('fk_id_gambar');
             $table->bigInteger('fk_id_brand');
-            $table->bigInteger('fk_id_kategori');                       
+            $table->bigInteger('fk_id_kategori');
             $table->timestamps();
             $table->softDeletes();
         });
