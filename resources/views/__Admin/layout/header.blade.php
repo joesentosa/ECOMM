@@ -30,15 +30,15 @@
             <li class="gradient-primary">
               <h5 class="f-w-600 mb-0">Elana Saint</h5>
             </li>
-            <li><i data-feather="user"> </i>Profile</li>                        
-            <li><i data-feather="log-out"></i>Log Out</li>
+            <li><i data-feather="user"> </i>Profile</li>
+            <li><a href="{{ url('auth/logout') }}"><i data-feather="log-out"></i>Log Out</a></li>
           </ul>
         </li>
       </ul>
       <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
     </div>
     <script id="result-template" type="text/x-handlebars-template">
-      <div class="ProfileCard u-cf">                        
+      <div class="ProfileCard u-cf">
       <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
       <div class="ProfileCard-details">
       <div class="ProfileCard-realName">{{ @name }}</div>

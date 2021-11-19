@@ -49,6 +49,6 @@ class AuthController extends Controller
     {
         Auth::guard('admin')->logout();
         $request->session()->flush();
-        return redirect('/');
+        return redirect('admin');
     }
 }
