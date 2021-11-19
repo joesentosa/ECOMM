@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\AdminModel;
+use App\Models\BarangModel;
+use App\Models\PromoModel;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,5 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
+        AdminModel::factory(5)->create();
+        BarangModel::factory(5)->create();
+        PromoModel::factory(5)->create();
     }
 }
