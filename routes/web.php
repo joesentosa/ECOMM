@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/home', [UserController::class, 'homepage']);
+Route::get('/home', [CustomerController::class, 'homepage']);
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
