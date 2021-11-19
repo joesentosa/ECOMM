@@ -6,49 +6,32 @@
 <!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/material-design-icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
+<link rel="stylesheet" href="https://unpkg.com/filepond/dist/filepond.min.css">
 @endsection
 
 @section('style')
 <style>  
-  .uploadOuter {
-    text-align: center;
-    padding: 20px;
+  .filepond--drop-label {
+    color: #4c4e53;
   }
-  .uploadOuter strong {
-    padding: 0 10px;
+
+  .filepond--label-action {
+    text-decoration-color: #babdc0;
   }
-  .dragBox {
-    width: 600px;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    font-weight: bold;
-    line-height: 95px;
-    color: #999;
-    border: 2px dashed #ccc;
-    display: inline-block;
-    transition: transform 0.3s;
+
+  .filepond--panel-root {
+    border-radius: 2em;
+    background-color: #edf0f4;
+    height: 1em;
   }
-  .dragBox input[type="file"] {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
+
+  .filepond--item-panel {
+    background-color: #595e68;
   }
-  .draging {
-    transform: scale(1.1);
-  }
-  #preview_insert, #preview_update {
-    text-align: center;
-  }
-  #preview_insert img {
-    max-width: 100%;
-  }
-  #preview_update img {
-    max-width: 100%;
+
+  .filepond--drip-blob {
+    background-color: #7f8a9a;
   }
 </style>
 @endsection
@@ -106,12 +89,8 @@
                   <td id="tdreview">
                     <button data-id="{{$item->id_barang}}" class="btn-primary view_data"><i class="fas fa-eye"></i></button>                    
                     {{$item->review}}                              
-                  </td>
-                  @if(strpos($item->gambar,'https'))
-                    <td class="d-flex justify-content-center"><img src="{{$item->gambar}}" style="width:150px; height:10%;background-size: cover;"></td>
-                  @else
-                    <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>
-                  @endif                  
+                  </td>                  
+                  <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>      
                   <td data-idbrand="{{$item->fk_id_brand}}" class="idbrand_hidden">{{$item->namaBrand}}</td>
                   <td data-idkategori="{{$item->fk_id_kategori}}" class="idkategori_hidden">{{$item->nama_kategori}}</td>                       
                   <td></td>                        
@@ -227,34 +206,11 @@
                 <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" id="reviewbarang_insert" name="reviewbarang_insert"></textarea>                
               </div>
             </div>
-          </div>
+          </div>          
           <div class="row">
             <div class="col-12">
-              <label for="basic-url">Url Image</label>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
-                </div>
-                <input type="text" class="form-control" id="basic-url" name="urlimageinsert" aria-describedby="basic-addon3">
-              </div>
-            </div>
-          </div> 
-          <div class="row">
-            <div class="col-md-12 d-flex flex-row-reverse">              
-              <button type="button" class="btn btn-danger btn-xs remove-preview-insert">
-                <i class="fa fa-times"></i> Reset This Form
-              </button>              
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="uploadOuter">                                            
-                <span class="dragBox">
-                  Drag and Drop image here
-                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert" name="uploadFile_insert"  />
-                </span>
-              </div>
-              <div id="preview_insert"></div>
+              <label for="filepond_insert">Upload Image</label>
+              <input type="file" class="filepond_insert" id="filepond_insert" name="filepond_insert" multiple data-max-file-size="3MB" data-max-files="5" />
             </div>
           </div>
           <div class="row">
@@ -348,33 +304,10 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <label for="basic-url">Url Image</label>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon3">https://example.com/</span>
-                </div>
-                <input type="text" class="form-control" id="basic-url" name="urlimageupdate" aria-describedby="basic-addon3">
-              </div>
-            </div>
-          </div> 
-          <div class="row">
-            <div class="col-md-12 d-flex flex-row-reverse">              
-              <button type="button" class="btn btn-danger btn-xs remove-preview-update">
-                <i class="fa fa-times"></i> Reset This Form
-              </button>              
-            </div>
-          </div>
           <div class="row">            
             <div class="col-md-12">              
-              <div class="uploadOuter">                                              
-                <span class="dragBox">
-                  Drag and Drop image here
-                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile_update" name="uploadFile_update"/>
-                </span>
-              </div>
-              <div id="preview_update"></div>
+              <label for="filepond_update">Upload Image</label>
+              <input type="file" class="filepond_update" id="filepond_update" name="filepond_update" multiple data-max-file-size="3MB" data-max-files="5" />
             </div>
           </div>
           <div class="row">
@@ -406,17 +339,22 @@
 <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
 <script src="{{asset('assets/js/dashboard/default.js')}}"></script>
 <script src="{{asset('assets/js/notify/index.js')}}"></script>
+
 <!-- select2 settings-->
 <script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
 <script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
 <!-- end select2 settings-->
 
 <script src="{{asset('assets/js/js_general.js')}}"></script>
-<script src="{{asset('assets/js/js_upload_settings.js')}}"></script>
 
-<!-- dropzone js -->
-<script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
-<!-- end dropzone js -->
+<!-- include FilePond library -->
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<!-- include FilePond plugins -->
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
+<!-- include FilePond jQuery adapter -->
+<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
 
 <!-- table design settings-->
 <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
@@ -490,8 +428,10 @@
     $(`textarea#reviewbarang_update`).val(tmpreview[1]);
     $(`input[name=id_hidden]`).val(data[0]);     
     // ============================================
-  });
+  });  
 
+  settingsFileUpload('filepond_insert');
+  settingsFileUpload('filepond_update');
 </script>
 @endsection
 

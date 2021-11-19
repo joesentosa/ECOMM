@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\BrandModel;
 use App\Models\BarangModel;
 use App\Models\KategoriModel;
+use App\Models\ShippingModel;
+use App\Models\PromoModel;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -29,18 +31,21 @@ class AdminController extends Controller
     public function Customer(){return view('__Admin.dashboard.customer');}
     public function HorderAdmin(){return view('__Admin.dashboard.horder');}
     public function DorderAdmin(){return view('__Admin.dashboard.dorder');}
-    public function ShippingAdmin(){return view('__Admin.dashboard.shipping');}
-    public function PromoAdmin(){return view('__Admin.dashboard.promo');}
-    public function WishlistAdmin(){return view('__Admin.dashboard.wishlist');}
-
-    public function reviewBarang($id){        
-        $barang = BarangModel::find($id);
-        return response()->json([
-            "status" => 200,
-            "data" => $barang
-        ]);
+    public function ShippingAdmin(){
+        $dtshipping = new ShippingModel();
+        return view('__Admin.dashboard.shipping',['data' => $dtshipping->getAll()]);
     }
-
+    public function PromoAdmin(){
+        $dtpromo = new PromoModel();
+        return view('__Admin.dashboard.promo',['data' => $dtpromo->getAll()]);
+    }    
+    public function PromoBarangAdmin(){
+        return view('__Admin.dashboard.promo_barang');
+    }
+    
+    // ==========================================
+    // BRAND
+    // ==========================================
     public function updatebrand(Request $req){
         $dtbrand = new BrandModel();
         if ($req->urlimageupdate != "") {$filename = $req->urlimageupdate;}
@@ -76,20 +81,28 @@ class AdminController extends Controller
             'status' => 200,            
         ]);
     }
+    // ==========================================
 
+    // ==========================================
+    //  BARANG
+    // ==========================================
+    public function reviewBarang($id){        
+        $barang = BarangModel::find($id);
+        return response()->json([
+            "status" => 200,
+            "data" => $barang
+        ]);
+    }
     public function insertbarang(Request $req){
-        $dtbarang = new BarangModel();
-        if ($req->urlimageinsert != "") {$filename = $req->urlimageinsert;}
-        else{
-            if ($req->hasFile('uploadFile_insert')) {
-                $file = $req->file('uploadFile_insert');
-                $extension = $file->getClientOriginalExtension();            
-                $filename = 'uploads/barang/'.time().'.'.$extension;            
-                $file->move('uploads/barang',$filename);
-            }
-        }                
-        // dd($filename);
-        $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert,$filename, $req->cb_brand,$req->cb_kategori);
+        $dtbarang = new BarangModel();     
+        dd($req->file('filepond_insert'));
+        if ($req->hasFile('filepond_insert')) {
+            $file = $req->file('filepond_insert');            
+            // $extension = $file->getClientOriginalExtension();            
+            // $filename = 'uploads/barang/'.time().'.'.$extension;            
+            // $file->move('uploads/barang',$filename);
+        }        
+        // $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert,$filename, $req->cb_brand,$req->cb_kategori);
         return back();
     }
 
@@ -109,6 +122,9 @@ class AdminController extends Controller
         return back();
     }
 
+    // ==========================================
+    // KATEGORI
+    // ==========================================
     public function insertkategori(Request $req){
         $dtkategori = new KategoriModel();        
         $dtkategori->insertKategori($req->nmkategori_insert);        
@@ -126,5 +142,52 @@ class AdminController extends Controller
             'status' => 200,            
         ]);
     }
+    // ==========================================
+
+    // ==========================================
+    // SHIPPING
+    // ==========================================
+    public function insertshipping(Request $req){
+        $dtshipping = new ShippingModel();
+        $dtshipping->insertShipping($req->kotatujuan_insert, $req->kurir_insert, $req->jenislayanan_insert, $req->tarif_insert);
+        return back();
+    }
+    public function updateshipping(Request $req){
+        $dtshipping = new ShippingModel();
+        $dtshipping->updateShipping($req->id_hidden, $req->kotatujuan_update, $req->kurir_update, $req->jenislayanan_update, $req->tarif_update);
+        return back();
+    }
+    public function deleteshipping(Request $req){
+        $dtshipping = new ShippingModel();
+        $dtshipping->deleteShipping($req->id_shipping);
+        return response()->json([
+            'status'    => 200,
+        ]);
+    }
+    // ==========================================
+
+    // ==========================================
+    //  PROMO
+    // ==========================================
+    public function insertpromo(Request $req){
+        $dtpromo = new PromoModel();
+        $splitDate = explode('-',$req->rangedatepromo_insert);                
+        $dtpromo->insertPromo(date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_insert);
+        return back();
+    }
+    public function updatepromo(Request $req){
+        $dtpromo = new PromoModel();
+        $splitDate = explode('-',$req->rangedatepromo_update);  
+        $dtpromo->updatePromo($req->id_hidden,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->harga_update);
+        return back();
+    }
+    public function deletepromo(Request $req){
+        $dtpromo = new PromoModel();
+        $dtpromo->deletePromo($req->id_promo);
+        return response()->json([
+            'status' => 200
+        ]);
+    }
+    // ==========================================
 
 }

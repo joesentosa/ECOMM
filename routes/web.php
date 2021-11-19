@@ -26,8 +26,8 @@ Route::middleware('adminauth')
     Route::get('/horder',[AdminController::class,'HorderAdmin'])->name('horder.admin');
     Route::get('/dorder',[AdminController::class,'DorderAdmin'])->name('dorder.admin');
     Route::get('/shipping',[AdminController::class,'ShippingAdmin'])->name('shipping.admin');
-    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');
-    Route::get('/wishlist',[AdminController::class,'WishlistAdmin'])->name('wishlist.admin');
+    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');    
+    Route::get('/promoBarang',[AdminController::class,'PromoBarangAdmin'])->name('promo.barang.admin');
 
     Route::get('/getReview/{id}',[AdminController::class,"reviewBarang"]);
 
@@ -41,6 +41,17 @@ Route::middleware('adminauth')
     Route::post('/insertkategori',[AdminController::class,"insertkategori"]);
     Route::post('/updatekategori',[AdminController::class,"updatekategori"]);
     Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
+
+    Route::post('/insertshipping',[AdminController::class,'insertshipping']);
+    Route::post('/updateshipping',[AdminController::class,'updateshipping']);
+    Route::post('/deleteshipping',[AdminController::class,'deleteshipping']);
+    
+    Route::post('/insertpromo',[AdminController::class,'insertpromo']);
+    Route::post('/updatepromo',[AdminController::class,'updatepromo']);
+    Route::post('/deletepromo',[AdminController::class,'deletepromo']);
+
+
+
     Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');
 });
 // end admin route

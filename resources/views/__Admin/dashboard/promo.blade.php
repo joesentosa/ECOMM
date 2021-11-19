@@ -35,14 +35,14 @@
           <div class="container_button"></div>          
         </div>
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn-add" data-toggle='modal' data-target='#form_promo_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_promo_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
         </div>
       </div>
       <div class="table-responsive">
-        <table class="display no-wrap" id="tablepromo" style="width:100%;">
+        <table class="display no-wrap" id="tablePromo" style="width:100%;">
           <thead>
             <tr>
               <th style="text-align: center;">No</th>
@@ -53,13 +53,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td>10/11/2021</td>
-              <td>15/11/2021</td>                                                     
-              <td>5%</td>
-              <td></td>
-            </tr>              
+            @isset($data)
+              @foreach($data as $item)
+                <tr>
+                  <td style="text-align: center;">{{$item->id_promo}}</td>                  
+                  <td>{{$item->firstDate}}</td>                  
+                  <td>{{$item->expiredDate}}</td>                                                     
+                  <td>{{$item->hargaPromo}}</td>
+                  <td></td>
+                </tr>              
+              @endforeach
+            @endisset            
           </tbody>
         </table>
       </div>
@@ -82,7 +86,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="promo_insert" class="form theme-form">
+        <form method="POST" id="promo_insert" action="/admin/insertpromo" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -149,6 +153,7 @@
                 <input type="submit" value="update" class="btn btn-primary">
               </div>
             </div>
+            <input type="text" name="id_hidden" id="id_hidden">
           </form>
           <!-- end form -->
         </div>
@@ -213,7 +218,56 @@
       'print'
     ]
   }
-  GeneralSettingsTable('tablepromo',settingstable,true,'container_button');
+  const settingsPromo = GeneralSettingsTable('tablePromo',settingstable,true,'container_button');
+
+  $('#tablePromo tbody').on('click','#btnupdate_promo',function(){
+    const data = settingsPromo.row($(this).parents('tr')).data();
+    // Object { 0: "1", 1: "2021-11-20", 2: "2021-11-25", 3: "5000" }    
+    $('#rangedatepromo_update').datepicker({
+      dateFormat: "Y-m-d",
+      maxDate:data[2],
+      minDate: data[1]
+    });    
+    $('input[name=hargapromo_update]').val(data[3]);
+    $('input[name=id_hidden]').val(data[0]);
+  });
+
+  // delete
+  $('#tablePromo tbody').on('click','#btndelete_promo',function(){
+    const data = settingsPromo.row($(this).parents('tr')).data();
+    $.ajax({
+      type: 'POST',
+      url: '/admin/deletepromo',
+      data:{
+        'id_promo' :data[0],
+        '_token':$('input[name=_token]').val()
+      },
+      success:function(res){
+        if (res.status == 200) {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'berhasil Dihapus',
+            showConfirmButton: false,
+            timer: 1500
+          });
+          setTimeout(function(){
+            location.reload();
+          }, 200);
+        }
+        else{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Tidak berhasil Dihapus',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      }
+    })
+  })
+
 </script>
 @endsection
 

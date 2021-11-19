@@ -15,18 +15,28 @@ class ShippingModel extends Model
     public $primaryKey  = "id_shipping";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = [ 'kotaTujuan','kurir','jenisLayanan','tarif','created_at','updated_at','deleted_at'];
+    protected $fillable = [ 'kotaTujuan','kurir','jenisLayanan','tarif','created_at','updated_at'];
 
-    public function saveData($kotaTujuan, $kurir, $jenislayanan, $tarif){
-        $shipping              = new ShippingModel();
-        $shipping->id_shipping = null;
+    public function insertShipping($kotaTujuan, $kurir, $jenislayanan, $tarif){
+        $shipping              = new ShippingModel();        
         $shipping->kotaTujuan  = $kotaTujuan;
         $shipping->kurir       = $kurir;   
         $shipping->jenislayanan= $jenislayanan;
-        $shipping->tarif       = $tarif;
-        $shipping->created_at  = null;
-        $shipping->updated_at  = null;
-        $shipping->deleted_at  = null;
-        $shipping->save();
+        $shipping->tarif       = $tarif;        
+        $shipping->save();        
+    }
+    public function updateShipping($id_hidden, $kotatujuan_update, $kurir_update, $jenislayanan_update, $tarif_update){
+        $data              = ShippingModel::find($id_hidden);        
+        $data->kotaTujuan  = $kotatujuan_update;
+        $data->kurir       = $kurir_update;   
+        $data->jenislayanan= $jenislayanan_update;
+        $data->tarif       = $tarif_update;        
+        $data->save(); 
+    }
+    public function deleteShipping($id_shipping){        
+        return ShippingModel::find($id_shipping)->delete();        
+    }
+    public function getAll(){
+        return ShippingModel::all();
     }
 }

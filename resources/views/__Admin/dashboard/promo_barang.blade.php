@@ -1,5 +1,5 @@
 @extends('__Admin.layout.master')
-@section('title', 'Master Shipping')
+@section('title', 'Master Promo Barang')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
@@ -11,12 +11,12 @@
 @endsection
 
 @section('breadcrumb-title')
-	<h2>Master<span>Shipping</span></h2>
+	<h2>Master<span>Promo Barang</span></h2>
 @endsection
 
 @section('breadcrumb-items')
   <li class="breadcrumb-item">Master</li>
-	<li class="breadcrumb-item active">Shipping</li>
+	<li class="breadcrumb-item active">Promo Barang</li>
 @endsection
 
 @section('content')
@@ -29,26 +29,30 @@
           <div class="container_button"></div>          
         </div>     
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn btn-primary" data-toggle='modal' data-target='#form_shipping_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_promo_barang_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
         </div>   
       </div>
       <div class="table-responsive">
-        <table class="display no-wrap" id="tableShipping" style="width:100%;">
+        <table class="display no-wrap" id="tablePromoBarang" style="width:100%;">
             <thead>
               <tr>
                 <th style="text-align: center;">No</th>
-                <th>Kota Tujuan</th>
-                <th>Kurir</th>
-                <th>Jenis Layanan</th>     
-                <th>Tarif</th>    
+                <th>Nama Barang</th>
+                <th>Potongan harga</th>                
                 <th>Action</th>       
               </tr>
             </thead>
             <tbody>
-              @isset($data)
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- @isset($data)
                 @foreach($data as $item)
                   <tr>
                     <td style="text-align: center;">{{$item->id_shipping}}</td>
@@ -59,7 +63,7 @@
                     <td></td>
                   </tr>              
                 @endforeach
-              @endisset              
+              @endisset               -->
             </tbody>
         </table>
       </div>
@@ -67,7 +71,7 @@
   </div>
 </div>
 <!-- Main Modal insert -->
-<div class="modal fade" id="form_shipping_insert" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="form_promo_barang_insert" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -129,7 +133,7 @@
 </div>
 <!-- end Main Modal insert -->
 <!-- Main Modal update -->
-<div class="modal fade" id="form_shipping_update" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="form_promo_barang_update" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -218,15 +222,13 @@
       {
         "targets": -1,
         "data": null,
-        "defaultContent": "<button type='button' id='btnupdate_shipping' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_shipping_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_shipping' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
+        "defaultContent": "<button type='button' id='btnupdate_promoBarang' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_promo_barang_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_promoBarang' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
         "orderable": false
       },             
-      { "width": "10px", "targets": 0, "orderable": false },
+      { "width": "10px", "targets": 0 },
       { "width": "200px", "targets": 1 },
       { "width": "200px", "targets": 2 },
       { "width": "120px", "targets": 3 },            
-      { "width": "100px", "targets": 4 },
-      { "width": "70px", "targets": 5 },
     ],              
     'responsive'  : true,
     'paging'      : true,
@@ -243,61 +245,61 @@
       'print'
     ]
   }
-  const settingsShipping = GeneralSettingsTable('tableShipping',settingstable,true,'container_button');  
+  const settingsPromoBarang = GeneralSettingsTable('tablePromoBarang',settingstable,true,'container_button');  
 
-  $('#tableShipping tbody').on('click','#btnupdate_shipping',function(){
-    const data = settingsShipping.row($(this).parents('tr')).data();    
-    clearInput();  
-    $('input[name=kotatujuan_update]').val(data[1]);
-    $('input[name=kurir_update]').val(data[2]);
-    $('input[name=jenislayanan_update]').val(data[3]);
-    $('input[name=tarif_update]').val(data[4]);
-    $('input[name=id_hidden]').val(data[0]);
-  });
+  // $('#tableShipping tbody').on('click','#btnupdate_shipping',function(){
+  //   const data = settingsShipping.row($(this).parents('tr')).data();    
+  //   clearInput();  
+  //   $('input[name=kotatujuan_update]').val(data[1]);
+  //   $('input[name=kurir_update]').val(data[2]);
+  //   $('input[name=jenislayanan_update]').val(data[3]);
+  //   $('input[name=tarif_update]').val(data[4]);
+  //   $('input[name=id_hidden]').val(data[0]);
+  // });
 
-  function clearInput(){
-    $('input[name=kotatujuan_update]').val('');
-    $('input[name=kurir_update]').val('');
-    $('input[name=jenislayanan_update]').val('');
-    $('input[name=tarif_update]').val('');
-    $('input[name=id_hidden]').val('');
-  }
+  // function clearInput(){
+  //   $('input[name=kotatujuan_update]').val('');
+  //   $('input[name=kurir_update]').val('');
+  //   $('input[name=jenislayanan_update]').val('');
+  //   $('input[name=tarif_update]').val('');
+  //   $('input[name=id_hidden]').val('');
+  // }
 
-  // delete
-  $('#tableShipping tbody').on('click','#btndelete_shipping',function(){
-    const data = settingsShipping.row($(this).parents('tr')).data();
-    $.ajax({
-      type: 'POST',
-      url: '/admin/deleteshipping',
-      data:{
-        'id_shipping' :data[0],
-        '_token':$('input[name=_token]').val()
-      },
-      success:function(res){
-        if (res.status == 200) {
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'berhasil Dihapus',
-            showConfirmButton: false,
-            timer: 1500
-          });
-          setTimeout(function(){
-            location.reload();
-          }, 200);
-        }
-        else{
-          Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: 'Tidak berhasil Dihapus',
-            showConfirmButton: false,
-            timer: 1500
-          });
-        }
-      }
-    })
-  });
+  // // delete
+  // $('#tableShipping tbody').on('click','#btndelete_shipping',function(){
+  //   const data = settingsShipping.row($(this).parents('tr')).data();
+  //   $.ajax({
+  //     type: 'POST',
+  //     url: '/admin/deleteshipping',
+  //     data:{
+  //       'id_shipping' :data[0],
+  //       '_token':$('input[name=_token]').val()
+  //     },
+  //     success:function(res){
+  //       if (res.status == 200) {
+  //         Swal.fire({
+  //           position: 'top-end',
+  //           icon: 'success',
+  //           title: 'berhasil Dihapus',
+  //           showConfirmButton: false,
+  //           timer: 1500
+  //         });
+  //         setTimeout(function(){
+  //           location.reload();
+  //         }, 200);
+  //       }
+  //       else{
+  //         Swal.fire({
+  //           position: 'top-end',
+  //           icon: 'error',
+  //           title: 'Tidak berhasil Dihapus',
+  //           showConfirmButton: false,
+  //           timer: 1500
+  //         });
+  //       }
+  //     }
+  //   })
+  // });
 </script>
 @endsection
 

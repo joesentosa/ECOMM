@@ -43,12 +43,12 @@
          </li>
          <li>
             <a class="bar-icons" href="#">
-               <i class="pe-7s-more"></i><span>Other</span>
+               <i class="fas fa-percent"></i><span>Master Promo</span>               
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
-               <li class="iconbar-header">Master</li>  
-               <li><a href="{{route('promo.admin')}}">Promo</a></li>                        
-               <li><a href="{{route('wishlist.admin')}}">Wishlist</a></li>                        
+               <li class="iconbar-header">Master Promo</li>  
+               <li><a href="{{route('promo.admin')}}">Promo</a></li> 
+               <li><a href="{{route('promo.barang.admin')}}">Promo Barang</a></li> 
             </ul>
          </li>
          <li>
@@ -58,10 +58,10 @@
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Laporan</li>  
                <li><a href="{{route('promo.admin')}}">Penjualan</a></li>                        
-               <li><a href="{{route('wishlist.admin')}}">Barang Terlaris</a></li>                        
-               <li><a href="{{route('wishlist.admin')}}">Pendapatan per Bulan</a></li>           
-               <li><a href="{{route('wishlist.admin')}}">Invoice</a></li>                                     
-               <li><a href="{{route('wishlist.admin')}}">Barang Terlaris</a></li>                        
+               <li><a href="{{route('promo.admin')}}">Barang Terlaris</a></li>                        
+               <li><a href="{{route('promo.admin')}}">Pendapatan per Bulan</a></li>           
+               <li><a href="{{route('promo.admin')}}">Invoice</a></li>                                     
+               <li><a href="{{route('promo.admin')}}">Barang Terlaris</a></li>                        
             </ul>
          </li>
       </ul>
