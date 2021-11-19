@@ -95,14 +95,15 @@ class AdminController extends Controller
 
     public function updatebarang(Request $req){
         $dtbarang = new BarangModel();
+        $filename=null;
         if ($req->urlimageupdate != "") {$filename = $req->urlimageupdate;}
-        else{
+        else{            
             if ($req->hasFile('uploadFile_update')) {
                 $file = $req->file('uploadFile_update');
                 $extension = $file->getClientOriginalExtension();            
                 $filename = 'uploads/barang/'.time().'.'.$extension;            
                 $file->move('uploads/barang',$filename);
-            }
+            }            
         }           
         $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
         return back();

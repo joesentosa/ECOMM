@@ -29,16 +29,17 @@ class BarangModel extends Model
         $barang->fk_id_brand    = $idbrand;
         $barang->fk_id_kategori = $idkategori;                     
         $barang->save();
-    }
-    // updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_Update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
-    public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang,$filename, $cb_brand,$cb_kategori){
+    }    
+    public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang,$filename = null, $cb_brand,$cb_kategori){
         $barang                 = BarangModel::find($id_hidden);
         $barang->namaBarang     = $nmbarang;
         $barang->stok           = $stokbarang;
         $barang->harga          = $hargaBarang;
         $barang->berat          = $beratbarang;
         $barang->review         = $reviewbarang;
-        $barang->gambar         = $filename;        
+        if ($filename != null) {
+            $barang->gambar         = $filename;
+        }        
         $barang->fk_id_brand    = $cb_brand;
         $barang->fk_id_kategori = $cb_kategori; 
         $barang->save();

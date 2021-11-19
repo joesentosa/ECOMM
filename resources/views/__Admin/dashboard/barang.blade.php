@@ -112,8 +112,8 @@
                   @else
                     <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>
                   @endif                  
-                  <td>{{$item->namaBrand}}</td>
-                  <td>{{$item->nama_kategori}}</td>                       
+                  <td data-idbrand="{{$item->fk_id_brand}}" class="idbrand_hidden">{{$item->namaBrand}}</td>
+                  <td data-idkategori="{{$item->fk_id_kategori}}" class="idkategori_hidden">{{$item->nama_kategori}}</td>                       
                   <td></td>                        
                 </tr>  
               @endforeach
@@ -301,7 +301,7 @@
                 <option value="#">Pilih Brand</option>
                 @isset($brand)
                   @foreach($brand as $item)
-                    <option value="{{$item->namaBrand}}">{{$item->namaBrand}}</option>
+                    <option value="{{$item->id_brand}}">{{$item->namaBrand}}</option>
                   @endforeach
                 @endisset
               </select>
@@ -320,7 +320,7 @@
                 <option value="opt1">Pilih Kategori</option>
                 @isset($kategori)
                   @foreach($kategori as $item)
-                    <option value="{{$item->nama_kategori}}">{{$item->nama_kategori}}</option>
+                    <option value="{{$item->id_kategori}}">{{$item->nama_kategori}}</option>
                   @endforeach
                 @endisset
               </select>
@@ -383,7 +383,7 @@
             </div>
           </div>
 
-          <input type="text" name="id_hidden" id="id_hidden">
+          <input type="hidden" name="id_hidden" id="id_hidden">
 
         </form>
         <!-- end form -->
@@ -392,6 +392,7 @@
   </div>
 </div>
 <!-- end Main Modal update -->
+
 <!-- Alternative pagination Starts-->
 @endsection
 
@@ -471,16 +472,19 @@
 	});
 
   // display data di table ke input form modal
-  $('#tableBarang tbody').on('click','#btnupdate_barang',function(){      
-    const data = settingsBarang.row($(this).parents('tr')).data();     
+  $('#tableBarang tbody').on('click','#btnupdate_barang',function(){  
+    const trhead = $(this).parents('tr');      
+    const data = settingsBarang.row(trhead).data();          
+    let tmpidbrand = trhead.find($('td')).eq(7).attr('data-idbrand');
+    let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori')
     let tmpberat = data[4].split(" ");   
-    let tmpreview = data[5].split("</button>");
-  
+    let tmpreview = data[5].split("</button>");    
+    
     // fill data
     $(`input[name=nmbarang_update]`).val(data[1]);
     $(`input[name=hargaBarang_update]`).val(data[3]);
-    $('#cb_brand').val(data[7]).change();
-    $('#cb_kategori').val(data[8]).change();
+    $('#cb_brand').val(tmpidbrand).change();
+    $('#cb_kategori').val(tmpidkategori).change();
     $(`input[name=stokbarang_update]`).val(data[2]);
     $(`input[name=beratbarang_update]`).val(tmpberat[0]);
     $(`textarea#reviewbarang_update`).val(tmpreview[1]);

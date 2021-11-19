@@ -31,7 +31,7 @@
               <h5 class="f-w-600 mb-0">Elana Saint</h5>
             </li>
             <li><i data-feather="user"> </i>Profile</li>                        
-            <li><i data-feather="log-out"></i>Log Out</li>
+            <li><a href="#"><i data-feather="log-out"></i>Log Out</a></li>
           </ul>
         </li>
       </ul>

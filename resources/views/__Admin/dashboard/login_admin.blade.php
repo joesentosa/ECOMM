@@ -19,7 +19,7 @@
     <!-- login page start-->
 
     @if($errors->has('status'))
-        @dd($errors->message)
+        <!-- @dd($errors->message) -->
     @endif
 
 
