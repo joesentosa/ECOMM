@@ -49,6 +49,7 @@ Route::middleware('adminauth')
 Route::prefix('auth')->group(function(){
     Route::post('admin', [AuthController::class, 'admin_auth'])->name("admin.auth");
     Route::post('user', [AuthController::class, 'user_auth'])->name("user.auth");
+    Route::get('logout', [AuthController::class, 'logout']);
 });
 // pragma endregion
 

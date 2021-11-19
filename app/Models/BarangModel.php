@@ -25,9 +25,9 @@ class BarangModel extends Model
         $barang->harga          = $harga;
         $barang->berat          = $berat;
         $barang->review         = $review;
-        $barang->gambar         = $gambar;        
+        $barang->gambar         = $gambar;
         $barang->fk_id_brand    = $idbrand;
-        $barang->fk_id_kategori = $idkategori;                     
+        $barang->fk_id_kategori = $idkategori;
         $barang->save();
     }    
     public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang,$filename = null, $cb_brand,$cb_kategori){
@@ -41,15 +41,20 @@ class BarangModel extends Model
             $barang->gambar         = $filename;
         }        
         $barang->fk_id_brand    = $cb_brand;
-        $barang->fk_id_kategori = $cb_kategori; 
+        $barang->fk_id_kategori = $cb_kategori;
         $barang->save();
     }
     public function getAllById(){
         return BarangModel::join('brand','brand.id_brand','=','barang.fk_id_brand')
                         ->join('kategori','kategori.id_kategori','=','barang.fk_id_kategori')
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
-    }    
+    }
     public function getAll(){
         return BarangModel::all();
+    }
+
+    public function gambar()
+    {
+        return $this->hasMany(GambarModel::class, 'id_gambar', 'gambar');
     }
 }
