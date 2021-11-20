@@ -15,6 +15,7 @@ class CreatePromo extends Migration
     {
         Schema::create('promo', function (Blueprint $table) {
             $table->increments('id_promo');
+            $table->string('namaPromo');
             $table->date('firstDate');
             $table->date('expiredDate');
             $table->bigInteger('hargaPromo');            

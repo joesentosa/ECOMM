@@ -7,6 +7,7 @@ use App\Models\BarangModel;
 use App\Models\KategoriModel;
 use App\Models\ShippingModel;
 use App\Models\PromoModel;
+use App\Models\PromoBarangModel;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -40,7 +41,10 @@ class AdminController extends Controller
         return view('__Admin.dashboard.promo',['data' => $dtpromo->getAll()]);
     }    
     public function PromoBarangAdmin(){
-        return view('__Admin.dashboard.promo_barang');
+        $dtpromobarang = new PromoBarangModel();     
+        $dtpromo = new PromoModel();
+        $dtbarang = new BarangModel();        
+        return view('__Admin.dashboard.promo_barang',['data' => $dtpromobarang->getAll(),'promo' => $dtpromo->getAll(),'barang'=> $dtbarang->getAll()]);
     }
     
     // ==========================================
@@ -178,7 +182,8 @@ class AdminController extends Controller
     public function updatepromo(Request $req){
         $dtpromo = new PromoModel();
         $splitDate = explode('-',$req->rangedatepromo_update);  
-        $dtpromo->updatePromo($req->id_hidden,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->harga_update);
+        // dd($req->harga_update);
+        $dtpromo->updatePromo($req->id_hidden,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_update);
         return back();
     }
     public function deletepromo(Request $req){
@@ -186,6 +191,28 @@ class AdminController extends Controller
         $dtpromo->deletePromo($req->id_promo);
         return response()->json([
             'status' => 200
+        ]);
+    }
+    // ==========================================
+
+    // ==========================================
+    //  PROMO BARANG
+    // ==========================================
+    public function insertpromobarang(Request $req){
+        $dtpromobarang = new PromoBarangModel();
+        $dtpromobarang->insertPromoBarang($req->cb_promo,$req->cb_barang);
+        return back();
+    }
+    public function updatepromobarang(Request $req){
+        $dtpromobarang = new PromoBarangModel();
+        $dtpromobarang->updatePromoBarang($req->id_hidden,$req->cb_promo_update,$req->cb_barang_update);
+        return back();
+    }
+    public function deletepromobarang(Request $req){
+        $dtpromobarang = new PromoBarangModel();
+        $dtpromobarang->deletePromoBarang($req->id_promoBarang);
+        return response()->json([
+            'status' => 200,
         ]);
     }
     // ==========================================

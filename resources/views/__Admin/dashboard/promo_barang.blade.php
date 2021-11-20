@@ -45,25 +45,17 @@
                 <th>Action</th>       
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <!-- @isset($data)
+            <tbody>              
+              @isset($data)
                 @foreach($data as $item)
                   <tr>
-                    <td style="text-align: center;">{{$item->id_shipping}}</td>
-                    <td>{{$item->kotaTujuan}}</td>
-                    <td>{{$item->kurir}}</td>
-                    <td>{{$item->jenisLayanan}}</td>                                                      
-                    <td>{{$item->tarif}}</td>
+                    <td style="text-align: center;">{{$item->id_promo_barang}}</td>
+                    <td  data-idbarang="{{$item->barang->id_barang}}" class="idbarang_hidden">{{$item->barang->namaBarang}}</td>
+                    <td  data-idpromo="{{$item->promo->id_promo}}" class="idpromo_hidden">{{generateFormatRP($item->promo->hargaPromo)}}</td>                    
                     <td></td>
                   </tr>              
                 @endforeach
-              @endisset               -->
+              @endisset              
             </tbody>
         </table>
       </div>
@@ -77,7 +69,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">
           <i class="fas fa-gamepad"></i>
-          Insert Shipping
+          Insert Promo Barang
         </h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -86,40 +78,34 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="shipping_insert" action="/admin/insertshipping" class="form theme-form">
+        <form method="POST" id="promobarang_insert" action="/admin/insertpromobarang" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
-              <div class="form-group">
-                <label for="kotatujuan_insert">Kota Tujuan</label>
-                <input class="form-control" id="kotatujuan_insert" type="text" placeholder="Masukkan kota tujuan" name="kotatujuan_insert">
-              </div>             
+              <div class="col-form-label">Pilih Promo</div>
+              <select class="form-control form-control-primary btn-square" name="cb_promo">
+                <option value="#">Pilih Promo</option>   
+                @isset($promo)                                                        
+                  @foreach($promo as $item)
+                    <option value="{{$item->id_promo}}">{{$item->namaPromo}}</option>   
+                  @endforeach
+                @endisset
+              </select>             
             </div>            
           </div>                                                       
           <div class="row">
             <div class="col-12">
-              <div class="form-group">
-                <label for="kurir_insert">Kurir</label>
-                <input class="form-control" id="kurir_insert" type="text" placeholder="Masukkan kurir" name="kurir_insert">
-              </div> 
+              <div class="col-form-label">Pilih Barang</div>
+              <select class="form-control form-control-primary btn-square" name="cb_barang">
+                <option value="#">Pilih Barang</option>   
+                @isset($barang)                                                        
+                  @foreach($barang as $item)
+                    <option value="{{$item->id_barang}}">{{$item->namaBarang}}</option>   
+                  @endforeach
+                @endisset
+              </select>  
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="jenislayanan_insert">Jenis Layanan</label>
-                <input class="form-control" id="jenislayanan_insert" type="text" placeholder="Masukkan jenis layanan" name="jenislayanan_insert">
-              </div> 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="tarif_insert">Tarif</label>
-                <input class="form-control" id="tarif_insert" type="text" placeholder="Masukkan tarif" name="tarif_insert">
-              </div> 
-            </div>
-          </div>
+          </div>         
           <div class="row">
             <div class="col-md-12 d-flex justify-content-end p-4">
               <input type="submit" value="insert" class="btn btn-primary">
@@ -139,7 +125,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">
           <i class="fas fa-gamepad"></i>
-          Update Brand
+          Update Promo barang
         </h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -147,47 +133,41 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- form -->
-        <form method="POST" id="shipping_update" action="/admin/updateshipping" class="form theme-form">
+      <!-- form -->
+        <form method="POST" id="promobarang_update" action="/admin/updatepromobarang" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
-              <div class="form-group">
-                <label for="kotatujuan_update">Kota Tujuan</label>
-                <input class="form-control" id="kotatujuan_update" type="text" placeholder="Masukkan kota tujuan" name="kotatujuan_update">
-              </div>             
+              <div class="col-form-label">Pilih Promo</div>
+              <select class="form-control form-control-primary btn-square" name="cb_promo_update" id="cb_promo_update">
+                <option value="#">Pilih Promo</option>   
+                @isset($promo)                                                        
+                  @foreach($promo as $item)
+                    <option value="{{$item->id_promo}}">{{$item->namaPromo}}</option>   
+                  @endforeach
+                @endisset
+              </select>             
             </div>            
           </div>                                                       
           <div class="row">
             <div class="col-12">
-              <div class="form-group">
-                <label for="kurir_update">Kurir</label>
-                <input class="form-control" id="kurir_update" type="text" placeholder="Masukkan kurir" name="kurir_update">
-              </div> 
+              <div class="col-form-label">Pilih Barang</div>
+              <select class="form-control form-control-primary btn-square" name="cb_barang_update" id="cb_barang_update">
+                <option value="#">Pilih Barang</option>   
+                @isset($barang)                                                        
+                  @foreach($barang as $item)
+                    <option value="{{$item->id_barang}}">{{$item->namaBarang}}</option>   
+                  @endforeach
+                @endisset
+              </select>  
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="jenislayanan_update">Jenis Layanan</label>
-                <input class="form-control" id="jenislayanan_update" type="text" placeholder="Masukkan jenis layanan" name="jenislayanan_update">
-              </div> 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="form-group">
-                <label for="tarif_update">Tarif</label>
-                <input class="form-control" id="tarif_update" type="text" placeholder="Masukkan tarif" name="tarif_update">
-              </div> 
-            </div>
-          </div>
+          </div>         
           <div class="row">
             <div class="col-md-12 d-flex justify-content-end p-4">
-              <input type="submit" value="update" class="btn btn-primary">
+              <input type="submit" value="insert" class="btn btn-primary">
             </div>
           </div>
-          <input type="hidden" name="id_hidden" id="id_hidden">
+          <input type="text" name="id_hidden" id="id_hidden">
         </form>
         <!-- end form -->
       </div>
@@ -247,59 +227,59 @@
   }
   const settingsPromoBarang = GeneralSettingsTable('tablePromoBarang',settingstable,true,'container_button');  
 
-  // $('#tableShipping tbody').on('click','#btnupdate_shipping',function(){
-  //   const data = settingsShipping.row($(this).parents('tr')).data();    
-  //   clearInput();  
-  //   $('input[name=kotatujuan_update]').val(data[1]);
-  //   $('input[name=kurir_update]').val(data[2]);
-  //   $('input[name=jenislayanan_update]').val(data[3]);
-  //   $('input[name=tarif_update]').val(data[4]);
-  //   $('input[name=id_hidden]').val(data[0]);
-  // });
+  $('#tablePromoBarang tbody').on('click','#btnupdate_promoBarang',function(){
+    const trhead = $(this).parents('tr');      
+    const data = settingsPromoBarang.row(trhead).data();          
+    let tmpidbarang = trhead.find($('td')).eq(1).attr('data-idbarang');
+    let tmpidpromo = trhead.find($('td')).eq(2).attr('data-idpromo');  
+    console.log(tmpidbarang+" - "+tmpidpromo)
+    clearInput();  
+    $('#cb_promo_update').val(tmpidpromo).change();
+    $('#cb_barang_update').val(tmpidbarang).change();
+    $('#id_hidden').val(data[0]);
+  });
 
-  // function clearInput(){
-  //   $('input[name=kotatujuan_update]').val('');
-  //   $('input[name=kurir_update]').val('');
-  //   $('input[name=jenislayanan_update]').val('');
-  //   $('input[name=tarif_update]').val('');
-  //   $('input[name=id_hidden]').val('');
-  // }
+  function clearInput(){
+    $('#cb_promo_update').val('');
+    $('#cb_barang_update').val('');
+    $('#id_hidden').val('');
+  }
 
-  // // delete
-  // $('#tableShipping tbody').on('click','#btndelete_shipping',function(){
-  //   const data = settingsShipping.row($(this).parents('tr')).data();
-  //   $.ajax({
-  //     type: 'POST',
-  //     url: '/admin/deleteshipping',
-  //     data:{
-  //       'id_shipping' :data[0],
-  //       '_token':$('input[name=_token]').val()
-  //     },
-  //     success:function(res){
-  //       if (res.status == 200) {
-  //         Swal.fire({
-  //           position: 'top-end',
-  //           icon: 'success',
-  //           title: 'berhasil Dihapus',
-  //           showConfirmButton: false,
-  //           timer: 1500
-  //         });
-  //         setTimeout(function(){
-  //           location.reload();
-  //         }, 200);
-  //       }
-  //       else{
-  //         Swal.fire({
-  //           position: 'top-end',
-  //           icon: 'error',
-  //           title: 'Tidak berhasil Dihapus',
-  //           showConfirmButton: false,
-  //           timer: 1500
-  //         });
-  //       }
-  //     }
-  //   })
-  // });
+  // delete
+  $('#tablePromoBarang tbody').on('click','#btndelete_promoBarang',function(){
+    const data = settingsPromoBarang.row($(this).parents('tr')).data();
+    $.ajax({
+      type: 'POST',
+      url: '/admin/deletepromobarang',
+      data:{
+        'id_promoBarang' :data[0],
+        '_token':$('input[name=_token]').val()
+      },
+      success:function(res){
+        if (res.status == 200) {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'berhasil Dihapus',
+            showConfirmButton: false,
+            timer: 1500
+          });
+          setTimeout(function(){
+            location.reload();
+          }, 200);
+        }
+        else{
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Tidak berhasil Dihapus',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      }
+    })
+  });
 </script>
 @endsection
 

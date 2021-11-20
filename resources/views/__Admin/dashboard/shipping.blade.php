@@ -55,7 +55,7 @@
                     <td>{{$item->kotaTujuan}}</td>
                     <td>{{$item->kurir}}</td>
                     <td>{{$item->jenisLayanan}}</td>                                                      
-                    <td>{{$item->tarif}}</td>
+                    <td>{{generateFormatRP($item->tarif)}}</td>
                     <td></td>
                   </tr>              
                 @endforeach
@@ -135,7 +135,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">
           <i class="fas fa-gamepad"></i>
-          Update Brand
+          Update Shipping
         </h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

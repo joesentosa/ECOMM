@@ -57,5 +57,5 @@ class BarangModel extends Model
     public function gambar()
     {
         return $this->hasMany(GambarModel::class, 'id_gambar', 'fk_id_gambar');
-    }
+    }    
 }

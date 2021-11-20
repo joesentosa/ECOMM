@@ -59,7 +59,7 @@
                   <td style="text-align: center;">{{$item->id_promo}}</td>                  
                   <td>{{$item->firstDate}}</td>                  
                   <td>{{$item->expiredDate}}</td>                                                     
-                  <td>{{$item->hargaPromo}}</td>
+                  <td>{{generateFormatRP($item->hargaPromo)}}</td>
                   <td></td>
                 </tr>              
               @endforeach
@@ -130,7 +130,7 @@
         </div>
         <div class="modal-body">
           <!-- form -->
-          <form method="POST" id="promo_update" class="form theme-form">
+          <form method="POST" id="promo_update" action="/admin/updatepromo" class="form theme-form">
             @csrf
             <div class="row">
               <div class="col-md-12">
@@ -153,7 +153,7 @@
                 <input type="submit" value="update" class="btn btn-primary">
               </div>
             </div>
-            <input type="text" name="id_hidden" id="id_hidden">
+            <input type="hidden" name="id_hidden" id="id_hidden">
           </form>
           <!-- end form -->
         </div>
@@ -222,12 +222,20 @@
 
   $('#tablePromo tbody').on('click','#btnupdate_promo',function(){
     const data = settingsPromo.row($(this).parents('tr')).data();
-    // Object { 0: "1", 1: "2021-11-20", 2: "2021-11-25", 3: "5000" }    
+    // Object { 0: "1", 1: "2021-11-20", 2: "2021-11-25", 3: "5000" }   
+    console.log(data[2] + data[1]);
+    // $('#rangedatepromo_update').datepicker({
+    //   dateFormat: "Y-m-d",
+    //   maxDate:data[2],
+    //   minDate: data[1]
+    // });    
+    var sDate = new Date(data[2]);
+    var minDate = new Date(data[1]);         
+    const changeFormat = (sDate.getMonth() + 1) + '/' + sDate.getDate() + '/' +  sDate.getFullYear()+" - "+(minDate.getMonth() + 1) + '/' + minDate.getDate() + '/' +  minDate.getFullYear();
     $('#rangedatepromo_update').datepicker({
-      dateFormat: "Y-m-d",
-      maxDate:data[2],
-      minDate: data[1]
-    });    
+      dateFormat: 'm/d/yyyy',              
+    });
+    $('#rangedatepromo_update').val(changeFormat);
     $('input[name=hargapromo_update]').val(data[3]);
     $('input[name=id_hidden]').val(data[0]);
   });

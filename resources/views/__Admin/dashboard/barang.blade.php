@@ -84,7 +84,7 @@
                   <td style="text-align: center;">{{$item->id_barang}}</td>
                   <td>{{$item->namaBarang}}</td>
                   <td>{{$item->stok}}</td>
-                  <td>{{$item->harga}}</td>
+                  <td>{{generateFormatRP($item->harga)}}</td>
                   <td>{{$item->berat}} kg</td>
                   <td id="tdreview">
                     <button data-id="{{$item->id_barang}}" class="btn-primary view_data"><i class="fas fa-eye"></i></button>                    

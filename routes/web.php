@@ -49,7 +49,10 @@ Route::middleware('adminauth')
     Route::post('/insertpromo',[AdminController::class,'insertpromo']);
     Route::post('/updatepromo',[AdminController::class,'updatepromo']);
     Route::post('/deletepromo',[AdminController::class,'deletepromo']);
-
+    
+    Route::post('/insertpromobarang',[AdminController::class,'insertpromobarang']);
+    Route::post('/updatepromobarang',[AdminController::class,'updatepromobarang']);
+    Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);
 
 
     Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');

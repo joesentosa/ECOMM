@@ -23,13 +23,14 @@ class PromoModel extends Model
         $promo->expiredDate  = $expiredDate;    
         $promo->hargaPromo   = $harga;            
         $promo->save();
-    }
+    }    
     public function updatePromo($id_promo,$firstDate_update,$expiredDate_update,$harga_update){
-        $data = PromoModel::find($id_promo);
-        $promo->firstDate    = $firstDate_update;
-        $promo->expiredDate  = $expiredDate_update;    
-        $promo->hargaPromo   = $harga_update;            
-        $promo->save();
+        
+        $data = PromoModel::find($id_promo);        
+        $data->firstDate    = $firstDate_update;
+        $data->expiredDate  = $expiredDate_update;    
+        $data->hargaPromo   = $harga_update;            
+        $data->save();
     }
     public function deletePromo($id_promo){
         return PromoModel::find($id_promo)->delete();

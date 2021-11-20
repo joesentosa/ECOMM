@@ -22,7 +22,7 @@ class PromoModelFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "namaPromo" => $this->faker->firstName(),
             "firstDate" => $this->faker->date("Y-m-d"),
             "expiredDate" => $this->faker->date("Y-m-d"),
             "hargaPromo" => $this->faker->numberBetween(100000, 1000000),
