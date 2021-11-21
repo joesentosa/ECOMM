@@ -10,4 +10,13 @@ class CustomerController extends Controller
     {
         return view('__User.home');
     }
+
+    public function login()
+    {
+        return view('__User.login');
+    }
+    public function register()
+    {
+        return view('__User.register');
+    }
 }

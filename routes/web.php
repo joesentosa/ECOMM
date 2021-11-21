@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/home', [CustomerController::class, 'homepage']);
+Route::get('/login', [CustomerController::class, 'login']);
+Route::get('/register', [CustomerController::class, 'register']);
+
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
