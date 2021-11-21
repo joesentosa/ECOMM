@@ -7,62 +7,47 @@
 @section('style')
 @endsection
 
-@section('breadcrumb-title')
-	<h2>Input<span>groups</span></h2>
-@endsection
-
-@section('breadcrumb-items')
-	<li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item">Form Controls</li>	
-	<li class="breadcrumb-item active">Input groups</li>
-@endsection
 
 @section('content')
-<div class="container-fluid">
+<!-- login page start-->
+<div class="authentication-main">
    <div class="row">
-      <div class="col-sm-12">
-         <div class="card">
-            <div class="card-header">
-            </div>
-            <div class="card-body">
-                <h1>Login</h1>
-               <div class="row">
-                  <div class="col">
-                     <form>
-                        <div class="form-group m-form__group">
-                           <label>Email</label>
-                           <div class="input-group">
-                              <div class="input-group-prepend"><span class="input-group-text"><i class="icofont icofont-pencil-alt-5"></i></span></div>
-                              <input class="form-control" type="text" placeholder="Email">
-                           </div>
+      <div class="col-md-12">
+         <div class="auth-innerright">
+            <div class="authentication-box">
+               <div class="card mt-4">
+                  <div class="card-body">
+                     <div class="cont text-center">
+                        <div>
+                           <form class="theme-form">
+                              <h4>REGISTER</h4>
+                              <h6>Enter your Username and Password</h6>
+                              <div class="form-group">
+                                 <label class="col-form-label pt-0">Your Name</label>
+                                 <input class="form-control" type="text" required="">
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-form-label">Password</label>
+                                 <input class="form-control" type="password" required="">
+                              </div>
+                              <div class="checkbox p-0">
+                                 <input id="checkbox1" type="checkbox">
+                                 <label for="checkbox1">Remember me</label>
+                              </div>
+                              <div class="form-group form-row mt-3 mb-0">
+                                 <button class="btn btn-primary btn-block" type="submit">REGISTER</button>
+                              </div> 
+                           </form>
                         </div>
-                        <div class="form-group m-form__group">
-                           <label>Password</label>
-                           <div class="input-group">
-                              <div class="input-group-prepend"><span class="input-group-text"><i class="icofont icofont-pencil-alt-5"></i></span></div>
-                              <input class="form-control" type="password" placeholder="Password">
-                           </div>
-                        </div>
-                        <div class="form-group m-form__group">
-                           <label>Confirm Password</label>
-                           <div class="input-group">
-                              <div class="input-group-prepend"><span class="input-group-text"><i class="icofont icofont-pencil-alt-5"></i></span></div>
-                              <input class="form-control" type="password" placeholder="Confirm Password">
-                           </div>
-                        </div>
-                     </form>
+                     </div>
                   </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-primary" type="submit">Submit</button>
-                <button class="btn btn-light" type="submit">Cancel</button><br>
-                <a href="/login">Have a account!!</a>
+               </div>
             </div>
          </div>
       </div>
    </div>
 </div>
+<!-- login page end-->
 @endsection
 
 @section('script')
