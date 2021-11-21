@@ -26,7 +26,7 @@ Route::middleware('adminauth')
     Route::get('/horder',[AdminController::class,'HorderAdmin'])->name('horder.admin');
     Route::get('/dorder',[AdminController::class,'DorderAdmin'])->name('dorder.admin');
     Route::get('/shipping',[AdminController::class,'ShippingAdmin'])->name('shipping.admin');
-    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');    
+    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');
     Route::get('/promoBarang',[AdminController::class,'PromoBarangAdmin'])->name('promo.barang.admin');
 
     Route::get('/getReview/{id}',[AdminController::class,"reviewBarang"]);
@@ -45,11 +45,11 @@ Route::middleware('adminauth')
     Route::post('/insertshipping',[AdminController::class,'insertshipping']);
     Route::post('/updateshipping',[AdminController::class,'updateshipping']);
     Route::post('/deleteshipping',[AdminController::class,'deleteshipping']);
-    
+
     Route::post('/insertpromo',[AdminController::class,'insertpromo']);
     Route::post('/updatepromo',[AdminController::class,'updatepromo']);
     Route::post('/deletepromo',[AdminController::class,'deletepromo']);
-    
+
     Route::post('/insertpromobarang',[AdminController::class,'insertpromobarang']);
     Route::post('/updatepromobarang',[AdminController::class,'updatepromobarang']);
     Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);
@@ -64,6 +64,10 @@ Route::prefix('auth')->group(function(){
     Route::post('admin', [AuthController::class, 'admin_auth'])->name("admin.auth");
     Route::post('user', [AuthController::class, 'user_auth'])->name("user.auth");
     Route::get('logout', [AuthController::class, 'logout']);
+
+    // callback and redirect to GOOGLE
+    Route::get('redirect/google', [AuthController::class, 'redirectToGoogle']);
+    Route::get('callback/google', [AuthController::class, 'handleCallbackGoogle']);
 });
 // pragma endregion
 
