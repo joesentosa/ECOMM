@@ -22,7 +22,8 @@ class CreateCustomer extends Migration
             $table->string('address',100)->nullable();
             $table->string('kota',50)->nullable();
             $table->string('kodeZip',5)->nullable();
-            $table->string('password',100);            
+            $table->string('password',100);
+            $table->string('google_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
