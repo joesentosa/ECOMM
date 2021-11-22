@@ -5,6 +5,11 @@
 @endsection
 
 @section('style')
+    <style>
+        .page-wrapper .page-body-wrapper .page-body {
+            margin-left : 0px !important;
+        }
+    </style>
 @endsection
 
 @section('content')

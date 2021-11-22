@@ -1,4 +1,4 @@
-@extends('__User.master')
+@extends('__User.master2')
 @section('title', 'Login')
 
 @section('css')
@@ -14,6 +14,10 @@
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#004d7a", endColorstr="#011227", GradientType=1);
             color: white;
         }
+
+         .page-wrapper .page-body-wrapper .page-body {
+             margin-left : 0px !important;
+         }
     </style>
 @endsection
 
@@ -165,7 +169,6 @@
     <script src="{{asset('assets/js/login.js')}}"></script>
     <script>
         $(document).ready(function(){
-
             // region Hide Alert
             const success_alert = $("#success-alert");
             const error_alert = $("#error-alert");
