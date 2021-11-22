@@ -66,7 +66,7 @@ class AuthController extends Controller
         }
 
         $customer = new CustomerModel();
-        $customer->saveData($request->username, '', '', $request->email, '',
+        $customer->saveData($request->username, $request->firstname, $request->lastname, $request->email, '',
             '', '', $request->password);
 
         return back()->with('status', 'User Registered'); // todo: change this to user specified page

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -73,6 +74,14 @@ Route::prefix('auth')->group(function(){
     Route::get('callback/google', [AuthController::class, 'handleCallbackGoogle']);
 });
 // pragma endregion
+
+//route customer
+Route::prefix('user')->group(function(){
+    Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
+    Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
+    Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
+});
+//end route customer
 
 // Route::get('/', function(){
 //     return redirect()->route('default');
