@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CustomerModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
@@ -100,8 +101,19 @@ class AuthController extends Controller
                 return redirect('/');
             } else {
                 // TODO JERE CREATE NEW CUSTOMER HERE
-            }
+                $user_data = $user->user;
+                $customer = CustomerModel::create([
+                    'username' => $user_data['given_name'] . $user_data['sub'],
+                    'firstname' => $user_data['given_name'],
+                    'lastname' => $user_data['family_name'],
+                    'email' => $user_data['email'],
+                    'password' => Hash::make($user_data['sub']),
+                    'google_id' => $user_data['sub']
+                ]);
 
+                Auth::login($customer);
+            }
+            return redirect('user/profile');
         } catch (\Exception $e) {
             dd($e->getMessage());
         }

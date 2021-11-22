@@ -76,7 +76,7 @@
                                                 <div class="form-row btn-showcase">
                                                     <div class="col-md-4 col-sm-6">
                                                         <a href="{{ url('auth/redirect/google') }}">
-                                                            <button type="button" class="btn social-btn btn-google">Google +</button>
+                                                            <button type="button" class="btn social-btn btn-google">Google</button>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -147,7 +147,9 @@
 {{--                                                            <button class="btn social-btn btn-twitter">Twitter</button>--}}
 {{--                                                        </div>--}}
                                                         <div class="col-sm-4">
-                                                            <button type="button" class="btn social-btn btn-google">Google +</button>
+                                                            <a href="{{ url('auth/redirect/google') }}">
+                                                                <button type="button" class="btn social-btn btn-google">Google</button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
