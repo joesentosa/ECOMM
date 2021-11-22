@@ -21,7 +21,7 @@ class AuthController extends Controller
             "password" => "required"
         ]);
 
-        if (Auth::guard('admin')->attempt($credentials)){
+        if (Auth::guard('admin')->attempt($credentials)) {
             $user = Auth::guard('admin')->user();
             return redirect('admin');
         }
@@ -31,15 +31,15 @@ class AuthController extends Controller
         ]);
     }
 
-    public function user_auth(Request $request)
+    public function customer_auth(Request $request)
     {
         $credentials = $request->validate([
-            "email" => "required",
+            "username" => "required",
             "password" => "required"
         ]);
 
-        if (Auth::attempt($credentials)){
-            return redirect('admin');
+        if (Auth::attempt($credentials)) {
+            return redirect('login')->with('status', 'success');
         }
 
         return back()->withErrors([
@@ -47,11 +47,37 @@ class AuthController extends Controller
         ]);
     }
 
+    public function customer_regis(Request $request)
+    {
+        $credentials = $request->validate([
+            "firstname" => "required",
+            "lastname" => "required",
+            "username" => "required",
+            "email" => "required|email",
+            "password" => "required"
+        ]);
+
+        $customer = CustomerModel::where('username', $request->username)
+            ->orWhere('email', $request->email)
+            ->first();
+
+        if ($customer) {
+            return back()->withErrors(['status' => 'User Already Registered']);
+        }
+
+        $customer = new CustomerModel();
+        $customer->saveData($request->username, '', '', $request->email, '',
+            '', '', $request->password);
+
+        return back()->with('status', 'User Registered');
+    }
+
     public function logout(Request $request)
     {
         Auth::guard('admin')->logout();
+        Auth::logout();
         $request->session()->flush();
-        return redirect('admin');
+        return redirect('/');
     }
 
     // region Google Auth
@@ -59,7 +85,8 @@ class AuthController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
-            //TODO : JERE - REFACTOR THIS CODE
+
+    //TODO : JERE - REFACTOR THIS CODE
     public function handleCallbackGoogle($request)
     {
         try {
@@ -68,18 +95,14 @@ class AuthController extends Controller
 
             $findUser = CustomerModel::where('google_id', $user->getId())->first();
 
-            if ($findUser)
-            {
+            if ($findUser) {
                 Auth::login($findUser);
                 return redirect('/');
-            }
-            else
-            {
+            } else {
                 // TODO JERE CREATE NEW CUSTOMER HERE
             }
 
-        } catch (\Exception $e)
-        {
+        } catch (\Exception $e) {
             dd($e->getMessage());
         }
     }

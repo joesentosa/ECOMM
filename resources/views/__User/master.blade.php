@@ -28,7 +28,7 @@
       @include('__User.header')
       <!-- Page Header Ends -->
       <!-- Page Body Start-->
-      {{-- <div class="page-body-wrapper"> --}}
+       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
         {{-- @include('layouts.simple.sidebar') --}}
         <!-- Page Sidebar Ends-->
@@ -60,4 +60,5 @@
     </div>
     @include('__User.script')
   </body>
+@stack('JScript')
 </html>

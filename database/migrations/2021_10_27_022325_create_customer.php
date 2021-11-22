@@ -15,8 +15,8 @@ class CreateCustomer extends Migration
     {
         Schema::create('customer', function (Blueprint $table) {
             $table->increments('id_customer');
-            $table->string('firstName',20);
-            $table->string('lastName',30);
+            $table->string('firstname',20)->nullable();
+            $table->string('lastname',30)->nullable();
             $table->string('username',50);
             $table->string('email',100);
             $table->string('address',100)->nullable();
@@ -24,6 +24,7 @@ class CreateCustomer extends Migration
             $table->string('kodeZip',5)->nullable();
             $table->string('password',100);
             $table->string('google_id')->nullable();
+            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });

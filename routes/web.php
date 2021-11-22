@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [CustomerController::class, 'homepage']);
 Route::get('/login', [CustomerController::class, 'login']);
-Route::get('/register', [CustomerController::class, 'register']);
 
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
@@ -65,7 +64,8 @@ Route::middleware('adminauth')
 // pragma region authRoute
 Route::prefix('auth')->group(function(){
     Route::post('admin', [AuthController::class, 'admin_auth'])->name("admin.auth");
-    Route::post('user', [AuthController::class, 'user_auth'])->name("user.auth");
+    Route::post('customer', [AuthController::class, 'customer_auth'])->name("customer.auth");
+    Route::post('customer/register', [AuthController::class, 'customer_regis'])->name("customer.regis");
     Route::get('logout', [AuthController::class, 'logout']);
 
     // callback and redirect to GOOGLE
