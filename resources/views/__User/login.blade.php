@@ -71,7 +71,9 @@
                                             <div class="social mt-3">
                                                 <div class="form-row btn-showcase">
                                                     <div class="col-md-4 col-sm-6">
-                                                        <button type="button" class="btn social-btn btn-google">Google +</button>
+                                                        <a href="{{ url('auth/redirect/google') }}">
+                                                            <button type="button" class="btn social-btn btn-google">Google +</button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

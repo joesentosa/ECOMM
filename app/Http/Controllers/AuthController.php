@@ -81,13 +81,13 @@ class AuthController extends Controller
     }
 
     // region Google Auth
-    public function redirectToGoogle($request)
+    public function redirectToGoogle(Request $request)
     {
         return Socialite::driver('google')->redirect();
     }
 
     //TODO : JERE - REFACTOR THIS CODE
-    public function handleCallbackGoogle($request)
+    public function handleCallbackGoogle(Request $request)
     {
         try {
 
