@@ -60,7 +60,7 @@
                                             </div>
                                             <div class="checkbox p-0">
                                                 <div class="checkbox checkbox-dark m-squar">
-                                                    <input id="checkbox1" type="checkbox">
+                                                    <input id="checkbox1" type="checkbox" name="remember_me">
                                                     <label class="mt-0" for="checkbox1">Remember me</label>
                                                 </div>
                                             </div>

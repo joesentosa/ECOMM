@@ -38,7 +38,7 @@ class AuthController extends Controller
             "password" => "required"
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, $request->remember_me)) {
             return redirect('login')->with('status', 'success');
         }
 
@@ -69,7 +69,7 @@ class AuthController extends Controller
         $customer->saveData($request->username, '', '', $request->email, '',
             '', '', $request->password);
 
-        return back()->with('status', 'User Registered');
+        return back()->with('status', 'User Registered'); // todo: change this to user specified page
     }
 
     public function logout(Request $request)
