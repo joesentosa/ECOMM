@@ -57,6 +57,7 @@ Route::middleware('adminauth')
     Route::post('/updatepromobarang',[AdminController::class,'updatepromobarang']);
     Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);
 
+    Route::post('/uploadimagebarang',[AdminController::class,'uploadImageBarang']);
 
     Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');
 });

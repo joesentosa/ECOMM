@@ -19,8 +19,4 @@ function settingsFileUpload(typeClass){
   // Set allowMultiple property to true
   $(`.${typeClass}`).filepond('allowMultiple', true);
 
-  // Listen for addfile event
-  $(`.${typeClass}`).on('FilePond:addfile', function(e) {
-      console.log('file added event', e);
-  });
 }

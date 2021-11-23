@@ -6,33 +6,54 @@
 <!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/material-design-icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.css') }}">
-<link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
-<link rel="stylesheet" href="https://unpkg.com/filepond/dist/filepond.min.css">
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css">
 @endsection
 
 @section('style')
 <style>  
-  .filepond--drop-label {
-    color: #4c4e53;
-  }
-
-  .filepond--label-action {
-    text-decoration-color: #babdc0;
-  }
-
-  .filepond--panel-root {
-    border-radius: 2em;
-    background-color: #edf0f4;
-    height: 1em;
-  }
-
-  .filepond--item-panel {
-    background-color: #595e68;
-  }
-
-  .filepond--drip-blob {
-    background-color: #7f8a9a;
-  }
+  .dropzone-wrapper {
+  border: 2px dashed #91b0b3;
+  color: #92b0b3;
+  position: relative;
+  height: 150px;
+}
+ 
+.dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 40%;
+  top: 50px;
+  font-size: 16px;
+}
+ 
+.dropzone,
+.dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  opacity: 0;
+}
+ 
+.dropzone-wrapper:hover,
+.dropzone-wrapper.dragover {
+  background: #ecf0f5;
+}
+ 
+.preview-zone {
+  text-align: center;
+}
+ 
+.preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
 </style>
 @endsection
 
@@ -90,13 +111,14 @@
                     <button data-id="{{$item->id_barang}}" class="btn-primary view_data"><i class="fas fa-eye"></i></button>                    
                     {{$item->review}}                              
                   </td>                  
-                  <td class="d-flex justify-content-center"><img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"></td>      
+                  <td class="d-flex justify-content-center"></td>      
+                  <!-- <img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"> -->
                   <td data-idbrand="{{$item->fk_id_brand}}" class="idbrand_hidden">{{$item->namaBrand}}</td>
                   <td data-idkategori="{{$item->fk_id_kategori}}" class="idkategori_hidden">{{$item->nama_kategori}}</td>                       
                   <td></td>                        
                 </tr>  
               @endforeach
-            @endisset                        
+            @endisset
           </tbody>
         </table>
 
@@ -209,8 +231,31 @@
           </div>          
           <div class="row">
             <div class="col-12">
-              <label for="filepond_insert">Upload Image</label>
-              <input type="file" class="filepond_insert" id="filepond_insert" name="filepond_insert" multiple data-max-file-size="3MB" data-max-files="5" />
+              <div class="preview-zone hidden">
+                <div class="box box-solid">
+                  <div class="box-header with-border">
+                    <div><b>Preview</b></div>
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-danger btn-xs remove-preview">
+                        <i class="fa fa-times"></i> Reset
+                      </button>
+                    </div>
+                  </div>
+                  <div class="box-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="filepond_insert">Upload Image</label>              
+              <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="glyphicon glyphicon-download-alt"></i>
+                  <p>Choose an image file or drag it here.</p>
+                </div>
+                <input type="file" name="uploadFile_update" class="dropzone" id="uploadFile_update">
+              </div>
             </div>
           </div>
           <div class="row">
@@ -347,15 +392,6 @@
 
 <script src="{{asset('assets/js/js_general.js')}}"></script>
 
-<!-- include FilePond library -->
-<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-
-<!-- include FilePond plugins -->
-<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
-
-<!-- include FilePond jQuery adapter -->
-<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-
 <!-- table design settings-->
 <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
@@ -429,6 +465,9 @@
     $(`input[name=id_hidden]`).val(data[0]);     
     // ============================================
   });  
+  FilePond.setOptions({
+    server: '/upload'
+  });
 
   settingsFileUpload('filepond_insert');
   settingsFileUpload('filepond_update');

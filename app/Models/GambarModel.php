@@ -9,7 +9,7 @@ class GambarModel extends Model
 {
     use HasFactory;
 
-    public $table       = "barang_gambar";
+    public $table       = "gambar";
     public $primaryKey  = "id_gambar";
     public $incrementing= true;
     public $timestamps  = true;

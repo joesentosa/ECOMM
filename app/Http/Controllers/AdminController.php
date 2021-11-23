@@ -125,6 +125,17 @@ class AdminController extends Controller
         $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
         return back();
     }
+    public function uploadImageBarang(Request $request){
+        $dtgambar = new GambarModel();
+        if ($request->hasFile('filepond_insert')) {
+            foreach ($request->file('filepond_insert') as $items) {
+                $extension = $items->getClientOriginalExtension();            
+                $filename = 'uploads/barang/'.time().'.'.$extension;            
+                $dtgambar->
+                $file->move('uploads/barang',$filename);
+            }
+        }
+    }
 
     // ==========================================
     // KATEGORI
