@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
         AdminModel::factory(5)->create();
         BarangModel::factory(5)->create();
         PromoModel::factory(5)->create();
+
+        $this->call([
+            BrandSeeder::class,
+            KategoriSeeder::class,
+        ]);
     }
 }
