@@ -7,8 +7,11 @@ use App\Models\BarangModel;
 use App\Models\KategoriModel;
 use App\Models\ShippingModel;
 use App\Models\PromoModel;
+use App\Models\GambarModel;
 use App\Models\PromoBarangModel;
 use Illuminate\Http\Request;
+
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -17,7 +20,8 @@ class AdminController extends Controller
     public function BarangAdmin(){
         $dtbarang = new BarangModel();        
         $dtbrand = new BrandModel();
-        $dtkategori = new KategoriModel();
+        $dtkategori = new KategoriModel();        
+        // dd($dtbarang->getAllById());
         return view('__Admin.dashboard.barang',['data' => $dtbarang->getAllById(),'brand' => $dtbrand->getAll(),'kategori' => $dtkategori->getAll()]);
     }
     public function BrandAdmin(){
@@ -90,51 +94,36 @@ class AdminController extends Controller
     // ==========================================
     //  BARANG
     // ==========================================
-    public function reviewBarang($id){        
-        $barang = BarangModel::find($id);
-        return response()->json([
-            "status" => 200,
-            "data" => $barang
-        ]);
-    }
+
     public function insertbarang(Request $req){
-        $dtbarang = new BarangModel();     
-        dd($req->file('filepond_insert'));
-        if ($req->hasFile('filepond_insert')) {
-            $file = $req->file('filepond_insert');            
-            // $extension = $file->getClientOriginalExtension();            
-            // $filename = 'uploads/barang/'.time().'.'.$extension;            
-            // $file->move('uploads/barang',$filename);
-        }        
-        // $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert,$filename, $req->cb_brand,$req->cb_kategori);
+        $dtbarang = new BarangModel();
+        $dtgambar = new GambarModel();             
+        $idbarang = $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert, $req->cb_brand,$req->cb_kategori);        
+        if ($req->hasFile('upload_imgs_insert')) {                        
+            foreach ($req->file('upload_imgs_insert') as $image) {
+                $extension = $image->getClientOriginalExtension();            
+                $filename = $this->generateFileName('gambar_barang',$extension);                   
+                $image->move('uploads/barang',$filename);
+            
+                $dtgambar->insertGambar($idbarang,'uploads/barang/'.$filename);
+            }  
+        }                
         return back();
     }
 
     public function updatebarang(Request $req){
         $dtbarang = new BarangModel();
-        $filename=null;
-        if ($req->urlimageupdate != "") {$filename = $req->urlimageupdate;}
-        else{            
-            if ($req->hasFile('uploadFile_update')) {
-                $file = $req->file('uploadFile_update');
-                $extension = $file->getClientOriginalExtension();            
+        
+        $filename=null;                 
+        if ($req->hasFile('upload_imgs')) {
+            foreach ($req->file('upload_imgs') as $key) {
+                $extension = $key->getClientOriginalExtension();            
                 $filename = 'uploads/barang/'.time().'.'.$extension;            
                 $file->move('uploads/barang',$filename);
-            }            
-        }           
-        $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
+            }                                
+        }                               
+        // $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
         return back();
-    }
-    public function uploadImageBarang(Request $request){
-        $dtgambar = new GambarModel();
-        if ($request->hasFile('filepond_insert')) {
-            foreach ($request->file('filepond_insert') as $items) {
-                $extension = $items->getClientOriginalExtension();            
-                $filename = 'uploads/barang/'.time().'.'.$extension;            
-                $dtgambar->
-                $file->move('uploads/barang',$filename);
-            }
-        }
     }
 
     // ==========================================
@@ -227,5 +216,22 @@ class AdminController extends Controller
         ]);
     }
     // ==========================================
+
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+    public function generateFileName($typeFile,$extension){
+        $date = Carbon::now()->format('Ymd');
+        $rnd = $this->generateRandomString(8);
+        $filename = $typeFile.'_'.$date.$rnd.'.'.$extension;
+        return $filename;
+    }
 
 }

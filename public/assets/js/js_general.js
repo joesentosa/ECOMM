@@ -8,15 +8,3 @@ function GeneralSettingsTable(id_table,data_settings,set_button,container_button
   } 
   return datatable; 
 }
-
-function settingsFileUpload(typeClass){
-  // First register any plugins
-  $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
-
-  // Turn input element into a pond
-  $(`.${typeClass}`).filepond();
-
-  // Set allowMultiple property to true
-  $(`.${typeClass}`).filepond('allowMultiple', true);
-
-}

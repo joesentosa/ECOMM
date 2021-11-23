@@ -9,7 +9,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <title>@yield('title')</title>
+    <title>@yield('title')</title>    
     @include('__Admin.layout.css')
     @yield('style')    
   </head>

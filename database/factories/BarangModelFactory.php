@@ -27,8 +27,7 @@ class BarangModelFactory extends Factory
             "stok" => $this->faker->numberBetween(1, 10),
             "harga" => $this->faker->numberBetween(100000, 5000000),
             "berat" => $this->faker->randomNumber(2),
-            "review" => $this->faker->paragraph(2),
-            "fk_id_gambar" => $this->faker->numberBetween(1, 27),
+            "review" => $this->faker->paragraph(2),            
             "fk_id_brand" => $this->faker->numberBetween(1, 36),
             "fk_id_kategori" => $this->faker->numberBetween(1, 11),
         ];

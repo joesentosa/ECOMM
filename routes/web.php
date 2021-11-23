@@ -32,8 +32,6 @@ Route::middleware('adminauth')
     Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');
     Route::get('/promoBarang',[AdminController::class,'PromoBarangAdmin'])->name('promo.barang.admin');
 
-    Route::get('/getReview/{id}',[AdminController::class,"reviewBarang"]);
-
     Route::post('/updatebrand',[AdminController::class,"updatebrand"]);
     Route::post('/insertbrand',[AdminController::class,"insertbrand"]);
     Route::post('/deletebrand',[AdminController::class,"deletebrand"]);
@@ -55,9 +53,7 @@ Route::middleware('adminauth')
 
     Route::post('/insertpromobarang',[AdminController::class,'insertpromobarang']);
     Route::post('/updatepromobarang',[AdminController::class,'updatepromobarang']);
-    Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);
-
-    Route::post('/uploadimagebarang',[AdminController::class,'uploadImageBarang']);
+    Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);    
 
     Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');
 });

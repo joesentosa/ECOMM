@@ -19,8 +19,7 @@ class CreateBarang extends Migration
             $table->smallInteger('stok');
             $table->bigInteger('harga');
             $table->smallInteger('berat');
-            $table->text('review');
-            $table->integer('fk_id_gambar');
+            $table->text('review');            
             $table->bigInteger('fk_id_brand');
             $table->bigInteger('fk_id_kategori');
             $table->timestamps();

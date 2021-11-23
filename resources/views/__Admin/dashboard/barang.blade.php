@@ -6,54 +6,31 @@
 <!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/material-design-icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.css') }}">
-<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/img_box.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.4-rc1/css/foundation.css">
 @endsection
 
 @section('style')
 <style>  
-  .dropzone-wrapper {
-  border: 2px dashed #91b0b3;
-  color: #92b0b3;
-  position: relative;
-  height: 150px;
-}
- 
-.dropzone-desc {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  width: 40%;
-  top: 50px;
-  font-size: 16px;
-}
- 
-.dropzone,
-.dropzone:focus {
-  position: absolute;
-  outline: none !important;
-  width: 100%;
-  height: 150px;
-  cursor: pointer;
-  opacity: 0;
-}
- 
-.dropzone-wrapper:hover,
-.dropzone-wrapper.dragover {
-  background: #ecf0f5;
-}
- 
-.preview-zone {
-  text-align: center;
-}
- 
-.preview-zone .box {
-  box-shadow: none;
-  border-radius: 0;
-  margin-bottom: 0;
-}
+  .quote-imgs-thumbs {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin: 1.5rem 0;
+    padding: 0.75rem;
+  }
+  .quote-imgs-thumbs--hidden {
+    display: none;
+  }
+  .img-preview-thumb {
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+    box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
+    margin-right: 1rem;
+    max-width: 140px;
+    padding: 0.25rem;
+  }
 </style>
 @endsection
 
@@ -111,7 +88,22 @@
                     <button data-id="{{$item->id_barang}}" class="btn-primary view_data"><i class="fas fa-eye"></i></button>                    
                     {{$item->review}}                              
                   </td>                  
-                  <td class="d-flex justify-content-center"></td>      
+                  <td>         
+                    <section id="gallery">                               
+                      <div id="image-gallery">                        
+                        @foreach($item->gambar as $index => $images)                          
+                          <div class="image @if($index > 0) hide_img @endif">
+                            <div class="img-wrapper">
+                              <a href="{{asset($images->gambar)}}"><img src="{{asset($images->gambar)}}" class="img-responsive"></a>
+                              <div class="img-overlay">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div> 
+                        @endforeach                         
+                      </div><!-- End image gallery -->
+                    </section>
+                  </td>      
                   <!-- <img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"> -->
                   <td data-idbrand="{{$item->fk_id_brand}}" class="idbrand_hidden">{{$item->namaBrand}}</td>
                   <td data-idkategori="{{$item->fk_id_kategori}}" class="idkategori_hidden">{{$item->nama_kategori}}</td>                       
@@ -123,7 +115,7 @@
         </table>
 
         <!-- modal review -->
-        <div id="data" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div id="data" class="modal show fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -228,34 +220,14 @@
                 <textarea class="form-control" rows="5" cols="5" placeholder="Masukkan review Barang" id="reviewbarang_insert" name="reviewbarang_insert"></textarea>                
               </div>
             </div>
-          </div>          
+          </div>                    
           <div class="row">
             <div class="col-12">
-              <div class="preview-zone hidden">
-                <div class="box box-solid">
-                  <div class="box-header with-border">
-                    <div><b>Preview</b></div>
-                    <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-danger btn-xs remove-preview">
-                        <i class="fa fa-times"></i> Reset
-                      </button>
-                    </div>
-                  </div>
-                  <div class="box-body"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <label for="filepond_insert">Upload Image</label>              
-              <div class="dropzone-wrapper">
-                <div class="dropzone-desc">
-                  <i class="glyphicon glyphicon-download-alt"></i>
-                  <p>Choose an image file or drag it here.</p>
-                </div>
-                <input type="file" name="uploadFile_update" class="dropzone" id="uploadFile_update">
-              </div>
+              <p>
+                <label for="upload_imgs_insert" class="button hollow">Select Your Images +</label>
+                <input class="show-for-sr" type="file" id="upload_imgs_insert" name="upload_imgs_insert[]" multiple/>
+              </p>
+              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
             </div>
           </div>
           <div class="row">
@@ -376,101 +348,124 @@
 
 @section('script')
 
-<script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
-<script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
-<script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
-<script src="{{asset('assets/js/typeahead-search/handlebars.js')}}"></script>
-<script src="{{asset('assets/js/typeahead-search/typeahead-custom.js')}}"></script>
-<script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
-<script src="{{asset('assets/js/dashboard/default.js')}}"></script>
-<script src="{{asset('assets/js/notify/index.js')}}"></script>
+  <script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
+  <script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
+  <script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
+  <script src="{{asset('assets/js/typeahead-search/handlebars.js')}}"></script>
+  <script src="{{asset('assets/js/typeahead-search/typeahead-custom.js')}}"></script>
+  <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
+  <script src="{{asset('assets/js/dashboard/default.js')}}"></script>
+  <script src="{{asset('assets/js/notify/index.js')}}"></script>
 
-<!-- select2 settings-->
-<script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
-<script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
-<!-- end select2 settings-->
+  <!-- select2 settings-->
+  <script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
+  <script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
+  <!-- end select2 settings-->
 
-<script src="{{asset('assets/js/js_general.js')}}"></script>
+  <script src="{{asset('assets/js/js_image_gallery.js')}}"></script>
+  <script src="{{asset('assets/js/js_general.js')}}"></script>
 
-<!-- table design settings-->
-<script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
-<!-- end table design settings-->
-<script>
-  const settingstable = {    
-    "columnDefs": [           
-      {
-        "targets": -1,
-        "data": null,
-        "defaultContent": "<button type='button' id='btnupdate_barang' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_barang_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_barang' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
-        "orderable": false
-      },
-      { "width": "10px", "targets": 0},
-      { "width": "200px", "targets": 1 },
-      { "width": "10px", "targets": 2 },
-      { "width": "100px", "targets": 3 },
-      { "width": "10px", "targets": 4 },
-      { "width": "150px","targets":9}   
-    ],          
-    "order": [[1, 'asc']],
-    'responsive'  : false,
-    'paging'      : true,
-    'pageLength'  : 5,
-    'destroy'     : false,
-    'lengthChange': false,
-    'searching'   : true,
-    'ordering'    : true,
-    'info'        : true,
-    'autoWidth'   : true,
-    'buttons'     : [
-      'copy',
-      'excel',      
-      'print'
-    ]
-  }
-  const settingsBarang = GeneralSettingsTable('tableBarang',settingstable,true,'container_button');  
-  
+  <!-- table design settings-->
+  <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
+  <!-- end table design settings-->
+<script>      
+  $(document).ready(function(){
+    const settingstable = {    
+      "columnDefs": [           
+        {
+          "targets": -1,
+          "data": null,
+          "defaultContent": "<button type='button' id='btnupdate_barang' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_barang_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_barang' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
+          "orderable": false
+        },
+        { "width": "10px", "targets": 0},
+        { "width": "200px", "targets": 1 },
+        { "width": "10px", "targets": 2 },
+        { "width": "100px", "targets": 3 },
+        { "width": "10px", "targets": 4 },
+        { "width": "200px", "targets": 6 },
+        { "width": "150px","targets":9}   
+      ],          
+      "order": [[1, 'asc']],
+      'responsive'  : true,
+      'paging'      : false,
+      'pageLength'  : 5,    
+      'destroy'     : false,
+      'lengthChange': false,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true,
+      'buttons'     : [
+        'copy',
+        'excel',      
+        'print'
+      ]
+    }
+    const settingsBarang = GeneralSettingsTable('tableBarang',settingstable,true,'container_button');    
+    $('.view_data').click(function(){      
+      var data_id = settingsBarang.row($(this).parents('tr')).data();         
+      let tmpdata = data_id[5].split("</button>");      
+      $("#detail_data").html(tmpdata[1]);
+      $("#data").modal('show');		
+    });
+    // display data di table ke input form modal
+    $('#tableBarang tbody').on('click','#btnupdate_barang',function(){  
+      const trhead = $(this).parents('tr');      
+      const data = settingsBarang.row(trhead).data();          
+      let tmpidbrand = trhead.find($('td')).eq(7).attr('data-idbrand');
+      let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori')
+      let tmpberat = data[4].split(" ");   
+      let tmpreview = data[5].split("</button>");    
+      
+      // fill data
+      $(`input[name=nmbarang_update]`).val(data[1]);
+      $(`input[name=hargaBarang_update]`).val(data[3]);
+      $('#cb_brand').val(tmpidbrand).change();
+      $('#cb_kategori').val(tmpidkategori).change();
+      $(`input[name=stokbarang_update]`).val(data[2]);
+      $(`input[name=beratbarang_update]`).val(tmpberat[0]);
+      $(`textarea#reviewbarang_update`).val(tmpreview[1]);
+      $(`input[name=id_hidden]`).val(data[0]);     
+      // ============================================
+    });    
+    // =================================
+    // image upload
+    var imgUpload = document.getElementById('upload_imgs_insert')
+      , imgPreview = document.getElementById('img_preview')
+      , imgUploadForm = document.getElementById('img-upload-form')
+      , totalFiles
+      , previewTitle
+      , previewTitleText
+      , img;
 
-  $('.view_data').click(function(){      
-		var data_id = $(this).data("id")    
-		$.ajax({
-			url: "/admin/getReview/"+data_id,
-			method: "get",			
-			success: function(data){          
-				$("#detail_data").html(data.data.review)
-				$("#data").modal('show')
-			}
-		})
-	});
+    imgUpload.addEventListener('change', previewImgs, false);  
 
-  // display data di table ke input form modal
-  $('#tableBarang tbody').on('click','#btnupdate_barang',function(){  
-    const trhead = $(this).parents('tr');      
-    const data = settingsBarang.row(trhead).data();          
-    let tmpidbrand = trhead.find($('td')).eq(7).attr('data-idbrand');
-    let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori')
-    let tmpberat = data[4].split(" ");   
-    let tmpreview = data[5].split("</button>");    
-    
-    // fill data
-    $(`input[name=nmbarang_update]`).val(data[1]);
-    $(`input[name=hargaBarang_update]`).val(data[3]);
-    $('#cb_brand').val(tmpidbrand).change();
-    $('#cb_kategori').val(tmpidkategori).change();
-    $(`input[name=stokbarang_update]`).val(data[2]);
-    $(`input[name=beratbarang_update]`).val(tmpberat[0]);
-    $(`textarea#reviewbarang_update`).val(tmpreview[1]);
-    $(`input[name=id_hidden]`).val(data[0]);     
-    // ============================================
-  });  
-  FilePond.setOptions({
-    server: '/upload'
-  });
+    function previewImgs(event) {
+      totalFiles = imgUpload.files.length;
+      
+      if(!!totalFiles) {
+        imgPreview.classList.remove('quote-imgs-thumbs--hidden');
+        previewTitle = document.createElement('p');
+        previewTitle.style.fontWeight = 'bold';
+        previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
+        previewTitle.appendChild(previewTitleText);
+        imgPreview.appendChild(previewTitle);
+      }
+      
+      for(var i = 0; i < totalFiles; i++) {
+        img = document.createElement('img');
+        img.src = URL.createObjectURL(event.target.files[i]);
+        img.classList.add('img-preview-thumb');
+        imgPreview.appendChild(img);
+      }
+    }
+    // image show
 
-  settingsFileUpload('filepond_insert');
-  settingsFileUpload('filepond_update');
+  })  
 </script>
 @endsection
 

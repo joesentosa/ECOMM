@@ -15,8 +15,10 @@ class GambarModel extends Model
     public $timestamps  = true;
     protected $fillable = ['id_barang', 'gambar'];
 
-    public function insertBarang($gambar){
+    public function insertGambar($id_barang,$gambar){
         $barang             = new GambarModel();
+        $barang->id_gambar  = null;
+        $barang->id_barang  = $id_barang;
         $barang->gambar     = $gambar;
         $barang->save();
     }

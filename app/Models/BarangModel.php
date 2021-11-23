@@ -15,22 +15,22 @@ class BarangModel extends Model
     public $primaryKey  = "id_barang";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['namaBarang','stok','harga','berat','review','gambar','fk_id_brand','fk_id_kategori','created_at','updated_at'];
+    protected $fillable = ['namaBarang','stok','harga','berat','review','fk_id_brand','fk_id_kategori','created_at','updated_at'];
 
-    public function insertBarang($nama,$stok,$harga,$berat,$review,$gambar,$idbrand,$idkategori){
+    public function insertBarang($nama,$stok,$harga,$berat,$review,$idbrand,$idkategori){
         $barang                 = new BarangModel();
         $barang->id_barang      = null;
         $barang->namaBarang     = $nama;
         $barang->stok           = $stok;
         $barang->harga          = $harga;
         $barang->berat          = $berat;
-        $barang->review         = $review;
-        $barang->gambar         = $gambar;
+        $barang->review         = $review;        
         $barang->fk_id_brand    = $idbrand;
         $barang->fk_id_kategori = $idkategori;
         $barang->save();
+        return $barang->id_barang;
     }
-    public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang,$filename = null, $cb_brand,$cb_kategori){
+    public function updateBarang($id_hidden,$nmbarang, $stokbarang, $hargaBarang, $beratbarang, $reviewbarang, $cb_brand,$cb_kategori){
         $barang                 = BarangModel::find($id_hidden);
         $barang->namaBarang     = $nmbarang;
         $barang->stok           = $stokbarang;
@@ -51,11 +51,11 @@ class BarangModel extends Model
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
     }
     public function getAll(){
-        return BarangModel::all();
+        return BarangModel::with(['gambar'])->get();
     }
 
     public function gambar()
     {
-        return $this->hasMany(GambarModel::class, 'id_gambar', 'fk_id_gambar');
+        return $this->hasMany(GambarModel::class, 'id_barang', 'id_barang'); // (models, table gambar, table barang)
     }    
 }
