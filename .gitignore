@@ -11,3 +11,20 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# Portable Network Graphics
+*.png
+
+# Animated Portable Network Graphics
+*.apng
+
+# ICO
+*.ico

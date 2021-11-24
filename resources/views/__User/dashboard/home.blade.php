@@ -1,15 +1,21 @@
-@extends('__User.master')
+@extends('__User.layout.master')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+
 @endsection
 
 @section('style')
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
+
     <style>
         .page-wrapper .page-body-wrapper .page-body {
             margin-left : 0px !important;
         }
     </style>
+@endsection
+
+@section('header')
+    @include('__User.layout.header')
 @endsection
 
 @section('content')

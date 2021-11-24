@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::get('/', [CustomerController::class, 'landing']);
 Route::get('/home', [CustomerController::class, 'homepage']);
 Route::get('/login', [CustomerController::class, 'login']);
 

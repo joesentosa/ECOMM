@@ -10,7 +10,7 @@
     <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
     <title>Poco - @yield('title')</title>
-    @include('__User.css')
+    @include('__User.layout.css')
     @yield('style')
 
   </head>
@@ -25,7 +25,7 @@
     <!-- page-wrapper Start-->
     <div class="page-wrapper">
       <!-- Page Header Start-->
-      @include('__User.header')
+        @yield('header')
       <!-- Page Header Ends -->
       <!-- Page Body Start-->
        <div class="page-body-wrapper">
@@ -55,10 +55,10 @@
             @yield('content')
         </div>
         <!-- footer start-->
-        @include('__User.footer')
+        @include('__User.layout.footer')
       {{-- </div> --}}
     </div>
-    @include('__User.script')
+    @include('__User.layout.script')
+    @stack('JScript')
   </body>
-@stack('JScript')
 </html>

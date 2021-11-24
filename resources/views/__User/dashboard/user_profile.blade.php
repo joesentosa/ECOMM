@@ -1,4 +1,4 @@
-@extends('__User.master')
+@extends('__User.layout.master')
 @section('title', 'User Profile')
 
 @section('css')

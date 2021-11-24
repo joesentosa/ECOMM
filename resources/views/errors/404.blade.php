@@ -1,4 +1,4 @@
-@extends('__User.master2')
+@extends('__User.layout.master')
 @section('title', '404')
 
 @section('css')

@@ -8,14 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
+    public function landing()
+    {
+        return view('__User.dashboard.landing');
+    }
+
     public function homepage()
     {
-        return view('__User.home');
+        return view('__User.dashboard.home');
     }
 
     public function login()
     {
-        return view('__User.login');
+        return view('__User.dashboard.login');
     }
 
     public function getDataCustomer(Request $request)
