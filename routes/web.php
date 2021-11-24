@@ -17,67 +17,73 @@ Route::get('/login', [CustomerController::class, 'login']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
 // admin route
-Route::middleware('adminauth')
+Route::middleware('admin.auth')
     ->prefix('admin')
-    ->group(function(){
-    Route::get('/',[AdminController::class,'IndexAdmin']);
-    Route::get('/barang',[AdminController::class,'BarangAdmin'])->name('barang.admin');
-    Route::get('/brand',[AdminController::class,'BrandAdmin'])->name('brand.admin');
-    Route::get('/kategori',[AdminController::class,'KategoriAdmin'])->name('kategori.admin');
-    Route::get('/useradmin',[AdminController::class,'AdminUser'])->name('user.admin');
-    Route::get('/customer',[AdminController::class,'Customer'])->name('customer.admin');
-    Route::get('/horder',[AdminController::class,'HorderAdmin'])->name('horder.admin');
-    Route::get('/dorder',[AdminController::class,'DorderAdmin'])->name('dorder.admin');
-    Route::get('/shipping',[AdminController::class,'ShippingAdmin'])->name('shipping.admin');
-    Route::get('/promo',[AdminController::class,'PromoAdmin'])->name('promo.admin');
-    Route::get('/promoBarang',[AdminController::class,'PromoBarangAdmin'])->name('promo.barang.admin');
+    ->group(function () {
+        Route::get('/', [AdminController::class, 'IndexAdmin'])->name('page.index.admin');
+        Route::get('/barang', [AdminController::class, 'BarangAdmin'])->name('page.barang.admin');
+        Route::get('/brand', [AdminController::class, 'BrandAdmin'])->name('page.brand.admin');
+        Route::get('/kategori', [AdminController::class, 'KategoriAdmin'])->name('page.kategori.admin');
+        Route::get('/useradmin', [AdminController::class, 'AdminUser'])->name('page.user.admin');
+        Route::get('/customer', [AdminController::class, 'Customer'])->name('page.customer.admin');
+        Route::get('/horder', [AdminController::class, 'HorderAdmin'])->name('page.horder.admin');
+        Route::get('/dorder', [AdminController::class, 'DorderAdmin'])->name('page.dorder.admin');
+        Route::get('/shipping', [AdminController::class, 'ShippingAdmin'])->name('page.shipping.admin');
+        Route::get('/promo', [AdminController::class, 'PromoAdmin'])->name('page.promo.admin');
+        Route::get('/promoBarang', [AdminController::class, 'PromoBarangAdmin'])->name('page.promo_barang.admin');
 
-    Route::post('/updatebrand',[AdminController::class,"updatebrand"]);
-    Route::post('/insertbrand',[AdminController::class,"insertbrand"]);
-    Route::post('/deletebrand',[AdminController::class,"deletebrand"]);
+        Route::post('/updatebrand', [AdminController::class, "updatebrand"]);
+        Route::post('/insertbrand', [AdminController::class, "insertbrand"]);
+        Route::post('/deletebrand', [AdminController::class, "deletebrand"]);
 
-    Route::post('/insertbarang',[AdminController::class,"insertbarang"]);
-    Route::post('/updatebarang',[AdminController::class,"updatebarang"]);
+        Route::post('/insertbarang', [AdminController::class, "insertbarang"]);
+        Route::post('/updatebarang', [AdminController::class, "updatebarang"]);
 
-    Route::post('/insertkategori',[AdminController::class,"insertkategori"]);
-    Route::post('/updatekategori',[AdminController::class,"updatekategori"]);
-    Route::post('/deletekategori',[AdminController::class,"deletekategori"]);
+        Route::post('/insertkategori', [AdminController::class, "insertkategori"]);
+        Route::post('/updatekategori', [AdminController::class, "updatekategori"]);
+        Route::post('/deletekategori', [AdminController::class, "deletekategori"]);
 
-    Route::post('/insertshipping',[AdminController::class,'insertshipping']);
-    Route::post('/updateshipping',[AdminController::class,'updateshipping']);
-    Route::post('/deleteshipping',[AdminController::class,'deleteshipping']);
+        Route::post('/insertshipping', [AdminController::class, 'insertshipping']);
+        Route::post('/updateshipping', [AdminController::class, 'updateshipping']);
+        Route::post('/deleteshipping', [AdminController::class, 'deleteshipping']);
 
-    Route::post('/insertpromo',[AdminController::class,'insertpromo']);
-    Route::post('/updatepromo',[AdminController::class,'updatepromo']);
-    Route::post('/deletepromo',[AdminController::class,'deletepromo']);
+        Route::post('/insertpromo', [AdminController::class, 'insertpromo']);
+        Route::post('/updatepromo', [AdminController::class, 'updatepromo']);
+        Route::post('/deletepromo', [AdminController::class, 'deletepromo']);
 
-    Route::post('/insertpromobarang',[AdminController::class,'insertpromobarang']);
-    Route::post('/updatepromobarang',[AdminController::class,'updatepromobarang']);
-    Route::post('/deletepromobarang',[AdminController::class,'deletepromobarang']);    
+        Route::post('/insertpromobarang', [AdminController::class, 'insertpromobarang']);
+        Route::post('/updatepromobarang', [AdminController::class, 'updatepromobarang']);
+        Route::post('/deletepromobarang', [AdminController::class, 'deletepromobarang']);
 
-    Route::get('login',[AdminController::class,"loginAdmin"])->name('admin.login')->withoutMiddleware('adminauth');
-});
+        Route::get('login', [AdminController::class, "loginAdmin"])->name('page.admin.login')->withoutMiddleware('admin.auth');
+    });
 // end admin route
 
 // pragma region authRoute
-Route::prefix('auth')->group(function(){
-    Route::post('admin', [AuthController::class, 'admin_auth'])->name("admin.auth");
-    Route::post('customer', [AuthController::class, 'customer_auth'])->name("customer.auth");
-    Route::post('customer/register', [AuthController::class, 'customer_regis'])->name("customer.regis");
-    Route::get('logout', [AuthController::class, 'logout']);
+Route::prefix('auth')
+    ->group(function () {
+        Route::post('admin', [AuthController::class, 'admin_auth'])->name("route.admin.auth");
+        Route::post('customer', [AuthController::class, 'customer_auth'])->name("route.customer.auth");
+        Route::post('customer/register', [AuthController::class, 'customer_regis'])->name("route.customer.regis");
+        Route::get('logout', [AuthController::class, 'logout']);
 
-    // callback and redirect to GOOGLE
-    Route::get('redirect/google', [AuthController::class, 'redirectToGoogle']);
-    Route::get('callback/google', [AuthController::class, 'handleCallbackGoogle']);
-});
+        // callback and redirect to GOOGLE
+        Route::get('redirect/google', [AuthController::class, 'redirectToGoogle']);
+        Route::get('callback/google', [AuthController::class, 'handleCallbackGoogle']);
+    });
 // pragma endregion
 
 //route customer
-Route::prefix('user')->group(function(){
-    Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
-    Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
-    Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
-});
+Route::middleware(['customer.auth'])
+    ->prefix('user')
+    ->group(function () {
+        Route::get('/', function(){
+            return redirect('/profile');
+        });
+        Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
+        Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
+        Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
+    });
 //end route customer
 
 // Route::get('/', function(){

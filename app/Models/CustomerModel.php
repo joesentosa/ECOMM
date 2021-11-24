@@ -17,8 +17,8 @@ class CustomerModel extends Authenticates
     public $primaryKey  = "id_customer";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['username','firstname','lastname','email','address','kota','kodeZip','password'];
-    protected $hidden = ['password', 'remember_token'];
+    protected $fillable = ['username','firstname','lastname','email','address','kota','kodeZip','google_id','password'];
+    protected $hidden = ['google_id', 'password', 'remember_token'];
 
     public function saveData($username,$firstname,$lastname,$email,$address,$kota,$kodezip,$password){
         $customer                 = new CustomerModel();

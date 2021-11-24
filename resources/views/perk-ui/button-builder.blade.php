@@ -2,10 +2,10 @@
 @section('title', 'Button Builder')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/button-builder.css')}}">
 @endsection
 
 @section('style')
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/button-builder.css')}}">
 @endsection
 
 @section('breadcrumb-title')

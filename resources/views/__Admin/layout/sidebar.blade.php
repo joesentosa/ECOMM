@@ -7,9 +7,9 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master Barang</li>
-               <li><a href="{{route('barang.admin')}}">Barang</a></li>
-               <li><a href="{{route('brand.admin')}}">Brand</a></li>
-               <li><a href="{{route('kategori.admin')}}">Kategori</a></li>               
+               <li><a href="{{route('page.barang.admin')}}">Barang</a></li>
+               <li><a href="{{route('page.brand.admin')}}">Brand</a></li>
+               <li><a href="{{route('page.kategori.admin')}}">Kategori</a></li>
             </ul>
          </li>
          <li>
@@ -18,8 +18,8 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master User</li>
-               <li><a href="{{route('user.admin')}}">Admin</a></li>
-               <li><a href="{{route('customer.admin')}}">Customer</a></li>               
+               <li><a href="{{route('page.user.admin')}}">Admin</a></li>
+               <li><a href="{{route('page.customer.admin')}}">Customer</a></li>
             </ul>
          </li>
          <li>
@@ -28,8 +28,8 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Master Order</li>
-               <li><a href="{{route('horder.admin')}}">Header Order</a></li>
-               <li><a href="{{route('dorder.admin')}}">Detail Order</a></li>               
+               <li><a href="{{route('page.horder.admin')}}">Header Order</a></li>
+               <li><a href="{{route('page.dorder.admin')}}">Detail Order</a></li>
             </ul>
          </li>
          <li>
@@ -37,18 +37,18 @@
                <i class="pe-7s-box1"></i><span>Master Shipping</span>
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
-               <li class="iconbar-header">Master Shipping</li>  
-               <li><a href="{{route('shipping.admin')}}">Shipping</a></li>                        
+               <li class="iconbar-header">Master Shipping</li>
+               <li><a href="{{route('page.shipping.admin')}}">Shipping</a></li>
             </ul>
          </li>
          <li>
             <a class="bar-icons" href="#">
-               <i class="fas fa-percent"></i><span>Master Promo</span>               
+               <i class="fas fa-percent"></i><span>Master Promo</span>
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
-               <li class="iconbar-header">Master Promo</li>  
-               <li><a href="{{route('promo.admin')}}">Promo</a></li> 
-               <li><a href="{{route('promo.barang.admin')}}">Promo Barang</a></li> 
+               <li class="iconbar-header">Master Promo</li>
+               <li><a href="{{route('page.promo.admin')}}">Promo</a></li>
+               <li><a href="{{route('page.promo_barang.admin')}}">Promo Barang</a></li>
             </ul>
          </li>
          <li>
@@ -56,12 +56,12 @@
                <i class="fas fa-bar-chart"></i><span>Laporan</span>
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
-               <li class="iconbar-header">Laporan</li>  
-               <li><a href="{{route('promo.admin')}}">Penjualan</a></li>                        
-               <li><a href="{{route('promo.admin')}}">Barang Terlaris</a></li>                        
-               <li><a href="{{route('promo.admin')}}">Pendapatan per Bulan</a></li>           
-               <li><a href="{{route('promo.admin')}}">Invoice</a></li>                                     
-               <li><a href="{{route('promo.admin')}}">Barang Terlaris</a></li>                        
+               <li class="iconbar-header">Laporan</li>
+               <li><a href="{{route('page.promo.admin')}}">Penjualan</a></li>
+               <li><a href="{{route('page.promo.admin')}}">Barang Terlaris</a></li>
+               <li><a href="{{route('page.promo.admin')}}">Pendapatan per Bulan</a></li>
+               <li><a href="{{route('page.promo.admin')}}">Invoice</a></li>
+               <li><a href="{{route('page.promo.admin')}}">Barang Terlaris</a></li>
             </ul>
          </li>
       </ul>

@@ -24,10 +24,10 @@ class AuthController extends Controller
 
         if (Auth::guard('admin')->attempt($credentials)) {
             $user = Auth::guard('admin')->user();
-            return redirect('admin');
+            return redirect()->route('page.index.admin');
         }
 
-        return redirect('admin')->withErrors([
+        return back()->withErrors([
             'status' => 'The provided credentials not valid.',
         ]);
     }
@@ -108,7 +108,7 @@ class AuthController extends Controller
                     'lastname' => $user_data['family_name'],
                     'email' => $user_data['email'],
                     'password' => Hash::make($user_data['sub']),
-                    'google_id' => $user_data['sub']
+                    'google_id' => $user->getId(),
                 ]);
 
                 Auth::login($customer);
