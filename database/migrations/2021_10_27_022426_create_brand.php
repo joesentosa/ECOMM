@@ -16,7 +16,7 @@ class CreateBrand extends Migration
         Schema::create('brand', function (Blueprint $table) {
             $table->increments('id_brand');
             $table->string('namaBrand',50)->comment('Nama Logo dari suatu produk.example:Logitech'); 
-            $table->string('gambar',255);           
+            $table->longText('gambar');           
             $table->timestamps();
             $table->softDeletes();
         });

@@ -17,6 +17,7 @@
     border-radius:50px;
     color:white;
     font-weight:500;
+    line-height:2;
   }
   .edit-table-customer.active{
     background-color:#90e900;
@@ -52,21 +53,35 @@
               <tr>
                 <th style="text-align: center;">No</th>
                 <th>Username</th>
+                <th>First Name</th>
+                <th>Last Name</th>                
                 <th>Email</th>
-                <th>Nomor Telepon</th>     
+                <th>Address</th>                                 
                 <th>Status</th>           
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="text-align: center;">1</td>
-                <td>Samuel Wijaya</td>
-                <td>samuel3@mhs.stts.edu</td>
-                <td>081217217016</td>                                                      
-                <td>
-                  <p class="edit-table-customer active">Aktif</p>                  
-                </td>
-              </tr>              
+              @isset($data)
+                @foreach($data as $item)
+                  <tr>
+                    <td style="text-align: center;">{{$item->id_customer}}</td>
+                    <td>{{$item->username}}</td>
+                    <td>{{$item->firstname}}</td>
+                    <td>{{$item->lastname}}</td>                                                      
+                    <td>{{$item->email}}</td>                                                      
+                    <td>{{$item->address.", ".$item->kota.", ".$item->kodeZip}}</td>                                                      
+                    @if($item->deleted_at == null)
+                    <td>                      
+                      <p class="edit-table-customer active">Aktif</p>                  
+                    </td>
+                    @else
+                    <td>                      
+                      <p class="edit-table-customer nanactive">Tidak Aktif</p>                  
+                    </td>
+                    @endif
+                  </tr>              
+                @endforeach
+              @endisset              
             </tbody>
         </table>
       </div>

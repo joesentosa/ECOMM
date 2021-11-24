@@ -22,7 +22,6 @@ class CustomerModel extends Authenticates
 
     public function saveData($username,$firstname,$lastname,$email,$address,$kota,$kodezip,$password){
         $customer                 = new CustomerModel();
-        //$customer->id_customer    = null;
         $customer->firstname      = $firstname;
         $customer->lastname       = $lastname;
         $customer->username       = $username;
@@ -31,9 +30,9 @@ class CustomerModel extends Authenticates
         $customer->kota           = $kota;
         $customer->kodeZip        = $kodezip;
         $customer->password       = Hash::make($password);
-        //$customer->created_at     = null;
-        //$customer->updated_at     = null;
-        //$customer->deleted_at     = null;
         $customer->save();
+    }
+    public function getAll(){
+        return CustomerModel::all();
     }
 }

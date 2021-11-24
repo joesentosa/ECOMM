@@ -8,9 +8,12 @@ use App\Models\KategoriModel;
 use App\Models\ShippingModel;
 use App\Models\PromoModel;
 use App\Models\GambarModel;
+use App\Models\AdminModel;
+use App\Models\CustomerModel;
 use App\Models\PromoBarangModel;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 
 class AdminController extends Controller
@@ -20,8 +23,7 @@ class AdminController extends Controller
     public function BarangAdmin(){
         $dtbarang = new BarangModel();        
         $dtbrand = new BrandModel();
-        $dtkategori = new KategoriModel();        
-        // dd($dtbarang->getAllById());
+        $dtkategori = new KategoriModel();                
         return view('__Admin.dashboard.barang',['data' => $dtbarang->getAllById(),'brand' => $dtbrand->getAll(),'kategori' => $dtkategori->getAll()]);
     }
     public function BrandAdmin(){
@@ -32,8 +34,14 @@ class AdminController extends Controller
         $dtkategori = new KategoriModel();
         return view('__Admin.dashboard.kategori',['data' => $dtkategori->getAll()]);
     }
-    public function AdminUser(){return view('__Admin.dashboard.useradmin');}
-    public function Customer(){return view('__Admin.dashboard.customer');}
+    public function AdminUser(){
+        $dtuseradmin = new AdminModel();
+        return view('__Admin.dashboard.useradmin',['data' => $dtuseradmin->getAll()]);
+    }
+    public function Customer(){
+        $dtcustomer = new CustomerModel();
+        return view('__Admin.dashboard.customer',['data'=>$dtcustomer->getAll()]);
+    }
     public function HorderAdmin(){return view('__Admin.dashboard.horder');}
     public function DorderAdmin(){return view('__Admin.dashboard.dorder');}
     public function ShippingAdmin(){
@@ -234,4 +242,25 @@ class AdminController extends Controller
         return $filename;
     }
 
+    // ==========================================
+    //  USER ADMIN
+    // ==========================================
+    public function insertuseradmin(Request $req){
+        $dtuseradmin = new AdminModel();
+        $dtuseradmin->insertUserAdmin($req->username_insert,$req->email_insert,$req->notlp_insert,Hash::make($req->password_insert));
+        return back();
+    }
+    public function updateuseradmin(Request $req){
+        $dtuseradmin = new AdminModel();
+        $dtuseradmin->updateUserAdmin($req->id_hidden,$req->username_update,$req->email_update,$req->notlp_update,Hash::make($req->password_update));
+        return back();
+    }
+    public function deleteuseradmin(Request $req){
+        $dtuseradmin = new AdminModel();
+        $dtuseradmin->deleteUserAdmin($req->id_useradmin);
+        return response()->json([
+            'status' => 200
+        ]);
+    }
+    // ==========================================
 }

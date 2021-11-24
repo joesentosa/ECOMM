@@ -9,41 +9,22 @@
 
 @section('style')
 <style>
-  #tdreview{
-    max-width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;       
-  }    
-  .dt-button{
-    background-color:#7e37d8;
-    color:white;
+  .edit-table-admin{
     width:100px;
     height:35px;
+    text-align:center;
+    padding-top:2.5%;    
     border-radius:50px;
-    border:none;
-  }
-  .dt-button:hover{
-    background-color:#7d37d8af;
-  }
-  .btn-edit{
-    background-color:#7e37d8;
-    border:none;
-  }
-  .btn-edit:hover{
-    background-color:#7d37d8af;
-  }
-  .btn-add{
-    background-color:#7e37d8;
-    width:100px;
-    border:none;
-    border-radius:50px;
-    height:35px;
     color:white;
+    font-weight:500;
+    line-height:2.3;
   }
-  .btn-add:hover{
-    background-color:#7d37d8af;
-  }  
+  .edit-table-admin.active{
+    background-color:#90e900;
+  }
+  .edit-table-admin.nanactive{
+    background-color:#fc1f57;
+  }     
 </style>
 @endsection
 
@@ -66,7 +47,7 @@
           <div class="container_button"></div>          
         </div>
         <div class="col-6 d-flex flex-row-reverse">
-          <button class="btn-add" data-toggle='modal' data-target='#form_useradmin_insert'>
+          <button class="btn btn-primary" data-toggle='modal' data-target='#form_useradmin_insert'>
             <i class="fas fa-plus"></i>
             Tambah
           </button>
@@ -80,17 +61,31 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Nomor Telepon</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="text-align: center;">1</td>
-                <td>Samuel Wijaya</td>
-                <td>samuel3@mhs.stts.edu</td>
-                <td></td>  
-                <td></td>                                     
-              </tr>              
+              @isset($data)
+                @foreach($data as $item)
+                  <tr>
+                    <td style="text-align: center;">{{$item->id}}</td>
+                    <td>{{$item->username}}</td>
+                    <td>{{$item->email}}</td>
+                    <td>{{$item->no_tlp}}</td> 
+                    @if($item->deleted_at == null)
+                    <td>                      
+                      <p class="edit-table-admin active">Aktif</p>                  
+                    </td>
+                    @else
+                    <td>                      
+                      <p class="edit-table-admin nanactive">Tidak Aktif</p>                  
+                    </td>
+                    @endif
+                    <td></td>                                     
+                  </tr>              
+                @endforeach
+              @endisset              
             </tbody>
         </table>
       </div>
@@ -114,7 +109,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="useradmin_insert" class="form theme-form">
+        <form method="POST" id="useradmin_insert" action="/admin/insertuseradmin" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -138,6 +133,20 @@
                 <label for="notlp_insert">Nomor Telepon</label>
                 <input class="form-control" id="notlp_insert" type="text" placeholder="Masukkan nomor telepon" name="notlp_insert">
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+              <button id="btngenerate" class="btn btn-primary" type="button">
+                <i class="fas fa-redo-alt"></i>
+                Generate
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="password_insert">Password</label>
+              <input class="form-control" id="password_insert" type="text" placeholder="Masukkan Password" name="password_insert">
             </div>
           </div>
           <div class="row">
@@ -168,7 +177,7 @@
       </div>
       <div class="modal-body">
         <!-- form -->
-        <form method="POST" id="useradmin_update" class="form theme-form">
+        <form method="POST" id="useradmin_update" action="/admin/updateuseradmin" class="form theme-form">
           @csrf
           <div class="row">
             <div class="col-md-12">
@@ -195,8 +204,23 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+              <button id="btngenerate" class="btn btn-primary" type="button">
+                <i class="fas fa-redo-alt"></i>
+                Generate
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="password_update">Password</label>
+              <input class="form-control" id="password_update" type="text" placeholder="Masukkan Password" name="password_update">
+            </div>
+          </div>
+          <input type="hidden" name="id_hidden" id="id_hidden">
+          <div class="row">
             <div class="col-md-12 d-flex justify-content-end p-4">
-              <input type="submit" value="update" class="btn btn-primary">
+              <input type="submit" value="Update" class="btn btn-primary">
             </div>
           </div>
         </form>
@@ -228,36 +252,99 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
 <!-- end table design settings-->
 <script>
-  const settingstable = {    
-    "columnDefs": [           
-      {
-        "targets": -1,
-        "data": null,
-        "defaultContent": "<button type='button' id='btnupdate_brand' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_useradmin_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_brand' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
-        "orderable": false
-      },
-      { "width": "10px", "targets": 0, "orderable": false },
-      { "width": "200px", "targets": 1 },
-      { "width": "200px", "targets": 2 },
-      { "width": "140px", "targets": 3 },      
-      { "width": "60px", "targets": 4 },  
-    ],              
-    'responsive'  : true,
-    'paging'      : true,
-    'pageLength'  : 10,
-    'destroy'     : false,
-    'lengthChange': false,
-    'searching'   : true,
-    'ordering'    : true,
-    'info'        : true,
-    'autoWidth'   : true,
-    'buttons'     : [
-      'copy',
-      'excel',      
-      'print'
-    ]
+  $(document).ready(function(){
+    const settingstable = {    
+      "columnDefs": [           
+        {
+          "targets": -1,
+          "data": null,
+          "defaultContent": "<button type='button' id='btnupdate_useradmin' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_useradmin_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_useradmin' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
+          "orderable": false
+        },
+        { "width": "10px", "targets": 0, "orderable": false },
+        { "width": "200px", "targets": 1 },
+        { "width": "200px", "targets": 2 },
+        { "width": "140px", "targets": 3 },      
+        { "width": "60px", "targets": 4 },  
+      ],              
+      'responsive'  : true,
+      'paging'      : true,
+      'pageLength'  : 10,
+      'destroy'     : false,
+      'lengthChange': false,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : true,
+      'buttons'     : [
+        'copy',
+        'excel',      
+        'print'
+      ]
+    }
+    let settingsuseradmin=GeneralSettingsTable('tableuseradmin',settingstable,true,'container_button');
+
+    $('#btngenerate').click(function(e){
+      e.preventDefault();          
+      $('input[name=password_insert]').val(generate(8));
+    });
+
+    $('#tableuseradmin tbody').on('click','#btnupdate_useradmin',function(){      
+      const data = settingsuseradmin.row($(this).parents('tr')).data();
+      console.log(data);
+      // fill data
+      $(`input[name=username_update]`).val(data[1]);
+      $(`input[name=email_update]`).val(data[2]);      
+      $(`input[name=notlp_update]`).val(data[3]);
+      $(`input[name=id_hidden]`).val(data[0]);
+      // ============================================
+    });
+
+    // delete
+    $('#tableuseradmin tbody').on('click','#btndelete_useradmin',function(){
+      const data = settingsuseradmin.row($(this).parents('tr')).data();      
+      $.ajax({
+        type: 'POST',
+        url: '/admin/deleteuseradmin',
+        data:{
+          'id_useradmin' :data[0],
+          '_token':$('input[name=_token]').val()
+        },
+        success:function(res){
+          if (res.status == 200) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'berhasil Dihapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            setTimeout(function(){
+              location.reload();
+            }, 200);
+          }
+          else{
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Tidak berhasil Dihapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        }
+      });
+    });
+  });  
+
+  function generate(ctr){
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for ( var i = 0; i < ctr; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
   }
-  GeneralSettingsTable('tableuseradmin',settingstable,true,'container_button');
 </script>
 @endsection
 

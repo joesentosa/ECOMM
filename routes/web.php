@@ -32,6 +32,10 @@ Route::middleware('admin.auth')
         Route::get('/promo', [AdminController::class, 'PromoAdmin'])->name('page.promo.admin');
         Route::get('/promoBarang', [AdminController::class, 'PromoBarangAdmin'])->name('page.promo_barang.admin');
 
+        Route::post('/insertuseradmin',[AdminController::class,'insertuseradmin']);
+        Route::post('/updateuseradmin',[AdminController::class,'updateuseradmin']);
+        Route::post('/deleteuseradmin',[AdminController::class,'deleteuseradmin']);
+
         Route::post('/updatebrand', [AdminController::class, "updatebrand"]);
         Route::post('/insertbrand', [AdminController::class, "insertbrand"]);
         Route::post('/deletebrand', [AdminController::class, "deletebrand"]);

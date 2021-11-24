@@ -103,8 +103,7 @@
                         @endforeach                         
                       </div><!-- End image gallery -->
                     </section>
-                  </td>      
-                  <!-- <img src="{{asset($item->gambar)}}" style="width:150px; height:10%;background-size: cover;"> -->
+                  </td>                        
                   <td data-idbrand="{{$item->fk_id_brand}}" class="idbrand_hidden">{{$item->namaBrand}}</td>
                   <td data-idkategori="{{$item->fk_id_kategori}}" class="idkategori_hidden">{{$item->nama_kategori}}</td>                       
                   <td></td>                        
@@ -227,7 +226,7 @@
                 <label for="upload_imgs_insert" class="button hollow">Select Your Images +</label>
                 <input class="show-for-sr" type="file" id="upload_imgs_insert" name="upload_imgs_insert[]" multiple/>
               </p>
-              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
+              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview_insert" aria-live="polite"></div>
             </div>
           </div>
           <div class="row">
@@ -323,8 +322,11 @@
           </div>
           <div class="row">            
             <div class="col-md-12">              
-              <label for="filepond_update">Upload Image</label>
-              <input type="file" class="filepond_update" id="filepond_update" name="filepond_update" multiple data-max-file-size="3MB" data-max-files="5" />
+              <p>
+                <label for="upload_imgs_update" class="button hollow">Select Your Images +</label>
+                <input class="show-for-sr" type="file" id="upload_imgs_update" name="upload_imgs_update[]" multiple/>
+              </p>
+              <div class="quote-imgs-thumbs" id="img_preview_update" aria-live="polite"></div>
             </div>
           </div>
           <div class="row">
@@ -406,6 +408,7 @@
       ]
     }
     const settingsBarang = GeneralSettingsTable('tableBarang',settingstable,true,'container_button');    
+
     $('.view_data').click(function(){      
       var data_id = settingsBarang.row($(this).parents('tr')).data();         
       let tmpdata = data_id[5].split("</button>");      
@@ -420,8 +423,10 @@
       let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori')
       let tmpberat = data[4].split(" ");   
       let tmpreview = data[5].split("</button>");    
-      
+      console.log(data[6]);
       // fill data
+      
+      // $('#img_preview_update').html();
       $(`input[name=nmbarang_update]`).val(data[1]);
       $(`input[name=hargaBarang_update]`).val(data[3]);
       $('#cb_brand').val(tmpidbrand).change();
@@ -434,38 +439,9 @@
     });    
     // =================================
     // image upload
-    var imgUpload = document.getElementById('upload_imgs_insert')
-      , imgPreview = document.getElementById('img_preview')
-      , imgUploadForm = document.getElementById('img-upload-form')
-      , totalFiles
-      , previewTitle
-      , previewTitleText
-      , img;
-
-    imgUpload.addEventListener('change', previewImgs, false);  
-
-    function previewImgs(event) {
-      totalFiles = imgUpload.files.length;
-      
-      if(!!totalFiles) {
-        imgPreview.classList.remove('quote-imgs-thumbs--hidden');
-        previewTitle = document.createElement('p');
-        previewTitle.style.fontWeight = 'bold';
-        previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
-        previewTitle.appendChild(previewTitleText);
-        imgPreview.appendChild(previewTitle);
-      }
-      
-      for(var i = 0; i < totalFiles; i++) {
-        img = document.createElement('img');
-        img.src = URL.createObjectURL(event.target.files[i]);
-        img.classList.add('img-preview-thumb');
-        imgPreview.appendChild(img);
-      }
-    }
-    // image show
-
-  })  
+    generalUpload('upload_imgs_insert','img_preview_insert','img-upload-form-insert');
+    generalUpload('upload_imgs_update','img_preview_update','img-upload-form-update');
+  });
 </script>
 @endsection
 

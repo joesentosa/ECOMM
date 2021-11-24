@@ -16,17 +16,27 @@ class AdminModel extends Authenticates
     public $incrementing= true;
     public $timestamps  = true;
     protected $fillable = ['username','email','no_tlp','password','created_at','updated_at'];
-
-    public function saveData($username,$email,$tlp,$password){
-        $admin             = new AdminModel();
-        $admin->id         = null;
+    
+    public function insertUserAdmin($username,$email,$tlp,$password){
+        $admin             = new AdminModel();        
         $admin->username   = $username;
         $admin->email      = $email;
         $admin->no_tlp     = $tlp;
-        $admin->password   = $password;
-        $admin->created_at = null;
-        $admin->updated_at = null;
-        $admin->deleted_at = null;
+        $admin->password   = $password;        
         $admin->save();
+    }
+    public function updateUserAdmin($id_hidden,$username_update,$email_update,$notlp_update,$password_update){
+        $data             = AdminModel::find($id_hidden);        
+        $data->username   = $username_update;
+        $data->email      = $email_update;
+        $data->no_tlp     = $notlp_update;
+        $data->password   = $password_update;        
+        $data->save();
+    }
+    public function deleteUserAdmin($id_useradmin){
+        return AdminModel::find($id_useradmin)->delete();                
+    }
+    public function getAll(){
+        return AdminModel::withTrashed()->get();
     }
 }
