@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/style.css')}}">
 
-    @include('__User.layout.css')
+{{--    @include('__User.layout.css')--}}
     @yield('style')
 </head>
 <body>

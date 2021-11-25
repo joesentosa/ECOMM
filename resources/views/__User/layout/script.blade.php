@@ -9,7 +9,7 @@
 <!-- Sidebar jquery-->
 <script src="{{asset('assets/js/sidebar-menu.js')}}"></script>
 <script src="{{asset('assets/js/config.js')}}"></script>
-@yield('script')	
+@yield('script')
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="{{asset('assets/js/script.js')}}"></script>
