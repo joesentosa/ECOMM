@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BarangModel;
 use App\Models\BrandModel;
 use App\Models\CustomerModel;
+use App\Models\KategoriModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,8 @@ class CustomerController extends Controller
     {
         $brands = BrandModel::all();
         $barangs = BarangModel::with(['gambar'])->get();
-        return view('__User.dashboard.landing', compact('brands', 'barangs'));
+        $kategories = KategoriModel::all();
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
     }
 
     public function homepage()

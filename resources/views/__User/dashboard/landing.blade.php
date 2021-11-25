@@ -797,6 +797,11 @@
     </div>
     <!-- ...::: Strat Product Section :::... -->
 
+    <div class="d-flex justify-content-center">
+        <a href="shop-grid-sidebar-left.html" class="btn btn-md btn-default btn-section-bottom">View
+            All Product</a>
+    </div>
+
     <!-- ...::: Strat Product Tab Item Section :::... -->
     <div class="product-tab-items-section section-fluid-270 section-top-gap-100">
         <div class="box-wrapper">
@@ -805,8 +810,8 @@
                     <div class="row justify-content-between align-items-center flex-warp">
                         <div class="col-xxl-4 col-lg-5 col-md-6 col-sm-8 col-auto me-5">
                             <div class="section-content section-content-gap-60">
-                                <h2 class="section-title">Products</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h2 class="section-title">All Category</h2>
+                                <p>All the dream and hope for this project to success :')</p>
                             </div>
                         </div>
                     </div>
@@ -823,23 +828,12 @@
                                             type="button">All <img src="assets/images/icons/product-tab-icon-1.svg"
                                                                    alt=""></button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#men" type="button">
-                                        Men <img src="assets/images/icons/product-tab-icon-2.svg" alt=""></button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#women" type="button">
-                                        Women <img src="assets/images/icons/product-tab-icon-3.svg" alt=""></button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#kid" type="button">
-                                        Kid <img src="assets/images/icons/product-tab-icon-5.svg" alt=""></button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#others"
-                                            type="button">Others <img src="assets/images/icons/product-tab-icon-4.svg"
-                                                                      alt=""></button>
-                                </li>
+                                @foreach($kategories as $index => $kategory)
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#men" type="button">
+                                            Men <img src="assets/images/icons/product-tab-icon-2.svg" alt=""></button>
+                                    </li>
+                                @endforeach
                             </ul>
                             <!-- End Product Tab Items  -->
 
@@ -1390,7 +1384,6 @@
                                                         </div>
                                                         <!-- End Product Single Item - Style 1 -->
                                                     </div>
-
                                                 </div>
                                                 <!-- If we need navigation buttons -->
                                                 <div class="center-slider-nav-buttons slider-buttons">
@@ -3647,11 +3640,6 @@
                                 <!-- End Tab Content Single Item -->
                             </div>
                             <!-- End Tab Content Items -->
-
-                            <div class="d-flex justify-content-center">
-                                <a href="shop-grid-sidebar-left.html" class="btn btn-md btn-default btn-section-bottom">View
-                                    All Product</a>
-                            </div>
                         </div>
                     </div>
                 </div>
