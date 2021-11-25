@@ -663,66 +663,42 @@
     </div>
     <!-- ...::: End Shipping Section :::... -->
 
-    <!-- ...::: Strat Banner Card Section Section :::... -->
-    <div class="banner-card-section section-fluid-270 section-top-gap-100">
+    <!-- ...::: Strat Company Logo Section Section :::... -->
+    <div class="company-logo-section section-fluid-270 section-top-gap-100">
         <div class="box-wrapper">
-            <div class="banner-card-wrapper">
+            <div class="company-logo-wrapper">
                 <div class="container-fluid">
-                    <div class="row mb-n20">
-                        <div class="col-lg-4 col-md-6 mb-20">
-                            <!-- Start Banner Card Single Item -->
-                            <div class="banner-card-single-item banner-animate--flash">
-                                <div class="image img-responsive">
-                                    <img src="assets/images/banner/banner-card-style-1.webp" width="435" height="308"
-                                         loading="lazy" alt="banner-image-1">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Start Company Slider -->
+                            <div class="company-slider company-slider-bg">
+                                <!-- Slider main container -->
+                                <div class="swiper-container">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        @foreach($brands as $index => $brand)
+                                            <!-- Start Company Slider Single Item -->
+                                            <a href="#" class="company-slider-single-item swiper-slide">
+                                                <div class="image">
+                                                    <img class="img-fluid"
+                                                         src="{{ $brand->gambar }}" loading="lazy"
+                                                         alt="{{ "company-logo-" . ($index + 1) }}">
+                                                </div>
+                                            </a>
+                                            <!-- End Company Slider Single Item -->
+                                        @endforeach
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <p class="tag">Up to 30% Off</p>
-                                    <h4 class="title">Best Fashion</h4>
-                                    <a href="shop-grid-sidebar-left.html" class="text-link white">GET IT NOW</a>
-                                </div>
-                                <span class="banner-cad-note">Lorem Ipsum is simply.</span>
                             </div>
-                            <!-- End Banner Card Single Item -->
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-20">
-                            <!-- Start Banner Card Single Item -->
-                            <div class="banner-card-single-item">
-                                <div class="image img-responsive banner-animate--flash">
-                                    <img src="assets/images/banner/banner-card-style-2.webp" width="435" height="308"
-                                         loading="lazy" alt="banner-image-2">
-                                </div>
-                                <div class="content">
-                                    <p class="tag"><span class="white">30%</span> Off</p>
-                                    <h4 class="title">Premium <span class="white">Shoe</span></h4>
-                                    <a href="shop-grid-sidebar-left.html" class="text-link white">GET IT NOW</a>
-                                </div>
-                                <span class="banner-cad-note">Lorem Ipsum is simply.</span>
-                            </div>
-                            <!-- End Banner Card Single Item -->
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-20">
-                            <!-- Start Banner Card Single Item -->
-                            <div class="banner-card-single-item">
-                                <div class="image img-responsive banner-animate--flash">
-                                    <img src="assets/images/banner/banner-card-style-3.webp" width="435" height="308"
-                                         loading="lazy" alt="banner-image-3">
-                                </div>
-                                <div class="content">
-                                    <p class="tag"><span class="white">10% Off</span></p>
-                                    <h4 class="title">Luxury Glass</h4>
-                                    <a href="shop-grid-sidebar-left.html" class="text-link dark">GET IT NOW</a>
-                                </div>
-                                <span class="banner-cad-note">Lorem Ipsum is simply.</span>
-                            </div>
-                            <!-- End Banner Card Single Item -->
+                            <!-- End Company Slider -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ...::: End Banner Card Section Section :::... -->
+    <!-- ...::: Strat Company Logo Section Section :::... -->
 
     <!-- ...::: Strat Product Section :::... -->
     <div class="product-item-section  section-fluid-270 section-top-gap-100">
@@ -732,8 +708,8 @@
                     <div class="row justify-content-between align-items-center flex-warp section-content-gap-60">
                         <div class="col-xxl-4 col-lg-5 col-md-6 col-sm-8 col-auto me-5">
                             <div class="section-content">
-                                <h2 class="section-title">Exclusive Collection</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <h2 class="section-title">Best Seller</h2>
+                                <p>Here lies our hopes and dreams to make this project successfull</p>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -759,22 +735,37 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
+                                        @foreach($barangs as $index => $barang)
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
                                             <a href="product-details-default.html" class="image img-responsive">
                                                 <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-5.webp"
+                                                     src="
+                                                         @if(!is_null($barang->gambar->first()))
+                                                            {{ $barang->gambar->first()->gambar }}
+                                                         @endif
+                                                         "
                                                      width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-yellow">15%</li>
-                                                </ul>
+{{--                                                <ul class="tooltip-tag-items">--}}
+{{--                                                    <li class="color-yellow">15%</li>--}}
+{{--                                                </ul>--}}
                                             </a>
                                             <div class="content">
                                                 <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Star Women
-                                                            pants</a></h4>
-                                                    <span class="price">$200.00 <del>$300.00</del></span>
+{{--                                                    <span class="catagory">WOMEN</span>--}}
+                                                    <h4 class="title">
+                                                        <a href="product-details-default.html">
+                                                            {{ $barang->namaBarang }}
+                                                        </a>
+                                                    </h4>
+                                                    <span class="price">{{generateFormatRP($barang->harga)}}
+                                                        <del>
+                                                            @php
+                                                                $div = pow(10, strlen((string)$barang->harga) - 1);
+                                                            @endphp
+                                                            {{ generateFormatRP(ceil($barang->harga / $div) * $div) }}
+                                                        </del>
+                                                    </span>
                                                 </div>
                                                 <div class="bottom">
                                                     <ul class="review-star">
@@ -791,187 +782,10 @@
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
                                                 </div>
-
                                             </div>
-
                                         </div>
                                         <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-4.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Slightly
-                                                            jackets XL Cool </a></h4>
-                                                    <span class="price">$350.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-6.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-green">15%</li>
-                                                </ul>
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">Bag</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Distracted
-                                                            XL bag</a></h4>
-                                                    <span class="price">$1200.00 <del>$1500.00</del></span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-1.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-green">15%</li>
-                                                </ul>
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">MEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Man's
-                                                            Outdoor Shirt</a></h4>
-                                                    <span class="price">$355.00 <del>$400.00</del></span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-2.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Women
-                                                            Summer deal</a></h4>
-                                                    <span class="price">$550.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-3.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Women
-                                                            Luxury Party</a></h4>
-                                                    <span class="price">$1050.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -4123,77 +3937,6 @@
         </div>
     </div>
     <!-- ...::: Strat Product Section :::... -->
-
-    <!-- ...::: Strat Company Logo Section Section :::... -->
-    <div class="company-logo-section section-fluid-270 section-top-gap-100">
-        <div class="box-wrapper">
-            <div class="company-logo-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Start Company Slider -->
-                            <div class="company-slider company-slider-bg">
-                                <!-- Slider main container -->
-                                <div class="swiper-container">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <!-- Start Company Slider Single Item -->
-                                        <a href="#" class="company-slider-single-item swiper-slide">
-                                            <div class="image">
-                                                <img class="img-fluid"
-                                                     src="assets/images/company-logo/company-logo-1.png" loading="lazy"
-                                                     alt="company-logo-1">
-                                            </div>
-                                        </a>
-                                        <!-- End Company Slider Single Item -->
-                                        <!-- Start Company Slider Single Item -->
-                                        <a href="#" class="company-slider-single-item swiper-slide">
-                                            <div class="image">
-                                                <img class="img-fluid"
-                                                     src="assets/images/company-logo/company-logo-2.png" loading="lazy"
-                                                     alt="company-logo-2">
-                                            </div>
-                                        </a>
-                                        <!-- End Company Slider Single Item -->
-                                        <!-- Start Company Slider Single Item -->
-                                        <a href="#" class="company-slider-single-item swiper-slide">
-                                            <div class="image">
-                                                <img class="img-fluid"
-                                                     src="assets/images/company-logo/company-logo-3.png" loading="lazy"
-                                                     alt="company-logo-3">
-                                            </div>
-                                        </a>
-                                        <!-- End Company Slider Single Item -->
-                                        <!-- Start Company Slider Single Item -->
-                                        <a href="#" class="company-slider-single-item swiper-slide">
-                                            <div class="image">
-                                                <img class="img-fluid"
-                                                     src="assets/images/company-logo/company-logo-4.png" loading="lazy"
-                                                     alt="company-logo-4">
-                                            </div>
-                                        </a>
-                                        <!-- End Company Slider Single Item -->
-                                        <!-- Start Company Slider Single Item -->
-                                        <a href="#" class="company-slider-single-item swiper-slide">
-                                            <div class="image">
-                                                <img class="img-fluid"
-                                                     src="assets/images/company-logo/company-logo-5.png" loading="lazy"
-                                                     alt="company-logo-5">
-                                            </div>
-                                        </a>
-                                        <!-- End Company Slider Single Item -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Company Slider -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ...::: Strat Company Logo Section Section :::... -->
 
     <!-- ...::: Strat Subscribe Section :::... -->
     <div class="newsletter-section section-fluid-270 section-top-gap-100">
