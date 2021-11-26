@@ -40,7 +40,11 @@
     @yield('style')
 </head>
 <body>
+    
+@include('__User.layout.header_general')
 @yield('content')
+@include('__User.layout.footer_general')
+
 @stack('JScript')
 </body>
 </html>

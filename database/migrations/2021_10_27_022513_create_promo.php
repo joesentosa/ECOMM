@@ -18,7 +18,7 @@ class CreatePromo extends Migration
             $table->string('namaPromo');
             $table->date('firstDate');
             $table->date('expiredDate');
-            $table->bigInteger('hargaPromo');            
+            $table->bigInteger('potonganHarga');            
             $table->timestamps();
             $table->softDeletes();
         });

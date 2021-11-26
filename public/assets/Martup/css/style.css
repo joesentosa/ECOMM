@@ -1347,6 +1347,12 @@ input, textarea {
   width: 100%;
   height: auto;
 }
+.img-brand{
+  border: 1px solid black;
+  max-height: 150px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 
 .img-responsive img {
   -o-object-fit: cover;

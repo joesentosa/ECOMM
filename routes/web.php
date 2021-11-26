@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
@@ -9,10 +10,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/home', [CustomerController::class, 'homepage']);
-Route::get('/login', [CustomerController::class, 'login']);
 
+Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
+Route::get('/login', [CustomerController::class, 'login']);
+Route::get('/catalog',[CatalogController::class,'catalog']);
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
