@@ -14,8 +14,8 @@ class CustomerController extends Controller
     public function landing()
     {
         $brands = BrandModel::all();
-        $barangs = BarangModel::with(['gambar'])->get();
-        $kategories = KategoriModel::all();
+        $barangs = BarangModel::with(['gambar','kategori'])->limit(5)->get();
+        $kategories = KategoriModel::limit(5)->get();
         return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
     }
 
@@ -33,14 +33,14 @@ class CustomerController extends Controller
     {
         $customer = Auth::user();
         $customer = CustomerModel::find($customer->id_customer);
-        return view('__User.user_profile', ['customer' => $customer]);
+        return view('__User.dashboard.user_profile', ['customer' => $customer]);
     }
 
     public function getDataForUpdate(Request $request)
     {
         $customer = Auth::user();
         $customer = CustomerModel::find($customer->id_customer);
-        return view('__User.user_update_profile', ['customer' => $customer]);
+        return view('__User.dashboard.user_update_profile', ['customer' => $customer]);
     }
 
     public function doUpdate(Request $request)

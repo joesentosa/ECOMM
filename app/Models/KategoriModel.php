@@ -19,20 +19,24 @@ class KategoriModel extends Model
 
     public function insertKategori($nmKategori){
         $kategori               = new KategoriModel();
-        $kategori->id_kategori  = null; 
-        $kategori->nama_kategori= $nmKategori;                
+        $kategori->id_kategori  = null;
+        $kategori->nama_kategori= $nmKategori;
         $kategori->save();
     }
     public function getAll(){
         return KategoriModel::all();
     }
     public function updateKategori($nmkategori,$id_hidden){
-        $kategori               = KategoriModel::find($id_hidden);        
-        $kategori->nama_kategori= $nmkategori;                
+        $kategori               = KategoriModel::find($id_hidden);
+        $kategori->nama_kategori= $nmkategori;
         $kategori->save();
     }
     public function deleteKategori($id_kategori){
         return KategoriModel::find($id_kategori)->delete();
     }
 
+    public function barang()
+    {
+        return $this->hasMany(BarangModel::class, 'fk_id_kategori', 'id_kategori');
+    }
 }
