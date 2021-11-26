@@ -24,7 +24,7 @@ class BarangModel extends Model
         $barang->stok           = $stok;
         $barang->harga          = $harga;
         $barang->berat          = $berat;
-        $barang->review         = $review;        
+        $barang->review         = $review;
         $barang->fk_id_brand    = $idbrand;
         $barang->fk_id_kategori = $idkategori;
         $barang->save();
@@ -57,5 +57,10 @@ class BarangModel extends Model
     public function gambar()
     {
         return $this->hasMany(GambarModel::class, 'id_barang', 'id_barang'); // (models, table gambar, table barang)
-    }    
+    }
+
+    public function kategori()
+    {
+        return $this->hasOne(KategoriModel::class, 'id_kategori', 'fk_id_kategori');
+    }
 }
