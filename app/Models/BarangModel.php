@@ -15,9 +15,9 @@ class BarangModel extends Model
     public $primaryKey  = "id_barang";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['namaBarang','stok','harga','berat','review','fk_id_brand','fk_id_kategori','created_at','updated_at'];
+    protected $fillable = ['namaBarang','stok','harga','berat','review','rating','fk_id_brand','fk_id_kategori','created_at','updated_at'];
 
-    public function insertBarang($nama,$stok,$harga,$berat,$review,$idbrand,$idkategori){
+    public function insertBarang($nama,$stok,$harga,$berat,$review,$rating,$idbrand,$idkategori){
         $barang                 = new BarangModel();
         $barang->id_barang      = null;
         $barang->namaBarang     = $nama;
@@ -25,6 +25,7 @@ class BarangModel extends Model
         $barang->harga          = $harga;
         $barang->berat          = $berat;
         $barang->review         = $review;
+        $barang->rating         = $rating;
         $barang->fk_id_brand    = $idbrand;
         $barang->fk_id_kategori = $idkategori;
         $barang->save();
