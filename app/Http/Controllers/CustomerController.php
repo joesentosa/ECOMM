@@ -16,8 +16,7 @@ class CustomerController extends Controller
         $brands = BrandModel::limit(25)->get();
         $barangs = BarangModel::with(['gambar','kategori'])->get();
         $kategories = KategoriModel::limit(5)->get();
-        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
-        // satu barang pny satu kategori, satu kategori pny banyak barang
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));        
     }
 
     public function homepage()
