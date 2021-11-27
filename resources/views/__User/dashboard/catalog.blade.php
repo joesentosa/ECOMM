@@ -12,7 +12,7 @@
     <div class="box-wrapper">
         <div class="breadcrumb-wrapper breadcrumb-wrapper--style-1 pos-relative">
             <div class="breadcrumb-bg">
-                <img src="{{asset('assets/Martup/images/breadcrumb/breadcrumb-img-shop-page.webp')}}" alt="error">
+                <img src="https://infinitygroupus.com/wp-content/uploads/2020/05/Arvinas-Blog-Hero.png" alt="error">
             </div>
             <div class="breadcrumb-content section-fluid-270">
                 <div class="breadcrumb-wrapper">
@@ -140,264 +140,48 @@
                 </li>
                 </ul>
                 <div class="product-shop-list-items">
-                <div class="row mb-n25">
-                    <div class="col-md-6 col-12 mb-25">
-                    <!-- Start Product Single Item - Style 1 -->
-                    <div class="product-single-item-style-1">
-                        <a href="product-details-default.html" class="image img-responsive">
-                        <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-1.webp')}}" alt="">
-                        <ul class="tooltip-tag-items">
-                            <li class="color-green">15%</li>
-                        </ul>
-                        </a>
-                        <div class="content">
-                        <div class="top">
-                            <span class="catagory">MEN</span>
-                            <h4 class="title"><a href="product-details-default.html">Man's Outdoor Shirt</a></h4>
-                            <span class="price">$355.00 <del>$400.00</del></span>
-                        </div>
-                        <div class="bottom">
-                            <ul class="review-star">
-                            <li class="fill"><span class="material-icons">star</span></li>
-                            <li class="fill"><span class="material-icons">star</span></li>
-                            <li class="fill"><span class="material-icons">star</span></li>
-                            <li class="fill"><span class="material-icons">star</span></li>
-                            <li class="fill"><span class="material-icons">star_half</span></li>
-                            </ul>
-                            <div class="product-event-items">
-                            <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                            <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-2.webp')}}" alt="">
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Women Summer deal</a></h4>
-                                    <span class="price">$550.00</span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
+                    <div class="row mb-n25">
+                        @isset($data_barang)
+                            @foreach($data_barang as $barang)
+                            <div class="col-md-6 col-12 mb-25">
+                                <!-- Start Product Single Item - Style 1 -->
+                                <div class="product-single-item-style-1">
+                                    <a href="product-details-default.html" class="image img-responsive">
+                                    <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-1.webp')}}" alt="">
+                                    </a>
+                                    <div class="content">
+                                    <div class="top">
+                                        <span class="catagory">MEN</span>
+                                        <h4 class="title"><a href="product-details-default.html">{{ $barang->namaBarang }}</a></h4>
+                                        <span class="price">$355.00 <del>$400.00</del></span>
+                                    </div>
+                                    <div class="bottom">
+                                        <ul class="review-star">
                                         <li class="fill"><span class="material-icons">star</span></li>
                                         <li class="fill"><span class="material-icons">star</span></li>
                                         <li class="fill"><span class="material-icons">star</span></li>
                                         <li class="fill"><span class="material-icons">star</span></li>
                                         <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
+                                        </ul>
+                                        <div class="product-event-items">
                                         <a href="cart.html" class="btn cart-btn">Add to cart</a>
                                         <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
-
+                                <!-- End Product Single Item - Style 1 -->
                             </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-3.webp')}}" alt="">
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Women Luxury Party</a></h4>
-                                    <span class="price">$1050.00</span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1 swiper-slide">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-4.webp')}}" alt="">
-                                <ul class="tooltip-tag-items">
-                                    <li class="color-yellow">15%</li>
-                                </ul>
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Star Women pants</a></h4>
-                                    <span class="price">$200.00 <del>$300.00</del></span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1 swiper-slide">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-5.webp')}}" alt="">
-                                <ul class="tooltip-tag-items">
-                                    <li class="color-green">15%</li>
-                                </ul>
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">MEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Man's Outdoor Shirt</a></h4>
-                                    <span class="price">$355.00 <del>$400.00</del></span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-6.webp')}}" alt="">
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Women Summer deal</a></h4>
-                                    <span class="price">$550.00</span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-7.webp')}}" alt="">
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Slightly jackets XL Cool </a></h4>
-                                    <span class="price">$350.00</span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
-                    </div>
-                    <div class="col-md-6 col-12 mb-25">
-                        <!-- Start Product Single Item - Style 1 -->
-                        <div class="product-single-item-style-1">
-                            <a href="product-details-default.html" class="image img-responsive">
-                                <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-8.webp')}}" alt="">
-                            </a>
-                            <div class="content">
-                                <div class="top">
-                                    <span class="catagory">WOMEN</span>
-                                    <h4 class="title"><a href="product-details-default.html">Women Luxury Party</a></h4>
-                                    <span class="price">$1050.00</span>
-                                </div>
-                                <div class="bottom">
-                                    <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
-                                    </ul>
-                                    <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!-- End Product Single Item - Style 1 -->
+                            @endforeach
+                        @endisset
                     </div>
                 </div>
-                </div>
+                {{-- @isset($select_kategori)
+                    @foreach ($select_kategori as $item)
+                        <h1>{{ $item }}</h1>
+                    @endforeach
+                @endisset --}}
+                
 
                 <!-- Start Pagination -->
                 <div class="d-flex justify-content-center">
