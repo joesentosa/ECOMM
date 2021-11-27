@@ -25,7 +25,7 @@ class PromoModelFactory extends Factory
             "namaPromo" => $this->faker->firstName(),
             "firstDate" => $this->faker->date("Y-m-d"),
             "expiredDate" => $this->faker->date("Y-m-d"),
-            "hargaPromo" => $this->faker->numberBetween(100000, 1000000),
+            "potonganHarga" => $this->faker->numberBetween(100000, 1000000),
         ];
     }
 }

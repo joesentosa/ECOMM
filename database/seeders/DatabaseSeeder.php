@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         AdminModel::factory(5)->create();
-        BarangModel::factory(5)->create();
+        // BarangModel::factory(5)->create();
         PromoModel::factory(5)->create();
 
         $this->call([
             BrandSeeder::class,
             KategoriSeeder::class,
-            GambarSeeder::class,
+            BarangSeeder::class
         ]);
     }
 }
