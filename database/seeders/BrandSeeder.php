@@ -14,223 +14,151 @@ class BrandSeeder extends Seeder
      * @return void
      */
     public function run()
-    {       
-        BrandModel::insert([
-            'namaBrand' => 'ASUS',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_asus.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
+    {               
         BrandModel::insert([
             'namaBrand' => 'Cougar',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_cougar.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([
-            'namaBrand' => 'Digital Alliance',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_dagaming.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
+            'gambar'    => 'uploads/brand/logo_cougar.png',
+        ]);        
         BrandModel::insert([
             'namaBrand' => 'Dxracer',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_dxracer.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_dxracer.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Eblue',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_eblue.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_eblue.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Onex',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_onex.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_onex.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Stracing',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_stracing.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_stracing.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Thunderx3',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_thunderx3.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_thunderx3.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Fantech',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo-fantech.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo-fantech.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Cooler Master',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_coolermaster.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_coolermaster.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Corsair',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_corsair-removebg-preview.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_corsair.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Dareu',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_dareu.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_dareu.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'dbE',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_dbe.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_dbe.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Havit',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_havit.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([
-            'namaBrand' => 'Hyperx',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_hyperx.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([
-            'namaBrand' => 'JBL',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_jbl.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
+            'gambar'    => 'uploads/brand/logo_havit.png',
+        ]);            
         BrandModel::insert([
             'namaBrand' => 'Logitech',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_logitech.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_logitech.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'NYK',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_nyk.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_nyk.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Razer',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/razer-logo.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([
-            'namaBrand' => 'Rexus',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_rexus.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_razer.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Sades',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/sades-logo.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_sades.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Saramonic',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_saramonic.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_saramonic.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Steelseries',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo-steelseries.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_steelseries.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Tecware',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_tecware.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_tecware.png',
         ]);
         BrandModel::insert([
 
             'namaBrand' => 'Thronmax',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo-thronmax.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([
-            'namaBrand' => 'Ducky',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_ducky.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_thronmax.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Funsty',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_funsty.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_funsty.png',
         ]);
         BrandModel::insert([
             'namaBrand' => 'Leopold',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_leopold.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([            
-            'namaBrand' => 'Acer',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_acer.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
+            'gambar'    => 'uploads/brand/logo_leopold.png',
+        ]);        
         BrandModel::insert([            
             'namaBrand' => 'AOC',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_aoc.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([            
-            'namaBrand' => 'LG',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo-lg.jpg',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
-        BrandModel::insert([            
-            'namaBrand' => 'Zowie',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_zowie.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);
+            'gambar'    => 'uploads/brand/logo_aoc.png',
+        ]);        
         BrandModel::insert([            
             'namaBrand' => 'MSI',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_msi.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_msi.png',
         ]);
         BrandModel::insert([            
             'namaBrand' => 'Glorious',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_glorious.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_glorious.png',            
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'Hyperx',
+            'gambar'    => 'uploads/brand/logo_hyperx.png',
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'ASUS',
+            'gambar'    => 'uploads/brand/logo_asus.png',
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'Digital Alliance',
+            'gambar'    => 'uploads/brand/logo_da.png',
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'JBL',
+            'gambar'    => 'uploads/brand/logo_jbl.png',
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'Rexus',
+            'gambar'    => 'uploads/brand/logo_rexus.png',
+        ]);
+        BrandModel::insert([
+            'namaBrand' => 'Ducky',
+            'gambar'    => 'uploads/brand/logo_ducky.png',
+        ]);
+        BrandModel::insert([            
+            'namaBrand' => 'LG',
+            'gambar'    => 'uploads/brand/logo_lg.jpg',
         ]);
         BrandModel::insert([            
             'namaBrand' => 'Gwolves',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_gwolves.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
+            'gambar'    => 'uploads/brand/logo_gwolves.png',            
         ]);
         BrandModel::insert([            
             'namaBrand' => 'AKKO',
-            'gambar'    => 'https://bocilkasian.files.wordpress.com/2021/11/logo_akko.png',
-            'created_at'=> Carbon::now()->format('Y-m-d'),
-            'updated_at'=> Carbon::now()->format('Y-m-d')
-        ]);        
+            'gambar'    => 'uploads/brand/logo_akko.png',            
+        ]);     
+        BrandModel::insert([            
+            'namaBrand' => 'Acer',
+            'gambar'    => 'uploads/brand/logo_acer.png',
+        ]);   
+        BrandModel::insert([            
+            'namaBrand' => 'Zowie',
+            'gambar'    => 'uploads/brand/logo_zowie.png'
+        ]);
     }
 }

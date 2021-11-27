@@ -13,8 +13,8 @@ class CustomerController extends Controller
 {
     public function landing()
     {
-        $brands = BrandModel::all();
-        $barangs = BarangModel::with(['gambar','kategori'])->limit(5)->get();
+        $brands = BrandModel::limit(25)->get();
+        $barangs = BarangModel::with(['gambar','kategori'])->get();
         $kategories = KategoriModel::limit(5)->get();
         return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
         // satu barang pny satu kategori, satu kategori pny banyak barang
