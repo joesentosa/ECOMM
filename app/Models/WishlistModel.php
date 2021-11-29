@@ -9,22 +9,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class WishlistModel extends Model
 {
     use HasFactory;
-    use SoftDeletes;
 
     public $table       = "wishlist";
-    public $primaryKey  = "id_wislist";
+    public $primaryKey  = "id_wishlist";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = [ 'fk_id_barang','fk_id_customer','created_at','updated_at','deleted_at'];
+    protected $fillable = [ 'fk_id_barang','fk_id_customer','created_at','updated_at'];
 
-    public function saveData($idbarang, $idcustomer){
+    public function insertWishlist($idbarang, $idcustomer){
         $wishlist                = new WishlistModel();
         $wishlist->id_wishlist   = null;
         $wishlist->fk_id_barang  = $idbarang;
         $wishlist->fk_id_customer= $idcustomer;           
-        $shipping->created_at    = null;
-        $shipping->updated_at    = null;
-        $shipping->deleted_at    = null;
-        $shipping->save();
+        $wishlist->created_at    = null;
+        $wishlist->updated_at    = null;
+        $wishlist->save();
+    }
+
+    public function deleteWishlist($id_kategori){
+        return WishlistModel::find($id_kategori)->delete();
     }
 }

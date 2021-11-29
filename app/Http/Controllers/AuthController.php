@@ -40,7 +40,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials, $request->remember_me)) {
-            return redirect('login')->with('status', 'success');
+            return redirect('home');
         }
 
         return back()->withErrors([

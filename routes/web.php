@@ -15,6 +15,9 @@ Route::get('/home', [CustomerController::class, 'homepage']);
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/login', [CustomerController::class, 'login']);
 Route::get('/catalog',[CatalogController::class,'catalog']);
+Route::get('/wishlist',[CatalogController::class,'wishlistData']);
+Route::get('/addToCart',[CatalogController::class,'addToCart']);
+Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
@@ -90,6 +93,8 @@ Route::middleware(['customer.auth'])
         Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
+        
+        
     });
 //end route customer
 

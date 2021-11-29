@@ -18,7 +18,6 @@ class CreateWishlist extends Migration
             $table->bigInteger('fk_id_barang');
             $table->bigInteger('fk_id_customer');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

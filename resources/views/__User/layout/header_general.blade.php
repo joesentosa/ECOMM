@@ -129,10 +129,13 @@
                                 data-bs-target="#wishlistOffcanvas"><img
                                 src="assets/images/icons/icon-heart-dark.svg" alt=""><span
                                 class="count-tag">01</span></button>
-                        <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
-                                data-bs-target="#addcartOffcanvas"><img
-                                src="assets/images/icons/icon-shopping-bag-dark.svg" alt=""><span
-                                class="item-count item-count--light">02 ITEMS</span></button>
+                        @isset($cart_count)
+                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas" data-bs-target="#addcartOffcanvas">
+                                <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
+                                <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
+                            </button>
+                        @endisset
+                        
                     </div>
                 </div>
             </div>
@@ -381,63 +384,35 @@
     </div>
     <div class="offcanvas-body">
         <ul class="offcanvas-products-list">
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-1.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Tops</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$100.00</span>
+            @isset($barang_cart)
+                @foreach ($barang_cart as $cart)
+                    <li class="single-item">
+                        <div class="box">
+                            <a href="" class="image">
+                                <img src="assets/images/products/small/product-small-1.webp" alt=""
+                                    class="offcanvas-wishlist-image">
+                            </a>
+                            <div class="content">
+                                <a href="" class="title">{{ $cart->namaBarang }}</a>
+                                <div class="offcanvas-wishlist-item-details">
+                                    <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                                    <span class="offcanvas-wishlist-item-details-price">{{ $cart->harga }}</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-2.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Leggings</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
+                        <div class="item-delete text-right">
+                            <form action="/deleteCart" method="get">
+                                @csrf
+                                <input type="hidden" name="barangId" value="{{ $cart->id_barang }}">
+                                <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>
+                            </form>
                         </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-3.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Casual Shirt</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$65.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
+                    </li>
+                @endforeach
+            @endisset
+            
         </ul>
         <div class="offcanvas-action-link">
-            <a href="cart.html" class="btn">Add Cart</a>
             <a href="checkout.html" class="btn">Checkout</a>
         </div>
     </div>
