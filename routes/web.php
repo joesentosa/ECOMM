@@ -18,9 +18,6 @@ Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
-Route::get('test', function() {
-    dd(1.5 * 10);
-});
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);
 
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
