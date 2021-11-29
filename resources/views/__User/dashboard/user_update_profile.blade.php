@@ -33,13 +33,13 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                            <label class="form-label">First Name</label>
-                           <input class="form-control" type="text" value="{{$customer->firstName}}" placeholder="{{$customer->firstName}}" name="firstName">
+                           <input class="form-control" type="text" value="{{$customer->firstname}}" placeholder="{{$customer->firstname}}" name="firstname">
                         </div>
                      </div>
                      <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                            <label class="form-label">Last Name</label>
-                           <input class="form-control" type="text" value="{{$customer->lastName}}" placeholder="{{$customer->lastName}}" name="lastName">
+                           <input class="form-control" type="text" value="{{$customer->lastname}}" placeholder="{{$customer->lastname}}" name="lastname">
                         </div>
                      </div>
                      <div class="col-md-5">

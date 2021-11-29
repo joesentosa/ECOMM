@@ -90,6 +90,8 @@ Route::middleware(['customer.auth'])
         Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
+
+        Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
     });
 //end route customer
 
