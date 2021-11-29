@@ -185,7 +185,7 @@
                 <label for="hargaBarang_insert">Harga Barang</label>
                 <input class="form-control" id="hargaBarang_insert" type="text" placeholder="Masukkan Harga Barang" name="hargaBarang_insert">
               </div>               
-            </div>
+            </div>            
             <div class="col-md-6">
               <div class="col-form-label">Kategori</div>
               <select class="form-control form-control-primary btn-square" name="cb_kategori">
@@ -211,7 +211,7 @@
                 <input class="form-control digits" id="beratbarang_insert" type="number" placeholder="Masukkan Berat Barang" name="beratbarang_insert">
               </div>
             </div>
-          </div>                    
+          </div>                           
           <div class="row">
             <div class="col-12">
               <div class="form-group">
@@ -326,7 +326,7 @@
                 <label for="upload_imgs_update" class="button hollow">Select Your Images +</label>
                 <input class="show-for-sr" type="file" id="upload_imgs_update" name="upload_imgs_update[]" multiple/>
               </p>
-              <div class="quote-imgs-thumbs" id="img_preview_update" aria-live="polite"></div>
+              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview_update" aria-live="polite"></div>
             </div>
           </div>
           <div class="row">
@@ -437,6 +437,10 @@
       $(`input[name=id_hidden]`).val(data[0]);     
       // ============================================
     });    
+    $('#tableBarang tbody').on('click','#btndelete_barang',function(){      
+      const data = settingsBarang.row($(this).parents('tr')).data();
+      console.log(data);
+    })
     // =================================
     // image upload
     generalUpload('upload_imgs_insert','img_preview_insert','img-upload-form-insert');

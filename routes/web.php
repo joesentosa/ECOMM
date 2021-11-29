@@ -44,6 +44,7 @@ Route::middleware('admin.auth')
 
         Route::post('/insertbarang', [AdminController::class, "insertbarang"]);
         Route::post('/updatebarang', [AdminController::class, "updatebarang"]);
+        Route::post('/deletebarang', [AdminController::class, "deletebarang"]);
 
         Route::post('/insertkategori', [AdminController::class, "insertkategori"]);
         Route::post('/updatekategori', [AdminController::class, "updatekategori"]);

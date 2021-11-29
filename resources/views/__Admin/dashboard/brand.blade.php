@@ -5,49 +5,29 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 <!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-design-icon.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.4-rc1/css/foundation.css">
 @endsection
 
 @section('style')
 <style>  
-  .uploadOuter {
-    text-align: center;
-    padding: 20px;
+  .quote-imgs-thumbs {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin: 1.5rem 0;
+    padding: 0.75rem;
   }
-  .uploadOuter strong {
-    padding: 0 10px;
+  .quote-imgs-thumbs--hidden {
+    display: none;
   }
-  .dragBox {
-    width: 600px;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    font-weight: bold;
-    line-height: 95px;
-    color: #999;
-    border: 2px dashed #ccc;
-    display: inline-block;
-    transition: transform 0.3s;
-  }
-  .dragBox input[type="file"] {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-  }
-  .draging {
-    transform: scale(1.1);
-  }
-  #preview_insert, #preview_update {
-    text-align: center;
-  }
-  #preview_insert img {
-    max-width: 100%;
-  }
-  #preview_update img {
-    max-width: 100%;
+  .img-preview-thumb {
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+    box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
+    margin-right: 1rem;
+    max-width: 140px;
+    padding: 0.25rem;
   }
 </style>
 @endsection
@@ -145,23 +125,14 @@
                 <input type="text" class="form-control" id="basic-url" name="urlimageinsert" aria-describedby="basic-addon3">
               </div>
             </div>
-          </div> 
-          <div class="row">
-            <div class="col-md-12 d-flex flex-row-reverse">              
-              <button type="button" class="btn btn-danger btn-xs remove-preview-insert">
-                <i class="fa fa-times"></i> Reset This Form
-              </button>              
-            </div>
-          </div>                                             
+          </div>                                                       
           <div class="row">
             <div class="col-12">
-              <div class="uploadOuter">                                            
-                <span class="dragBox">
-                  Drag and Drop image here
-                  <input type="file" onChange="dragNdropInsert(event)"  ondragover="dragInsert()" ondrop="dropInsert()" id="uploadFile_insert" name="uploadFile_insert"  />
-                </span>
-              </div>
-              <div id="preview_insert"></div>
+              <p>
+                <label for="upload_imgs_insert" class="button hollow">Select Your Images +</label>
+                <input class="show-for-sr" type="file" id="upload_imgs_insert" name="upload_imgs_insert" />
+              </p>
+              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview_insert" aria-live="polite"></div>
             </div>
           </div>
           <div class="row">
@@ -212,23 +183,14 @@
                 <input type="text" class="form-control" id="basic-url" name="urlimageupdate" aria-describedby="basic-addon3">
               </div>
             </div>
-          </div> 
-          <div class="row">
-            <div class="col-md-12 d-flex flex-row-reverse">              
-              <button type="button" class="btn btn-danger btn-xs remove-preview-update">
-                <i class="fa fa-times"></i> Reset This Form
-              </button>              
-            </div>
-          </div>                                             
+          </div>                                                       
           <div class="row">
             <div class="col-12">
-              <div class="uploadOuter">                                            
-                <span class="dragBox">
-                  Drag and Drop image here
-                  <input type="file" onChange="dragNdropUpdate(event)"  ondragover="dragUpdate()" ondrop="dropUpdate()" name="uploadFile_update" id="uploadFile_update"/>
-                </span>
-              </div>
-              <div id="preview_update"></div>
+              <p>
+                <label for="upload_imgs_update" class="button hollow">Select Your Images +</label>
+                <input class="show-for-sr" type="file" id="upload_imgs_update" name="upload_imgs_update"/>
+              </p>
+              <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview_update" aria-live="polite"></div>
             </div>
           </div>          
           <input type="hidden" name="id_hidden" id="id_hidden">
@@ -258,11 +220,6 @@
 <script src="{{asset('assets/js/notify/index.js')}}"></script>
 
 <script src="{{asset('assets/js/js_general.js')}}"></script>
-<script src="{{asset('assets/js/js_upload_settings.js')}}"></script>
-
-<!-- dropzone js -->
-<script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
-<!-- end dropzone js -->
 
 <!-- table design settings-->
 <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
@@ -307,8 +264,7 @@
     clearInput();
     // fill data
     $(`input[name=id_hidden]`).val(data[0]);
-    $(`input[name=nmbrand_update]`).val(data[1]);
-    // $(`#preview_update`).append(data[2]);    
+    $(`input[name=nmbrand_update]`).val(data[1]);      
     // ============================================
   });
 
@@ -353,6 +309,9 @@
         }
     });            
   });
+
+  generalUpload('upload_imgs_insert','img_preview_insert','img-upload-form-insert');
+  generalUpload('upload_imgs_update','img_preview_update','img-upload-form-update');
 </script>
 @endsection
 

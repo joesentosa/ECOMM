@@ -66,8 +66,8 @@ class AdminController extends Controller
         $dtbrand = new BrandModel();
         if ($req->urlimageupdate != "") {$filename = $req->urlimageupdate;}
         else{
-            if ($req->hasFile('uploadFile_update')) {
-                $file = $req->file('uploadFile_update');
+            if ($req->hasFile('upload_imgs_update')) {
+                $file = $req->file('upload_imgs_update');
                 $extension = $file->getClientOriginalExtension();            
                 $filename = 'uploads/brand/'.time().'.'.$extension;            
                 $file->move('uploads/brand',$filename);
@@ -80,8 +80,8 @@ class AdminController extends Controller
         $dtbrand = new BrandModel();
         if ($req->urlimageinsert != "") {$filename = $req->urlimageinsert;}
         else{
-            if ($req->hasFile('uploadFile_insert')) {
-                $file = $req->file('uploadFile_insert');
+            if ($req->hasFile('upload_imgs_insert')) {
+                $file = $req->file('upload_imgs_insert');
                 $extension = $file->getClientOriginalExtension();            
                 $filename = 'uploads/brand/'.time().'.'.$extension;            
                 $file->move('uploads/brand',$filename);
@@ -105,7 +105,7 @@ class AdminController extends Controller
 
     public function insertbarang(Request $req){
         $dtbarang = new BarangModel();
-        $dtgambar = new GambarModel();             
+        $dtgambar = new GambarModel();                  
         $idbarang = $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert, $req->cb_brand,$req->cb_kategori);        
         if ($req->hasFile('upload_imgs_insert')) {                        
             foreach ($req->file('upload_imgs_insert') as $image) {
@@ -121,17 +121,20 @@ class AdminController extends Controller
 
     public function updatebarang(Request $req){
         $dtbarang = new BarangModel();
-        
-        $filename=null;                 
-        if ($req->hasFile('upload_imgs')) {
-            foreach ($req->file('upload_imgs') as $key) {
+        $dtgambar = new GambarModel();                       
+        if ($req->hasFile('upload_imgs_update')) {
+            foreach ($req->file('upload_imgs_update') as $image) {
                 $extension = $key->getClientOriginalExtension();            
                 $filename = 'uploads/barang/'.time().'.'.$extension;            
-                $file->move('uploads/barang',$filename);
+                // $image->move('uploads/barang',$filename);
+                // $dtgambar->updateBarang($idbarang,'uploads/barang/'.$filename);
             }                                
         }                               
-        // $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
+        $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
         return back();
+    }
+    public function deletebarang(Request $req){
+        
     }
 
     // ==========================================
