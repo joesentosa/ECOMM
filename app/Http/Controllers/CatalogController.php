@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class CatalogController extends Controller
 {
     public function catalog(Request $req){
-        $dtkategori = new KategoriModel();        
+        $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::get();
         $user       = Auth::user();
@@ -46,7 +46,7 @@ class CatalogController extends Controller
         }
         $user       = Auth::user()->id_customer;
         // dd($user);
-        // var_dump($barangId);   
+        // var_dump($barangId);
         $cekAda     = WishlistModel:: where('fk_id_barang', $barangId)->where('fk_id_customer',$user)->first();
         // dd($cekAda);
         if (!$cekAda) {
@@ -56,7 +56,7 @@ class CatalogController extends Controller
             $dtWishlist = new WishlistModel();
             $dtWishlist->deleteWishlist($cekAda->id_wishlist);
         }
-        
+
         return redirect('catalog');
     }
 
@@ -65,7 +65,7 @@ class CatalogController extends Controller
         $barangId = $req->barangId;
         if ($req->session()->has('cart')) {
             $barangArr= session('cart');
-            for ($i=0; $i < count($barangArr); $i++) { 
+            for ($i=0; $i < count($barangArr); $i++) {
                 if ($barangArr[$i] == $barangId) {
                     return back();
                 }
@@ -86,7 +86,7 @@ class CatalogController extends Controller
         $barangId = $req->barangId;
         $barangArr = session('cart');
         $req->session()->forget('cart');
-        for ($i=0; $i < count($barangArr); $i++) { 
+        for ($i=0; $i < count($barangArr); $i++) {
             if ($barangArr[$i] == $barangId) {
                 unset($barangArr[$i]);
             }
