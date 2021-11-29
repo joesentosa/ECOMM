@@ -16,7 +16,16 @@ class CatalogController extends Controller
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::get();
-        $user       = Auth::user();
+        $customer   = Auth::user();
+        // dd($customer);
+        $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
+        $WishlistCust = null;
+        $wishlistCount = 0;
+        if ($WLCek) {
+            $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
+            $wishlistCount = count($WishlistCust);
+            $WLCust = BarangModel::whereIn('id_barang',$WishlistCust)->get();
+        }
         $cart       = null;
         $cartCount  = 0;
         $barangCart = null;
@@ -33,7 +42,9 @@ class CatalogController extends Controller
             'data_brand' => $dtbrand,
             'data_barang' => $dtbarang,
             'barang_cart' => $barangCart,
-            'cart_count'=>$cartCount
+            'cart_count'=>$cartCount,
+            'WL_cust'=>$WLCust,
+            'WL_count'=>$wishlistCount
         ]);
     }
 
@@ -57,6 +68,25 @@ class CatalogController extends Controller
             $dtWishlist->deleteWishlist($cekAda->id_wishlist);
         }
 
+        return redirect('catalog');
+    }
+
+    public function deleteWL(Request $req)
+    {
+        $barangId   = $req->barangId;
+        if (Auth::guard('web')->guest())
+        {
+            return redirect('login');
+        }
+        $user       = Auth::user()->id_customer;
+        // dd($user);
+        // var_dump($barangId);   
+        $cekAda     = WishlistModel:: where('fk_id_barang', $barangId)->where('fk_id_customer',$user)->first();
+        // dd($cekAda);
+        
+        $dtWishlist = new WishlistModel();
+        $dtWishlist->deleteWishlist($cekAda->id_wishlist);
+        
         return redirect('catalog');
     }
 

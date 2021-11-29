@@ -125,10 +125,12 @@
                 </div>
                 <div class="col-auto">
                     <div class="header-action">
+                        @isset($WL_count)
                         <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
                                 data-bs-target="#wishlistOffcanvas"><img
                                 src="assets/images/icons/icon-heart-dark.svg" alt=""><span
-                                class="count-tag">01</span></button>
+                                class="count-tag">{{ $WL_count }}</span></button>
+                        @endisset
                         @isset($cart_count)
                             <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas" data-bs-target="#addcartOffcanvas">
                                 <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
@@ -314,60 +316,32 @@
     </div>
     <div class="offcanvas-body">
         <ul class="offcanvas-products-list">
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-1.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Tops</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$100.00</span>
+            @isset($WL_cust)
+                @foreach ($WL_cust as $item)
+                    <li class="single-item">
+                        <div class="box">
+                            <a href="" class="image">
+                                <img src="assets/images/products/small/product-small-1.webp" alt=""
+                                    class="offcanvas-wishlist-image">
+                            </a>
+                            <div class="content">
+                                <a href="" class="title">{{ $item->namaBarang }}</a>
+                                <div class="offcanvas-wishlist-item-details">
+                                    <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                                    <span class="offcanvas-wishlist-item-details-price">{{ $item->harga }}</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-2.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Leggings</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
-            <li class="single-item">
-                <div class="box">
-                    <a href="" class="image">
-                        <img src="assets/images/products/small/product-small-3.webp" alt=""
-                              class="offcanvas-wishlist-image">
-                    </a>
-                    <div class="content">
-                        <a href="" class="title">Casual Shirt</a>
-                        <div class="offcanvas-wishlist-item-details">
-                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
-                            <span class="offcanvas-wishlist-item-details-price">$65.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-delete text-right">
-                    <a href="#"><img src="assets/images/icons/icon-trash.svg" alt=""></a>
-                </div>
-            </li>
+                        <form action="/deleteWL" method="get">
+                            <div class="item-delete text-right">
+                                <input type="hidden" name="barangId" value="{{ $item->id_barang }}">
+                                <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>
+                            </div>
+                        </form>
+                    </li>
+                @endforeach
+            @endisset
+            
         </ul>
         <div class="offcanvas-action-link">
             <a href="wishlist.html" class="btn">View wishlist</a>
