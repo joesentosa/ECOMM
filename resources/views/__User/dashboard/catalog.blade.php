@@ -55,7 +55,7 @@
                                 </label>
                             </li>
                             @endforeach
-                        @endisset                        
+                        @endisset
                         </ul>
                     </div>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="sidebar-content">
                         <input type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="0" data-max="7000" data-from="500" data-to="5000" />
                     </div>
-                </div> <!-- End Single Sidebar Widget -->                                
+                </div> <!-- End Single Sidebar Widget -->
 
                 <!-- Start Single Sidebar Widget -->
                 <div class="sidebar-single-widget">
@@ -119,12 +119,12 @@
                                 @foreach($data_brand as $item)
                                     <li><a href="#">{{$item->namaBrand}}</a></li>
                                 @endforeach
-                            @endisset                            
+                            @endisset
                         </ul>
                     </div>
                 </div>
                 <!-- End Single Sidebar Widget -->
-                </div> 
+                </div>
                 <!-- End Sidebar Area -->
             </div>
             <!-- product barang -->
@@ -151,21 +151,30 @@
                                     </a>
                                     <div class="content">
                                     <div class="top">
-                                        <span class="catagory">MEN</span>
+                                        <span class="catagory">{{ $barang->kategori->nama_kategori }}</span>
                                         <h4 class="title"><a href="product-details-default.html">{{ $barang->namaBarang }}</a></h4>
-                                        <span class="price">$355.00 <del>$400.00</del></span>
+                                        <span class="price">Rp {{ number_format($barang->harga) }}<del>$400.00</del></span>
                                     </div>
                                     <div class="bottom">
                                         <ul class="review-star">
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star</span></li>
-                                        <li class="fill"><span class="material-icons">star_half</span></li>
+                                            @for ($i = 0; $i < floor($barang->rating); $i++)
+                                                <li class="fill"><span class="material-icons">star</span></li>
+                                            @endfor
+                                            @if ($barang->rating * 10 % 10 != 0)
+                                                <li class="fill"><span class="material-icons">star_half</span></li>
+                                            @endif
                                         </ul>
                                         <div class="product-event-items">
-                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
-                                        <a href="wishlist.html" class="btn wishlist-btn"><span class="material-icons">favorite_border</span></a>
+                                            <form action="/addToCart" method="get">
+                                                @csrf
+                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
+                                                <button class="btn cart-btn">Add to cart</button>
+                                            </form>
+                                            <form action="/wishlist" method="get">
+                                                @csrf
+                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
+                                                <button class="btn wishlist-btn"><span class="material-icons">favorite_border</span></button>
+                                            </form>
                                         </div>
                                     </div>
                                     </div>
@@ -181,7 +190,7 @@
                         <h1>{{ $item }}</h1>
                     @endforeach
                 @endisset --}}
-                
+
 
                 <!-- Start Pagination -->
                 <div class="d-flex justify-content-center">
@@ -202,7 +211,7 @@
         </div>
         </div>
     </div>
-</div> 
+</div>
 <!-- ...:::: End Shop List Section:::... -->
 @endsection
 
