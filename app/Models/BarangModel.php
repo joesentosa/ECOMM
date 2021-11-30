@@ -24,7 +24,7 @@ class BarangModel extends Model
         $barang->stok           = $stok;
         $barang->harga          = $harga;
         $barang->berat          = $berat;
-        $barang->review         = $review;        
+        $barang->review         = $review;
         $barang->fk_id_brand    = $idbrand;
         $barang->fk_id_kategori = $idkategori;
         $barang->save();
@@ -50,6 +50,8 @@ class BarangModel extends Model
                         ->with(['gambar'])
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
     }
+
+
     public function getAll(){
         return BarangModel::with(['gambar'])->get();
     }

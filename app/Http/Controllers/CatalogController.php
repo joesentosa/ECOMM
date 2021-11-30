@@ -131,4 +131,8 @@ class CatalogController extends Controller
         $req->session()->put('cart',$barangArr);
         return back();
     }
+    public function cart(Request $request)
+    {
+        return view('__User.dashboard.cart');
+    }
 }

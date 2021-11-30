@@ -51,7 +51,7 @@
                      <div class="col-sm-12 col-lg-4 order-sm-0 order-xl-1">
                         <div class="user-designation">
                            <div class="title"><a target="_blank" href="">Full Name</a></div>
-                           <div class="desc mt-2">{{$customer->firstName . " " . $customer->lastName}}</div>
+                           <div class="desc mt-2">{{$customer->firstname . " " . $customer->lastname}}</div>
                         </div>
                      </div>
                      <div class="col-sm-6 col-lg-4 order-sm-2 order-xl-2">

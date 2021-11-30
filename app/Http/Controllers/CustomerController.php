@@ -16,7 +16,7 @@ class CustomerController extends Controller
         $brands = BrandModel::limit(25)->get();
         $barangs = BarangModel::with(['gambar','kategori'])->get();
         $kategories = KategoriModel::limit(5)->get();
-        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));        
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
     }
 
     public function homepage()
@@ -50,5 +50,13 @@ class CustomerController extends Controller
         $customer->update($request->all());
         Auth::user()->update($request->all());
         return redirect()->back();
+    }
+
+    public function getDataBarang(Request $request)
+    {
+        $barang = BarangModel::find($request->id);
+        $kategori = KategoriModel::find($barang->fk_id_kategori);
+        $brand = BrandModel::find($barang->fk_id_brand);
+        return view('__User.dashboard.user_detail_barang', ['barang' => $barang, 'brand' => $brand, 'kategori' => $kategori]);
     }
 }
