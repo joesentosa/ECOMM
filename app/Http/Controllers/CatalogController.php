@@ -17,11 +17,17 @@ class CatalogController extends Controller
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::get();
         $customer   = Auth::user();
+        $WLCek      = null;
+        $WLCust      = null;
         // dd($customer);
-        $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
+        if ($customer == null) {
+            $customer = null;
+        }else{
+            $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
+        }
         $WishlistCust = null;
         $wishlistCount = 0;
-        if ($WLCek) {
+        if ($WLCek != null) {
             $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
             $wishlistCount = count($WishlistCust);
             $WLCust = BarangModel::whereIn('id_barang',$WishlistCust)->get();
