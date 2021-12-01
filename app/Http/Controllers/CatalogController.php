@@ -29,8 +29,16 @@ class CatalogController extends Controller
         $wishlistCount = 0;
         if ($WLCek != null) {
             $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
+            // dd($WishlistCust);
             $wishlistCount = count($WishlistCust);
-            $WLCust = BarangModel::whereIn('id_barang',$WishlistCust)->get();
+            $WL_fk_barang = [];
+            for ($i=0; $i < $wishlistCount; $i++) { 
+                array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
+            }
+            // dd($WL_fk_barang);
+            // array_push($WishlistCust);
+            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
+            // dd($WLCust);
         }
         $cart       = null;
         $cartCount  = 0;
