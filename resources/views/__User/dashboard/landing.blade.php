@@ -24,7 +24,7 @@
                                         <div class="hero-slider-single-item--style-1 swiper-slide hero-bg">
                                             <div class="image">
                                                 <img class="img-fluid"
-                                                     src="{{ asset('assets/images/hero-slider/hero-slider-style-1-img-1.png') }}"
+                                                     src="{{ asset('assets/images/hero-slider/rtx_idaman.png') }}"
                                                      width="469" height="760" loading="lazy" alt="hero-image-1">
                                             </div>
                                             <div class="image-shape"></div>
@@ -37,18 +37,19 @@
                                                             <h2 class="title">Best Gaming Collection </h2>
                                                             <p>There are many variations of passages of Lorem Ipsum
                                                                 available, but the majority.</p>
-                                                            <a href="product-details-default.html"
+                                                            <a href="{{ url('catalog') }}"
                                                                class="btn btn-lg btn-default">GET IT NOW</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="hero-slider-shape hero-slider-top-shape"><img class="img-fluid"
-                                                                                                      src="assets/images/icons/hero-slider-top-shape.svg"
-                                                                                                      width="113"
-                                                                                                      height="107"
-                                                                                                      loading="lazy"
-                                                                                                      alt="hero-shape-1">
+                                            <div class="hero-slider-shape hero-slider-top-shape">
+                                                <img class="img-fluid"
+                                                     src="assets/images/icons/hero-slider-top-shape.svg"
+                                                     width="113"
+                                                     height="107"
+                                                     loading="lazy"
+                                                     alt="hero-shape-1">
                                             </div>
                                             <div class="hero-slider-shape hero-slider-bottom-shape"><img
                                                     class="img-fluid"
@@ -60,7 +61,7 @@
                                         <div class="hero-slider-single-item--style-1 swiper-slide hero-bg">
                                             <div class="image">
                                                 <img class="img-fluid"
-                                                     src="assets/images/hero-slider/hero-slider-style-1-img-2.png"
+                                                     src="{{ asset('assets/images/hero-slider/chair_gaming.png') }}"
                                                      width="469" height="760" loading="lazy" alt="hero-image-2">
                                             </div>
                                             <div class="image-shape"></div>
@@ -73,18 +74,19 @@
                                                             <h2 class="title">Best Unique Collection </h2>
                                                             <p>There are many variations of passages of Lorem Ipsum
                                                                 available, but the majority.</p>
-                                                            <a href="product-details-default.html"
+                                                            <a href="{{ url('catalog') }}"
                                                                class="btn btn-lg btn-default">GET IT NOW</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="hero-slider-shape hero-slider-top-shape"><img class="img-fluid"
-                                                                                                      src="assets/images/icons/hero-slider-top-shape.svg"
-                                                                                                      width="113"
-                                                                                                      height="107"
-                                                                                                      loading="lazy"
-                                                                                                      alt="hero-shape-1">
+                                            <div class="hero-slider-shape hero-slider-top-shape">
+                                                <img class="img-fluid"
+                                                     src="assets/images/icons/hero-slider-top-shape.svg"
+                                                     width="113"
+                                                     height="107"
+                                                     loading="lazy"
+                                                     alt="hero-shape-1">
                                             </div>
                                             <div class="hero-slider-shape hero-slider-bottom-shape"><img
                                                     class="img-fluid"
@@ -96,7 +98,7 @@
                                         <div class="hero-slider-single-item--style-1 swiper-slide hero-bg">
                                             <div class="image">
                                                 <img class="img-fluid"
-                                                     src="assets/images/hero-slider/hero-slider-style-1-img-3.png"
+                                                     src="{{ asset('assets/images/hero-slider/keyboard.png') }}"
                                                      width="469" height="760" loading="lazy" alt="hero-image-3">
                                             </div>
                                             <div class="image-shape"></div>
@@ -109,20 +111,22 @@
                                                             <h2 class="title">Happiness in shopping. </h2>
                                                             <p>There are many variations of passages of Lorem Ipsum
                                                                 available, but the majority.</p>
-                                                            <a href="product-details-default.html"
+                                                            <a href="{{ url('catalog') }}"
                                                                class="btn btn-lg btn-default">GET IT NOW</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="hero-slider-shape hero-slider-top-shape"><img class="img-fluid"
-                                                                                                      src="assets/images/icons/hero-slider-top-shape.svg"
-                                                                                                      width="113"
-                                                                                                      height="107"
-                                                                                                      loading="lazy"
-                                                                                                      alt="hero-shape-1">
+                                            <div class="hero-slider-shape hero-slider-top-shape">
+                                                <img class="img-fluid"
+                                                     src="assets/images/icons/hero-slider-top-shape.svg"
+                                                     width="113"
+                                                     height="107"
+                                                     loading="lazy"
+                                                     alt="hero-shape-1">
                                             </div>
-                                            <div class="hero-slider-shape hero-slider-bottom-shape"><img
+                                            <div class="hero-slider-shape hero-slider-bottom-shape">
+                                                <img
                                                     class="img-fluid"
                                                     src="assets/images/icons/hero-slider-bottom-shape.svg" width="221"
                                                     height="234" loading="lazy" alt="hero-shape-1"></div>
@@ -183,7 +187,8 @@
                                 <!-- Start Shipping Single Items -->
                                 <div class="shipping-single-item--style-1">
                                     <div class="icon">
-                                        <img class="img-fluid" src="{{ asset('assets/images/icons/clock-history.svg') }}" width="46"
+                                        <img class="img-fluid"
+                                             src="{{ asset('assets/images/icons/clock-history.svg') }}" width="46"
                                              height="33" loading="lazy" alt="shipping-icon-2">
                                     </div>
                                     <div class="content">
@@ -230,8 +235,8 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                         <!-- Slides -->
-                                        @foreach($brands as $index => $brand)
-                                            <!-- Start Company Slider Single Item -->
+                                    @foreach($brands as $index => $brand)
+                                        <!-- Start Company Slider Single Item -->
                                             <a href="#" class="company-slider-single-item swiper-slide">
                                                 <div class="image img-brand">
                                                     <img class="img-fluid"
@@ -334,11 +339,12 @@
                                                                    alt=""></button>
                                 </li>
                                 @foreach($kategories as $index => $kategory)
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
-                                        {{ $kategory->nama_kategori }}
-                                    <img src="assets/images/icons/product-tab-icon-2.svg" alt=""></button>
-                                </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
+                                            {{ $kategory->nama_kategori }}
+                                            <img src="assets/images/icons/product-tab-icon-2.svg" alt=""></button>
+                                    </li>
                                 @endforeach
                             </ul>
                             <!-- End Product Tab Items  -->
@@ -424,7 +430,7 @@
                                     <div class="swiper-wrapper">
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-5.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -435,7 +441,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Star Women
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Star Women
                                                             pants</a></h4>
                                                     <span class="price">$200.00 <del>$300.00</del></span>
                                                 </div>
@@ -449,7 +455,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
@@ -461,7 +467,7 @@
                                         <!-- End Product Single Item - Style 1 -->
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-4.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -469,7 +475,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Slightly
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Slightly
                                                             jackets XL Cool </a></h4>
                                                     <span class="price">$350.00</span>
                                                 </div>
@@ -483,7 +489,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
@@ -495,7 +501,7 @@
                                         <!-- End Product Single Item - Style 1 -->
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-6.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -506,7 +512,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">Bag</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Distracted
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Distracted
                                                             XL bag</a></h4>
                                                     <span class="price">$1200.00 <del>$1500.00</del></span>
                                                 </div>
@@ -520,7 +526,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
@@ -532,7 +538,7 @@
                                         <!-- End Product Single Item - Style 1 -->
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-1.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -543,7 +549,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">MEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Man's
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Man's
                                                             Outdoor Shirt</a></h4>
                                                     <span class="price">$355.00 <del>$400.00</del></span>
                                                 </div>
@@ -557,7 +563,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
@@ -569,7 +575,7 @@
                                         <!-- End Product Single Item - Style 1 -->
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-2.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -577,7 +583,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Women
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Women
                                                             Summer deal</a></h4>
                                                     <span class="price">$550.00</span>
                                                 </div>
@@ -591,7 +597,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>
@@ -603,7 +609,7 @@
                                         <!-- End Product Single Item - Style 1 -->
                                         <!-- Start Product Single Item - Style 1 -->
                                         <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="product-details-default.html" class="image img-responsive">
+                                            <a href="{{ url('catalog') }}" class="image img-responsive">
                                                 <img class="img-fluid"
                                                      src="assets/images/products/default/product-default-style-1-img-3.webp"
                                                      width="435" height="350" loading="lazy" alt="product-image">
@@ -611,7 +617,7 @@
                                             <div class="content">
                                                 <div class="top">
                                                     <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="product-details-default.html">Women
+                                                    <h4 class="title"><a href="{{ url('catalog') }}">Women
                                                             Luxury Party</a></h4>
                                                     <span class="price">$1050.00</span>
                                                 </div>
@@ -625,7 +631,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="product-event-items">
-                                                        <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
                                                         <a href="wishlist.html" class="btn wishlist-btn"><span
                                                                 class="material-icons">favorite_border</span></a>
                                                     </div>

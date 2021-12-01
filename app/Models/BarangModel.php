@@ -49,7 +49,6 @@ class BarangModel extends Model
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
     }
 
-
     public static function getAll(){
         return BarangModel::with(['gambar','promos','kategori'])->get();
     }
@@ -66,6 +65,6 @@ class BarangModel extends Model
 
     public function promos()
     {
-        return $this->belongsToMany(PromoModel::class, 'promo_barang', 'fk_id_barang', 'id_barang');
+        return $this->belongsToMany(PromoModel::class, 'promo_barang', 'fk_id_barang', 'fk_id_barang');
     }
 }

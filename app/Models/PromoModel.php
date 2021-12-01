@@ -18,18 +18,18 @@ class PromoModel extends Model
     protected $fillable = ['firstDate','expiredDate','hargaPromo','created_at','updated_at'];
 
     public function insertPromo($firstDate,$expiredDate,$harga){
-        $promo               = new PromoModel();        
+        $promo               = new PromoModel();
         $promo->firstDate    = $firstDate;
-        $promo->expiredDate  = $expiredDate;    
-        $promo->hargaPromo   = $harga;            
+        $promo->expiredDate  = $expiredDate;
+        $promo->hargaPromo   = $harga;
         $promo->save();
-    }    
+    }
     public function updatePromo($id_promo,$firstDate_update,$expiredDate_update,$harga_update){
-        
-        $data = PromoModel::find($id_promo);        
+
+        $data = PromoModel::find($id_promo);
         $data->firstDate    = $firstDate_update;
-        $data->expiredDate  = $expiredDate_update;    
-        $data->hargaPromo   = $harga_update;            
+        $data->expiredDate  = $expiredDate_update;
+        $data->hargaPromo   = $harga_update;
         $data->save();
     }
     public function deletePromo($id_promo){
@@ -37,5 +37,10 @@ class PromoModel extends Model
     }
     public function getAll(){
         return PromoModel::all();
+    }
+
+    public function barang()
+    {
+        return $this->belongsToMany(BarangModel::class, 'promo_barang', 'fk_id_promo', 'fk_id_promo');
     }
 }
