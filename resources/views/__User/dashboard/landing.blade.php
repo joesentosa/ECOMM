@@ -303,7 +303,7 @@
     <!-- ...::: Strat Product Section :::... -->
 
     <div class="d-flex justify-content-center">
-        <a href="shop-grid-sidebar-left.html" class="btn btn-md btn-default btn-section-bottom">View
+        <a href="{{ url('catalog') }}" class="btn btn-md btn-default btn-section-bottom">View
             All Product</a>
     </div>
 

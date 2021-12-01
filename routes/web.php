@@ -16,6 +16,7 @@ Route::get('/', [CustomerController::class, 'landing'])->name('page.index.custom
 Route::get('/login', [CustomerController::class, 'login']);
 Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
+Route::get('/cart',[CatalogController::class,'cart']);
 Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);
