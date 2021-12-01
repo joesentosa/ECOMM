@@ -420,7 +420,7 @@
       const trhead = $(this).parents('tr');      
       const data = settingsBarang.row(trhead).data();          
       let tmpidbrand = trhead.find($('td')).eq(7).attr('data-idbrand');
-      let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori')
+      let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori');
       let tmpberat = data[4].split(" ");   
       let tmpreview = data[5].split("</button>");    
       console.log(data[6]);
