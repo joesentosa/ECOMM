@@ -20,7 +20,7 @@ Route::get('/cart',[CatalogController::class,'cart']);
 Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);
-Route::get('/detailBarang',[CustomerController::class,'detailBarang']);
+Route::get('/detailBarang/{name}',[CustomerController::class,'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
 // admin route

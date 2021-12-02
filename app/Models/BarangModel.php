@@ -48,7 +48,13 @@ class BarangModel extends Model
                         ->with(['gambar'])
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
     }
-
+    public static function getByName($name){
+        return BarangModel::join('brand','brand.id_brand','=','barang.fk_id_brand')
+                        ->join('kategori','kategori.id_kategori','=','barang.fk_id_kategori')
+                        ->with(['gambar'])
+                        ->where('barang.namaBarang',$name)
+                        ->get();
+    }
     public static function getAll(){
         return BarangModel::with(['gambar','promos','kategori'])->get();
     }

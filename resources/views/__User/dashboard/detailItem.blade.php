@@ -264,7 +264,7 @@
                                     <!-- Start Product Single Item - Style 1 -->
                                     <div class="product-single-item-style-1 swiper-slide">
                                         <a href="product-details-default.html" class="image img-responsive">
-                                            <img class="img-fluid" src="assets/images/products/default/product-default-style-1-img-5.webp" alt="">
+                                            <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-5.webp')}}" alt="">
                                             <ul class="tooltip-tag-items">
                                                 <li class="color-yellow">15%</li>
                                             </ul>
@@ -296,7 +296,7 @@
                                     <!-- Start Product Single Item - Style 1 -->
                                     <div class="product-single-item-style-1 swiper-slide">
                                         <a href="product-details-default.html" class="image img-responsive">
-                                            <img class="img-fluid" src="assets/images/products/default/product-default-style-1-img-4.webp" alt="">
+                                            <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-4.webp')}}" alt="">
                                         </a>
                                         <div class="content">
                                             <div class="top">
@@ -325,7 +325,7 @@
                                     <!-- Start Product Single Item - Style 1 -->
                                     <div class="product-single-item-style-1 swiper-slide">
                                         <a href="product-details-default.html" class="image img-responsive">
-                                            <img class="img-fluid" src="assets/images/products/default/product-default-style-1-img-6.webp" alt="">
+                                            <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-6.webp')}}" alt="">
                                             <ul class="tooltip-tag-items">
                                                 <li class="color-green">15%</li>
                                             </ul>
@@ -457,15 +457,9 @@
 @endsection
 
 @push('JScript')
-  <!-- <script src="{{ asset('assets/Martup/js/vendor/modernizr-3.11.2.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/jquery-3.6.0.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/js/vendor/jquery-ui.min.js') }}"></script>
+<!-- Minify Version -->
+    <script src="{{ asset('assets/Martup/js/vendor/vendor.min.js') }}"></script>
+    <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
-  <script src="{{asset('assets/Martup/js/plugins/jquery.nice-select.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/ion.rangeSlider.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/venobox.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/ajax-mail.js')}}"></script> -->
+    <script src="{{asset('assets/Martup/js/main.js')}}"></script>
 @endpush

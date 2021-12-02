@@ -93,15 +93,9 @@
 @endsection
 
 @push('JScript')
-  <script src="{{ asset('assets/Martup/js/vendor/modernizr-3.11.2.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/jquery-3.6.0.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
-  <script src="{{ asset('assets/Martup/js/vendor/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/js/vendor/jquery-ui.min.js') }}"></script>
+  <!-- Minify Version -->
+    <script src="{{ asset('assets/Martup/js/vendor/vendor.min.js') }}"></script>
+    <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
-  <script src="{{asset('assets/Martup/js/plugins/jquery.nice-select.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/ion.rangeSlider.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/venobox.min.js')}}"></script>
-  <script src="{{asset('assets/Martup/js/plugins/ajax-mail.js')}}"></script>
+    <script src="{{asset('assets/Martup/js/main.js')}}"></script>
 @endpush
