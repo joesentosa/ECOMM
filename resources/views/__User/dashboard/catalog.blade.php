@@ -165,11 +165,6 @@
                                             @endif
                                         </ul>
                                         <div class="product-event-items">
-                                            <form action="/addToCart" method="get">
-                                                @csrf
-                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
-                                                <button class="btn cart-btn">Add to cart</button>
-                                            </form>
                                             <form action="/wishlist" method="get">
                                                 @csrf
                                                 <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
