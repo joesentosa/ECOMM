@@ -37,13 +37,11 @@ class BarangModel extends Model
         $barang->harga          = $hargaBarang;
         $barang->berat          = $beratbarang;
         $barang->review         = $reviewbarang;
-        if ($filename != null) {
-            $barang->gambar         = $filename;
-        }
         $barang->fk_id_brand    = $cb_brand;
         $barang->fk_id_kategori = $cb_kategori;
         $barang->save();
     }
+
     public function getAllById(){
         return BarangModel::join('brand','brand.id_brand','=','barang.fk_id_brand')
                         ->join('kategori','kategori.id_kategori','=','barang.fk_id_kategori')
@@ -51,9 +49,8 @@ class BarangModel extends Model
                         ->get(['barang.*', 'brand.namaBrand','kategori.nama_kategori']);
     }
 
-
-    public function getAll(){
-        return BarangModel::with(['gambar'])->get();
+    public static function getAll(){
+        return BarangModel::with(['gambar','promos','kategori'])->get();
     }
 
     public function gambar()
@@ -64,5 +61,10 @@ class BarangModel extends Model
     public function kategori()
     {
         return $this->hasOne(KategoriModel::class, 'id_kategori', 'fk_id_kategori');
+    }
+
+    public function promos()
+    {
+        return $this->belongsToMany(PromoModel::class, 'promo_barang', 'fk_id_barang', 'fk_id_barang');
     }
 }

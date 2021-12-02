@@ -6,6 +6,7 @@ use App\Models\BarangModel;
 use App\Models\BrandModel;
 use App\Models\CustomerModel;
 use App\Models\KategoriModel;
+use App\Models\PromoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,9 +15,10 @@ class CustomerController extends Controller
     public function landing()
     {
         $brands = BrandModel::limit(25)->get();
-        $barangs = BarangModel::with(['gambar','kategori'])->get();
-        $kategories = KategoriModel::limit(5)->get();
-        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories'));
+        $barangs = BarangModel::getAll();
+        $promos = PromoModel::with('barang')->get();
+        $kategories = KategoriModel::with(['barang'])->get();
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos'));
     }
 
     public function homepage()

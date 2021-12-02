@@ -36,7 +36,7 @@ class PromoBarangModel extends Model
         $data->delete();
     }
 
-    // PromoBarang mau nyambungno ke barang -> 
+    // PromoBarang mau nyambungno ke barang ->
     // belongsTo -> user pny profile  -> user hasOne profile <- profile belongsTo user
     public function barang(){
         return $this->hasOne(BarangModel::class,'id_barang','fk_id_barang');
@@ -44,6 +44,7 @@ class PromoBarangModel extends Model
     public function promo(){
         return $this->hasOne(PromoModel::class,'id_promo','fk_id_promo');
     }
+
     public function getAll(){
         return PromoBarangModel::with(['barang','promo'])->get();
     }
