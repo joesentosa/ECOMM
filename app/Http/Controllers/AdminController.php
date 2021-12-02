@@ -124,17 +124,26 @@ class AdminController extends Controller
         $dtgambar = new GambarModel();                       
         if ($req->hasFile('upload_imgs_update')) {
             foreach ($req->file('upload_imgs_update') as $image) {
-                $extension = $key->getClientOriginalExtension();            
-                $filename = 'uploads/barang/'.time().'.'.$extension;            
-                // $image->move('uploads/barang',$filename);
-                // $dtgambar->updateBarang($idbarang,'uploads/barang/'.$filename);
+                $extension = $image->getClientOriginalExtension();            
+                $filename = $this->generateFileName('gambar_barang',$extension);            
+                $image->move('uploads/barang',$filename);
+                $dtgambar->insertGambar($req->id_hidden,'uploads/barang/'.$filename);
             }                                
         }                               
-        $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update,$filename, $req->cb_brand,$req->cb_kategori);
+        $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update, $req->cb_brand,$req->cb_kategori);
         return back();
     }
-    public function deletebarang(Request $req){
-        
+    public function deletebarang($id){        
+        $dtbarang = new BarangModel();
+        $dtbarang->deleteBarangItems($id);
+        if ($dtbarang) {
+            return response()->json([
+                'status' => 200
+            ]);
+        }      
+        return response()->json([
+            'status' => 400
+        ]);
     }
 
     // ==========================================

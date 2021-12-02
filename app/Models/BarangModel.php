@@ -15,7 +15,7 @@ class BarangModel extends Model
     public $primaryKey  = "id_barang";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['namaBarang','stok','harga','berat','review','fk_id_brand','fk_id_kategori','created_at','updated_at'];
+    protected $fillable = ['namaBarang','stok','harga','berat','review','fk_id_brand','fk_id_kategori'];
 
     public function insertBarang($nama,$stok,$harga,$berat,$review,$idbrand,$idkategori){
         $barang                 = new BarangModel();
@@ -51,6 +51,10 @@ class BarangModel extends Model
 
     public static function getAll(){
         return BarangModel::with(['gambar','promos','kategori'])->get();
+    }
+
+    public function deleteBarangItems($id){
+        return BarangModel::find($id)->delete();
     }
 
     public function gambar()

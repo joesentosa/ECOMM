@@ -43,7 +43,7 @@ class BarangSeeder extends Seeder
                 The macro key only can work in the macro setting layer, long press Fn + left win key can enter the macro setting layer, long press again can exit this mode.
                 Esc/Fn/left Win key can not be defined.',
             'rating' => 3,
-            'fk_id_brand' => 37,
+            'fk_id_brand' => 34,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -75,7 +75,7 @@ class BarangSeeder extends Seeder
                 The macro key only can work in the macro setting layer, long press Fn + left win key can enter the macro setting layer, long press again can exit this mode.
                 Esc/Fn/left Win key can not be defined.',
             'rating' => 4,
-            'fk_id_brand' => 37,
+            'fk_id_brand' => 34,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -105,7 +105,7 @@ class BarangSeeder extends Seeder
                 Supplementary Keycaps
                 Imcluded 9 supplementary keycap, allow you design your own keyboard.',
             'rating' => 5,
-            'fk_id_brand' => 37,
+            'fk_id_brand' => 34,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -128,7 +128,7 @@ class BarangSeeder extends Seeder
                 Stable and Straight Large Keycaps
                 AKKO constantly endeavors to improve the stability of large keycaps, and is making progress to enchance the reliability of stabilizers to deliver better typing experiences on large keycaps.',
             'rating' => 5,
-            'fk_id_brand' => 37,
+            'fk_id_brand' => 34,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -151,7 +151,7 @@ class BarangSeeder extends Seeder
                 Stable and Straight Large Keycaps
                 AKKO constantly endeavors to improve the stability of large keycaps, and is making progress to enchance the reliability of stabilizers to deliver better typing experiences on large keycaps.',
             'rating' => 5,
-            'fk_id_brand' => 37,
+            'fk_id_brand' => 34,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -188,7 +188,7 @@ class BarangSeeder extends Seeder
                 Intelligent Control. Unlimited Possibilities.
                 CORSAIR iCUE software enables vivid dynamic lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.',
             'rating' => 4.5,
-            'fk_id_brand' => 12,
+            'fk_id_brand' => 9,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -219,7 +219,7 @@ class BarangSeeder extends Seeder
             Intelligent Control. Unlimited Possibilities.
             CORSAIR iCUE software enables vivid dynamic lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.',
             'rating' => 4.5,
-            'fk_id_brand' => 12,
+            'fk_id_brand' => 9,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -248,7 +248,7 @@ class BarangSeeder extends Seeder
             Intelligent Control. Unlimited Possibilities.
             CORSAIR iCUE software enables vivid dynamic lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.',
             'rating' => 4,
-            'fk_id_brand' => 12,
+            'fk_id_brand' => 9,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -292,7 +292,7 @@ class BarangSeeder extends Seeder
             Intelligent Control. Unlimited Possibilities.
             CORSAIR iCUE software enables vivid dynamic lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.',
             'rating' => 4,
-            'fk_id_brand' => 12,
+            'fk_id_brand' => 9,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -326,7 +326,7 @@ class BarangSeeder extends Seeder
             Intelligent Control. Unlimited Possibilities.
             CORSAIR iCUE software enables vivid dynamic lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.',
             'rating' => 3,
-            'fk_id_brand' => 12,
+            'fk_id_brand' => 9,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -349,7 +349,7 @@ class BarangSeeder extends Seeder
             USB TYPE-C INTERFACED
             USB to type-C interfaced and detachable.',
             'rating' => 3.5,
-            'fk_id_brand' => 13,
+            'fk_id_brand' => 10,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -372,7 +372,7 @@ class BarangSeeder extends Seeder
             USB TYPE-C INTERFACED
             USB to type-C interfaced and detachable.',
             'rating' => 4,
-            'fk_id_brand' => 13,
+            'fk_id_brand' => 10,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -398,7 +398,7 @@ class BarangSeeder extends Seeder
             MINIMALIST DESIGN,WITH METAL FRAME
             A minimalist design. Easy to use with a metal frame made of strong steel to help the keyboard be stable. Anti-vibration when typing protects the device safe from shocks sudden action.',
             'rating' => 3.5,
-            'fk_id_brand' => 13,
+            'fk_id_brand' => 10,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -419,7 +419,7 @@ class BarangSeeder extends Seeder
             Fullsize Mechanical Gaming Keyboard N-Key Rollover
             EK-169 Gaming Keyboard has N-Key Rollover. This enables every key to be pressed simultaneously on the keyboard while avoiding the possibility of ghosting.',
             'rating' => 4,
-            'fk_id_brand' => 13,
+            'fk_id_brand' => 10,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([
@@ -439,7 +439,7 @@ class BarangSeeder extends Seeder
             COMBINATION FUNCTION
             EK-812 Gaming Keyboard already have Keys Combination Function that can be activated by pressing FN key. You can change the modes of rainbow lighting, turn on or turn off the rainbow lighting, speed up or down, and many more function.',
             'rating' => 4,
-            'fk_id_brand' => 13,
+            'fk_id_brand' => 10,
             'fk_id_kategori' =>7
         ]);
         BarangModel::insert([

@@ -59,7 +59,7 @@
           </button>
         </div>
       </div>
-      <div class="table-responsive">
+      <div class="table-responsive">        
         <table class="display no-wrap" id="tableBarang" style="width:100%;">
           <thead>
             <tr>
@@ -422,13 +422,11 @@
       let tmpidbrand = trhead.find($('td')).eq(7).attr('data-idbrand');
       let tmpidkategori = trhead.find($('td')).eq(8).attr('data-idkategori');
       let tmpberat = data[4].split(" ");   
-      let tmpreview = data[5].split("</button>");    
-      console.log(data[6]);
-      // fill data
+      let tmpreview = data[5].split("</button>");                
       
       // $('#img_preview_update').html();
       $(`input[name=nmbarang_update]`).val(data[1]);
-      $(`input[name=hargaBarang_update]`).val(data[3]);
+      $(`input[name=hargaBarang_update]`).val(data[3].replace('Rp ','').replace('.','').replace(',00',''));
       $('#cb_brand').val(tmpidbrand).change();
       $('#cb_kategori').val(tmpidkategori).change();
       $(`input[name=stokbarang_update]`).val(data[2]);
@@ -437,9 +435,35 @@
       $(`input[name=id_hidden]`).val(data[0]);     
       // ============================================
     });    
-    $('#tableBarang tbody').on('click','#btndelete_barang',function(){      
+    $('#tableBarang tbody').on('click','#btndelete_barang',function(){            
       const data = settingsBarang.row($(this).parents('tr')).data();
-      console.log(data);
+      $.ajax({
+        type: 'GET',
+        url:"/admin/deletebarang/"+data[0],        
+        success: function(res){
+          if (res.status == 200) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'berhasil Dihapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+            setTimeout(function(){
+              location.reload();
+            }, 200);
+          }
+          else if(res.status == 400){
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Tidak berhasil Dihapus',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }         
+        }
+    });   
     })
     // =================================
     // image upload

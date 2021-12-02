@@ -1128,11 +1128,11 @@ class GambarSeeder extends Seeder
         ]);
         GambarModel::insert([            
             'id_barang' => '42',
-            'gambar'    => 'uploads/barang/G413_2.jpg',            
+            'gambar'    => 'uploads/barang/G413_2.png',            
         ]);
         GambarModel::insert([            
             'id_barang' => '42',
-            'gambar'    => 'uploads/barang/G413_3.jpg',            
+            'gambar'    => 'uploads/barang/G413_3.png',            
         ]);
 
         GambarModel::insert([            
@@ -1141,16 +1141,16 @@ class GambarSeeder extends Seeder
         ]);
         GambarModel::insert([            
             'id_barang' => '43',
-            'gambar'    => 'uploads/barang/GPRO_2.jpg',            
+            'gambar'    => 'uploads/barang/GPRO_2.png',            
         ]);
         GambarModel::insert([            
             'id_barang' => '43',
-            'gambar'    => 'uploads/barang/GPRO_3.jpg',            
+            'gambar'    => 'uploads/barang/GPRO_3.png',            
         ]);
 
         GambarModel::insert([            
             'id_barang' => '44',
-            'gambar'    => 'uploads/barang/K06_1.jpg',            
+            'gambar'    => 'uploads/barang/K06_1.png',            
         ]);
         GambarModel::insert([            
             'id_barang' => '44',
@@ -1260,7 +1260,7 @@ class GambarSeeder extends Seeder
         ]);
         GambarModel::insert([            
             'id_barang' => '50',
-            'gambar'    => 'uploads/barang/BWCHROMA_2.jpg',            
+            'gambar'    => 'uploads/barang/BWCHROMA_2.png',            
         ]);
 
         GambarModel::insert([            

@@ -16,9 +16,9 @@
                         <!-- Start Menu event -->
                         <div class="menu-event dropdown">
                             <button class="main-menu-event dropdown-toggle" data-bs-toggle="dropdown"><img
-                                    src="{{ asset('assets/images/icons/icon-open-menu.svg') }}"
+                                    src="{{ asset('assets/Martup/images/icons/icon-open-menu.svg') }}"
                                     alt=""><span>Menu</span><img
-                                    src="{{ asset('assets/images/icons/icon-arrow-drop-down.svg') }}" alt="">
+                                    src="{{ asset('assets/Martup/images/icons/icon-arrow-drop-down.svg') }}" alt="">
                             </button>
                             <ul class="mainmenu-nav dropdown-menu">
                                 <li class="menu-items">
@@ -117,8 +117,7 @@
 
                         <div class="search-event">
                             <input class="header-search" type="search" placeholder="Search">
-                            <button class="header-search-btn" type="submit"><img
-                                    src="assets/images/icons/icon-search.svg" alt=""></button>
+                            <button class="header-search-btn" type="submit"><img src="{{asset('assets/Martup/images/icons/icon-search.svg')}}" alt=""></button>
                         </div>
                         <!-- End Menu event -->
                     </div>

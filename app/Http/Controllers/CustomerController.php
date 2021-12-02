@@ -30,7 +30,12 @@ class CustomerController extends Controller
     {
         return view('__User.dashboard.login');
     }
-
+    public function page_wishlist(){
+        return view('__User.dashboard.wishlist');
+    }
+    public function detailBarang(){
+        return view('__User.dashboard.detailItem');
+    }
     public function getDataCustomer(Request $request)
     {
         $customer = Auth::user();

@@ -15,3 +15,5 @@
 <script src="{{asset('assets/js/script.js')}}"></script>
 <script src="{{asset('assets/js/theme-customizer/customizer.js')}}"></script>
 <!-- login js-->
+
+<script src="{{asset('assets/js/vendor/modernizr-3.11.2.min.js')}}"></script>

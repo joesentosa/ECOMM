@@ -28,9 +28,8 @@
         <li class="onhover-dropdown"> <span class="media user-header"><img class="img-fluid" src="{{asset('assets/images/dashboard/user.png')}}" alt=""></span>
           <ul class="onhover-show-div profile-dropdown">
             <li class="gradient-primary">
-              <h5 class="f-w-600 mb-0">Elana Saint</h5>
-            </li>
-            <li><i data-feather="user"> </i>Profile</li>
+              <h5 class="f-w-600 mb-0">{{Auth::guard('admin')->user()->username}}</h5>
+            </li>           
             <li><a href="{{ url('auth/logout') }}"><i data-feather="log-out"></i>Log Out</a></li>
           </ul>
         </li>
