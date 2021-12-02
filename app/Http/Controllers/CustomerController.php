@@ -17,7 +17,7 @@ class CustomerController extends Controller
         $brands = BrandModel::limit(25)->get();
         $barangs = BarangModel::getAll();
         $promos = PromoModel::with('barang')->get();
-        $kategories = KategoriModel::limit(5)->get();
+        $kategories = KategoriModel::with(['barang'])->get();
         return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos'));
     }
 

@@ -258,7 +258,7 @@
     </div>
     <!-- ...::: Strat Company Logo Section Section :::... -->
 
-    <!-- ...::: Strat Product Section :::... -->
+    <!-- ...::: Strat BEST SELLER Product Section :::... -->
     <div class="product-item-section  section-fluid-270 section-top-gap-100">
         <div class="box-wrapper">
             <div class="section-wrapper">
@@ -293,9 +293,9 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-                                        @foreach($barangs as $index => $barang)
-                                            @include('__User.dashboard.single_item')
-                                        @endforeach
+{{--                                        @foreach($barangs as $index => $barang)--}}
+{{--                                            @include('__User.dashboard.single_item')--}}
+{{--                                        @endforeach--}}
                                     </div>
                                 </div>
                             </div>
@@ -305,14 +305,14 @@
             </div>
         </div>
     </div>
-    <!-- ...::: Strat Product Section :::... -->
+    <!-- ...::: Strat BEST SELLER  Product Section :::... -->
 
     <div class="d-flex justify-content-center">
         <a href="{{ url('catalog') }}" class="btn btn-md btn-default btn-section-bottom">View
             All Product</a>
     </div>
 
-    <!-- ...::: Strat Product Tab Item Section :::... -->
+    <!-- ...::: Strat CATEGORY Product Tab Item Section :::... -->
     <div class="product-tab-items-section section-fluid-270 section-top-gap-100">
         <div class="box-wrapper">
             <div class="section-wrapper">
@@ -343,7 +343,24 @@
                                         <button class="nav-link" data-bs-toggle="tab"
                                                 data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
                                             {{ $kategory->nama_kategori }}
-                                            <img src="assets/images/icons/product-tab-icon-2.svg" alt=""></button>
+                                            <img src="
+                                            @php
+                                                switch ($index)
+                                                {
+                                                    case 0:
+                                                        echo asset("assets/images/icons/product-tab-icon-1.svg");
+                                                        break;
+                                                    case 1:
+                                                        echo asset("assets/images/icons/product-tab-icon-2.svg");
+                                                        break;
+                                                    case 2:
+                                                        echo asset("assets/images/icons/product-tab-icon-3.svg");
+                                                        break;
+                                                    default:
+                                                        echo asset("assets/images/icons/product-tab-icon-4.svg");
+                                                }
+                                            @endphp
+                                            " alt=""></button>
                                     </li>
                                 @endforeach
                             </ul>
@@ -351,7 +368,6 @@
 
                             <!-- Start Tab Content Items -->
                             <div class="tab-content">
-
                                 <!-- Start Tab Content Single Item -->
                                 <div class="tab-pane tab-animate show active" id="all" role="tabpanel">
                                     <div class="row">
@@ -391,7 +407,7 @@
             </div>
         </div>
     </div>
-    <!-- ...::: Strat Product Tab Item Section :::... -->
+    <!-- ...::: Strat CATEGORY Product Tab Item Section :::... -->
 
     <!-- ...::: Strat Product Section :::... -->
     <div class="product-item-section  section-fluid-270 section-top-gap-100">
@@ -402,7 +418,7 @@
                         <div class="col-xxl-4 col-lg-5 col-md-6 col-sm-8 col-auto me-5">
                             <div class="section-content">
                                 <h2 class="section-title">Exclusive Collection</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>Our Brand New And Exclusive Content Only For You!</p>
                             </div>
                         </div>
                         <div class="col-auto">
@@ -428,219 +444,7 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-5.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-yellow">15%</li>
-                                                </ul>
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Star Women
-                                                            pants</a></h4>
-                                                    <span class="price">$200.00 <del>$300.00</del></span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-4.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Slightly
-                                                            jackets XL Cool </a></h4>
-                                                    <span class="price">$350.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-6.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-green">15%</li>
-                                                </ul>
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">Bag</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Distracted
-                                                            XL bag</a></h4>
-                                                    <span class="price">$1200.00 <del>$1500.00</del></span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-1.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                                <ul class="tooltip-tag-items">
-                                                    <li class="color-green">15%</li>
-                                                </ul>
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">MEN</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Man's
-                                                            Outdoor Shirt</a></h4>
-                                                    <span class="price">$355.00 <del>$400.00</del></span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-2.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Women
-                                                            Summer deal</a></h4>
-                                                    <span class="price">$550.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
-                                        <!-- Start Product Single Item - Style 1 -->
-                                        <div class="product-single-item-style-1 swiper-slide">
-                                            <a href="{{ url('catalog') }}" class="image img-responsive">
-                                                <img class="img-fluid"
-                                                     src="assets/images/products/default/product-default-style-1-img-3.webp"
-                                                     width="435" height="350" loading="lazy" alt="product-image">
-                                            </a>
-                                            <div class="content">
-                                                <div class="top">
-                                                    <span class="catagory">WOMEN</span>
-                                                    <h4 class="title"><a href="{{ url('catalog') }}">Women
-                                                            Luxury Party</a></h4>
-                                                    <span class="price">$1050.00</span>
-                                                </div>
-                                                <div class="bottom">
-                                                    <ul class="review-star">
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star</span></li>
-                                                        <li class="fill"><span class="material-icons">star_half</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="product-event-items">
-                                                        <a href="{{ url('cart') }}" class="btn cart-btn">Add to cart</a>
-                                                        <a href="wishlist.html" class="btn wishlist-btn"><span
-                                                                class="material-icons">favorite_border</span></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- End Product Single Item - Style 1 -->
+{{--                                        @include('__User.dashboard.single_item')--}}
                                     </div>
                                 </div>
                             </div>
@@ -661,8 +465,7 @@
                         <div class="newsletter-area newsletter-area-style-1">
                             <div class="content content-left">
                                 <h4 class="title">Newsletter</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing.
-                                    printing and typesetting industry.</p>
+                                <p>Subscribe to our latest news and promostion, and never miss new promotion, Subscribe Now!</p>
                                 <div class="newsletter-form">
                                     <input type="email" placeholder="Enter your email" required>
                                     <button type="submit">Subscribe</button>
@@ -674,8 +477,7 @@
                             </div>
                             <div class="content content-right">
                                 <h4 class="title">Download App</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing.
-                                    printing and typesetting industry.</p>
+                                <p>Download Now! Exclusive sale for customer only.* </p>
 
                                 <div class="apps-btn">
                                     <a href="#"><img class="img-fluid" src="assets/images/icons/iphone-app-button.png"

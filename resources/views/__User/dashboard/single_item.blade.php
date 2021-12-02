@@ -52,7 +52,7 @@
     <a href="product-details-default.html" class="image img-responsive">
         <img class="img-fluid"
              src="
-             @if(!is_null($barang->gambar->first()))
+             @if($barang->gambar->first())
              {{ $barang->gambar->first()->gambar }}
              @endif
                  "
