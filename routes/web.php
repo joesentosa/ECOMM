@@ -99,6 +99,7 @@ Route::middleware(['customer.auth'])
         Route::get('/wishlist',[CustomerController::class,'page_wishlist']);
 
         Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
+        Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
     });
 //end route customer
 

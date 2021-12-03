@@ -72,24 +72,6 @@
                            <input class="form-control" type="number" value="{{$customer->kodeZip}}" placeholder="{{$customer->kodeZip}}" name="kodeZip">
                         </div>
                      </div>
-                     <div class="col-md-5">
-                        <div class="form-group">
-                           <label class="form-label">Country</label>
-                           <select class="form-control btn-square">
-                              <option value="0">--Select--</option>
-                              <option value="1">Germany</option>
-                              <option value="2">Canada</option>
-                              <option value="3">Usa</option>
-                              <option value="4">Aus</option>
-                           </select>
-                        </div>
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-group">
-                           <label class="form-label">About Me</label>
-                           <textarea class="form-control" rows="5" placeholder="Enter About your description"></textarea>
-                        </div>
-                     </div>
                      <div class="col-md-12 text-right">
                          <input type="submit" class="btn btn-primary btn-pill" value="Update Profile">
                      </div>

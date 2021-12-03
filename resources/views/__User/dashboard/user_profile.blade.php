@@ -72,65 +72,10 @@
                      </div>
                   </div>
                   <hr>
-                  <div class="social-media">
-                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-rss"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="follow">
-                     <div class="row">
-                        <div class="col-6 text-md-right border-right">
-                           <div class="follow-num counter">25869</div>
-                           <span>Follower</span>
-                        </div>
-                        <div class="col-6 text-md-left">
-                           <div class="follow-num counter">659887</div>
-                           <span>Following</span>
-                        </div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
-         <!-- user profile first-style end-->
-         {{-- <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="pswp__bg"></div>
-            <div class="pswp__scroll-wrap">
-               <div class="pswp__container">
-                  <div class="pswp__item"></div>
-                  <div class="pswp__item"></div>
-                  <div class="pswp__item"></div>
-               </div>
-               <div class="pswp__ui pswp__ui--hidden">
-                  <div class="pswp__top-bar">
-                     <div class="pswp__counter"></div>
-                     <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                     <button class="pswp__button pswp__button--share" title="Share"></button>
-                     <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                     <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                     <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                           <div class="pswp__preloader__cut">
-                              <div class="pswp__preloader__donut"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                     <div class="pswp__share-tooltip"></div>
-                  </div>
-                  <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                  <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                  <div class="pswp__caption">
-                     <div class="pswp__caption__center"></div>
-                  </div>
-               </div>
-            </div>
-         </div> --}}
+
       </div>
    </div>
 </div>

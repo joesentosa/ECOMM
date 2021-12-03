@@ -9,6 +9,7 @@ use App\Models\KategoriModel;
 use App\Models\PromoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class CustomerController extends Controller
 {
@@ -66,5 +67,12 @@ class CustomerController extends Controller
         $kategori = KategoriModel::find($barang->fk_id_kategori);
         $brand = BrandModel::find($barang->fk_id_brand);
         return view('__User.dashboard.user_detail_barang', ['barang' => $barang, 'brand' => $brand, 'kategori' => $kategori]);
+    }
+
+    public function addingToCart(Request $request)
+    {
+        $request->session()->put('id_barang', $request->id);
+        $request->session()->put('banyak', $request->banyak);
+        return back();
     }
 }
