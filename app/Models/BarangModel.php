@@ -17,6 +17,7 @@ class BarangModel extends Model
     public $timestamps  = true;
     protected $fillable = ['namaBarang','stok','harga','berat','review','fk_id_brand','fk_id_kategori'];
 
+
     public function insertBarang($nama,$stok,$harga,$berat,$review,$idbrand,$idkategori){
         $barang                 = new BarangModel();
         $barang->id_barang      = null;

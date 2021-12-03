@@ -33,9 +33,9 @@ class CustomerController extends Controller
     public function page_wishlist(){
         return view('__User.dashboard.wishlist');
     }
-    public function detailBarang($name){
-        $dtbarang = BarangModel::getByName($name);        
-        return view('__User.dashboard.detailItem',['data'=>$dtbarang]);
+    public function detailBarang(BarangModel $barang){
+        //$dtbarang = BarangModel::getByName($name);
+        return view('__User.dashboard.detailItem',compact('barang'));
     }
     public function getDataCustomer(Request $request)
     {

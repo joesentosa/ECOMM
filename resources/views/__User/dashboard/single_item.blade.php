@@ -65,7 +65,7 @@
         <div class="top">
             {{--                                                    <span class="catagory">WOMEN</span>--}}
             <h4 class="title">
-                <a href="{{ url('detailBarang/'. $barang->namaBarang) }}">
+                <a href="{{ url('detailBarang/'. $barang->id_barang) }}">
                     {{ $barang->namaBarang }}
                 </a>
             </h4>

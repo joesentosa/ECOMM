@@ -7,7 +7,6 @@
 @endsection
 
 @section('content')
-
 <!-- ...::: Strat Breadcrumb Section :::... -->
 <div class="breadcrumb-section">
     <div class="box-wrapper">
@@ -48,7 +47,7 @@
                                         <li class="nav-item">
                                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#img-1" type="button">
                                                 <span class="thumb">
-                        <img class="img-fluid" src="{{asset('assets/Martup/images/products/product-details/product-thumb-1.webp')}}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/Martup/images/products/product-details/product-thumb-1.webp') }}" alt="">
                       </span>
                                             </button>
                                         </li>
@@ -97,9 +96,9 @@
                     <div class="col-xxl-4 col-lg-6">
                         <!-- Start Product Content -->
                         <div class="product-content">
-                            <span class="catagory">Women</span>
-                            <h2 class="title">Stylish women court gray 2DX m</h2>
-                            <span class="author">Design: kakakoli Fashion</span>
+                            <span class="catagory">{{ $barang->kategori->nama_kategori }}</span>
+                            <h2 class="title">{{ $barang->namaBarang }}</h2>
+{{--                            <span class="author">Design: kakakoli Fashion</span>--}}
                             <div class="bottom">
                                 <ul class="review-star">
                                     <li class="fill"><span class="material-icons">star</span></li>
@@ -173,7 +172,7 @@
                             </div>
 
                         </div>
-                        <!-- End Product Content -->                        
+                        <!-- End Product Content -->
                     </div>
                 </div>
             </div>
@@ -213,10 +212,10 @@
                             <div class="social-links">
                                 <span class="text">Share:</span>
                                 <div class="items">
-                                    <a href="https://example.com/"><img class="icon-svg" src="assets/images/icons/icon-facebook-f-dark.svg" alt=""></a>
-                                    <a href="https://example.com/"><img class="icon-svg" src="assets/images/icons/icon-twitter-dark.svg" alt=""></a>
-                                    <a href="https://example.com/"><img class="icon-svg" src="assets/images/icons/icon-pinterest-p-dark.svg" alt=""></a>
-                                    <a href="https://example.com/"><img class="icon-svg" src="assets/images/icons/icon-dribbble-dark.svg" alt=""></a>
+                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-facebook-f-dark.svg') }}" alt=""></a>
+                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}" alt=""></a>
+                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-pinterest-p-dark.svg') }}" alt=""></a>
+                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-dribbble-dark.svg') }}" alt=""></a>
                                 </div>
                             </div>
                         </div>

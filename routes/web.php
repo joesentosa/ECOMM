@@ -21,7 +21,7 @@ Route::get('/checkout',[CatalogController::class,'checkout']);
 Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);
-Route::get('/detailBarang/{name}',[CustomerController::class,'detailBarang']);
+Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 
 // admin route
@@ -51,7 +51,7 @@ Route::middleware('admin.auth')
         Route::post('/insertbarang', [AdminController::class, "insertbarang"]);
         Route::post('/updatebarang', [AdminController::class, "updatebarang"]);
         Route::get('/deletebarang/{id}', [AdminController::class, "deletebarang"]);
-        
+
         Route::post('/insertkategori', [AdminController::class, "insertkategori"]);
         Route::post('/updatekategori', [AdminController::class, "updatekategori"]);
         Route::post('/deletekategori', [AdminController::class, "deletekategori"]);
