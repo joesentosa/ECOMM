@@ -13,14 +13,14 @@
             <div class="breadcrumb-wrapper">
                 <!--CART-->
                 <div class="content">
-                    <h1 class="title"><span class="text-mark">User's Cart</h1>
-                    <h4>Alamat Dikirim</h4><br>
+                    <h1 class="title"><span class="text-mark">User's Cart</h1><br>
+                    <!-- <h4>Alamat Dikirim</h4><br> -->
                 </div>
-                <div class="product-single-item-style-1 swiper-slide">
+                <!-- <div class="product-single-item-style-1 swiper-slide">
                     <div class="content">
                         ini alamat
                     </div>
-                </div><br>
+                </div><br> -->
                 <div class="product-single-item-style-1 swiper-slide">
                     <a href="product-details-default.html" class="image img-responsive">
                         <img class="img-fluid"
@@ -43,9 +43,6 @@
                                 <li class="fill"><span class="material-icons">star_half</span>
                                 </li>
                             </ul>
-                            <div class="product-event-items">
-                                <a href="checkout.html" class="btn cart-btn">Add to Checkout</a>
-                            </div>
                         </div>
                     </div>
                 </div><br>
@@ -71,9 +68,6 @@
                                 <li class="fill"><span class="material-icons">star_half</span>
                                 </li>
                             </ul>
-                            <div class="product-event-items">
-                                <a href="checkout.html" class="btn cart-btn">Add to Checkout</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,25 +79,14 @@
                             <h6 class="sidebar-title title-border">Ringkasan Belanja</h6>
                             <div class="sidebar-content">
                                 <div class="product-single-item-style-1 swiper-slide">
-                                    <a href="product-details-default.html" class="image img-responsive">
-                                        <img class="img-fluid"
-                                                src="assets/images/products/default/product-default-style-1-img-5.webp"
-                                                width="435" height="350" loading="lazy" alt="product-image">
-                                    </a>
+                                    <a href="product-details-default.html" class="image img-responsive"></a>
                                     <div class="content">
                                         <div class="top">
-                                            <span class="catagory">WOMEN</span>
-                                            <h4 class="title"><a href="product-details-default.html">Star Women
-                                                    pants</a></h4>
-                                            <span class="price">$200.00 <del>$300.00</del></span>
+                                            
                                         </div>
                                         <div class="bottom">
                                             <ul class="review-star">
-                                                <li class="fill"><span class="material-icons">star</span></li>
-                                                <li class="fill"><span class="material-icons">star</span></li>
-                                                <li class="fill"><span class="material-icons">star</span></li>
-                                                <li class="fill"><span class="material-icons">star</span></li>
-                                                <li class="fill"><span class="material-icons">star_half</span>
+                                                <h6>Total Pembelian: $400.00</h6>
                                                 </li>
                                             </ul>
                                             <div class="product-event-items">
