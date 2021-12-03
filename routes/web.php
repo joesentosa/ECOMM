@@ -17,6 +17,7 @@ Route::get('/login', [CustomerController::class, 'login']);
 Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[CatalogController::class,'cart']);
+Route::get('/checkout',[CatalogController::class,'checkout']);
 Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);

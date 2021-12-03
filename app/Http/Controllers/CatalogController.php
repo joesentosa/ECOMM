@@ -143,4 +143,8 @@ class CatalogController extends Controller
     {
         return view('__User.dashboard.cart');
     }
+    public function checkout(Request $request)
+    {
+        return view('__User.dashboard.checkout');
+    }
 }

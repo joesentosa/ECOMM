@@ -13,8 +13,14 @@
             <div class="breadcrumb-wrapper">
                 <!--CART-->
                 <div class="content">
-                    <h1 class="title"><span class="text-mark">User's Cart</h1><br>
+                    <h1 class="title"><span class="text-mark">User's Checkout</h1>
+                    <h4>Alamat Dikirim</h4><br>
                 </div>
+                <div class="product-single-item-style-1 swiper-slide">
+                    <div class="content">
+                        ini alamat
+                    </div>
+                </div><br>
                 <div class="product-single-item-style-1 swiper-slide">
                     <a href="product-details-default.html" class="image img-responsive">
                         <img class="img-fluid"
@@ -64,7 +70,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 <!--END CART-->
                 <!-- PROMO -->
                 <h3>Promo</h3>
