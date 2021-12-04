@@ -21,8 +21,8 @@
                         <h2 class="title"><span class="text-mark">Product</span> Details</h2>
                     </div>
                     <ul class="breadcrumb-nav">
-                        <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
-                        <li>Product Details Default</li>
+                        <li><a href="{{ url('catalog') }}">Shop</a></li>
+                        <li>{{ $barang->namaBarang }}</li>
                     </ul>
                 </div>
             </div>
@@ -212,9 +212,9 @@
                             <div class="social-links">
                                 <span class="text">Share:</span>
                                 <div class="items">
-                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-facebook-f-dark.svg') }}" alt=""></a>
-                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}" alt=""></a>
-                                    <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-pinterest-p-dark.svg') }}" alt=""></a>
+                                    <a href="{{ $socialShare["facebook"] }}"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-facebook-f-dark.svg') }}" alt=""></a>
+                                    <a href="{{ $socialShare["twitter"] }}"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}" alt=""></a>
+                                    <a href="{{ $socialShare["whatsapp"] }}"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-pinterest-p-dark.svg') }}" alt=""></a>
                                     <a href="https://example.com/"><img class="icon-svg" src="{{ asset('assets/images/icons/icon-dribbble-dark.svg') }}" alt=""></a>
                                 </div>
                             </div>
@@ -461,4 +461,5 @@
     <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
     <script src="{{asset('assets/Martup/js/main.js')}}"></script>
+    <script src="{{asset('js/share.js')}}"></script>
 @endpush

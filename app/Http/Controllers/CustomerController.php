@@ -10,6 +10,7 @@ use App\Models\PromoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Jorenvh\Share\Share;
 
 class CustomerController extends Controller
 {
@@ -36,7 +37,16 @@ class CustomerController extends Controller
     }
     public function detailBarang(BarangModel $barang){
         //$dtbarang = BarangModel::getByName($name);
-        return view('__User.dashboard.detailItem',compact('barang'));
+        $socialShare = \Share::currentPage("Hey! Look at this product.. It's Awesome! Get It Now!", [], null, null)
+            ->facebook()
+            ->twitter()
+            ->reddit()
+            ->linkedin()
+            ->whatsapp()
+            ->telegram()
+            ->getRawLinks();
+
+        return view('__User.dashboard.detailItem',compact('barang','socialShare'));
     }
     public function getDataCustomer(Request $request)
     {

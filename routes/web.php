@@ -4,7 +4,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ShareSocialController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -102,6 +102,10 @@ Route::middleware(['customer.auth'])
         Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
     });
 //end route customer
+
+// pragma region Share to social media
+Route::get('share/{platform?}', [ShareSocialController::class, 'share_to_socialMedia']);
+// pragma endregion Share to social media
 
 // Route::get('/', function(){
 //     return redirect()->route('default');
