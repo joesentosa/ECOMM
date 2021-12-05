@@ -1575,5 +1575,1611 @@ class BarangSeeder extends Seeder
             'fk_id_brand' => 25,
             'fk_id_kategori' =>7
         ]);
+        BarangModel::insert([
+            'namaBarang' => 'Audio Cable Replacement for Steeleries Arctis 5',
+            'stok'    => '10',
+            'harga' => 230000,
+            'berat' => 1,
+            'review' => 'Replacement cable to connect your headset to the GameDac or ChatMix dongle, or use the included adapter to connect directly to a mobile device, laptop, or any other device with a standard 3.5mm connection.',
+            'rating' => 3,
+            'fk_id_brand' => 18,
+            'fk_id_kategori' =>1
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Hyperx Microphone Replacement for Cloud Alpha',
+            'stok'    => '10',
+            'harga' => 180000,
+            'berat' => 1,
+            'review' => 'In addition to its line of unbeatable headsets, HyperX™ has all the gaming accessories you need, from microphones to earpad kits, to get you in the game and help you play longer and more comfortably. Keep HyperX accessories on hand and you won’t miss a moment of the action. These accessories are intended to replace any lost or worn-out parts and are not provided in retail packaging.',
+            'rating' => 2.5,
+            'fk_id_brand' => 26,
+            'fk_id_kategori' =>1
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'MSI MAG MT81 Ergonomic Bracket Monitor Arms',
+            'stok'    => '10',
+            'harga' => 575000,
+            'berat' => 2,
+            'review' => 'VESA Compatible – Fit most monitors with the VESA compatibility of 75×75 / 100x100mm.
+            Full-Motion – Easily change the position of the monitor for maximum ergonomics.
+            Easy Installation – C-clamp can be applied to the edge of any desk with a thickness less than 7cm (2.76”).
+            Cable Management – Reduce friction from the cables and grant you an orderly desk. Tension Adjustable – Adjust the spring tension base on your needs.',
+            'rating' => 4,
+            'fk_id_brand' => 24,
+            'fk_id_kategori' =>1
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Razer PBT Keycaps Upgrade Set',
+            'stok'    => '10',
+            'harga' => 499000,
+            'berat' => 2,
+            'review' => 'DOUBLESHOT DURABILITY
+            It’s time to get tough and secure your keys to victory with the Razer PBT Keycap Upgrade Set. Designed to endure the most intense gaming, these doubleshot PBT keycaps aren’t here to win one battle—they’re here to win the war.
+
+            SUPERIOR PBT MATERIAL
+            Harder and more durable than ABS or PVC, PBT is a high-grade thermoplastic that gives the keycaps a sturdy, textured look and feel that won’t wear down to a shiny finish. Crafted with extra-thick walls, they are well equipped to handle extreme use and produce more satisfying keystrokes because of their solid build.
+            Available in 4 different colors.
+
+            DOUBLESHOT MOLDING WITH ULTRA-THIN FONT
+            Using our unique doubleshot precision molding process, the keycap labels are fade-resistant and have the thinnest font ever produced on PBT keycaps. They are also designed to be backlight compatible, and work best with our keyboards’ Razer Chroma RGB lighting.
+
+            WORKS WITH POPULAR KEYBOARD LAYOUTS
+            The Razer PBT Keycap Upgrade Set works with Razer and standard 104/105 key US or UK layouts, and comes with 120 doubleshot PBT keycaps and additional stabilizers for optical and mechanical keyboards.',
+            'rating' => 4,
+            'fk_id_brand' => 15,
+            'fk_id_kategori' =>1
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Razer Kishi Universal Gaming Controller for Android',
+            'stok'    => '10',
+            'harga' => 1399000,
+            'berat' => 2,
+            'review' => 'Universal Gaming Controller for Android
+            MAKE YOUR MOVE
+            Bring your A-game anytime, anywhere. Introducing a universal mobile gaming controller that fits most smartphone devices, designed to bring console-level control to your on-the-go gaming. With this controller by your side, wherever you go, victory will follow.
+
+            CLICKABLE ANALOG THUMBSTICKS
+            Refine your aim and execution with a familiar console controller experience that provides tactile feedback, supported by an array of face and bumper buttons, as well as a D-pad for extra inputs.
+
+            UNIVERSAL FIT
+            The universal mobile controller’s flexible design allows it to be stretched and clamped on most phones, providing a secure hold that’ll never come loose while you game.
+
+            ULTRA-LOW LATENCY GAMEPLAY
+            Because it connects directly to your device’s charging port, this mobile controller is able to provide instant button response for smooth, seamless control.
+
+            PASS THROUGH CHARGING
+            If your phone starts running low while you’re gaming with the controller still attached, simply hook up a charging cable to the controller itself to get the device charging.
+
+            ERGONOMIC DESIGN
+            Designed for long gaming sessions, the mobile controller’s comfortable handheld grip has optimized button placements to make sure each button press feels natural and intuitive.
+
+            CLOUD GAMING COMPATIBLE
+            With the reality of playing AAA releases on any screen, having the controller attached to your device provides a form factor convenient and portable enough to truly game anywhere.',
+            'rating' => 5,
+            'fk_id_brand' => 15,
+            'fk_id_kategori' =>2
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Rexus Pro Gladius GX1 Gamepad',
+            'stok'    => '10',
+            'harga' => 180000,
+            'berat' => 1,
+            'review' => 'Rexus Pro Gaming Gamepad GX1
+            Tidak kompatibel utk game : PUBG Mobile,Mobile Legend,PES MOBILE,FREEFIRE di karenakan kebijakan dari developer game akan membanned id pengguna third app gamepad.
+
+            Rexus Pro Gaming Gamepad GX1 merupakan gamepad konsol yang bisa diaplikasikan dengan perangkat Android, PC, dan Playstation 3 yang sudah didukung fitur USB OTG. Nikmati sensasi bermain yang lebih menyenangkan berkat fitur getar
+
+            Material Berkualitas
+            Rexus Pro Gaming Gamepad GX1 terbuat dari bahan berkualitas. Komponen utamanya berupa plastik Acrylonitrile Butadiene Styrene (ABS) yg mempunyai kekuatan dan fleksibilitas tinggi. Komponenlainnya, seperti tombol, terdiri dari pegasmasif yg awet.
+
+            Fitur Turbo
+            Turbo adalah tombol semi otomatis yg membuat beberapa aksi hanya dgn menekan satu tombol dalam waktu lama. Turbo sangat membantu dalam game perang atau menembak sehingga memungkinkan Anda menembak hanya dgn sekali menekan tombol sehingga takkan mudah lelah.
+
+            Kendali Nyaman
+            Dengan ukuran160 x 104 x 159 mm, gamepad ini disesuaikan dgn ukuran telapak tangan orang Asia. Ukuran yg proporsiona itu dikombinasikan dgn berat perangkat yg ideal, yaitu sekitar 189 Gram.
+
+            —Berikut ini link untuk yang menggunakan HP type C bisa pakai converter ini
+            https://www.tokopedia.com/rexusid/rexus-converter-usb-to-type-c',
+            'rating' => 3,
+            'fk_id_brand' => 30,
+            'fk_id_kategori' =>2
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Elgato 4K60 Pro MK2',
+            'stok'    => '10',
+            'harga' => 4994999,
+            'berat' => 1,
+            'review' => 'The Most Stunning Content on The Planet. Period.
+            A state of the art capture solution that takes production quality to the extreme, 4K60 Pro supports crystal clear 4K resolution at 60 fps, and vibrant HDR10 imaging.
+
+            Your Recording Powerhouse.
+            Dedicated software for maximum performance. Powerful yet easy to use. Meet 4KCU: custom-built to help you get the most out of 4K60 Pro.
+            HDR10 RECORDING – Capture vivid highlights and deep shadows.
+            Live Commentary – Add your voice as a separate track for easy post production.
+            Flashback Recording – Slide back in time to save epic moments retroactively.
+            Video Library – Organize your archive and locate files in a flash.
+
+            Ultra Precise.
+            Instant Gameview powers your workflow with ultra-low latency technology. Even when pushing an incredible number of pixels, you remain on point and never skip a frame.
+
+            Hyper Smooth.
+            Your dual-PC setup puts you leagues ahead of the competition. Now capture without compromising your gameplay. 1080p at 120 Hz? Easy. 1440p at 144 Hz or 1080p at 240 Hz? Go ahead. 4K60 Pro supports an impressive array of resolution and refresh rate combos.
+
+            Super Solid.
+            Black electrogalvanized-steel casing with sharp geometric edges, slick grilles, prominent port labels and iconic branding. 4K60 Pro features all the hallmarks of legendary Elgato PCIe architecture in a compact form factor that slots seamlessly into your machine.
+
+            Superior in Every Way.
+            You’re a professional. You demand cutting-edge technology that does your content justice. From capturing the highest resolution and dynamic range possible, to working flawlessly with your favorite tools and platforms, 4K60 Pro delivers.',
+            'rating' => 5,
+            'fk_id_brand' => 37,
+            'fk_id_kategori' =>3
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Elgato Key Light 2800 Lumens Professional LED',
+            'stok'    => '10',
+            'harga' => 3799000,
+            'berat' => 3,
+            'review' => 'KEY LIGHT
+            Illuminate on Command
+
+            The spotlight’s on you.
+            Quality lighting is the secret to making your camera feed shine. From the way you smirk and celebrate to the way you focus and freak out, viewers want to see every expression in detail. After all, you’re the star of the show. They subscribe to see you. And with Key Light, they instantly know you’re pro.
+
+            Lighting Method: Edge-Lit LED
+            Maximum Brightness: 2800 Lumens
+            Color Temperature Range: 2900 – 7000 K
+            Panel Surface Area: ca. 600 cm² / 93 in²
+            Maximum Height: 125 cm / 49 in
+            Multi Mount System: Master Mount L & Desk Clamp
+            Multi-Layer Diffusion: Yes
+            Camera Ball Mount: No
+            3D Swivel Ball Head: Yes
+            Chroma Key Performance: Perfect
+            Wi-Fi Enabled: Yes
+            Works with Stream Deck: Yes
+            Multi Mount Compatible: Yes
+
+            Designed from the desk up.
+            Conventional studio lighting can clutter your setup. Built from solid metal, Elgato Key Light eliminates this issue thanks to a streamlined profile that stays out of your way. It doesn’t even touch your floor, plus it stands flush against your wall. Simply clamp the pole mount to your desk, extend it to your ideal height, and you’re ready to roll.
+
+            Puts soft boxes to shame.
+            While soft boxes tend to make you sweat, Key Light keeps heat impressively low despite its massive 2800-lumen output. 160 premium OSRAM LEDs ensure extra-bright illumination you can dim down to a subtle glow. A color temperature range of 2900 to 7000 K produces hues from arctic blue through sunset amber. And a silky-smooth opal glass face guarantees balanced, glare-free diffusion at the perfect beam angle.
+
+            Always at hand.
+            Why jump up to adjust settings only to return to a blown-out image? Key Light replaces hard-to-reach knobs with a direct Wi-Fi connection to your PC. So you can kick back with the Control Center app, tweak your lighting from the comfort of your mouse, get real-time, on-screen feedback. And even sync as many Key Lights as you wish.
+
+            Works with Stream Deck.
+            Lights, camera, action – all with a single tap. Stream Deck takes Key Light to the next level thanks to direct integrations you can customize as you see fit. Power up, adjust brightness, tweak color temperature, and more. You can even save different settings for instant access on the fly. And that’s just the beginning, because with Stream Deck, new integrations just keep coming.
+
+            Makes a statement.
+            Flawlessly designed to beat the rising demands of video production, Key Light sets the bar for high-end studio lighting. Extra-bright yet super dimmable. Space-saving and built to stand the test of time. App-enabled and destined to evolve with you. Everything about Key Light says: you mean business.',
+            'rating' => 5,
+            'fk_id_brand' => 37,
+            'fk_id_kategori' =>3
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Digital Alliance Racing X Gaming Chair',
+            'stok'    => '10',
+            'harga' => 2750000,
+            'berat' => 50,
+            'review' => 'DA GAMING CHAIR RACING X merupakan kursi gaming premium dari Digital Alliance. Hadir dengan desain khusus sesuai kebutuhan para gamers dengan fungsi ergonomis maksimal. Membuat keseimbangan antara kenyamanan dan performa para gamers dalam dunia gaming. Aktivitas bermain game akan makin nyaman dan mengasyikkan saat bermain di atas Gaming Chair ini. Terbuat dari material berkualitas tinggi dan dengan desain yang mutakhir sehingga awet, mendukung mobilitas, dan menjaga kontur tubuh tetap nyaman saat bermain game dalam durasi lama. Pegangan tangan dapat disesuaikan dengan posisi tangan. Selain itu, desain sandaran punggung dan kepala yang lebar disesuaikan dengan kontur tulang belakang.
+
+            Lima pilihan warna untuk menyesuaikan dengan selera setup gaming kalian.
+            Warrior Black-Orange, Glaciers White-Grey, Empire Black-Yellow, Red Blaze Black-Red dan Blue Azure Black-Blue.',
+            'rating' => 3,
+            'fk_id_brand' => 28,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Dxracer Racing Pro White RV131/NB',
+            'stok'    => '10',
+            'harga' => 4950000,
+            'berat' => 50,
+            'review' => 'DXRacer’s Racing Pro series is ergonomically constructed with a slimly built body similar to the Formula series, but with an even taller backrest. The multifunctional control unit, 4-dimensional armrests and the fully adjustable backrest (between 90 and 135 degrees) allows for almost endless customizability, giving you the option to conveniently change your position and adapt to whatever task you take on next in front of the computer. The maximum load capacity is 150 kg* and the recommended height is 165-195 cm.
+
+            The headrest and lumbar cushions along with the dense cold foam in the seat helps you sit up straight and keep a good posture even after long hours in front of the computer. The large 3” casters are made of PU-plastic and rolls smoothly over flat surfaces.
+
+            * Approved limit for gas lift is 150 kg & approved limit for overturning is 110 kg.',
+            'rating' => 4.5,
+            'fk_id_brand' => 2,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Eblue EEC412 Cobra Gaming Chair',
+            'stok'    => '10',
+            'harga' => 2500000,
+            'berat' => 50,
+            'review' => 'AVAILABLE IN
+            White/Black | Ocean Blue/Black | Rose Red/Black
+
+            A Gaming Chair “Masterpiece”
+            Ergonomically design, the Eblue Cobra is particulary enginered and design for gamer. The high quality PU leather cushion provides the most comfortable sitting posture. The ergonomic structure provides an extraordinary boost in every gaming position for extended period of time.
+
+            Height Adjustable Armrest
+            Applied with 7cm height adujstable armrest, which provide flexibility on any arm position.
+
+            Adjustable Backrest
+            Adjustable backrest angle up to 180, with three difference position, 90, 120 and 180 which provide a relax position.
+
+            Anti-stracthing & noise Reduction Wheels
+            Preventing sctracthes by any wheel friction on the floor.
+
+            Thick Seat Cushion, Perceive The Most Comfortable In Sitting
+            Selective with special Polyurethane (PU) material on the seat mounting, provide the Anti-abrasion which prevent any sketch and fray clash.
+
+            Adjustable Cushion
+            Rocking angle and adjustable height includes lumbar soft cushion and reclining headrest.
+
+            Hydraulic lifter has been certified by “SGS”
+            Sustain ultimately 200kgs.',
+            'rating' => 3,
+            'fk_id_brand' => 3,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Thunderx3 BC1 BOSS Gaming Chair',
+            'stok'    => '10',
+            'harga' => 1500000,
+            'berat' => 50,
+            'review' => 'Built especially for comfort, style, and support in all the right places, the BC1 BOSS delivers the look and feel of a true gamer right to your room. Equipped with AIR Tech, this chair allows for greater breathability, keeping you nice and cool at all times, especially during long gaming sessions. Available in 6 unique color schemes: Chocolate Brown, Coffee Black Brown, Fire Grey Red, Fuchsia Grey Pink, Ocean Grey Blue, and Void Black.
+
+            GAME LIKE A BOSS
+            The BC1 BOSS comes with an Embossed ThunderX3 logo, adding a powerful yet elegant touch to your gaming chair so you can game like a boss while enjoying premium comfort.
+            ALL-DAY COMFORT
+
+            With high density molding foam that adjusts to your own body shape and provides full body support, you’ll feel comfort like no other while rocking the look of a true gamer.
+
+            AIR TECH
+            AIR Tech combines a pinhole design with premium nonwoven materials and foams to increase air circulation and breathability, keeping you comfortable and cool even after long gaming sessions.
+
+            ERGONOMIC DESIGN
+            With an ergonomic curve built into the backrest, the BC1 BOSS will provide you with ample back support and help improve your posture.
+
+            CURVED, CUSHIONED ARMRESTS
+            Soft, cushioned armrests with solid cold foam padding provide additional comfort and support for your arms. The curved design of the armrests and matching colored seams make for an elegant and stylish look.
+
+            ADJUST SEAT HEIGHT
+            Hydraulic gas lift allows for seat height adjustment with a 360-degree swivel.
+
+            ROCK ON
+            Sit back and relax as you enjoy the chair’s soothing and rhythmic rocking movements.
+
+            BUILT TO LAST
+            Our top-of-the-line, premium grade materials, including sturdy nylon base and tough steel frame, offer durability and quality you can rely on, even after long periods of use.
+
+            CARBON FIBER LOOK
+            Premium leatherette and carbon pattern design deliver a stylish and futuristic look and feel, ensuring the chair looks great from all angles.',
+            'rating' => 4,
+            'fk_id_brand' => 6,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Stracing Electra Series Ergonomic Gaming Chair',
+            'stok'    => '10',
+            'harga' => 2350000,
+            'berat' => 50,
+            'review' => 'STracing Electra Series merupakan kursi gaming yang dengan standar kualitas tinggi, mengedepankan sisi kenyamanan yang dipadukan dengan desain yang mewah.Kursi ditujukan bagi para gamer untuk memaksimalkan pengalaman bermain game serta memberikan rasa nyaman pada punggung dan anggota tubuh lain, terutama saat bermain game untuk waktu lama dalam posisi duduk.',
+            'rating' => 2.5,
+            'fk_id_brand' => 5,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Onex GX3 Black Blue Gaming Chair',
+            'stok'    => '10',
+            'harga' => 2500000,
+            'berat' => 50,
+            'review' => 'Featuring a stylish eSports design, the ONEX GX3 Gaming Chair will elevate your gaming setup to the next level. Built with AIR Tech and an ergonomically-friendly design, the GX3 was designed for superior breathability and pure comfort. This gaming chair features a 180° adjustable backrest and comes with adjustable head and back cushions for extra support.
+
+            Inspired by jet streams, this model delivers an element of speed and power straight to your gaming room.
+
+            AIR Tech – Breathable pinhole surface
+            Premium leatherette with carbon fiber pattern
+            Adjustable head and back cushions
+            High density foam
+            90°–180° adjustable backrest
+            3°–18° Rocking mechanism
+            Class 4 hydraulic gas lift
+            6 colour combinations',
+            'rating' => 3,
+            'fk_id_brand' => 4,
+            'fk_id_kategori' =>4
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Digital Alliance Gaming Desk',
+            'stok'    => '10',
+            'harga' => 2850000,
+            'berat' => 110,
+            'review' => 'DIGITAL ALLIANCE Gaming Desk merupakan gaming desk persembahan DIGITAL ALLIANCE yang mampu memberikan kenyamanan Anda saat bermain game. Dengan desain yang futuristik gaming desk ini sangat komplit untuk meletakan perangkat gaming Anda seperti monitor, pc, keyboard. Menjadikan pengalaman Anda saat bertarung dalam game semakin mengesankan dan nyaman dengan gaming desk Digital Alliance.',
+            'rating' => 3,
+            'fk_id_brand' => 28,
+            'fk_id_kategori' =>5
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'DXRacer NEX TG-GDN001-NS-1 Gaming Desk',
+            'stok'    => '10',
+            'harga' => 3299000,
+            'berat' => 25,
+            'review' => 'DXRacer NEX Gaming Desk
+
+            Immersive RGB Surface
+            Watch your DXRacer NEX gaming desk come alive with built-in dynamic RGB lighting on the desktop. Experience your game like never before with our gaming desk.
+
+            Seamless Cable Management
+            Get that tangled mess of cords under control and ready for more desktop room for your gaming PC, gaming Laptop, Xbox, or PS4 with an integrated cable management system on the back of the desk.
+
+            Game Harder, Feel Better
+            The DXRacer NEX Gaming Desk comes with plenty of added features such as a convenient cup holder and earphone hook to help you reach higher level of gaming experience. Move the armrest up or down will help you to find the most suitable position to enjoy games.
+
+            [Game Inspiration, Focus On Life] NEX computer Table is derived from the most trusted brand DXRacer which has been providing comfort and support to gamers all over the world for over a decade. The NEX gaming table is not only designed for games but also designed to serve your life better. Yes! It’s a perfect bedroom desk and a suitable computer workstation.
+
+            [Cool Dynamic RGB Lighting] Plug the USB into your desk computer or laptop, the LED lighting glows with a cool light on the game tabletop and in the legs for a better gaming experience. Take your gaming to the next level with the immersive lighting experience.
+
+            [Large Gaming & Working Surface] The DXRacer NEX gaming computer desk comes with a sleek and super smooth carbon fiber textured desktop including a large mouse pad. The wide gaming desktop and professional mouse pad will level up your game and light your work.
+
+            [Multi-functions Design] The NEX desk table has a user-friendly design, which comes with a console standing, wire organizer, cup holder, headphone hook holder. These professional equipments storage more space for gaming or working.
+
+            [Quality Guarantee & Satisfaction Service] DXRacer has always been committed to high-quality products. This desk has a sturdy metal frame, which is firm and stable. And the NEX gaming desks are eligible for free returns within the first 30 days. We also offer a two-year for replacement of defective or damaged parts.',
+            'rating' => 4.5,
+            'fk_id_brand' => 2,
+            'fk_id_kategori' =>5
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Fantech GD612 Gaming Desk',
+            'stok'    => '10',
+            'harga' => 2950000,
+            'berat' => 110,
+            'review' => 'Fantech GD612 Gaming Desk merupakan gaming desk persembahan Fantech yang mampu memberikan kenyamanan Anda saat bermain game. Dengan desain yang futuristik gaming desk ini sangat komplit untuk meletakan perangkat gaming Anda seperti monitor, pc, keyboard.
+
+            Menjadikan pengalaman Anda saat bertarung dalam game semakin mengesankan dan nyaman dengan gaming desk Fantech.',
+            'rating' => 2.5,
+            'fk_id_brand' => 7,
+            'fk_id_kategori' =>5
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Asus ROG Cetra Core USB-C Inear with Microphone',
+            'stok'    => '10',
+            'harga' => 1429000,
+            'berat' => 1,
+            'review' => 'Rise above the noise
+            ROG Cetra are USB-C gaming earbuds that support multiple platforms, including mobile phones, PC, Mac and Nintendo Switch. Featuring Active Noise Cancellation (ANC) technology and the innovative Ambient mode, ROG Cetra lets you fully immerse yourself in your games, music and other media without distraction with the ability to let the sounds of the outside world in instantly when needed. Exclusive 10mm ASUS Essence drivers deliver optimized gaming audio and strong bass, and a choice of three sizes of silicone tips and ear fins, plus a pair of foam ear tips let you achieve a perfect fit that’s comfortable and secure.
+
+            Lose yourself in game
+            Escape the noise of the city with Active Noise Cancellation (ANC) technology developed with Sony and get fully immersed in your game. ROG Cetra blocks out unwanted noises and provides a more natural audio experience with a better presentation of high frequency sounds and a defined, undistorted low frequencies range. With natural audio reproduction and undisturbed listening in any environment, you’ll experience a new level of mobile gaming and entertainment enjoyment.
+
+            Ambient mode
+            Ambient mode instantly switches off noise cancellation and lets you hear the sounds of the world around you without removing your headphones. Easily activated with a push of a button on the inline controller, it’s perfect for times when you need to pay attention to your environment, such as when crossing the street or listening for an airline gate announcement.
+
+            Large 10mm ASUS Essence drivers
+            Designed with a wide frequency response of 20-40kHz, the exclusive 10mm ASUS Essence driver provides incredibly strong bass and optimized gaming sound, so you’ll enjoy an exceptionally immersive and detailed audio experience.
+
+            Secure and comfortable fit
+            Get a comfortable, secure, in-ear fit and enhanced noise isolation thanks to the ergonomic design of ROG Cetra. The earbud design is slightly tilted at the front to better fit human ears and comes with a small bump at the base so the earbuds sit more securely on the ear.
+
+            Not just for mobile phones
+            ROG Cetra features a USB-C connector for wide compatibility with mobile phones, PCs, Macs, and Nintendo Switch.
+            Instant control at your fingertips
+
+            ROG Cetra comes with a handy in-line control to adjust volume, play/pause, and activate ANC mode and Ambient mode.
+            Travel case included
+
+            ROG Cetra comes with a compact travel case for better storage of your earbuds and ear fins. Three sizes of silicone tips and ear fins as well as a pair of foam ear tips are also included, so you can enjoy a custom fit that’s comfortable and secure.
+
+            Stylish lighting
+            A red ROG logo on each earbud that glows with a subtle lighting effect adds a stylish touch and shows off your gaming cred.
+
+            Armoury II
+            Armoury II software offers extensive controls and an intuitive UI, so you can easily tune ROG Cetra to play your way. Take full control of your audio experience, from equalization (EQ) to 7.1-speaker level-balancing, and easily create and apply audio profiles for different game types and scenarios, such as first-person shooters and racing titles.',
+            'rating' => 3.5,
+            'fk_id_brand' => 27,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Asus ROG Cetra Core Inear with Microphone',
+            'stok'    => '10',
+            'harga' => 850000,
+            'berat' => 1,
+            'review' => 'Large 10mm ASUS Essence drivers
+            Designed with a wide frequency response of 20–40kHz, the exclusive 10mm ASUS Essence driver provides incredibly strong bass and optimized gaming sound, so you‘ll enjoy an exceptionally immersive and detailed audio experience.
+
+            Perfectly angled for handheld gaming
+            ROG Cetra Core comes with a 90-degree connector that keeps the headphone cable out of your way for hassle-free and comfortable portable gaming experiences.
+
+            Secure and comfortable fit
+            Get a comfortable, secure, in-ear fit and enhanced noise isolation with the ergonomic design of ROG Cetra Core. Each earbud is slightly tilted at the front to better fit your ears and has a small bump at the base to help them stay in place securely.
+
+            Not just for mobile phones
+            ROG Cetra Core has a 3.5mm connector to enable immersive audio experiences on a wide variety of devices, including mobile phones, Nintendo Switch, PlayStation 4, Xbox One, PC and Mac.
+
+            Instant control at your fingertips
+            A handy inline control provides instant, convenient access to play, pause and volume adjustments. With an attractive metallic finish and tactile buttons that provide satisfying feedback when pressed, the inline control has a premium look and feel that goes above and beyond other headsets.
+            1. Volume up
+            2. Play / pause
+            3. Volume down
+
+            Travel case included
+            ROG Cetra Core comes with a compact travel case for better storage of your earbuds and ear fins. Three sizes of silicone tips and ear fins as well as a pair of foam ear tips are also included, so you can enjoy a custom fit that’s comfortable and secure.',
+            'rating' => 4,
+            'fk_id_brand' => 27,
+            'fk_id_kategori' =>5
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Cooler Master MH650 RGB 7.1 Surround Sound Gaming Headset',
+            'stok'    => '10',
+            'harga' => 940000,
+            'berat' => 2,
+            'review' => 'Experience Immersive Gaming
+            The MH650 Gaming Headset provides an immersive experience in a portable package ideal for console and PC gamers. Virtual 7.1 surround sound and omnidirectional boom mic offer high-quality sound and comms, wrapped in a sleek matte black design and fully customizable RGB illumination – and cushioned ear cups provide the perfect fit for those marathon sessions.
+            LONG-LASTING COMFORT
+            VIRTUAL 7.1 SURROUND SOUND
+            RGB ILLUMINATION
+            PC & CONSOLE CONNECTIVITY
+            EASY PORTABILITY
+            HEADSET CONTROLS
+
+            Powerful Virtual 7.1 Surround Sound
+            50mm Neodymium drivers deliver an incredibly rich soundstage to your eardrums, while virtual 7.1 surround sound expands that to its full potential, for lush, powerful sound that’s perfectly balanced for all game and music genres.
+            *7.1 Surround Sound only available on PC.
+
+            Ambient RGB Illumination
+            Add personality to your headset with customizable RGB lighting that’s understated and not at all obnoxious – unless you want it to be.
+
+            Responsive, Form-fitting Cushioning
+            With swiveling ear cups and fabric mesh cushioning, say goodbye to pinched ears, painful lobes, or awkward fits for your marathon battle royales.
+
+            Crystal Clear Communications
+            Your squad orders will never be misheard with an adjustable omnidirectional boom microphone that prioritizes voice quality while simultaneously minimizing any annoying background noise.
+
+            Ideal For Console And PC Gamers
+            Single USB connectivity is perfect for console and PC gamers who want both high-quality audio and comms with none of the tangled dual cables.
+
+            Sleek, Understated Styling
+            The MH650 isn’t all that bad looking either, with signature Cooler Master style, featuring metallic sideplates and a stealth matte black finish throughout the body.',
+            'rating' => 3.5,
+            'fk_id_brand' => 8,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Cooler Master MH670 Wireless 7.1 Surround Sound Gaming Headset',
+            'stok'    => '10',
+            'harga' => 1590000,
+            'berat' => 2,
+            'review' => 'The MH670 Gaming Headset is a sleek, comfortable wireless headset that provides maximum sound quality and superior versatility with minimal hassle. Latency-free 2.4GHz wireless connectivity, high-quality audio, and near-universal connectivity combine to give you a supremely convenient gaming headset that gives you your audio the way you want it.
+
+            Zero Cords, zero Lag
+            2.4GHz wireless offers freedom from the corded life, without any of the annoying delays and latency you get from other wireless solutions.
+            *Compatible on most consoles and PC.
+
+            Powerful Virtual 7.1 Surround Sound
+            50mm Neodymium drivers deliver an incredibly rich soundstage to your eardrums, while virtual 7.1 surround sound expands that to its full potential, for lush, powerful sound that’s perfectly balanced for all game and music genres.
+            *7.1 Surround Sound only available on PC.
+
+            Sleek, Understated Styling
+            The MH670 isn’t all that bad looking either, with signature Cooler Master style, featuring subtle gray accents and stealth matte black finish throughout the body.
+
+            Responsive, Form-fitting Cushioning
+            Swiveling ear cups and leatherette cushioning for comfort during the longest gaming sessions.
+
+            Easy, Hassle-free Portability
+            No more worrying about tangled cables. Everything on the MH670 is either detachable or foldable, giving you supreme portability and ridiculously easy storage in a backpack or computer bag.
+
+            Connect With Any And Every Gaming Platform
+            A 3.5mm jack pretty much means universal connectivity across all platforms – whether you’re a PC, console, or mobile gamer. You can even take the MH670 on the go for work, play, and everything in between.
+
+            Crystal Clear Communications
+            Your squad orders will never be misheard with an adjustable omnidirectional boom microphone that prioritizes voice quality while simultaneously minimizing any annoying background noise.',
+            'rating' => 4,
+            'fk_id_brand' => 8,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Corsair HS35 Blue',
+            'stok'    => '10',
+            'harga' => 460000,
+            'berat' => 2,
+            'review' => 'Slip on the CORSAIR HS35 Stereo Gaming Headset for high-quality sound and voice clarity while you play for hours thanks to its plush memory foam and adjustable earcups -ideal for PC, PS4, Xbox One, and more.
+
+            Easily plug in and play on PC, Xbox One*, PS4, Switch, or mobile devices with a 3.5mm connector. *May require Microsoft 3.5mm adapter (sold separately).
+
+            Command in confidence
+            The Discord-Certified, detachable unidirectional microphone is optimized for voice quality while reducing ambient noise, so that you are heard loud and clear.',
+            'rating' => 3.5,
+            'fk_id_brand' => 9,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Dareu A700 Wireless 2.4GHz Gaming Headset',
+            'stok'    => '10',
+            'harga' => 750000,
+            'berat' => 2,
+            'review' => '2.4GHz WIRELESS TRANSMISSION
+            2.4GHz wireless transmission syncs audio in no delay within 10m working distance.
+
+            LONG LASTING WORKING TIME
+            930mAh Li-polymer allows for up to 12h gaming time with 2 hours charging.
+
+            OMNI-DIRECTIONAL DETACHABLE MICROPHONE
+            It is easy to use and store. Use it for playing games or take it off when listening to music.
+
+            Skin friendly Earmuffs
+            Leather earmuff, being skinfriendly and breathing, reduces pressure on ears and guarantees good sound effect.',
+            'rating' => 2,
+            'fk_id_brand' => 10,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'dbE GM300 Gaming Headset',
+            'stok'    => '10',
+            'harga' => 450000,
+            'berat' => 2,
+            'review' => 'dbE GM300 adalah kasta tertinggi dari gaming headphone yang dibuat oleh dbE.
+            Perbedaannya dengan seri sebelumnya adalah :
+            – Headset GM300 didesain sehingga lebih nyaman digunakan untuk waktu lama bahkan jika dibandingkan dengan GM200 / GM250 sekalipun
+            – Driver di dalam GM300 berkualitas diatas driver di dalam GM200, sehingga kualitas suara yang dihasilkan lebih baik dan detail terdengar lebih baik
+            – Terdapat dua mode suara yang dapat dipilih di GM300 yaitu mode bass, yang lebih baik untuk mendengar musik dan mode 3D yang lebih baik untuk mendengar detail dalam game FPS seperti PUBG
+            – 7 warna LED yang terlihat cantik',
+            'rating' => 2,
+            'fk_id_brand' => 11,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Digital Alliance Titan Premium Gaming Headset',
+            'stok'    => '10',
+            'harga' => 470000,
+            'berat' => 1,
+            'review' => 'Main Featured: Virtual Surround Sound 7.1
+            LED: Single color LED on Logo
+            Color: Black and White
+            Weight: 270g With Cable
+            Connector: Single Jack 3.5mm Or USB for LED Power 1.8m
+            Earpad: PU Leatherrete Over Ears
+            Support To: PC, PS4, XBOX ONE, Nintendo Switch, Mobile Devices
+
+            AUDIO
+            Speaker Diameter: φ50mm
+            Frequency Response: 20Hz – 20KHz
+            Impedance: 32Ω+15%
+            Speaker Sensitivity: 115dB S.P.L.at 1KHz
+            Speaker Sensitivity: 100dB ±3dB
+            Rated Power: 10mW
+            Max. Power: 20mW
+
+            MICROPHONE
+            Mic Type: OMNI Directional + Noise-Canceling
+            Mic Dimension: 6.0 x 5.0 mm
+            Sensitivity: 42db±3db
+            Frequence Response: 20Hz-20KHz
+            Mic Impedance: ≦2200
+
+            Packages Content:
+            Titan Premium Headset
+            Detachable Microphone
+            USB-C Cable
+            Aux 3.5mm Cable
+            User Documentation',
+            'rating' => 2,
+            'fk_id_brand' => 28,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Fantech Mithril TX1 TWS Wireless Gaming Inear',
+            'stok'    => '10',
+            'harga' => 299000,
+            'berat' => 1,
+            'review' => 'True Wireless Earphone dengan Teknologi Touch Control memudahkan anda mengontrol penggunaan tanpa ribet. Memakai bluetooth 5.0 yang Low Latency membuat delay yang sangat minim sehingga terasa seperti menggunakan Earphone kabel yang realtime.',
+            'rating' => 1,
+            'fk_id_brand' => 7,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Hyperx Cloud Earbuds with Microphone Gaming Earphone',
+            'stok'    => '10',
+            'harga' => 695000,
+            'berat' => 1,
+            'review' => 'HyperX Cloud Earbuds™ are ideal for the Nintendo Switch™ gamer who enjoys taking their game outside. With a 90-degree angled plug, the rubberized, tangle-free cable makes a less obtrusive connection optimized for handheld mode, and the included carrying case is perfect for portability and secure storage. Easily communicate with your squad in Fortnite and other Switch games that use in-game chat and get an edge in your execution and enjoyment. Cloud Earbuds come with three sizes of patented silicone ear tips to provide signature HyperX comfort, making them great for lengthy gaming sessions. Get immersive audio thanks to the earbuds’ enhanced bass, and crystal-clear highs, mids, and lows. The slim, convenient in-line mic has a multi-function button that easily allows you to answer calls1 and control your streaming media. HyperX Cloud Earbuds feature a two-year warranty and come with free technical support, making them perfect purchase for any fan of portable gaming.
+
+            Optimized for Handheld Mode
+            The 90-degree angled cable connector, tangle-free cable, and travel case provide hassle-free portable gaming.
+
+            Signature HyperX comfort
+            Three sizes of patented silicone ear tips that conform for optimal comfort and fit.
+
+            Immersive gaming audio
+            Enhance your gaming experience with enhanced bass, and crystal-clear lows, mids, and highs.
+
+            Slim in-line mic for game chat and phone calls
+            The in-line mic enables you to communicate and coordinate with your squad in Fortnite and other Switch games that use in-game chat. Answer calls1 and control streaming media by simply using the multi-function button.',
+            'rating' => 1,
+            'fk_id_brand' => 26,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'JBL Quantum 400 Surround and DTS Gaming Headset',
+            'stok'    => '10',
+            'harga' => 1799000,
+            'berat' => 1,
+            'review' => 'Headset gaming over-ear USB dengan tombol game-chat
+
+            Buat permainan terasa lebih nyata dengan JBL QuantumSURROUND™ dan DTS
+            Rasakan pengalaman gaming yang lebih nyata dengan surround sound istimewa yang didukung perangkat lunak PC bawaan JBL QuantumENGINE. JBL QuantumSURROUND™ membawamu ke puncak keseruan permainan, sehingga kamu dapat meningkatkan permainanmu dan menaklukkan semua lawan. Juga dilengkapi DTS headphone:X v2.0.
+
+            JBL QuantumSOUND Signature memberikan keunggulan audio yang sebenarnya
+            Dari langkah kaki tersenyap hingga ledakan terkeras, JBL QuantumSOUND Signature membuat setiap momen gaming terasa epik dan setiap permainan lebih menantang. Kualitas audio khas kami menghadirkan lanskap suara yang paling realistis demi keunggulan strategismu dalam setiap pertempuran.
+
+            Bermain lebih nyaman, lebih lama dengan memory-foam
+            Headband yang ringan dan bantalan telinga memory-foam dirancang untuk pengalaman gaming lebih nyaman, lebih lama.
+
+            Suara menjamin Kemenangan.
+            Temukan keunggulan audio. Headset JBL Quantum 400 membuatmu selalu selangkah di depan dengan surround sound yang membuat terasa lebih nyata dan membantumu mengantisipasi setiap gerakan. Dirancang demi presisi dan sensasi nyata, JBL QuantumSOUND Signature membantu meningkatkan kemampuan gaming-mu berkat keunggulan strategis dalam pertempuran. JBL Quantum 400 juga dibekali dengan mikrofon boom yang berfokus pada suara untuk interaksi multiplayer yang jelas, tombol game-chat balance yang disertifikasi untuk DISCORD, serta kompatibel dengan TeamSpeak serta aplikasi lainnya. Headband yang ringan dan bantalan telinga memory-foam membuat bermain game selama berjam-jam tetap nyaman. Tingkatkan permainanmu dengan headset JBL Quantum 400 dan libas semua lawanmu.',
+            'rating' => 1,
+            'fk_id_brand' => 29,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'JBL Quantum 400 Surround and DTS Gaming Headset',
+            'stok'    => '10',
+            'harga' => 2049000,
+            'berat' => 1,
+            'review' => 'PRO GRADE PERFORMANCE
+            Designed in collaboration with and for pros for advanced communications and precision audio.
+
+            BLUE VO!CE microphone technology gives you a choice of real-time voice filters to reduce noise, add compression and de-essing, and ensure that your voice sounds richer, cleaner, and more professional. Get consistent, studio-quality, in-game vocal communications with BLUE VO!CE via G HUB Gaming Software.
+
+            COMFORTABLE MEMORY FOAM
+            Memory foam wrapped in premium leatherette or breathable velour give you lasting comfort. So you can play longer and harder, and focus on winning.
+
+            DURABLE STEEL AND ALUMINUM
+            With a sturdy and lightweight frame constructed of aluminum and steel, PRO X is built for durability, comfort, and a premium aesthetic.
+
+            NEXT-GEN SURROUND SOUND
+            DTS HEADPHONE:X 2.0 is the latest version of object-based sound imaging from DTS. Version 2.0 takes 7.1 channel surround sound further than ever with enhanced bass rendering, audio clarity and proximity cues. And most importantly, a new level of distance awareness differentiates between near field and far field audio, so your enemies location is pinpointed more than ever.
+
+            PRO-G 50 MM DRIVERS
+            PRO-G features a unique hybrid mesh construction to deliver amazingly clear and precise sound imaging. Hear footsteps and environmental cues with breathtaking clarity, and get the competitive edge you need to win. Now, with 50 mm drivers, the next-gen PRO-G achieves even more accuracy across a wider frequency range, plus higher-fidelity bass response.
+
+            PRO-TUNED EQ
+            Audio EQ profiles—tuned by esports athletes—now available on G HUB Gaming Software. Use their profiles as-is, or fine tune to your ears. Save them to the external USB sound card—then apply to other PCs.
+
+            Advanced Sound Card
+            External USB sound card (DAC) delivers crystal-clear digital signal processing for tournament-level audio and voice communications. Program it with Logitech G HUB Gaming Software and take your audio settings to the tournament.
+            ACCESSORIES FOR VERSATILITY
+            Featuring a PC cable with inline audio controls and a mobile cable with inline mic—so you can use PRO X with the boom mic detached. An included carrying bag protects the headset and accessories when you travel.',
+            'rating' => 1,
+            'fk_id_brand' => 13,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'NYK HS-E11 Stellar Gaming Headset',
+            'stok'    => '10',
+            'harga' => 490000,
+            'berat' => 1,
+            'review' => 'RGB Gaming 7.1 Surround Sound Headset
+
+            -3 in 1 Gaming Headset
+            -Virtual 7.1 Surround Sound
+            -Flexible Detachable Microphone
+            -RGB Illumination
+            -Multiplatform Headset
+            -50mm Driver
+            -Comfortable Earmuffs
+
+            Gaming Headset with 7.1 surround sound and 3in1 input/output
+            The NYK HS-E11 STELLAR is a gaming headset that already equipped with 50mm Driver, Virtual 7.1 Surround Sound with Software and RGB Illuminate. Soft Leather Headband make your gaming experience more easy and comfortable. This headset equipped with Flexible Detachable Microphone make your gaming communication more clear. Also NYK HS-E11 Stellar is a multiplatform headset who have 3in1 connection.
+
+            50 MM DRIVER WITH DRIVER SOFTWARE
+            This headset already featured with 50mm Driver and Have Driver Software to utilize performance',
+            'rating' => 1,
+            'fk_id_brand' => 14,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Razer Blackshark V2 Gaming Headset',
+            'stok'    => '10',
+            'harga' => 1699000,
+            'berat' => 1,
+            'review' => 'THE SOUND OF ESPORTS
+            If esports is everything, then give it your all with the Razer BlackShark V2. With an esports headset that’s a triple threat of amazing audio, superior mic clarity and supreme sound isolation, your time to turn pro is now.
+
+            RAZER™ TRIFORCE TITANIUM 50MM DRIVERS
+            Our all-new patented design allows our engineers to custom tune each driver as though there are three—allowing for the individual replications of high, mid and low audio frequencies to deliver on richer trebles, brighter sound and powerful bass. The Razer BlackShark V2 also includes titanium-coated diaphragms, giving added clarity to any vocals you hear so that any comms you receive is always crisp and clear.
+
+            RAZER™ HYPERCLEAR CARDIOID MIC WITH USB SOUND CARD
+            Offering greater speech pickup and noise cancellation, the removable mic on this esports headset has an optimized microphone housing which adopts a more open design for minimal obstruction—resulting in improved clarity for a closer recreation of your voice. Supported by a USB sound card, you can tweak and enhance your voice output further via Razer Synapse, with access to features such as Mic Boost, Voice Gate, Volume Normalization, Mic Equalizer and Ambient Noise Reduction.
+
+            ADVANCED PASSIVE NOISE CANCELLATION
+            From cheering crowds to the hum of your rig, shut noise out and enjoy uninterrupted focus with special closed earcups that fully cover your ears, aided by plush cushions that form a perfect seal for greater sound isolation.
+
+            FLOWKNIT MEMORY FOAM EAR CUSHIONS
+            Our new breathable weave minimizes sweat and heat build-up generated by skin contact, while the ultra-soft foam’s improved density greatly reduces the headset’s clamping force.
+
+            CROSS-PLATFORM COMPATIBILITY
+            This esports headset connects using a 3.5mm jack or through its USB sound card. The 3.5mm jack works across popular platforms, allowing you to seek out competition on PC, Mac, PS4, Xbox One, Nintendo Switch and mobile devices (Mobile devices with an available 3.5mm port)',
+            'rating' => 1,
+            'fk_id_brand' => 15,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Rexus Thundervox HX20 Gaming Headset',
+            'stok'    => '10',
+            'harga' => 400000,
+            'berat' => 1,
+            'review' => 'Headset Gaming Rexus Thundervox HX20
+            Give The Best for Your Ear
+
+            Fitur Unggulan
+            Earpad yang Nyaman dan Fungsional
+            Earpad Rexus Thundervox HX20 didesain oval sehingga sangat pas saat digunakan di telinga. Earpad tersebut terbuat dari bahan PU leather yang sangat lembut sehingga sangat nyaman dipakai. Busa earpad ini juga tebal dan empuk, serta berfungsi sebagai peredam bising dari luar.
+
+            LED RGB
+            Rexus Thundervox HX20 dilengkapi dengan LED RGB. LED RGB tersebut dapat dimatikan dan dinyalakan dengan saklar yang ada di panel kontrol.
+
+            Mikrofon Sensitif dan Dapat Dilepas
+            Rexus Thundervox HX20 didukung dengan replaceable microphone yang sensitif dan menghasilkan suara yang detil. Mikrofon semi-condenser ini dapat dikoneksikan di HP atau perangkat perekam lain secara langsung untuk menangkap suara rekaman.
+
+            Teknologi Virtual Surround 7.1
+            Teknologi ini sudah kerap digunakan pada gaming headset. Fungsinya adalah untuk mengubah karakteristik suara stereo menjadi surround.
+
+            Digital Equalizer
+            Rexus Thundervox HX20 dilengkapi dengan ekualiser digital di perangkat lunaknya. Untuk mengatur suara dan efek suara agar sesuai dengan keinginan dan kebutuhan pengguna. Terdapat pengaturan ekualiser 3D untuk membuat efek terbuka atau tertutup.
+
+            Karakteristik Suara Riil
+            Rexus Thundervox HX20 mengunggulkan karakteristik suara yang riil dan detil, sesuai dengan tipe gaming headset murni. Dengan karakteristik suara seperti itu, indera pendengaran kita akan dipermudah saat menganalisa pergerakan musuh saat bermain game.',
+            'rating' => 1,
+            'fk_id_brand' => 30,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Sades Diablo SA-916',
+            'stok'    => '10',
+            'harga' => 700000,
+            'berat' => 1,
+            'review' => 'SADES LOCUST PLUS RGB adalah headset gaming yang memiliki body build sangat baik, dengan earcup yang nyaman dipakai dalam jangka waktu yang cukup lama, salah satu hal yang menarik yang dimiliki oleh headset ini adalah desainnya yang elegan dengan hadirnya Lampu LED RGB pada bagian kanan dan kiri headset. Dari segi suara headset ini sudah mendukung fitur 7.1, suara yang dihasilkan juga sangat baik.',
+            'rating' => 1,
+            'fk_id_brand' => 16,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Saramonic Games Monic SR-BH60 True Wireless Gaming Earbuds',
+            'stok'    => '10',
+            'harga' => 1450000,
+            'berat' => 1,
+            'review' => 'True Wireless Gaming Earbuds
+            More than your average TWS earbuds, Saramonic BH60 GamesMonic delivers great experience for game time and other daily use.
+            Professional audio sound quality and extremly low latency providing immersive game experience.
+            DSP noise cancelling providing crystal clear calls, Use the built-in Smart Touch to control your music, water resistant body and integrated eartips making them ideal for sports and outdoors pursuits.
+
+            Extremly low latency 60ms
+            DSP noise cancellation for crystal clear calls
+            Professional audio sound quality
+            Up to 7+17 hours playtime, 3hours call time
+            IPX5 waterproof protection
+            Patented and erganomic design for comfortable and stable wearing
+            Bluetooth 5.0 quick and unbreakable connection
+            Sensitive Touch Control
+            Cool Breathing Lights
+            8mm Customized Drivers to enhance bass
+            Hall switch auto-pairing, uncap and go
+            Switchable mono/stereo mode
+            Light Weight Each Earbud Only 5.5g
+            Transmission Range Around 10m',
+            'rating' => 1,
+            'fk_id_brand' => 17,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Steelseries Arctis 7P Wireless 2.4GHz Gaming Headset',
+            'stok'    => '10',
+            'harga' => 2380000,
+            'berat' => 1,
+            'review' => 'Wireless Gaming Headset for PlayStation
+
+            Designed for PlayStation 5
+            Experience the next gen of wireless audio, battery life, comfort, and versatility on PS5, PS4 and more.
+
+            24-hour battery life
+            Best-in-class battery life with 24 hours of nonstop wireless usage, so you can game all day and night on a single charge.
+
+            Wireless Everywhere Extreme versatility
+            Game everywhere with the compact USB-C dongle for a seamless transition between PlayStation 5, PS4, PC, Android, and Nintendo Switch.
+
+            Signature Arctis sound
+            With the same high-quality speaker drivers as the Arctis 7, the Arctis 7P emphasizes subtle sounds to give you an audio advantage in your favorite next-gen games, and is fully compatible with PlayStation 5’s Tempest 3D AudioTech.
+
+            ClearCast noise cancelling microphone
+            The retractable Discord-certified ClearCast microphone uses a bidirectional design, the same used by aircraft carrier deck crews for superior noise cancellation, making your voice sound clear and natural.
+            Durable steel headband.
+            Adjustable ski goggle suspension design.
+            Dedicated sidetone control.
+            Convenient on-ear controls.
+
+            Exclusive color!
+            Only SteelSeries.com members have access to the exclusive black Arctis 7P.
+
+            Next-gen ready
+            SteelSeries offers multiple headsets compatible with the next-gen PlayStation 5, as well as PlayStation 4 and other platforms.',
+            'rating' => 5,
+            'fk_id_brand' => 18,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Tecware Q5 Gaming Headset',
+            'stok'    => '10',
+            'harga' => 620000,
+            'berat' => 1,
+            'review' => 'Built for Comfort
+            ​Soft Memory Foam Leatherette Ear Cups that provide a snug and cozy fit – seals nicely around your ears for improved passive noise isolation.
+            Game for hours on end without distraction.
+
+            Speak with Absolute Clarity.
+            Detachable & Flexible Wide Bandwidth Microphone with crystal clear voice reproduction and gain control.
+            Fitted with a foam windscreen that minimizes background noise.
+            Virtual 7.1 Surround Sound.
+            Dive into the midst of the action – 7.1 Surround Sound that provides spatial sound, delivering a fully immersive experience.
+
+            Quick & Convenient Control.
+            In-line Controller allows you to adjust volume and mute your mic instantly within easy reach.',
+            'rating' => 1.5,
+            'fk_id_brand' => 19,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Thronmax THX-50 Professional Studio Monitoring Headphones',
+            'stok'    => '10',
+            'harga' => 480000,
+            'berat' => 1,
+            'review' => 'Advanced build quality and engineering; Designed for studio tracking and mixing
+            • 50 millimeter drivers with rare earth magnets and copper clad aluminum wire voice coils
+            • Tune for enhanced low frequency performance
+            • Magnet neodymium; Designed for studio tracking and mixing
+
+            Durable Design
+            Cutting-edge engineering and robust construction.
+            Offers Excellent Sound Isolation
+
+            Circumaural design contours around the ears for excellent sound isolation in loud environments.
+            Affordable Price Point
+
+            Makes the THX-50 a popular tracking headphone for multi-station studio sessions.
+            Convenient Single-Side Cable Exit
+            2.5m straight cable for professional applications.
+            1.5m straight cable for mobile and pc application.
+
+            Provided Accessories
+            Two detachable cables (1.5 m – 2.5 m coiled cable);; 6.3 mm (1/4″) screw-on adapter.
+            Accurate Sound for Studio, Live & DJ Use
+
+            Tuned flat for incredibly accurate sound monitoring across the entire frequency range.
+            Comfortable Fit for Hours of Use
+            Professional-grade earpad and headband material delivers more durability and comfort.',
+            'rating' => 2,
+            'fk_id_brand' => 20,
+            'fk_id_kategori' =>6
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Acer KG241QP 144Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 2799000,
+            'berat' => 7,
+            'review' => 'The Gate of Smooth Gaming
+            In competitive gaming, every frame matters. Introducing Acer’s KG241Q gaming monitor – the Full HD resolution monitor that can keep up with your game play. Through AMD Radeon FreeSync technology, the game’s frame rate is determined by your graphics card, not the fixed refresh rate of the monitor, giving you a serious competitive edge. Plus, users can enjoy comfortable viewing experience while gaming via flicker-less, low dimming and ComfyView display.
+
+            Quality Visuals
+            The KG241Q 24″ monitor with 1920 x 1080 Full HD resolution in a 16:9 aspect ratio presents stunning, high quality images with excellent detail.
+
+            AMD RADEON FREESYNC Technology
+            Say “goodbye” to stuttering and tearing. With AMD RADEON FREESYNC, the monitor’s frames are synced with the graphics card’s frames, which eliminates screen tearing and provide the smoothest gaming experience.
+
+            Responsive!!
+            Fast response time of 1ms GTG (Gray to Gray) enhanced gamers’ in-game experience. No matter the fast-moving action or any dramatic transitions will be all rendered smoothly without the annoying effects of smearing or ghosting through Acer KG series.
+
+            Bright and Clear
+            Images come to life and games pop thanks to the 6-axis color adjustment ensuring the screen displays the highest standard of color accuracy desired by design professionals and photo enthusiasts.
+
+            Rapid Refresh Rate
+            The 144Hz refresh rate speeds up the frames per second to deliver an ultra-smooth 2D motion scenes. With a rapid refresh rate of 144Hz, Acer Monitors shorten the time it takes for frame rendering, lower input lag and provide gamers an excellent in-game experience.
+
+            Better for Your Eyes
+            AcerVisionCare incorporates several technologies to reduce eye strain and provide a more comfortable viewing experience. Say goodbye to annoying screen flickering and shield your eyes from eye-straining blue light.',
+            'rating' => 2,
+            'fk_id_brand' => 35,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Acer KG251QD 240Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 4699000,
+            'berat' => 7,
+            'review' => 'The Gate of Smooth Gaming
+            In competitive gaming, every frame matters. Acer’s KG251Q gaming monitor – the Full HD resolution monitor that can keep up with your game play. Through AMD Radeon FreeSync technology, the game’s frame rate is determined by your graphics card, not the fixed refresh rate of the monitor, giving you a serious competitive edge. Plus, users can enjoy comfortable viewing experience while gaming via flicker-less, low dimming and ComfyView display.
+
+            Quality Visuals
+            The KG251Q 24.5″ monitor with 1920 x 1080 Full HD resolution in a 16:9 aspect ratio presents stunning, high quality images with excellent detail. The zero-frame design does away with the thick frames found on conventional monitors freeing up precious screen space so you have more to look at from edge to edge.
+
+            AMD RADEON FREESYNC Technology
+            Say ‘goodbye’ to stuttering and tearing. With AMD RADEON FREESYNC, the monitor’s frames are synced with the graphics card’s frames, which eliminates screen tearing and provide the smoothest gaming experience.
+
+            Responsive!!
+            Fast response time of 1ms GTG (Gray to Gray) enhanced gamers’ in-game experience. No matter the fast-moving action or any dramatic transitions will be all rendered smoothly without the annoying effects of smearing or ghosting through Acer KG series.
+
+            Bright and Clear
+            Images come to life and games pop thanks to the 6-axis color adjustment ensuring the screen displays the highest standard of color accuracy desired by design professionals and photo enthusiasts.
+
+            Rapid Refresh Rate
+            The 240Hz refresh rate speeds up the frames per second to deliver an ultra-smooth 2D motion scenes. With a rapid refresh rate of 240Hz, Acer Monitors shorten the time it takes for frame rendering, lower input lag and provide gamers an excellent in-game experience.
+
+            Better for Your Eyes
+            AcerVisionCare incorporates several technologies to reduce eye strain and provide a more comfortable viewing experience. Say goodbye to annoying screen flickering and shield your eyes from eye-straining blue light.',
+            'rating' => 2,
+            'fk_id_brand' => 35,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'AOC 24G2E5 75Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 1825000,
+            'berat' => 7,
+            'review' => '24G2E5
+            23.8 inch IPS, FreeSync, 1ms, Flicker Free, Ultra Narrow Border Monitor
+            With its 1ms instant response time and FreeSync Technology, 24G2E5 vastly reduces screen tearing, blurring and ghosting to enhance your gaming performance. Its HDR mode, together with the renowned 80% DCI-P3 gamut and IPS panels, delivers images with increased dynamic contrast, color accuracy and wider viewing angles for maximum visual enjoyment. Compatible with HDMI, the 23.8” monitor offers versatility in connectivity options.
+
+            FreeSync technology supports totally immersive gameplay
+            AMD FreeSync technology provides the perfect high performance solution for gamers looking for the best gaming experience. FreeSync eliminates any tearing or stuttering by synchronizing the GPU and the monitor so frames are displayed when ready. This also ensures the fastest possible frame rates and prevents any laggy and stuttering input from the gaming mouse. Gamers can enjoy the smoothest gameplay and give themselves the desired competitive edge.
+
+            Instant response times
+            In competitive gaming, a millisecond can be the difference between victory and defeat. A 1ms response time will massively reduce blurring or ghosting, and ultimately clear your path to victory.
+
+            HDR mode visual enhancement
+            Through a combination of advanced algorithmic functions, the HDR Mode essentially transforms non-HDR content into HDR-like visuals via 3 different modes. By enhancing RGBCMY color for more vivid images (via improved saturation and range), increasing dynamic contrast for clarity and image sharpness, the HDR mode ensures you can experience HDR visuals when viewing standard quality content.
+
+            Colorful visuals for all to enjoy
+            The renowned DCI-P3 color gamut covers a wide range of tones and is known for being in line with many cinema standards. This makes it a top choice for film enthusiasts and video editors as well.
+
+            GAME COLOR
+            Experience more immersive and vivid gameplay
+            With AOC Game Color, you can adjust color saturation and grey levels across 20 levels of detail for a better game experience. Delight in more vivid MMORPG scenes, more intense FPS action, and better MOBA character details.
+
+            Game Mode
+            Optimize your game settings
+            It can be a hassle to adjust monitor settings every time you load up a new game. AOC Game Mode allows quick adjustment and pre-designed setups (tailored for different genres) to enhance the gaming experience.
+
+            IPS WIDE VIEW
+            Designed with wide viewing angles
+            IPS panels deliver vivid and accurate color expression while offering wider viewing angles than regular monitors for extra comfortable viewing.
+
+            ULTRA NARROW BORDER
+            Slim, sleek, simple
+            Slim bezel and border monitors offer a comforting viewing experience without distraction. They also save space and can boost productivity via multi-monitor setups. This monitor comes with 1.2mm ultra-narrow bezel and 4.2mm black screen border.
+
+            FLICKER FREE
+            Protect your eyes from screen flicker
+            Flicker Free technology uses a smooth backlight system to prevent monitor flickering. This reduces eye strain and other damaging effects to your eyes – an especially valuable feature when working overtime, gaming for long hours or watching movies.
+
+            LOW BLUE MODE
+            Reducing shortwave blue light output for healthier eyes
+            Long exposure to short wavelength blue light may cause eye strain, sleep disorders, or headaches. AOC Low Blue Mode puts the user first by reducing the screen’s short wavelength blue light emission without sacrificing color accuracy. Also provides four different filtering modes – reading, web browsing, multimedia, and office.
+
+            DIAL POINT
+            Your custom built-in crosshair
+            The Dial Point function is specially designed for first person shooting (FPS) gamers. A fixed, custom crosshair is placed at the center of the screen to help with accuracy and focus.
+
+            Connectable with other devices
+            HDMI compatibility unlocks a wider array of connectivity options for users, including gaming consoles, laptops, Blu-Ray players, and more. DisplayPort is the main PC-to-monitor connection format in the industry, with better refresh rates and the ability to transmit good quality audio in addition to visual data.',
+            'rating' => 2,
+            'fk_id_brand' => 23,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Asus ROG Strix XG248Q 240Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 6400000,
+            'berat' => 7,
+            'review' => 'ROG Strix XG248Q is all about speed — making it the perfect monitor for eSports and first-person shooters. This Full HD monitor is the fastest ever, with a 240Hz native refresh rate, 1ms response time and Extreme Low Motion Blur technology for silky-smooth gameplay and ultra-realistic visuals. Additionally, ROG Strix XG248Q has distinctive Strix-exclusive design elements and ASUS Aura Sync lighting that add ambiance to any gaming setup or LAN party.
+
+            ROG Strix XG248Q’s astonishing 240Hz native refresh rate makes it twice as fast as conventional 120Hz monitors. You’ll experience amazingly fluid gaming visuals, giving you the upper hand in first-person shooters, racing, real-time strategy and sports titles. It’s all action and no breaks!
+            ROG Strix XG248Q has been certified as G-SYNC Compatible, delivering a seamless, tear-free gaming experience by enabling VRR by default on NVIDIA GeForce GTX 10-Series and NVIDIA GeForce RTX 20-Series graphics cards.
+            ROG Strix XG248Q features the latest ASUS Extreme Low Motion Blur technology, which achieves 1ms MPRT to eliminate smearing and motion blur, and makes objects in motion look sharper, so gameplay is more fluid and responsive.
+
+            Adaptive-Sync (FreeSync™) technology delivers the smoothest, fastest, and most breathtaking gaming visuals imaginable by eliminating screen tearing and choppy frame rates, and by minimizing display stutter and input lag. ROG Strix XG248Q gives you seamless, lag-free visuals when playing the latest fast-paced first-person-shooters, sports, or action-adventure games.
+
+            The ROG Strix series is a continuation of the ever-lasting legacy of ROG, with a bold, streamline design featuring the iconic tripod stand. The series is made using high- quality materials, skillfully crafted with the expertise and adventurous spirit synonymous with ROG.
+
+            ROG Strix XG Series gaming monitors feature ASUS Aura Sync lighting on the back. It offers several lighting modes to provide a cool and stylish backdrop to any gaming setup.
+            Light Signature lets you create and customize ROG Strix XG248Q’s light-projection* effects. It includes two ROG logo covers and one blank covers that you can use to create customized, unique light projections to enhance your desktop surface.
+            *LED Lighting projection is patent pending.
+
+            Strix XG248Q features a super narrow design, making it the ideal solution for almost-seamless multi-display setups. Build the ultimate battle station, and enjoy total immersion!
+
+            GAMEPLUS TECHNOLOGY
+            ROG Strix XG248Q features the ASUS-exclusive GamePlus hotkey with in-game enhancements that help you get more out of your game. This function is co-developed with input from pro gamers, allowing them to practice and improve their gaming skills.
+
+            A crosshair overlay provides four different crosshair options, so you can select the one that best suits the shooter you’re currently playing.
+
+            ASUS-EXCLUSIVE DISPLAYWIDGET SOFTWARE
+            DisplayWidget is an intuitive software utility that lets users tweak settings or configure ASUS GameVisual, App Sync™, and Blue Light Filter. Adjustments to these utilities can be made via the On Screen Display (OSD) menu or the navigational joystick, but ASUS DisplayWidget makes accessing and using these various settings much faster and easier.
+            GameVisual, AppSync™, Ultra-Low Blue Light technology, Sharable display setting parameter.
+
+            ULTRA-LOW BLUE LIGHT TECHNOLOGY
+            ROG Strix XG248Q comes with TÜV Rheinland-certified ASUS Ultra-low Blue Light filters to protect your eyes from harmful blue light. It’s easy to access and select the four different filter settings via the OSD menu using the 5-way joystick.
+
+            FLICKER-FREE TECHNOLOGY
+            ROG Strix XG248Q reduces onscreen flicker to give you a more comfortable gaming experience. This minimizes eye strain during marathon gaming sessions.
+            ERGONOMIC DESIGN
+            ROG Strix XG248Q features a stand that’s ergonomically designed to offer extensive swivel, tilt, and height adjustment — so you can always attain that ideal viewing angle.',
+            'rating' => 2,
+            'fk_id_brand' => 27,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Asus TUF Gaming VG249Q Monitor Gaming',
+            'stok'    => '10',
+            'harga' => 3750000,
+            'berat' => 7,
+            'review' => 'TUF gaming VG249Q
+            TUF Gaming VG249Q is a 23.8-inch, Full HD (1920×1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.
+            It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.
+
+            23.8 inch IPS display for wide viewing angle and better color reproduction
+            The 23.8-inch Full HD (1920 X 1080) IPS panel of TUF Gaming VG249Q delivers stunning visuals from all angles with wide 178-degree viewing angles ensure minimal distortion and color shift even when you’re viewing from extreme positions.
+
+            144Hz Refresh Rate
+            TUF Gaming VG249Q has an ultra-fast 144Hz refresh rate, ensuring that even fast-paced games played at the highest visual settings look buttery smooth and completely lag-free. Get the upper hand in first-person-shooters, racing, real-time strategy and sports titles.
+
+            EXTREME LOW MOTION BLUR
+            Features the latest ASUS-exclusive Extreme Low Motion Blur technology, which achieves 1ms MPRT to eliminate smearing and motion blur, and makes objects in motion look sharper, so gameplay is more fluid and responsive.
+
+            IN−GAME ENHANCEMENTS
+            Shadow Boost
+            ASUS Shadow Boost technology clarifies dark areas of the game without overexposing brighter areas, improving overall viewing while also making it easier to spot enemies hidden in dark areas of the map.
+            GamePlus
+            The ASUS-exclusive, integrated GamePlus hotkey offers in-game enhancements that help you get more out of your game. This function is co-developed with input from pro gamers, allowing them to practice and improve their gaming skills.
+            GameVisual
+            ASUS GameVisual Technology has seven pre-set display modes to optimize visuals for different types of content. This unique feature can be easily accessed through a hotkey or the on-screen display settings menu.
+            Flicker-Free technology
+            Flicker-Free technology reduces flicker to minimize eyestrain for improved comfort when you’re embroiled in long gaming sessions.
+            Ultra-Low Blue Light technology
+            ASUS Ultra-Low Blue Light technology reduces the amount of potentially harmful blue light emitted by the display. Four different filter settings are available to control the amount of blue light reduction.
+
+            Rich connectivity
+            Extensive connectivity options, including, DisplayPort1.2×1, HDMI (v1.4)x1, D-subx1, audio-in support a wide array of multimedia devices.',
+            'rating' => 2,
+            'fk_id_brand' => 27,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'LG 24MP59G-P 75Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 1950000,
+            'berat' => 7,
+            'review' => 'Full HD Gaming with 1ms Motion Blur Reduction
+            Full HD display with 1ms Motion Blur Reduction allows gamers to enjoy the accuracy needed to play at a very high level. With a response time that is virtually 1ms, blurring and ghosting are reduced to make the action smoother and more precise.
+
+            AMD FreeSync
+            FreeSync reduces the tearing and stuttering that occur between a graphic card’s frame rate and a monitor’s refresh rate. With FreeSync, gamers can experience seamless, fluid movement throughout their games.
+
+            Dynamic Action Sync
+            Gamers can experience optimized, fast-pace gaming with Dynamic Action Sync. Dynamic Action Sync is a feature that minimizes input lag so the game play in RTS games is more responsive.
+
+            Black Stabilizer
+            Keep visibility even in dark scenes. LG’s Black Stabilizer senses dark scenes and helps make it brighter so that you can find the enemies hiding and waiting to attack your player in the dark.
+
+            Game Mode
+            Set your game mode to optimize and customize your gaming conditions. There are 3 gamer modes, 2 First-Person-Shooter modes and even a RTS pre-set mode so you can choose the best mode for you and the game you’re playing.
+
+            V-Line Stand
+            The sleek design of this gaming monitor is accentuated by red color accents on the V-shape stand. This monitor will feel right at home as part of any gamer’s desktop setup.',
+            'rating' => 2,
+            'fk_id_brand' => 32,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'LG Ultragear 24GL600F-B 144Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 3200000,
+            'berat' => 7,
+            'review' => 'Geared Up for Victory
+            LG UltraGear™ is the powerful gaming display gear with high performance features to take your gaming to the next level.
+            The Gear for Rapid Action
+            With a 23.6-inch display, and 1ms response time, the 24GL600F is the
+            UltraGear optimized for games requiring instantaneous decisions, such as RTS and FPS.
+
+            Fast Track to Victory
+            With a high refresh rate and fastest response time, you can take advantage of any battlefield.
+
+            Get into Synchronized Action
+            With a refresh rate of 144Hz, the 24GL600F allows you to capture even the smallest movements while also providing smoother motion.
+
+            Shoot the Enemy First with Less Delay
+            With the 24GL600F, which supports the fastest response time, you can quickly observe the battlefield and immediately respond to enemy.
+
+            Explore the Entire Battlefield
+            Allowing players to see the battlefield and all the game UIs at a glance, the 24GL600F can lead to victory in the battle, and ultimately the war, through rapid decision-making.
+
+            Fluid Gaming Motion without Tearing & Stuttering
+            Equipped with Radeon FreeSync, the 24GL600F provides smooth motion without tearing or stuttering thanks to Adaptive Sync technology.
+
+            Dynamic Action Sync is a feature that minimizes input lag so the gameplay in RTS and FPS games is more responsive.
+            Black Stabilizer gives gamers full visibility even in deep-dark scenes. It synchronizes the darkest areas and makes them brighter.
+            Crosshair – By placing the striking point in the center of the display, the Crosshair feature enhances accuracy in first-person shooter games.',
+            'rating' => 2,
+            'fk_id_brand' => 32,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'MSI Optix G241VC 75Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 2399000,
+            'berat' => 8,
+            'review' => 'Samsung curved panel
+            Optix G24VC uses the high quality Samsung curved panel with many special features for gamers, which will help them enjoy the marvelous game world.
+
+            1800R Curve Rate
+            Compared to 4000R or 3000R curvature rate, 1800R is the most comfortable curvature rate for human eyes.
+
+            Wide Gamut Coverage
+            110% SRGB, 85% NTSC
+            True color
+            Compared to regular monitors, Optix G24VC has at least 20% more color gamut coverage, providing much more details in images.
+            The Less Blue Light design, which decreases the damaging blue light coming from the screen, will protect your eye from the damage of long-hour gaming and working.
+
+            178° Wide Viewing Angle
+            178˚ wide viewing angle allows you to share your exciting gaming experiences with friends around you, creating both fun and vivid memories.
+
+            FPS front Sight
+            It is hard to aim at targets when the crosshair in game is too small or non-existent. With FPS Crosshair, you can aim at targets much easier in games. Try using it to secure your next victory.
+
+            SMOOTHEST GAMING EXPERIENCE WITH AMD FREESYNC
+            AMD FreeSync technology, which has been incorporated to the monitor, syncs your monitor’s refresh rate to your AMD GPU’s FPS to prevent screen tearing. With tearing-free visuals, you can finally enjoy the perfect game arts that industry giants design for you.',
+            'rating' => 2,
+            'fk_id_brand' => 24,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'MSI Optix G24C4 144Hz Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 3300000,
+            'berat' => 8,
+            'review' => 'CURVED FOR YOUR VIEWING PLEASURE
+            Optix monitors use a curved display panel that has a curvature rate of R1500, which is the most comfortable and suitable for a wide range of applications from general computing to gaming. Curved panels also help with gameplay immersion, making you feel more connected to the entire experience.
+
+            144HZ REFRESH RATE + 1MS RESPONSE TIME
+            Optix monitors are equipped with a 144hz refresh rate + 1ms response time VA LED panel which has the most benefit in fast moving game genres such as first person shooters, fighters, racing sims, real-time strategy, and sports. These type of games require very fast and precise movements, which an ultra-high refresh rate and fast response time monitor will put you ahead of your competition.
+
+            TEAR FREE, STUTTER FREE, FLUID GAMING
+            Gaming shouldn’t be a choice between choppy gameplay or broken frames. With MSI Optix series gaming monitors, it doesn’t have to be. Get fluid, artifact-free performance at virtually any framerate with AMD FreeSync™ technology.
+            *Note: FreeSync technology requires a monitor and AMD Radeon™ graphics, both with FreeSync support. See http://www.amd.com/freesync for complete details. Confirm capability with your system manufacturer before purchase. GD-127
+
+            SMOOTH OUT YOUR GAMEPLAY WITH ® ADAPTIVE SYNC
+            Optix monitors are built with AMD® Adaptive Sync technology to create the smoothest visuals for your gameplay. To do this, AMD® Adaptive Sync will sync your monitors refresh rate to your AMD® GPU, which helps to eliminate screen tearing or stuttering. Enjoy the game the way it was meant to be enjoyed with ultra-smooth, lag-free visuals.
+            *Note: AMD® Adaptive Sync requires a compatible AMD® GPU to be enabled. For more information:
+            http://www.amd.com/en-us/innovations/software-technologies/technologies-gaming/freesync
+
+            ANTI-FLICKER TECHNOLOGY
+            Generic monitor displays normally have a flicker-rate of about 200-times per second, which is unnoticeable to the naked eye, but can cause fatigue over time. MSI Anti-Flicker technology provides a very comfortable viewing experience by reducing the amount of flicker.
+
+            BLUE LIGHT REDUCTION
+            Optix monitors are optimized to produce less amount of blue light displayed by the monitor, so that you can game for longer periods of time without eye-fatigue.
+
+            178 DEGREES OF WIDE VIEWING ANGLE
+            By having a large viewing angle, Optix monitors has more leeway for placing your monitor in your setup without giving up the optimal viewing experience. Colors and details will stay sharp at more angles compared to other monitors with less viewing angles.',
+            'rating' => 2,
+            'fk_id_brand' => 24,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Zowie Benq XL2411P Gaming Monitor',
+            'stok'    => '10',
+            'harga' => 3950000,
+            'berat' => 8,
+            'review' => 'Monitor BenQ ZOWIE XL2411P adalah penerus monitor gaming XL24II terdahulu. BenQ juga merancang layar LCD dengan permukaan matte sehingga tidak memiliki sifat memantulkan layaknya cermin. Alhasil faktor kenyamanan menggunakan monitor bertambah, terlebih untuk kalangan gamer dengan tuntutan konsentrasi tinggi.
+
+            BenQ XL2411P merupakan monitor LCD 24 inci dengan backlight LED. BenQ menggunakan panel LCD tipe TN (Twisted Nematic) dengan kemampuan menghasilkan warna hingga 16,7 juta variasi pada tingkat resolusi gambar 1920 x 1080 piksel. Tingkat response time sebesar 1 miliseconds (Grey-To-Grey) sehingga sanggup menghasilkan kualitas tampilan bebas dari gejala ghosting. Tingkat response time setinggi itu memang sangat ideal untuk menangani adegan cepat pada sebuah video ataupun game.
+
+            Black Equalizer menghasilkan dan mempertahankan detil tanpa terlalu banyak mengekspos area terang ketika tampilan dalam keadaan gelap . Color Vibrance memberikan fleksibilitas untuk menampilkan warna sesuai keinginan anda.
+
+            Berbeda dengan produk LCD monitor pada umumnya dengan tingkat refresh rate 60 Hz, BenQ menawarkan keistimewaan pada pilihan tingkat refresh rate mulai dari 60 Hz, 100 Hz, 120 Hz, dan 144 Hz untuk pilihan tertinggi. Perangkat PC gaming dengan kemampuan menghasilkan frame rate di atas 60 fps tentu akan suka saat dipasangkan dengan BenQ. Gejala image tearing akibat tingkat refresh rate LCD monitor lebih rendah dari frame rate game dapat diminimalisir. Bahkan pada saat fitur V-Sync dihidupkan, game masih dapat “berlari” pada tingkat frame rate hingga mencapai 144 fps saat mode 144 Hz digunakan, tidak seperti pada saat menggunakan LCD monitor 60 Hz dimana frame rate game dikunci pada 60 fps pada saat fitur V-Sync diaktifkan. Alhasil kualitas visual maksimal didapatkan tanpa perlu mengorbankan kenyamanan bermain.',
+            'rating' => 2,
+            'fk_id_brand' => 36,
+            'fk_id_kategori' =>8
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Logitech G560 LIGHTSYNC PC Gaming Speaker',
+            'stok'    => '10',
+            'harga' => 3439000,
+            'berat' => 10,
+            'review' => 'LIGHTSYNC RGB
+            LIGHTSYNC RGB immerses you into the environment with lighting that automatically reacts to your content. Light and color can sync with what’s on your screen, respond in rhythm to audio, or deliver special lighting effects programmed by developers. Set a mood and enhance the experience with ~16.8M customizable colors.
+
+            Beyond the Monitor
+            Choose any area on your monitor and assign it to any of the four lighting zones via Logitech G HUB. Choose any part of the screen and assign to any of the 4 areas: left and right, front and back. LIGHTSYNC engine reads the pixels’ colors on screen and matches the color dynamically to your speakers in real-time. The result is stunning environmental lighting that immersing your room into the experience.
+
+            Bring Games to Light
+            Extend the game world into your room. Game developers work with our LIGHTSYNC SDK to program the color and animation effects for each game. That means the spectacular moments that the game creators focus on will be enhanced with RGB. Your favorite games. Brought to light.
+
+            Audio Visualizer
+            Create your own dance party with Audio Visualizer. It activates to bring your music to life. Low-volume response is a soft breathing effect. High-volume lighting pulses to the beat—rear lights take the bass and fronts take mids and highs. Connect via USB and use Logitech G HUB to customize lighting color and effects.
+
+            240 Watts Powerful Sound
+            Feel the explosive action from 240 Watts Peak (120 Watts RMS) power feeding the down-firing subwoofer and two satellite speakers with lightweight, high-strength metallic drivers. Hear every detail as game and sound designers intended from this 2.1 speaker system. And from a wide range of angles, thanks to the unique driver design delivering a huge soundscape.
+
+            One Speaker for All Your Audio
+            G560 connects to and mixes multiple sources: USB, 3.5mm, and Bluetooth®. With Logitech Easy-Switch™ you can seamlessly switch between up to 4 connected devices.
+
+            Designed to Break Boundaries
+            Feel games and music in a whole new way. Two lighting zones per speaker deliver rear ambient projection to enhance your environment and front-facing lights for more active and informational lighting. With LIGHTSYNC you can customize across approximately 16.8 million colors to match your style and setup.
+
+            Logitech G HUB
+            With Logitech G HUB, you can customize lighting and create your own effects or pick from one of the advanced LIGHTSYNC features.
+            Make your lights react to any content- games, videos, music. Tap into advanced audio equalizer or program the G-key to activate custom commands for any applications.
+
+            Controls at Your Fingertips
+            Volume control is front and center. Bluetooth® pairing is done with the touch of a button. Programmable G-key cycles through color brightness by default, or can be programmed to trigger applications or execute in-game macros via G HUB. The power button is also directly within reach on the back of the right satellite speaker.',
+            'rating' => 4,
+            'fk_id_brand' => 13,
+            'fk_id_kategori' =>11
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'NYK SP N03 Audio Speaker',
+            'stok'    => '10',
+            'harga' => 150000,
+            'berat' => 10,
+            'review' => 'Gaming RGB Speaker SP-N03 already equipped with Stereoscopic 3D Games Stereo Audio that produce clear and powerful sound that can makes you more immerse in game. This speaker also have double sides strong bass that produce strong and powerful bass.
+
+            Double 45mm SUper neodymium magnet speaker
+            45mm Powerful Neodymium Speaker
+            Speaker NYK SP-N03 already equipped with super big 45mm neodymium magnet speaker that produce clear and powerful sound.',
+            'rating' => 2,
+            'fk_id_brand' => 14,
+            'fk_id_kategori' =>11
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Steelseries GameDAC Gaming Soundcard',
+            'stok'    => '10',
+            'harga' => 2120000,
+            'berat' => 10,
+            'review' => 'GameDAC mengubah PS4 atau PC menjadi sistem audio berkinerja tinggi dengan bypass yang rendah. Dengan jantung Chipset ESS Saber 9018 Referensi DAC yang legendaris, dengan kualitas audio yang tak tertandingi, ni membuat suara bass lebih kencang, efek suara individual lebih jelas, dan isyarat posisasinya lebih akurat.
+
+            GameDAC adalah DAC gaming pertama dengan sertifikasi Hi-Res Audio. Rasakan kualitas luar biasa file WAV, FLAC, dan DSD, streaming dari sumber Hi-Res seperti Tidal, dan siap untuk audio game hi-res dengan 96 kHz asli GameDAC, dukungan 24-bit.
+
+            Melalui file jack 3.5mm jack, GameDAC meningkatkan pengalaman bermain Anda dengan audio berkekuatan tinggi yang kuat melalui headset Arctis, sepasang headphone high-end terpisah, atau headset game lainnya.',
+            'rating' => 4,
+            'fk_id_brand' => 18,
+            'fk_id_kategori' =>11
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Akko Naruto Shippuden Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 235000,
+            'berat' => 1,
+            'review' => '',
+            'rating' => 4,
+            'fk_id_brand' => 34,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Akko One Piece-Chopper Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 140000,
+            'berat' => 1,
+            'review' => '',
+            'rating' => 4,
+            'fk_id_brand' => 34,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Cooler Master MP510 Extra Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 399000,
+            'berat' => 1,
+            'review' => 'PREMIUM QUALITY, FLAWLESS VICTORY
+            The MP510 Gaming Mouse Pad is an upgrade in every sense of the word, adding skill points to durability, accuracy, and performance. The key is in the special Cordura® fabric, which delivers responsiveness, durability, and water resistance. No need to worry about sweat, tears, and energy drinks nerfing your performance. Designed for the perfect balance of speed and control, the anti-fray stitching of the MP510 prevents pesky peeling. Sturdy and built to last, the MP510 is your exotic gear of chocie on the battlefield.
+
+            Durable Cordura Fabric
+            Fabric with a legendary reputation for durability, water-resistance, and pro-grade qualities.
+
+            Anti-fray Stitching
+            Extends the life of your pad by preventing peeling around the edges.
+
+            Glow-in-the-dark Logo
+            Because glow in the dark things are rad, no matter how old you are.
+
+            Splash-proof Surface
+            Any and all fluids don’t absorb into the Mouse Pad, prolonging its life and preventing unpleasant smells.
+
+            A Perfect Fit
+            Specially designed to fit perfectly with your MasterMouse.',
+            'rating' => 4,
+            'fk_id_brand' => 8,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Cooler Master MP510 Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 279000,
+            'berat' => 1,
+            'review' => 'PREMIUM QUALITY, FLAWLESS VICTORY
+            The MP510 Gaming Mouse Pad is an upgrade in every sense of the word, adding skill points to durability, accuracy, and performance. The key is in the special Cordura® fabric, which delivers responsiveness, durability, and water resistance. No need to worry about sweat, tears, and energy drinks nerfing your performance. Designed for the perfect balance of speed and control, the anti-fray stitching of the MP510 prevents pesky peeling. Sturdy and built to last, the MP510 is your exotic gear of chocie on the battlefield.
+
+            Durable Cordura Fabric
+            Fabric with a legendary reputation for durability, water-resistance, and pro-grade qualities.
+
+            Anti-fray Stitching
+            Extends the life of your pad by preventing peeling around the edges.
+
+            Glow-in-the-dark Logo
+            Because glow in the dark things are rad, no matter how old you are.
+
+            Splash-proof Surface
+            Any and all fluids don’t absorb into the Mouse Pad, prolonging its life and preventing unpleasant smells.
+
+            A Perfect Fit
+            Specially designed to fit perfectly with your MasterMouse.',
+            'rating' => 4,
+            'fk_id_brand' => 8,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Digital Alliance D4 Hexa XL RGB Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 210000,
+            'berat' => 1,
+            'review' => 'Model: D4 Hexa RGB
+            Type: Speed & Control
+            Color: Black
+            Material: Polyester
+            Natural Rubber Base Design: Yes
+            Dimension: 800mm x 300mm x 3 mm
+            Voltage: 5V, 100mA
+
+            Other Features:
+            Flexible Surface
+            15 Mode Spectrum Backlighting
+            Waterproof
+            Power Off Memory Function
+            Detachable Cable
+            Anti-Slip Rubber Base',
+            'rating' => 4,
+            'fk_id_brand' => 28,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Hyperx Fury S Control Extra Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 471000,
+            'berat' => 1,
+            'review' => 'HyperX™ FURY S Pro Gaming Mouse Pad has seamlessly stitched anti-fray edges to give you a flat and uniform surface. Whether you prefer speed or precision, the densely woven fabric pad provides a surface that feels smooth to the touch and is optimized for your preference. HyperX FURY S features a soft cloth surface for wrist comfort and a textured natural rubber underside designed to hold fast when the action gets frenetic. FURY S comes in four sizes to fit your set up and can be rolled up for easy portability.
+
+            The HyperX Pulsefire and FURY S bundle is a deadly duo designed to upgrade your aiming accuracy. Check your local etailer/retailer for availability.
+
+            Seamless anti-fray stitching
+            FURY S has seamless anti-fray stitched edges for resistance to daily wear and tear.
+
+            Available surface options built to provide precision or speed
+            Pick your pad, either optimized for precision or lower friction for speed.
+
+            Comfort and stability
+            HyperX FURY S has a soft cloth surface for wrist comfort and a textured natural rubber underside designed to hold fast under duress.',
+            'rating' => 4,
+            'fk_id_brand' => 26,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Hyperx Fury S Control Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 259000,
+            'berat' => 1,
+            'review' => 'HyperX™ FURY S Pro Gaming Mouse Pad has seamlessly stitched anti-fray edges to give you a flat and uniform surface. Whether you prefer speed or precision, the densely woven fabric pad provides a surface that feels smooth to the touch and is optimized for your preference. HyperX FURY S features a soft cloth surface for wrist comfort and a textured natural rubber underside designed to hold fast when the action gets frenetic. FURY S comes in four sizes to fit your set up and can be rolled up for easy portability.
+
+            The HyperX Pulsefire and FURY S bundle is a deadly duo designed to upgrade your aiming accuracy. Check your local etailer/retailer for availability.
+
+            Seamless anti-fray stitching
+            FURY S has seamless anti-fray stitched edges for resistance to daily wear and tear.
+
+            Available surface options built to provide precision or speed
+            Pick your pad, either optimized for precision or lower friction for speed.
+
+            Comfort and stability
+            HyperX FURY S has a soft cloth surface for wrist comfort and a textured natural rubber underside designed to hold fast under duress.',
+            'rating' => 4,
+            'fk_id_brand' => 26,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'NYK G-7000 XL RGB Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 160000,
+            'berat' => 1,
+            'review' => 'Mousepad NYK G-7000 is XXL Gaming Mousepad that have 7-Color Lightning with 12 RGB effects on the side. This Mousepad also using high grade material such as Micro-Textured Cloth on the surface and Rubber on the base so this mousepad optimized for both Speed and Control, won’t slip at all. This mousepad also have LED Light Controller.
+
+            Mousepad NYK G-7000 is XXL Gaming Mousepad that have 7-Color Lightning with 12 RGB effects on the side.',
+            'rating' => 4,
+            'fk_id_brand' => 14,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Razer Firefly V2',
+            'stok'    => '10',
+            'harga' => 899000,
+            'berat' => 1,
+            'review' => 'LET THERE BE LIGHT
+            Thinner. Brighter. Better. Turn it up and illuminate your battlestation with the new, improved Razer Firefly V2—an ultra-thin mouse mat designed for brilliant performance in every sense of the word.
+
+            POWERED BY RAZER CHROMA RGB
+            Enjoy endless RGB lighting customization with our brightest Razer Chroma™ mouse mat yet. Choose from a collection of 16.8 million colors and our suite of signature lighting effects for a vibe that perfectly complements your setup.
+
+            MICRO-TEXTURED SURFACE
+            The surface of the Razer Firefly V2 is calibrated for all mouse sensors and lab tested to ensure pixel-precise tracking between your mouse and cursor, allowing you to aim and maneuver with greater accuracy.
+
+            BUILT-IN CABLE CATCH
+            Manage your mouse cable neatly to prevent it from being entangled, reducing drag for smoother mouse swipes when gaming.
+
+            OPTIMIZED SURFACE COATING
+            Whether you favor speed, control, or a balance of both, the mat’s coating provides the right amount of friction and glide that caters to any playstyle.
+
+            ULTRA-THIN FORM FACTOR WITH ANTI-SLIP BASE
+            At just 3mm, it’s thin enough for your wrist to rest comfortably on your desk, while the anti-slip rubber base keeps the mat in place during intense gameplay.',
+            'rating' => 4,
+            'fk_id_brand' => 15,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Razer Gigantus Elite Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 460000,
+            'berat' => 1,
+            'review' => 'Ultra Large for Big Swipes
+            When you’re in the thick of battle, it’s frustrating to have your movement be limited by the size of your mouse mat. Substantially larger than the average mouse mat, the Razer Gigantus provides you with ample space to maneuver especially when you play on a low sensitivity setting, reducing the need to lift and reposition your mouse between swipes.
+
+            Optimized for Speed and Control
+            The Razer Gigantus has been engineered to provide you with a smooth glide and adequate stopping power, so you get the best of both worlds on the battlefield. Free from elevations or depressions, the flat cloth surface of this next level gaming mouse mat is optimized for highly responsive tracking, giving you increased accuracy that meets the needs of esports athletes.
+
+            Thicker Than Ever
+            With 5 mm thick high density foam and a rubberized base, the Razer Gigantus stays firmly in place, even over imperfect surfaces, providing a reliable foundation for consistent mouse movements.',
+            'rating' => 3,
+            'fk_id_brand' => 15,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Rexus Daxa RGB Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 259000,
+            'berat' => 1,
+            'review' => 'Unmatched Gliding Experience!
+
+            Ketangguhan menjadi kunci dalam sebuah produk yang digunakan setiap hari, seperti mousepad. Sebagai alas mouse yang setiap saat mengalami gesekan saat mouse digerakkan, dibutuhkan alas mouse yang kuat, fleksibel, dan mudah ditrek oleh sensor mouse secara akurat.
+
+            Mousepad DAXA Mats hadir dengan mengombinasikan fitur unggulan mousepad masa kini, seperti desain moderen, LED RGB, dan ketebalan alas yang ideal, dengan bahan atau material pilihan yang terbuat dari jenis bahan Cordura. Cordura terkenal sebagai salah satu material pilihan pembuat tas dan perlengkapan outdoor lain yang mempunyai durabilitas tinggi, anti air, dan mempunyai kontur permukanan yang mudah ditrek.
+            Dengan permukaan bertekstur dan dilengkapi dengan ketebalan ideal, Mousepad DAXA Mats akan memaksimalkan pergerakan mouse secara presisi, meski dalam kecepatan dan akurasi tinggi. Temukan kesempurnaan sebuah mousepad dalam mousepad DAXA Mats.
+
+            Durabilitas Maksimal dengan Cordura
+            Mousepad DAXA Mats menggunakan material alas permukaan berbahan Cordura. Dalam mousepad ini, Cordura yang digunakan berbahan dasar jenis nylon. Tipe Cordura jenis ini banyak digunakan sebagai bahan pembuat tas berkualitas sehingga terkenal akan ketahananya terhadap cuaca, gesekan, dan paparan air.
+
+            RGB LED dengan 10 Mode Pencahayaan
+            Mousepad DAXA Mats dilengkapi dengan LED RGB fleksibel dengan 10 mode warna yang akan menambah gaya dan semangat permainan Anda. Pengaturan LED dapat dilakukan dengan tombol yang tersedia pada bagian panel yang terhubung dengan kabel USB.
+
+            Ukuran Lebih Besar
+            Mousepad DAXA Mats mempunyai ukuran yang lebih besar di kelasnya, baik secara lebar maupun panjangnya. Dengan ukuran yang lebih besar tersebut, pergerakan mouse jadi lebih leluasa. Cocok untuk digunakan memainkan beragam genre game.
+
+            Pengendalian Maksimal
+            Mousepad DAXA Mats cocok bagi semua tipe dan jenis sensor mouse, serta menjamin penguasaan mouse yang lebih optimal. Dengan alas karet yang tebal, pergerakan mouse akan lebih mantap saat dilakukan dengan sedikit tekanan pada mouse. Karenanya, mousepad ini cenderung bertipe “Control”. Cocok buat Anda yang membutuhkan akurasi tinggi dalam pergerakan.
+
+            Lapisan Anti-kelupas
+            Mousepad DAXA Mats menggunakan sistem pres dan jahit obras untuk menyatukan antara lapisan permukaan Cordura dan bahan dasar karet sehingga sangat menyatu dan tak dapat mengelupas.
+
+            Ketebalan Ideal
+            Mousepad DAXA Mats mempunyai alas lebih tebal, yaitu 5mm. Dengan ketebalan tersebut, permukaan karet akan terasa lebih empuk sehingga mempunyai daya cengkram yang lebih baik bagi pergerakan mouse.',
+            'rating' => 3,
+            'fk_id_brand' => 30,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Rexus Kvlar T7 Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 70000,
+            'berat' => 1,
+            'review' => 'KOMBINASI DUA LAPISAN
+            Rexus Gaming Mousepad KVLAR Speed T6, T7, T8 merupakan mousepad gaming yang mengombinasikan dua lapisan berkualitas tinggi. Untuk lapisan atas, kain Cloth bertekstur halus dan lembut (silky) memungkinkan sensor mouse memetakan frame secara detil. Di lapisan bawahnya, terdapat lembaran karet berteknologi mutakhir yang bertekstur sehingga anti-selip, sekaligus berfungsi untuk meredam tekanan dari atas.
+
+            UKURAN BERAGAM
+            Rexus Mousepad Gaming KVLAR Speed T6, T7, T8 memiliki ukuran yang beragam, dari kecil, besar, dan panjang, hingga melingkupi semua area permainan, termasuk sebagai alas keyboard. Hal itu akan memungkinkan pergerakan yang bebas sekaligus dapat berfungsi sebagai bantalah yang nyaman untuk kedua pergelangan tangan Anda.
+
+            JAHITAN TEPI ANTI-LEPAS
+            Mousepad Gaming Rexus KVLAR Speed T6, T7, T8 memiliki lapisan permukaan Cloth dan bahan dasar karet disatukan dengan metode press dan diperkuat dengan jahitan obras benang nilon di pinggir mousepad sehingga menyatu dan tak dapat mengelupas.
+
+            AKSELERATIF NAMUN TETAP PRESISI
+            Rexus Gaming Mousepad KVLAR Speed T6, T7, T8 memiliki lapisan atas yang licin dan berwarna gelap memungkinkan sensor mouse memetakan piksel secara sempurna sehingga memudahkan pergerakan mouse yang cepat dan bertenaga, namun tetap presisi.
+
+            MATERIAL AWET
+            Bahan Mousepad Gaming Rexus KVLAR Speed T6, T7, T8 berkualitas tinggi sehingga fleksibel, kuat, awet, dan tak mudah sobek. Karet lapisannya mempunyai ketebalan ideal yang nyaman digunakan, fleksibel, dan tak mudah mengeras.
+
+            FREE YOUR MOVE!
+            Fitur Unggulan Mousepad Gaming
+            Performa permainan terbaik tergantung pergerakan mouse yang didukung oleh mousepad gaming yang membantu akselerasi, kecepatan, maupun presisi kursor. Dengan ukuran yang lebar, Rexus Mousepad Gaming KVLAR Speed T6, T7, T8 akan membebaskan pergerakan mouse Anda sehingga mengoptimalkan pemetaan sensor dan meningkatkan sensasi bermain Anda.
+
+            Mousepad Gaming Rexus KVLAR Speed T6, T7, T8 diproduksi dengan teknologi mutakhir ini akan mengakomodasi setiap pergerakan mouse secara halus dan lancar sehingga mendongkrak performa dan kenyamanan. Gaming mousepad ini mempunyai permukaan yang halus dan licin sehingga sangat tepat untuk permainan berkarakter “speed” yang membutuhkan pergerakan mouse secara cepat namun tetap presisi.',
+            'rating' => 3,
+            'fk_id_brand' => 30,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'SteelSeries QcK Heavy Large Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 490000,
+            'berat' => 1,
+            'review' => 'Extra Thick Gaming Platform
+            QcK Heavy mouse pads feature an extra thick rubber base for a solid gaming platform and added cushion for your wrist.
+
+            Pinpoint Mouse Accuracy
+            Tested by the top mouse sensor manufacturer, the high thread count and smooth surface optimizes mouse tracking accuracy for both optical and laser sensors.
+
+            Legendary Micro-Woven Cloth
+            With over 10 million sold, the SteelSeries QcK is the pinnacle of surface performance and innovation.
+
+            Never-Slip Base
+            The durable, non-slip rubber base is designed to eliminate unwanted movement and provide a solid platform for competitive gaming.
+
+            Professional Performance
+            For the past 15 years, esports pros have trusted the QcK as their mousepad of choice, and for good reason: SteelSeries products have won more prize money than any other brand.
+
+            QcK Heavy Series
+            Featuring the same legendary micro-woven cloth surface as the QcK, the QcK Heavy Series is three times as thick, allowing for extra arm and wrist comfort.',
+            'rating' => 3,
+            'fk_id_brand' => 18,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Steelseries QcK Large Dota 2 TI9 Edition Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 380000,
+            'berat' => 1,
+            'review' => 'QcK Large Dota 2 TI9 Edition merupakan mousepad terbaru seri game Dota.Permukaan surface kain berbahan micro-woven sangat halus, dengan hasil tracking yang sudah teruji dan bisa digunakan untuk mouse dengan sensor Optik ataupun Laser.
+            Dengan bahan micro-woven cloth memastikan mousepad akan sangat aman untuk mousefeet karena dapat meminimalisir gesekan.',
+            'rating' => 4,
+            'fk_id_brand' => 18,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Tecware Haste XL RGB Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 265000,
+            'berat' => 1,
+            'review' => 'Haste Mousemats were built for precise mouse tracking and maximum control, perfect for Gamers.
+
+            Large in size, the mousemat will fit your keyboard and have ample room for extensive mouse movement.
+            A non-slip rubber base prevents unnecessary movement of your gear during high-pressure situations.
+
+            Edge-stitching on the frame prevents the surface of mouse mat from coming apart, while its water-resistant fabric makes cleaning of accidental spills easier.
+
+            Haste’s clean & simple design makes it the perfect add-on to your setup.
+
+            Care instructions
+            – Do not fold
+            – Do not roll tightly
+            – Do not stretch
+            – Wipe moderately with damp cloth to clean surface',
+            'rating' => 3,
+            'fk_id_brand' => 19,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Zowie G-SR SE Deep Blue Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 735000,
+            'berat' => 1,
+            'review' => 'GSR-SE DEEP BLUE was designed for gamers that enjoy the comfort of a rubber base in a cloth mousepad.
+            The unique soft rubber base is 100% flat. It provides comfort while maintaining a consistent glide across the mousepad.
+            The SR-SE provides a different glide from the black G-SR.',
+            'rating' => 4,
+            'fk_id_brand' => 36,
+            'fk_id_kategori' =>10
+        ]);
+        BarangModel::insert([
+            'namaBarang' => 'Zowie G-SR Gaming Mousepad',
+            'stok'    => '10',
+            'harga' => 600000,
+            'berat' => 1,
+            'review' => 'SR is the answer for gamers that enjoy the comfort of a soft rubber base in a cloth mousepad. The newly developed soft rubber base is 100% flat, providing comfort while maintaining a consistent glide across the mousepad to ensure the best performance is met.',
+            'rating' => 4,
+            'fk_id_brand' => 36,
+            'fk_id_kategori' =>10
+        ]);
     }
 }
