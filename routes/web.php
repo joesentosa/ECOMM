@@ -23,7 +23,8 @@ Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::get('/deleteWL',[CatalogController::class,'deleteWL']);
 Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
-
+Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
+Route::post('/catalog-filter-price', [CatalogController::class, 'filterPrice'])->name('filter-price');
 // admin route
 Route::middleware('admin.auth')
     ->prefix('admin')

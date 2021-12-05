@@ -53,7 +53,7 @@
                                         <li>
                                             <label class="checkbox-default" for="{{$item->nama_kategori}}">
                                             {{-- <input type="hidden" name="category" value="{{$item->id_kategori}}"> --}}
-                                            <input type="checkbox" id="{{$item->nama_kategori}}" name="category[]" value="{{$item->id_kategori}}">
+                                            <input type="checkbox" id="{{$item->nama_kategori}}" name="category" value="{{$item->id_kategori}}">
                                             <span>{{$item->nama_kategori}}</span>
                                             </label>
                                         </li>
