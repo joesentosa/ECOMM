@@ -1688,5 +1688,10 @@ class GambarSeeder extends Seeder
             'id_barang' => '65',
             'gambar'    => 'uploads/barang/96_4.jpg',            
         ]);
+        
+        GambarModel::insert([            
+            'id_barang' => '65',
+            'gambar'    => 'uploads/barang/96_4.jpg',            
+        ]);
     }
 }

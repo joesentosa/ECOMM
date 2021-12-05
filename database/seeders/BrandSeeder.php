@@ -160,5 +160,9 @@ class BrandSeeder extends Seeder
             'namaBrand' => 'Zowie',
             'gambar'    => 'uploads/brand/logo_zowie.png'
         ]);
+        BrandModel::insert([            
+            'namaBrand' => 'Elgato',
+            'gambar'    => 'uploads/brand/logo_elgato.png'
+        ]);
     }
 }
