@@ -36,7 +36,7 @@ class CustomerController extends Controller
         return view('__User.dashboard.wishlist');
     }
     public function detailBarang(BarangModel $barang){
-        //$dtbarang = BarangModel::getByName($name);
+        // $dtbarang = BarangModel::getByName($name);
         $socialShare = \Share::currentPage("Hey! Look at this product.. It's Awesome! Get It Now!", [], null, null)
             ->facebook()
             ->twitter()
