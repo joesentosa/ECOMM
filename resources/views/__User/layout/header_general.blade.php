@@ -7,7 +7,7 @@
                 <div class="col-auto">
                     <!-- Start Header Logo -->
                     <a href="{{ route('page.index.customer') }}" class="header-logo">
-                        <img class="img-fluid" src="{{ asset('assets/igw/logo-light-theme.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/igw/logo-dark.png') }}" alt="" loading="eager">
                     </a>
                     <!-- End Header Logo -->
                 </div>
@@ -34,7 +34,8 @@
                                     </div>
                                 </li>
                                 <li class="menu-items">
-                                    <a href="shop-grid-sidebar-left.html">Shop <span class="material-icons">arrow_right</span></a>
+                                    <a href="shop-grid-sidebar-left.html">Shop <span
+                                            class="material-icons">arrow_right</span></a>
                                     <div class="has-dropdown megamenu">
                                         <div class="menu-content">
                                             <h6 class="title">Shop Page</h6>
@@ -70,7 +71,8 @@
                                     </div>
                                 </li>
                                 <li class="menu-items">
-                                    <a href="blog-list-left-sidebar.html">Blog <span class="material-icons">arrow_right</span></a>
+                                    <a href="blog-list-left-sidebar.html">Blog <span
+                                            class="material-icons">arrow_right</span></a>
                                     <div class="has-dropdown megamenu">
                                         <div class="menu-content">
                                             <h6 class="title">Blog List Full Width</h6>
@@ -117,7 +119,8 @@
 
                         <div class="search-event">
                             <input class="header-search" type="search" placeholder="Search">
-                            <button class="header-search-btn" type="submit"><img src="{{asset('assets/Martup/images/icons/icon-search.svg')}}" alt=""></button>
+                            <button class="header-search-btn" type="submit"><img
+                                    src="{{asset('assets/Martup/images/icons/icon-search.svg')}}" alt=""></button>
                         </div>
                         <!-- End Menu event -->
                     </div>
@@ -125,18 +128,30 @@
                 <div class="col-auto">
                     <div class="header-action">
                         @isset($WL_count)
-                        <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
-                                data-bs-target="#wishlistOffcanvas"><img
-                                src="assets/images/icons/icon-heart-dark.svg" alt=""><span
-                                class="count-tag">{{ $WL_count }}</span></button>
+                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                    data-bs-target="#wishlistOffcanvas">
+                                <img src="assets/images/icons/icon-heart-dark.svg" alt="">
+                                <span class="count-tag">{{ $WL_count }}</span>
+                            </button>
                         @endisset
                         @isset($cart_count)
-                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas" data-bs-target="#addcartOffcanvas">
+                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                    data-bs-target="#addcartOffcanvas">
                                 <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
                                 <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
                             </button>
                         @endisset
-                        
+                        @if(\Illuminate\Support\Facades\Auth::guest())
+                            <button class="header-action-item header-right">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="item-count item-count--light">Login</span>
+                            </button>
+                            @else
+                            <button class="header-action-item header-right">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="item-count item-count--light">Profile</span>
+                            </button>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -158,7 +173,8 @@
 
             <div class="col-auto">
                 <div class="mobile-action-link text-end d-flex ">
-                    <button data-bs-toggle="offcanvas" data-bs-target="#toggleMenu"><span class="material-icons">menu</span>
+                    <button data-bs-toggle="offcanvas" data-bs-target="#toggleMenu"><span
+                            class="material-icons">menu</span>
                     </button>
                 </div>
             </div>
@@ -185,7 +201,7 @@
             <div class="search-event">
                 <input class="header-search" type="search">
                 <button class="header-search-btn" type="submit"><img src="assets/images/icons/icon-search.svg"
-                                                                      alt=""></button>
+                                                                     alt=""></button>
             </div>
         </div>
 
@@ -289,12 +305,12 @@
                                                                                                 alt=""></a>
                     </li>
                     <li><a href="https://twitter.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                            src="assets/images/icons/icon-twitter-dark.svg"
-                                                                                            alt=""></a>
+                                                                                           src="assets/images/icons/icon-twitter-dark.svg"
+                                                                                           alt=""></a>
                     </li>
                     <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                                  src="assets/images/icons/icon-pinterest-p-dark.svg"
-                                                                                                  alt=""></a></li>
+                                                                                                 src="assets/images/icons/icon-pinterest-p-dark.svg"
+                                                                                                 alt=""></a></li>
                     <li><a href="https://dribbble.com/" target="_blank" rel="noopener"><img class="icon-svg"
                                                                                             src="assets/images/icons/icon-dribbble-dark.svg"
                                                                                             alt=""></a></li>
@@ -321,7 +337,7 @@
                         <div class="box">
                             <a href="" class="image">
                                 <img src="assets/images/products/small/product-small-1.webp" alt=""
-                                    class="offcanvas-wishlist-image">
+                                     class="offcanvas-wishlist-image">
                             </a>
                             <div class="content">
                                 <a href="" class="title">{{ $item->namaBarang }}</a>
@@ -340,7 +356,7 @@
                     </li>
                 @endforeach
             @endisset
-            
+
         </ul>
         <div class="offcanvas-action-link">
             <a href="wishlist.html" class="btn">View wishlist</a>
@@ -363,7 +379,7 @@
                         <div class="box">
                             <a href="" class="image">
                                 <img src="assets/images/products/small/product-small-1.webp" alt=""
-                                    class="offcanvas-wishlist-image">
+                                     class="offcanvas-wishlist-image">
                             </a>
                             <div class="content">
                                 <a href="" class="title">{{ $cart->namaBarang }}</a>
@@ -383,7 +399,7 @@
                     </li>
                 @endforeach
             @endisset
-            
+
         </ul>
         <div class="offcanvas-action-link">
             <a href="checkout.html" class="btn">Checkout</a>

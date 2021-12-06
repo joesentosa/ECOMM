@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/plugins/swiper-bundle.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/plugins/ion.rangeSlider.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/plugins/venobox.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/fontawesome.css')}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/style.css')}}">
 
@@ -40,7 +41,7 @@
     @yield('style')
 </head>
 <body>
-    
+
 @include('__User.layout.header_general')
 @yield('content')
 @include('__User.layout.footer_general')

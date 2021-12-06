@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', [CustomerController::class, 'homepage']);
 
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
-Route::get('/login', [CustomerController::class, 'login']);
+Route::get('/login', [CustomerController::class, 'login'])->name('page.login.customer');
 Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[CatalogController::class,'cart']);
@@ -25,6 +25,7 @@ Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
 Route::post('/catalog-filter-price', [CatalogController::class, 'filterPrice'])->name('filter-price');
+
 // admin route
 Route::middleware('admin.auth')
     ->prefix('admin')
@@ -91,9 +92,6 @@ Route::prefix('auth')
 Route::middleware(['customer.auth'])
     ->prefix('user')
     ->group(function () {
-        Route::get('/', function(){
-            return redirect('/profile');
-        });
         Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
