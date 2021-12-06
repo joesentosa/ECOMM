@@ -142,15 +142,28 @@
                             </button>
                         @endisset
                         @if(\Illuminate\Support\Facades\Auth::guest())
-                            <button class="header-action-item header-right">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="item-count item-count--light">Login</span>
-                            </button>
-                            @else
-                            <button class="header-action-item header-right">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="item-count item-count--light">Profile</span>
-                            </button>
+                            <a href="{{ route('page.login.customer') }}">
+                                <button class="header-action-item header-right">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light pb-2">Login</span>
+                                </button>
+                            </a>
+                        @else
+                            <div class="menu-event dropdown">
+                                <button class="header-action-item header-right main-menu-event dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light pb-2">Profile</span>
+                                </button>
+                                <ul class="mainmenu-nav dropdown-menu">
+                                    <li class="menu-items">
+                                        <a href="{{ route('page.user.profile') }}">Profile</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <a href="{{ route('route.auth.logout') }}">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
                         @endif
                     </div>
                 </div>

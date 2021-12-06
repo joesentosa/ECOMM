@@ -80,7 +80,7 @@ Route::prefix('auth')
         Route::post('admin', [AuthController::class, 'admin_auth'])->name("route.admin.auth");
         Route::post('customer', [AuthController::class, 'customer_auth'])->name("route.customer.auth");
         Route::post('customer/register', [AuthController::class, 'customer_regis'])->name("route.customer.regis");
-        Route::get('logout', [AuthController::class, 'logout']);
+        Route::get('logout', [AuthController::class, 'logout'])->name('route.auth.logout');
 
         // callback and redirect to GOOGLE
         Route::get('redirect/google', [AuthController::class, 'redirectToGoogle']);
@@ -92,7 +92,7 @@ Route::prefix('auth')
 Route::middleware(['customer.auth'])
     ->prefix('user')
     ->group(function () {
-        Route::get('/profile', [CustomerController::class, 'getDataCustomer']);
+        Route::get('/profile', [CustomerController::class, 'getDataCustomer'])->name('page.user.profile');
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
         Route::get('/wishlist',[CustomerController::class,'page_wishlist']);
