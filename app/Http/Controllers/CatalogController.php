@@ -16,10 +16,10 @@ class CatalogController extends Controller
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::get();
+        $dtSession   = BarangModel::get();
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
-        // dd($customer);
         if ($customer == null) {
             $customer = null;
         }else{
@@ -29,35 +29,25 @@ class CatalogController extends Controller
         $wishlistCount = 0;
         if ($WLCek != null) {
             $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
-            // dd($WishlistCust);
             $wishlistCount = count($WishlistCust);
             $WL_fk_barang = [];
             for ($i=0; $i < $wishlistCount; $i++) {
                 array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
             }
-            // dd($WL_fk_barang);
-            // array_push($WishlistCust);
             $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
-            // dd($WLCust);
         }
         $cart       = null;
         $cartCount  = 0;
-        $QtyCart    = null;
-        $barangCart = null;
         if ($req->session()->has('cart_barang')) {
             $cart      = session('cart_barang');
             $cartCount = count($cart);
         }
-        // dd($barangCart);
-        // dd($cartCount);
-        // dd($QtyCart);
         // dd($cart);
-        // $selectKategori = BarangModel::whereIn("fk_id_kategori", $dtkategori->id_kategori)->get();
-        // $cart = session('cart');
         return view('__User.dashboard.catalog',[
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,
             'data_barang' => $dtbarang,
+            'data_session' => $dtSession,
             'cart_barang'=> $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
@@ -107,22 +97,21 @@ class CatalogController extends Controller
         return redirect('catalog');
     }
 
-    
-
     public function deleteCart(Request $req)
     {
         $barangId = $req->barangId;
-        $barangArr = session('cart');
-        $req->session()->forget('cart');
-        for ($i=0; $i < count($barangArr); $i++) {
-            if ($barangArr[$i] == $barangId) {
-                unset($barangArr[$i]);
+        $cart_barang = session('cart_barang');
+        $req->session()->forget('cart_barang');
+        for ($i=0; $i < count($cart_barang); $i++) {
+            if ($cart_barang[$i]['id'] == $barangId) {
+                unset($cart_barang[$i]);
             }
         }
         // dd($barangArr);
-        $req->session()->put('cart',$barangArr);
+        $req->session()->put('cart_barang',$cart_barang);
         return back();
     }
+
     public function cart(Request $request)
     {
         return view('__User.dashboard.cart');
@@ -146,6 +135,7 @@ class CatalogController extends Controller
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $customer   = Auth::user();
+        $dtSession   = BarangModel::get();
         $WLCek      = null;
         $WLCust      = null;
 
@@ -167,17 +157,17 @@ class CatalogController extends Controller
         }
         $cart       = null;
         $cartCount  = 0;
-        $barangCart = null;
-        if ($request->session()->has('cart')) {
-            $cart      = session('cart');
+        if ($request->session()->has('cart_barang')) {
+            $cart      = session('cart_barang');
             $cartCount = count($cart);
-            $barangCart= BarangModel::whereIn('id_barang',$cart)->get();
         }
+        // dd($cart);
         $data = [
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,
             'data_barang' => $brg,
-            'barang_cart' => $barangCart,
+            'data_session' => $dtSession,
+            'cart_barang' => $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
             'WL_count'=>$wishlistCount
@@ -190,6 +180,7 @@ class CatalogController extends Controller
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $customer   = Auth::user();
+        $dtSession   = BarangModel::get();
         $WLCek      = null;
         $WLCust      = null;
 
@@ -213,17 +204,16 @@ class CatalogController extends Controller
         }
         $cart       = null;
         $cartCount  = 0;
-        $barangCart = null;
-        if ($request->session()->has('cart')) {
-            $cart      = session('cart');
+        if ($request->session()->has('cart_barang')) {
+            $cart      = session('cart_barang');
             $cartCount = count($cart);
-            $barangCart= BarangModel::whereIn('id_barang',$cart)->get();
         }
         $data = [
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,
             'data_barang' => BarangModel::where('harga','>=',$min[0])->where('harga','<=',$min[1])->get(),
-            'barang_cart' => $barangCart,
+            'data_session' => $dtSession,
+            'cart_barang' => $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
             'WL_count'=>$wishlistCount

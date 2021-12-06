@@ -356,10 +356,10 @@
     </div>
     <div class="offcanvas-body">
         <ul class="offcanvas-products-list">
-            @isset($data_barang)
-            @isset($data_barang)
+            @isset($cart_barang)
+            @isset($data_session)
                 @foreach ($cart_barang as $cart)
-                @foreach ($data_barang as $barang)
+                @foreach ($data_session as $barang)
                     @if ($cart["id"] == $barang->id_barang)
                         <li class="single-item">
                             <div class="box">
