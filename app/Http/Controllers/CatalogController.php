@@ -100,15 +100,24 @@ class CatalogController extends Controller
     public function deleteCart(Request $req)
     {
         $barangId = $req->barangId;
+        $arrTemp = session('cart_barang');
         $cart_barang = session('cart_barang');
+        $inputSession = [];
         $req->session()->forget('cart_barang');
-        for ($i=0; $i < count($cart_barang); $i++) {
-            if ($cart_barang[$i]['id'] == $barangId) {
-                unset($cart_barang[$i]);
+        for ($i=0; $i < count($arrTemp); $i++) {
+            if ($arrTemp[$i]['id'] == $barangId) {
+                unset($arrTemp[$i]);
             }
         }
-        // dd($barangArr);
-        $req->session()->put('cart_barang',$cart_barang);
+        for ($i=0; $i < count($arrTemp); $i++) { 
+            for ($j=0; $j < count($cart_barang); $j++) { 
+                if ($i == $j) {
+                    array_push($inputSession, $cart_barang[$j]);
+                }
+            }
+        }
+        $req->session()->put('cart_barang',$inputSession);
+        // dd(session('cart_barang'));
         return back();
     }
 

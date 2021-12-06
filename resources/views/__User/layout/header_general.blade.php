@@ -330,7 +330,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="/deleteWL" method="get">
+                        <form action="/deleteWL" method="post">
                             <div class="item-delete text-right">
                                 <input type="hidden" name="barangId" value="{{ $item->id_barang }}">
                                 <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>

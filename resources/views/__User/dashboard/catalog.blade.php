@@ -161,7 +161,7 @@
                                     <div class="content">
                                     <div class="top">
                                         <span class="catagory">{{ $barang->kategori->nama_kategori }}</span>
-                                        <h4 class="title"><a href="product-details-default.html">{{ $barang->namaBarang }}</a></h4>
+                                        <h4 class="title"><a href="/user/detailBarang/{{ $barang->id_barang }}">{{ $barang->namaBarang }}</a></h4>
                                         <span class="price">Rp {{ number_format($barang->harga) }}<del>$400.00</del></span>
                                     </div>
                                     <div class="bottom">
