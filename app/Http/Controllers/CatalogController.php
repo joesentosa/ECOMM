@@ -161,10 +161,11 @@ class CatalogController extends Controller
 
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
+        $dtbarang   = BarangModel::get();
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
-
+        // dd($customer);
         if ($customer == null) {
             $customer = null;
         }else{
@@ -174,76 +175,36 @@ class CatalogController extends Controller
         $wishlistCount = 0;
         if ($WLCek != null) {
             $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
+            // dd($WishlistCust);
             $wishlistCount = count($WishlistCust);
             $WL_fk_barang = [];
             for ($i=0; $i < $wishlistCount; $i++) {
                 array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
             }
+            // dd($WL_fk_barang);
+            // array_push($WishlistCust);
             $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
+            // dd($WLCust);
         }
         $cart       = null;
         $cartCount  = 0;
         $barangCart = null;
-        if ($request->session()->has('cart')) {
+        if ($req->session()->has('cart')) {
             $cart      = session('cart');
             $cartCount = count($cart);
             $barangCart= BarangModel::whereIn('id_barang',$cart)->get();
         }
-        $data = [
+        // dd($barangCart);
+        // $selectKategori = BarangModel::whereIn("fk_id_kategori", $dtkategori->id_kategori)->get();
+        // $cart = session('cart');
+        return view('__User.dashboard.catalog',[
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,
-            'data_barang' => $brg,
+            'data_barang' => $dtbarang,
             'barang_cart' => $barangCart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
             'WL_count'=>$wishlistCount
-        ];
-        return view('__User.dashboard.filter-category', $data);
-    }
-
-    public function filterPrice(Request $request)
-    {
-        $dtkategori = new KategoriModel();
-        $dtbrand    = BrandModel::limit(5)->get();
-        $customer   = Auth::user();
-        $WLCek      = null;
-        $WLCust      = null;
-
-        $min = explode(";", $request->my_range);
-
-        if ($customer == null) {
-            $customer = null;
-        }else{
-            $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
-        }
-        $WishlistCust = null;
-        $wishlistCount = 0;
-        if ($WLCek != null) {
-            $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
-            $wishlistCount = count($WishlistCust);
-            $WL_fk_barang = [];
-            for ($i=0; $i < $wishlistCount; $i++) {
-                array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
-            }
-            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
-        }
-        $cart       = null;
-        $cartCount  = 0;
-        $barangCart = null;
-        if ($request->session()->has('cart')) {
-            $cart      = session('cart');
-            $cartCount = count($cart);
-            $barangCart= BarangModel::whereIn('id_barang',$cart)->get();
-        }
-        $data = [
-            'data_kategori'=>$dtkategori->getAll(),
-            'data_brand' => $dtbrand,
-            'data_barang' => BarangModel::where('harga','>=',$min[0])->where('harga','<=',$min[1])->get(),
-            'barang_cart' => $barangCart,
-            'cart_count'=>$cartCount,
-            'WL_cust'=>$WLCust,
-            'WL_count'=>$wishlistCount
-        ];
-        return view('__User.dashboard.filter-price', $data);
+        ]);
     }
 }
