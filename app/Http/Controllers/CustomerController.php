@@ -10,6 +10,7 @@ use App\Models\PromoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+// use App\Http\Controllers\Session;
 use Jorenvh\Share\Share;
 
 class CustomerController extends Controller
@@ -81,8 +82,44 @@ class CustomerController extends Controller
 
     public function addingToCart(Request $request)
     {
-        $request->session()->put('id_barang', $request->id);
-        $request->session()->put('banyak', $request->banyak);
-        return back();
+        $barangId = $request->id;
+        $barangQty = $request->banyak;
+        if ($request->session()->has('cart_barang')) {
+            $cart_barang= session('cart_barang');
+            $cekSama = false;
+            $indexBarang = -1;
+            for ($i=0; $i < count($cart_barang); $i++) { 
+                if ($barangId == $cart_barang[$i]["id"]) {
+                    $cekSama = true;
+                    $indexBarang = $i;
+                }
+            }
+            if ($cekSama == true) {
+                $request->session()->forget('cart_barang');
+                $cart_barang[$indexBarang]['qty'] += $barangQty;
+                $request->session()->put('cart_barang',$cart_barang);
+            }else{
+                $request->session()->forget('cart_barang');
+                $barang = [
+                    'id'=>$barangId,
+                    'qty'=>$barangQty
+                ];
+                array_push($cart_barang, $barang);
+                $request->session()->put('cart_barang',$cart_barang);
+            }
+
+        }else{
+            $cart_barang = [];
+            $barang = [
+                'id'=>$barangId,
+                'qty'=>$barangQty
+            ];
+            array_push($cart_barang , $barang);
+            $request->session()->forget('cart_barang');
+            $request->session()->put('cart_barang',$cart_barang);
+            // dd($cart_barang);
+        }
+        return redirect("catalog");
+        // return back();
     }
 }
