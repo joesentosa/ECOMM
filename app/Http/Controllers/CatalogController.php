@@ -152,8 +152,9 @@ class CatalogController extends Controller
     {
         //Masih bug
         $category = $request->category;
+        // dd($category);
         $brg = [];
-        for ($i=0; $i < sizeof($category); $i++) {
+        for ($i=0; $i < count($category); $i++) {
             $temp = BarangModel::where('fk_id_kategori',$category[$i])->get();
             array_push($brg, $temp);
         }
@@ -197,7 +198,7 @@ class CatalogController extends Controller
             'WL_cust'=>$WLCust,
             'WL_count'=>$wishlistCount
         ];
-        return view('__User.dashboard.filter-price', $data);
+        return view('__User.dashboard.filter-category', $data);
     }
 
     public function filterPrice(Request $request)
