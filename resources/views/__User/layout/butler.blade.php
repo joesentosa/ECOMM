@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/vendor/bootstrap.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/vendor/bootstrap.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/vendor/material-icons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/vendor/jquery-ui.min.css')}}">
 
@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/fontawesome.css')}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/style.css')}}">
+    <div id="fb-root"></div>
 
-{{--    @include('__User.layout.css')--}}
+    {{--    @include('__User.layout.css')--}}
     @yield('style')
 </head>
 <body>
