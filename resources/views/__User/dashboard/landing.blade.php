@@ -335,32 +335,48 @@
                             <ul class="product-tab nav" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all"
-                                            type="button">All <img src="assets/images/icons/product-tab-icon-1.svg"
-                                                                   alt=""></button>
+                                            type="button">
+                                        <i class="fa fa-shopping-bag" style="padding-right: 1em" aria-hidden="true"></i>
+                                        All
+                                    </button>
                                 </li>
                                 @foreach($kategories as $index => $kategory)
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" data-bs-toggle="tab"
                                                 data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
+                                            {{--                                            <img src="--}}
+                                            @if($index == 0)
+                                                <i class="fa fa-wpbeginner" style="padding-right: 1em" aria-hidden="true"></i>
+                                            @elseif($index == 1)
+                                                <i class="fa fa-gamepad" style="padding-right: 1em" aria-hidden="true"></i>
+                                            @elseif($index == 2)
+                                                <i class="fa fa-video-camera" style="padding-right: 1em" aria-hidden="true"></i>
+                                            @elseif($index == 3)
+                                                <i class="iconify" style="padding-right: 1em" data-icon="si-glyph:chair-2"></i>
+                                            @elseif($index == 4)
+                                                <i class="iconify" style="padding-right: 1em" data-icon="mdi:desk"></i>
+                                            @elseif($index == 5)
+                                                <i class="fa fa-headphones" aria-hidden="true" style="padding-right: 1em"></i>
+                                            @elseif($index == 6)
+                                                <i class="fa fa-keyboard-o" aria-hidden="true" style="padding-right: 1em"></i>
+                                            @elseif($index == 7)
+                                                <i class="fa fa-desktop" style="padding-right: 1em" aria-hidden="true"></i>
+                                            @elseif($index == 8)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @elseif($index == 9)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @elseif($index == 10)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @elseif($index == 11)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @elseif($index == 12)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @elseif($index == 13)
+                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                            @endif
+                                            {{--                                            " alt="">--}}
                                             {{ $kategory->nama_kategori }}
-                                            <img src="
-                                            @php
-                                                switch ($index)
-                                                {
-                                                    case 0:
-                                                        echo asset("assets/images/icons/product-tab-icon-1.svg");
-                                                        break;
-                                                    case 1:
-                                                        echo asset("assets/images/icons/product-tab-icon-2.svg");
-                                                        break;
-                                                    case 2:
-                                                        echo asset("assets/images/icons/product-tab-icon-3.svg");
-                                                        break;
-                                                    default:
-                                                        echo asset("assets/images/icons/product-tab-icon-4.svg");
-                                                }
-                                            @endphp
-                                            " alt=""></button>
+                                        </button>
                                     </li>
                                 @endforeach
                             </ul>

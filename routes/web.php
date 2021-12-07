@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/home', [CustomerController::class, 'homepage']);
 
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/login', [CustomerController::class, 'login'])->name('page.login.customer');
@@ -18,14 +17,14 @@ Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[CatalogController::class,'cart']);
 Route::get('/checkout',[CatalogController::class,'checkout']);
-Route::get('/addToCart',[CatalogController::class,'addToCart']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::post('/deleteWL',[CatalogController::class,'deleteWL']);
-Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
+Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
+// Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
+Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
 Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
 Route::post('/catalog-filter-price', [CatalogController::class, 'filterPrice'])->name('filter-price');
-
 // admin route
 Route::middleware('admin.auth')
     ->prefix('admin')
@@ -97,8 +96,8 @@ Route::middleware(['customer.auth'])
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
         Route::get('/wishlist',[CustomerController::class,'page_wishlist']);
 
-        Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
-        Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
+        
+        
     });
 //end route customer
 

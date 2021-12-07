@@ -24,8 +24,7 @@
                 </div>
             </div>
             <div class="col-xl-8">
-                <form action="{{url('user/addingToCart')}}" method="post">
-                    @csrf
+                
 
                         <div class="product-page-details">
                         <h5>{{$barang->namaBarang}}</h5>
@@ -41,7 +40,9 @@
                         </div>
                         <hr>
                         <p>{{$barang->review}}</p>
-                        <div class="product-price digits">{{'Rp.'.$barang->harga.',-'}}</div>
+                        <div class="product-price digits">
+                            {{'Rp.'. number_format($barang->harga).',-'}}
+                        </div>
                         <hr>
                         <div>
                         <table class="product-page-width">
@@ -78,13 +79,15 @@
 
                             </div>
                         </div>
+                        <form action="{{url('addingToCart')}}" method="post">
                         <div class="m-t-15">
-                            <input type="hidden" name="id" value="{{$barang->id_barang}}">
-                            <input type="submit" class="btn btn-primary-gradien m-r-10" data-original-title="btn btn-info-gradien" style="color:white;" value="{{"Add To Cart"}}">
+                                @csrf
+                                    <input type="hidden" name="id" value="{{$barang->id_barang}}">
+                                    <input type="submit" class="btn btn-primary-gradien m-r-10" data-original-title="btn btn-info-gradien" style="color:white;" value="{{"Add To Cart"}}">
+                            </form>
                             <a  class="btn btn-success-gradien m-r-10" data-original-title="btn btn-info-gradien" style="color:white;">Buy Now</a>
                         </div>
 
-                </form>
             </div>
         </div>
         </div>

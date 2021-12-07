@@ -152,39 +152,9 @@
                     <div class="row mb-n25">
                         @isset($data_barang)
                             @foreach($data_barang as $barang)
-                            <div class="col-md-6 col-12 mb-25">
-                                <!-- Start Product Single Item - Style 1 -->
-                                <div class="product-single-item-style-1">
-                                    <a href="product-details-default.html" class="image img-responsive">
-                                    <img class="img-fluid" src="{{asset('assets/Martup/images/products/default/product-default-style-1-img-1.webp')}}" alt="">
-                                    </a>
-                                    <div class="content">
-                                    <div class="top">
-                                        <span class="catagory">{{ $barang->kategori->nama_kategori }}</span>
-                                        <h4 class="title"><a href="/user/detailBarang/{{ $barang->id_barang }}">{{ $barang->namaBarang }}</a></h4>
-                                        <span class="price">Rp {{ number_format($barang->harga) }}<del>$400.00</del></span>
-                                    </div>
-                                    <div class="bottom">
-                                        <ul class="review-star">
-                                            @for ($i = 0; $i < floor($barang->rating); $i++)
-                                                <li class="fill"><span class="material-icons">star</span></li>
-                                            @endfor
-                                            @if ($barang->rating * 10 % 10 != 0)
-                                                <li class="fill"><span class="material-icons">star_half</span></li>
-                                            @endif
-                                        </ul>
-                                        <div class="product-event-items">
-                                            <form action="/wishlist" method="get">
-                                                @csrf
-                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
-                                                <button class="btn wishlist-btn"><span class="material-icons">favorite_border</span></button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    </div>
+                                <div class="col-md-6 col-12 mb-25">
+                                    @include('__User.dashboard.single_item')
                                 </div>
-                                <!-- End Product Single Item - Style 1 -->
-                            </div>
                             @endforeach
                         @endisset
                     </div>
