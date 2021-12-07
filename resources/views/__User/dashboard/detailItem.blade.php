@@ -218,20 +218,13 @@
                                 <div class="social-links">
                                     <span class="text">Share:</span>
                                     <div class="items">
-                                        <a href="{{ $socialShare["facebook"] }}">
-                                            <img class="icon-svg"
-                                                 src="{{ asset('assets/images/icons/icon-facebook-f-dark.svg') }}"
-                                                 alt="">
-                                        </a>
-                                        <a href="{{ $socialShare["twitter"] }}">
-                                            <img class="icon-svg"
-                                                 src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}" alt="">
-                                        </a>
-                                        <a href="{{ $socialShare["whatsapp"] }}">
-                                            <img class="icon-svg"
-                                                 src="{{ asset('assets/images/icons/icon-pinterest-p-dark.svg') }}"
-                                                 alt="">
-                                        </a>
+                                        <a href="{{ $socialShare["facebook"] }}"><img class="icon-svg"
+                                                                                      src="{{ asset('assets/images/icons/icon-facebook-f-dark.svg') }}"
+                                                                                      alt=""></a>
+                                        <a href="{{ $socialShare["twitter"] }}"><img class="icon-svg"
+                                                                                     src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}"
+                                                                                     alt=""></a>
+                                        <a href="{{ $socialShare["whatsapp"] }}"><i class="icon-svg iconify"  style="color: #457b9d;" data-icon="dashicons:whatsapp"></i></a>
                                     </div>
                                 </div>
                             </div>

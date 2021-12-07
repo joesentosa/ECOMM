@@ -60,7 +60,7 @@
                                         @endforeach
                                     @endisset
                                     </ul> <br>
-                                    <input class="btn btn-primary" type="submit" value="FILTER">
+                                    <input class="btn" style="background-color:#ade1e9; color:#fff;" type="submit" value="FILTER">
                             </form>
                         </div><br>
                     </div>
@@ -114,7 +114,7 @@
                         <form action="{{route('filter-price')}}" method="post">
                             @csrf
                             <input type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="0" data-max="10000000" data-from="500" data-to="5000" />
-                            <input class="btn btn-primary" type="submit" value="Filter by price">
+                            <input class="btn" style="background-color:#ade1e9; color:#fff;" type="submit" value="Filter by price">
                         </form>
                     </div>
                 </div> <!-- End Single Sidebar Widget -->
