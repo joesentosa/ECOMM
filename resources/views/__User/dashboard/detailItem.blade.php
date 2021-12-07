@@ -12,7 +12,7 @@
         <div class="box-wrapper">
             <div class="breadcrumb-wrapper breadcrumb-wrapper--style-1 pos-relative">
                 <div class="breadcrumb-bg">
-                    <img src="{{ asset('assets/Martup/images/breadcrumb/breadcrumb-img-product-details-page.webp') }}"
+                    <img src="{{ asset('assets/images/banner/bg-2.jpg') }}"
                          alt="">
                 </div>
                 <div class="breadcrumb-content section-fluid-270">
@@ -41,66 +41,71 @@
                         <div class="col-xxl-8 col-lg-6">
                             <!-- Start Product Gallert - Tab Style -->
                             @isset($barang->gambar[0])
-                            <div class="product-gallery product-gallery--style-tab">
-                                <div class="row flex-md-row flex-column-reverse">
-                                    <div class="col-md-3">
-                                        <!-- Start Product Thumbnail -->
-                                        <ul class="product-thumbnail-image nav">
-                                            <li class="nav-item">
-                                                <button class="nav-link active" data-bs-toggle="tab"
-                                                        data-bs-target="#img-1" type="button">
+                                <div class="product-gallery product-gallery--style-tab">
+                                    <div class="row flex-md-row flex-column-reverse">
+                                        <div class="col-md-3">
+                                            <!-- Start Product Thumbnail -->
+                                            <ul class="product-thumbnail-image nav">
+                                                <li class="nav-item">
+                                                    <button class="nav-link active" data-bs-toggle="tab"
+                                                            data-bs-target="#img-1" type="button">
                                                 <span class="thumb">
                         <img class="img-fluid" src="{{ asset($barang->gambar[0]->gambar) }}" alt="" loading="lazy">
                       </span>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#img-2"
-                                                        type="button">
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="tab"
+                                                            data-bs-target="#img-2"
+                                                            type="button">
                                                 <span class="thumb">
                         <img class="img-fluid" src="{{ asset($barang->gambar[1]->gambar) }}" alt="" loading="lazy">
                       </span>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#img-3"
-                                                        type="button">
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="tab"
+                                                            data-bs-target="#img-3"
+                                                            type="button">
                                                 <span class="thumb">
                         <img class="img-fluid" src="{{ asset($barang->gambar[2]->gambar) }}" alt="" loading="lazy">
                       </span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <!-- End Product Thumbnail -->
-                                    </div>
-                                    <div class="col-md-9">
-                                        <!-- Start Product Large Image -->
-                                        <div class="product-large-image tab-content">
-                                            <div class="tab-pane fade show active" id="img-1" role="tabpanel">
-                                                <div class="image">
-                                                    <img class="img-fluid" src="{{asset($barang->gambar[0]->gambar)}}"
-                                                         alt="" loading="lazy">
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="img-2" role="tabpanel">
-                                                <div class="image">
-                                                    <img class="img-fluid" src="{{asset($barang->gambar[1]->gambar)}}"
-                                                         alt="" loading="lazy">
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="img-3" role="tabpanel">
-                                                <div class="image">
-                                                    <img class="img-fluid" src="{{asset($barang->gambar[2]->gambar)}}"
-                                                         alt="" loading="lazy">
-                                                </div>
-                                            </div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <!-- End Product Thumbnail -->
                                         </div>
-                                        <!-- End Product Large Image -->
+                                        <div class="col-md-9">
+                                            <!-- Start Product Large Image -->
+                                            <div class="product-large-image tab-content">
+                                                <div class="tab-pane fade show active" id="img-1" role="tabpanel">
+                                                    <div class="image">
+                                                        <img class="img-fluid"
+                                                             src="{{asset($barang->gambar[0]->gambar)}}"
+                                                             alt="" loading="lazy">
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="img-2" role="tabpanel">
+                                                    <div class="image">
+                                                        <img class="img-fluid"
+                                                             src="{{asset($barang->gambar[1]->gambar)}}"
+                                                             alt="" loading="lazy">
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="img-3" role="tabpanel">
+                                                    <div class="image">
+                                                        <img class="img-fluid"
+                                                             src="{{asset($barang->gambar[2]->gambar)}}"
+                                                             alt="" loading="lazy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Product Large Image -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endisset
-                            <!-- End Product Gallert - Tab Style -->
+                        @endisset
+                        <!-- End Product Gallert - Tab Style -->
                         </div>
                         <div class="col-xxl-4 col-lg-6">
                             <!-- Start Product Content -->
@@ -128,7 +133,7 @@
                                     <a href="wishlist.html" class="wishlist">Add Wishlist</a>
                                 </div>
 
-{{--                                <span class="price">$550.00 <del>$650.00</del></span>--}}
+                                {{--                                <span class="price">$550.00 <del>$650.00</del></span>--}}
                                 <span class="price">{{ generateFormatRP($barang->harga) }}</span>
 
                                 <div class="product-variables">

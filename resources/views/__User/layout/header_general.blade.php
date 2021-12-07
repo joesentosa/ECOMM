@@ -115,28 +115,57 @@
                             </ul>
                         </div>
 
-                        <div class="search-event">
-                            <input class="header-search" type="search" placeholder="Search">
-                            <button class="header-search-btn" type="submit"><img src="{{asset('assets/Martup/images/icons/icon-search.svg')}}" alt=""></button>
-                        </div>
+                        <form action="{{ url('catalog') }}">
+                            <div class="search-event">
+                                <input class="header-search" type="search" placeholder="Search" name="name">
+                                <button class="header-search-btn" type="submit"><img
+                                        src="{{asset('assets/Martup/images/icons/icon-search.svg')}}" alt=""></button>
+                            </div>
+                        </form>
                         <!-- End Menu event -->
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="header-action">
-                        @isset($WL_count)
-                        <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
-                                data-bs-target="#wishlistOffcanvas"><img
-                                src="assets/images/icons/icon-heart-dark.svg" alt=""><span
-                                class="count-tag">{{ $WL_count }}</span></button>
-                        @endisset
-                        @isset($cart_count)
-                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas" data-bs-target="#addcartOffcanvas">
-                                <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
-                                <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
-                            </button>
-                        @endisset
-                        
+                        @if(\Illuminate\Support\Facades\Auth::user())
+                            @isset($WL_count)
+                                <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                        data-bs-target="#wishlistOffcanvas">
+                                    <img src="assets/images/icons/icon-heart-dark.svg" alt="">
+                                    <span class="count-tag">{{ $WL_count }}</span>
+                                </button>
+                            @endisset
+                            @isset($cart_count)
+                                <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                        data-bs-target="#addcartOffcanvas">
+                                    <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
+                                    <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
+                                </button>
+                            @endisset
+
+                            <div class="menu-event dropdown">
+                                <button class="header-action-item header-right main-menu-event dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light pb-2">Profile</span>
+                                </button>
+                                <ul class="mainmenu-nav dropdown-menu">
+                                    <li class="menu-items">
+                                        <a href="{{ route('page.user.profile') }}">Profile</a>
+                                    </li>
+                                    <li class="menu-items">
+                                        <a href="{{ route('route.auth.logout') }}">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        @else
+                            <a href="{{ route('page.login.customer') }}">
+                                <button class="header-action-item header-right">
+                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light pb-2">Login</span>
+                                </button>
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -152,7 +181,7 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-auto">
                 <div class="mobile-logo">
-                    <a href="index.html"><img src="assets/images/logo/logo-light-theme.png" alt=""></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('assets/igw/logo-dark.png') }}" alt=""></a>
                 </div>
             </div>
 
@@ -173,21 +202,31 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div class="d-flex justify-content-center ">
-            <a href="wishlist.html" class="header-action-item header-action-wishlist"><img
-                    src="assets/images/icons/icon-heart-dark.svg" alt=""><span class="count-tag">01</span></a>
-            <a href="cart.html" class="header-action-item header-action-wishlist"><img
-                    src="assets/images/icons/icon-shopping-bag-dark.svg" alt=""><span
-                    class="item-count item-count--light">02 ITEMS</span></a>
-        </div>
-
-        <div class="header-event mobile-search my-5">
-            <div class="search-event">
-                <input class="header-search" type="search">
-                <button class="header-search-btn" type="submit"><img src="assets/images/icons/icon-search.svg"
-                                                                      alt=""></button>
+        @if(\Illuminate\Support\Facades\Auth::user())
+            <div class="d-flex justify-content-center ">
+                @isset($WL_count)
+                    <a href="wishlist.html" class="header-action-item header-action-wishlist"><img
+                            src="assets/images/icons/icon-heart-dark.svg" alt=""><span
+                            class="count-tag">{{ $WL_count }}</span></a>
+                @endisset
+                @isset($cart_count)
+                    <a href="cart.html" class="header-action-item header-action-wishlist"><img
+                            src="assets/images/icons/icon-shopping-bag-dark.svg" alt=""><span
+                            class="item-count item-count--light">{{ $cart_count }}</span></a>
+                @endisset
             </div>
-        </div>
+        @endif
+
+        <form action="{{ url('catalog') }}">
+            <div class="header-event mobile-search my-5">
+                <div class="search-event">
+                    <input class="header-search" type="search" name="name">
+                    <button class="header-search-btn" type="submit">
+                        <img src="assets/images/icons/icon-search.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </form>
 
         <!-- Start Offcanvas Mobile Menu Wrapper -->
         <div class="offcanvas-mobile-menu-wrapper">
