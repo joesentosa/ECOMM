@@ -37,6 +37,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/Martup/css/style.css')}}">
 
+    <!-- iconify -->
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <!-- end iconify -->
+
 {{--    @include('__User.layout.css')--}}
     @yield('style')
 </head>
