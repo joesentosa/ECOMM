@@ -13,15 +13,15 @@ npm-debug.log
 yarn-error.log
 
 # JPEG
-*.jpg
-*.jpeg
-*.jpe
-*.jif
-*.jfif
-*.jfi
+#*.jpg
+#*.jpeg
+#*.jpe
+#*.jif
+#*.jfif
+#*.jfi
 
 # Portable Network Graphics
-*.png
+#*.png
 
 # Animated Portable Network Graphics
 *.apng
