@@ -43,7 +43,7 @@
     <!-- end iconify -->
 
 {{--    @include('__User.layout.css')--}}
-    @yield('style')
+    @yield('style')    
 </head>
 <body>
 

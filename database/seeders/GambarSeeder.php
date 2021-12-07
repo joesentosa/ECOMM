@@ -1687,11 +1687,638 @@ class GambarSeeder extends Seeder
         GambarModel::insert([            
             'id_barang' => '65',
             'gambar'    => 'uploads/barang/96_4.jpg',            
-        ]);
-        
+        ]);        
         GambarModel::insert([            
             'id_barang' => '65',
             'gambar'    => 'uploads/barang/96_4.jpg',            
+        ]);
+        GambarModel::insert([
+            'id_barang' => '65',
+            'gambar'    => 'uploads/barang/96_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '66',
+            'gambar'    => 'uploads/barang/ARCTIS5CABLE_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '66',
+            'gambar'    => 'uploads/barang/ARCTIS5CABLE_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '66',
+            'gambar'    => 'uploads/barang/ARCTIS5CABLE_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '67',
+            'gambar'    => 'uploads/barang/CloudAlpha_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '67',
+            'gambar'    => 'uploads/barang/CloudAlpha_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '67',
+            'gambar'    => 'uploads/barang/CloudAlpha_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '68',
+            'gambar'    => 'uploads/barang/BRACKET_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '68',
+            'gambar'    => 'uploads/barang/BRACKET_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '68',
+            'gambar'    => 'uploads/barang/BRACKET_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '68',
+            'gambar'    => 'uploads/barang/BRACKET_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '69',
+            'gambar'    => 'uploads/barang/PBT_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '69',
+            'gambar'    => 'uploads/barang/PBT_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '69',
+            'gambar'    => 'uploads/barang/PBT_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '69',
+            'gambar'    => 'uploads/barang/PBT_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '70',
+            'gambar'    => 'uploads/barang/kishi_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '70',
+            'gambar'    => 'uploads/barang/kishi_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '70',
+            'gambar'    => 'uploads/barang/kishi_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '70',
+            'gambar'    => 'uploads/barang/kishi_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '71',
+            'gambar'    => 'uploads/barang/GX1_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '71',
+            'gambar'    => 'uploads/barang/GX1_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '71',
+            'gambar'    => 'uploads/barang/GX1_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '71',
+            'gambar'    => 'uploads/barang/GX1_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '72',
+            'gambar'    => 'uploads/barang/PROMK2_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '72',
+            'gambar'    => 'uploads/barang/PROMK2_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '72',
+            'gambar'    => 'uploads/barang/PROMK2_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '73',
+            'gambar'    => 'uploads/barang/2800_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '73',
+            'gambar'    => 'uploads/barang/2800_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '73',
+            'gambar'    => 'uploads/barang/2800_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '73',
+            'gambar'    => 'uploads/barang/2800_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '74',
+            'gambar'    => 'uploads/barang/RACING_X_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '74',
+            'gambar'    => 'uploads/barang/RACING_X_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '74',
+            'gambar'    => 'uploads/barang/RACING_X_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '74',
+            'gambar'    => 'uploads/barang/RACING_X_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '75',
+            'gambar'    => 'uploads/barang/RV131_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '75',
+            'gambar'    => 'uploads/barang/RV131_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '75',
+            'gambar'    => 'uploads/barang/RV131_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '75',
+            'gambar'    => 'uploads/barang/RV131_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '76',
+            'gambar'    => 'uploads/barang/EEC412_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '76',
+            'gambar'    => 'uploads/barang/EEC412_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '76',
+            'gambar'    => 'uploads/barang/EEC412_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '76',
+            'gambar'    => 'uploads/barang/EEC412_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '77',
+            'gambar'    => 'uploads/barang/BC1_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '77',
+            'gambar'    => 'uploads/barang/BC1_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '77',
+            'gambar'    => 'uploads/barang/BC1_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '77',
+            'gambar'    => 'uploads/barang/BC1_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '78',
+            'gambar'    => 'uploads/barang/ELECTRA_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '78',
+            'gambar'    => 'uploads/barang/ELECTRA_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '79',
+            'gambar'    => 'uploads/barang/GX3_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '79',
+            'gambar'    => 'uploads/barang/GX3_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '79',
+            'gambar'    => 'uploads/barang/GX3_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '79',
+            'gambar'    => 'uploads/barang/GX3_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '80',
+            'gambar'    => 'uploads/barang/GD_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '80',
+            'gambar'    => 'uploads/barang/GD_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '80',
+            'gambar'    => 'uploads/barang/GD_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '80',
+            'gambar'    => 'uploads/barang/GD_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '81',
+            'gambar'    => 'uploads/barang/TG_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '81',
+            'gambar'    => 'uploads/barang/TG_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '81',
+            'gambar'    => 'uploads/barang/TG_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '81',
+            'gambar'    => 'uploads/barang/TG_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '82',
+            'gambar'    => 'uploads/barang/GD612_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '82',
+            'gambar'    => 'uploads/barang/GD612_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '82',
+            'gambar'    => 'uploads/barang/GD612_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '82',
+            'gambar'    => 'uploads/barang/GD612_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '83',
+            'gambar'    => 'uploads/barang/ROGCETRA_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '83',
+            'gambar'    => 'uploads/barang/ROGCETRA_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '83',
+            'gambar'    => 'uploads/barang/ROGCETRA_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '83',
+            'gambar'    => 'uploads/barang/ROGCETRA_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '83',
+            'gambar'    => 'uploads/barang/ROGCETRA_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '84',
+            'gambar'    => 'uploads/barang/MH650_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '84',
+            'gambar'    => 'uploads/barang/MH650_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '84',
+            'gambar'    => 'uploads/barang/MH650_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '84',
+            'gambar'    => 'uploads/barang/MH650_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '85',
+            'gambar'    => 'uploads/barang/HS35_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '85',
+            'gambar'    => 'uploads/barang/HS35_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '85',
+            'gambar'    => 'uploads/barang/HS35_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '85',
+            'gambar'    => 'uploads/barang/HS35_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '86',
+            'gambar'    => 'uploads/barang/A700_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '86',
+            'gambar'    => 'uploads/barang/A700_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '86',
+            'gambar'    => 'uploads/barang/A700_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '86',
+            'gambar'    => 'uploads/barang/A700_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '87',
+            'gambar'    => 'uploads/barang/GM300_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '87',
+            'gambar'    => 'uploads/barang/GM300_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '87',
+            'gambar'    => 'uploads/barang/GM300_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '87',
+            'gambar'    => 'uploads/barang/GM300_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '88',
+            'gambar'    => 'uploads/barang/TITAN_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '88',
+            'gambar'    => 'uploads/barang/TITAN_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '88',
+            'gambar'    => 'uploads/barang/TITAN_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '88',
+            'gambar'    => 'uploads/barang/TITAN_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '89',
+            'gambar'    => 'uploads/barang/TX1_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '89',
+            'gambar'    => 'uploads/barang/TX1_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '89',
+            'gambar'    => 'uploads/barang/TX1_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '89',
+            'gambar'    => 'uploads/barang/TX1_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '90',
+            'gambar'    => 'uploads/barang/CLOUD_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '90',
+            'gambar'    => 'uploads/barang/CLOUD_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '90',
+            'gambar'    => 'uploads/barang/CLOUD_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '90',
+            'gambar'    => 'uploads/barang/CLOUD_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '91',
+            'gambar'    => 'uploads/barang/QUANTUM400_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '91',
+            'gambar'    => 'uploads/barang/QUANTUM400_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '91',
+            'gambar'    => 'uploads/barang/QUANTUM400_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '91',
+            'gambar'    => 'uploads/barang/QUANTUM400_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '92',
+            'gambar'    => 'uploads/barang/E11_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '92',
+            'gambar'    => 'uploads/barang/E11_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '92',
+            'gambar'    => 'uploads/barang/E11_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '92',
+            'gambar'    => 'uploads/barang/E11_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '93',
+            'gambar'    => 'uploads/barang/V2_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '93',
+            'gambar'    => 'uploads/barang/V2_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '93',
+            'gambar'    => 'uploads/barang/V2_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '94',
+            'gambar'    => 'uploads/barang/BH60_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '94',
+            'gambar'    => 'uploads/barang/BH60_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '94',
+            'gambar'    => 'uploads/barang/BH60_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '94',
+            'gambar'    => 'uploads/barang/BH60_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '94',
+            'gambar'    => 'uploads/barang/BH60_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '95',
+            'gambar'    => 'uploads/barang/KG241QP_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '95',
+            'gambar'    => 'uploads/barang/KG241QP_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '95',
+            'gambar'    => 'uploads/barang/KG241QP_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '95',
+            'gambar'    => 'uploads/barang/KG241QP_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '96',
+            'gambar'    => 'uploads/barang/24G2E5_1.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '96',
+            'gambar'    => 'uploads/barang/24G2E5_2.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '96',
+            'gambar'    => 'uploads/barang/24G2E5_3.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '96',
+            'gambar'    => 'uploads/barang/24G2E5_4.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '97',
+            'gambar'    => 'uploads/barang/XG248Q_1.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '97',
+            'gambar'    => 'uploads/barang/XG248Q_2.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '97',
+            'gambar'    => 'uploads/barang/XG248Q_3.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '97',
+            'gambar'    => 'uploads/barang/XG248Q_4.jpg',
+        ]);        
+        GambarModel::insert([
+            'id_barang' => '98',
+            'gambar'    => 'uploads/barang/24MP59G_1.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '98',
+            'gambar'    => 'uploads/barang/24MP59G_2.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '98',
+            'gambar'    => 'uploads/barang/24MP59G_3.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '98',
+            'gambar'    => 'uploads/barang/24MP59G_4.jpg',
+        ]);           
+        GambarModel::insert([
+            'id_barang' => '99',
+            'gambar'    => 'uploads/barang/G24C4_1.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '99',
+            'gambar'    => 'uploads/barang/G24C4_2.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '99',
+            'gambar'    => 'uploads/barang/G24C4_3.jpg',
+        ]);                
+        GambarModel::insert([
+            'id_barang' => '99',
+            'gambar'    => 'uploads/barang/G24C4_4.jpg',
+        ]); 
+        GambarModel::insert([
+            'id_barang' => '100',
+            'gambar'    => 'uploads/barang/XL2411P_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '100',
+            'gambar'    => 'uploads/barang/XL2411P_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '100',
+            'gambar'    => 'uploads/barang/XL2411P_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '100',
+            'gambar'    => 'uploads/barang/XL2411P_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '101',
+            'gambar'    => 'uploads/barang/G560_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '101',
+            'gambar'    => 'uploads/barang/G560_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '101',
+            'gambar'    => 'uploads/barang/G560_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '101',
+            'gambar'    => 'uploads/barang/G560_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '102',
+            'gambar'    => 'uploads/barang/NARUTOMP_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '102',
+            'gambar'    => 'uploads/barang/NARUTOMP_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '102',
+            'gambar'    => 'uploads/barang/NARUTOMP_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '102',
+            'gambar'    => 'uploads/barang/NARUTOMP_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '103',
+            'gambar'    => 'uploads/barang/CHOPPERMS_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '103',
+            'gambar'    => 'uploads/barang/CHOPPERMS_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '103',
+            'gambar'    => 'uploads/barang/CHOPPERMS_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '103',
+            'gambar'    => 'uploads/barang/CHOPPERMS_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '104',
+            'gambar'    => 'uploads/barang/M510EXTRA_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '104',
+            'gambar'    => 'uploads/barang/M510EXTRA_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '104',
+            'gambar'    => 'uploads/barang/M510EXTRA_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '104',
+            'gambar'    => 'uploads/barang/M510EXTRA_4.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '105',
+            'gambar'    => 'uploads/barang/M510LARGE_1.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '105',
+            'gambar'    => 'uploads/barang/M510LARGE_2.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '105',
+            'gambar'    => 'uploads/barang/M510LARGE_3.jpg',
+        ]);
+        GambarModel::insert([
+            'id_barang' => '105',
+            'gambar'    => 'uploads/barang/M510LARGE_4.jpg',
         ]);
     }
 }

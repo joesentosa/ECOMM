@@ -7,7 +7,7 @@
                 <div class="col-auto">
                     <!-- Start Header Logo -->
                     <a href="{{ route('page.index.customer') }}" class="header-logo">
-                        <img class="img-fluid" src="{{ asset('assets/igw/logo-light-theme.png') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/igw/logo_gaming_store.png') }}" style="width:100ox; height:45px;" alt="">
                     </a>
                     <!-- End Header Logo -->
                 </div>
@@ -144,10 +144,10 @@
                             @endisset
 
                             <div class="menu-event dropdown">
-                                <button class="header-action-item header-right main-menu-event dropdown-toggle"
+                                <button class="header-action-item header-right main-menu-event dropdown-toggle edit-button"
                                         data-bs-toggle="dropdown">
-                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                                    <span class="item-count item-count--light pb-2">Profile</span>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light" style="font-size:1rem;padding-left:5px; color:#FFF">Profile</span>
                                 </button>
                                 <ul class="mainmenu-nav dropdown-menu">
                                     <li class="menu-items">
@@ -160,9 +160,9 @@
                             </div>
                         @else
                             <a href="{{ route('page.login.customer') }}">
-                                <button class="header-action-item header-right">
-                                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                                    <span class="item-count item-count--light pb-2">Login</span>
+                                <button class="header-action-item header-right edit-button">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span class="item-count item-count--light edit-text" style="font-size:1rem;padding-left:5px; color:#FFF">Login</span>
                                 </button>
                             </a>
                         @endif
@@ -181,7 +181,7 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-auto">
                 <div class="mobile-logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('assets/igw/logo-dark.png') }}" alt=""></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('assets/igw/logo_gaming_store.png') }}" style="width:100ox; height:45px;" alt=""></a>
                 </div>
             </div>
 
