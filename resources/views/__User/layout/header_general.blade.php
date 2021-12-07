@@ -371,7 +371,7 @@
                                     <a href="/user/detailBarang/{{ $barang->id_barang }}" class="title">{{ $barang->namaBarang }}</a>
                                     <div class="offcanvas-wishlist-item-details">
                                         <span class="offcanvas-wishlist-item-details-quantity">{{ $cart['qty'] }} x</span>
-                                        <span class="offcanvas-wishlist-item-details-price">{{ $barang->harga }}</span>
+                                        <span class="offcanvas-wishlist-item-details-price">Rp {{ number_format($barang->harga) }}</span>
                                     </div>
                                 </div>
                             </div>
