@@ -63,7 +63,7 @@
     </a>
     <div class="content">
         <div class="top">
-            {{--                                                    <span class="catagory">WOMEN</span>--}}
+            <span class="catagory">{{ $barang->kategori->namaKategori }}</span>
             <h4 class="title">
                 <a href="{{ url('detailBarang/'. $barang->id_barang) }}">
                     {{ $barang->namaBarang }}
@@ -88,7 +88,10 @@
                 @endif
             </ul>
             <div class="product-event-items">
-                <a href="cart.html" class="btn cart-btn">Add to cart</a>
+                <form action="{{url('addingToCart')}}" method="post"> @csrf
+                    <input type="hidden" name="id" value="{{$barang->id_barang}}">
+                    <button class="btn cart-btn">Add to cart</button>
+                </form>
                 <form action="/wishlist" method="get">
                     @csrf
                     <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">

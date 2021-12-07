@@ -369,7 +369,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="/deleteWL" method="post">
+                        <form action="/deleteWL" method="post"> @csrf
                             <div class="item-delete text-right">
                                 <input type="hidden" name="barangId" value="{{ $item->id_barang }}">
                                 <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>
