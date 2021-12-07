@@ -365,7 +365,7 @@
                             <div class="content">
                                 <a href="" class="title">{{ $item->namaBarang }}</a>
                                 <div class="offcanvas-wishlist-item-details">
-                                    <span class="offcanvas-wishlist-item-details-price">{{ $item->harga }}</span>
+                                    <span class="offcanvas-wishlist-item-details-price">{{ generateFormatRP($item->harga) }}</span>
                                 </div>
                             </div>
                         </div>
@@ -378,7 +378,7 @@
                     </li>
                 @endforeach
             @endisset
-            
+
         </ul>
         <div class="offcanvas-action-link">
             <a href="wishlist.html" class="btn">View wishlist</a>
@@ -410,7 +410,7 @@
                                     <a href="/user/detailBarang/{{ $barang->id_barang }}" class="title">{{ $barang->namaBarang }}</a>
                                     <div class="offcanvas-wishlist-item-details">
                                         <span class="offcanvas-wishlist-item-details-quantity">{{ $cart['qty'] }} x</span>
-                                        <span class="offcanvas-wishlist-item-details-price">Rp {{ number_format($barang->harga) }}</span>
+                                        <span class="offcanvas-wishlist-item-details-price">{{ generateFormatRP($barang->harga) }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +427,7 @@
                 @endforeach
             @endisset
             @endisset
-            
+
         </ul>
         <div class="offcanvas-action-link">
             <a href="checkout.html" class="btn">Checkout</a>
