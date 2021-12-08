@@ -15,8 +15,8 @@ class CatalogController extends Controller
     public function catalog(Request $req){
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
-        $dtbarang   = BarangModel::get();
-        $dtSession   = BarangModel::get();
+        $dtbarang   = BarangModel::with(['gambar'])->get();
+        $dtSession   = BarangModel::with(['gambar'])->get();
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
@@ -109,8 +109,8 @@ class CatalogController extends Controller
                 unset($arrTemp[$i]);
             }
         }
-        for ($i=0; $i < count($arrTemp); $i++) { 
-            for ($j=0; $j < count($cart_barang); $j++) { 
+        for ($i=0; $i < count($arrTemp); $i++) {
+            for ($j=0; $j < count($cart_barang); $j++) {
                 if ($i == $j) {
                     array_push($inputSession, $cart_barang[$j]);
                 }
@@ -123,7 +123,20 @@ class CatalogController extends Controller
 
     public function cart(Request $request)
     {
-        return view('__User.dashboard.cart');
+        // get barang from session
+        $tmp_data = $request->session()->get('cart_barang');
+        $carts = array();
+        // find each barang and assign to cariable carts
+        foreach($tmp_data as $data){
+            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
+
+            array_push($carts, array(
+                'data' => $data_barang,
+                'qty' => $data['qty']
+            ));
+        }
+        // use compact to serve the data
+        return view('__User.dashboard.cart', compact('carts'));
     }
     public function checkout(Request $request)
     {

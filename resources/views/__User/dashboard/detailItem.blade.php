@@ -129,8 +129,10 @@
                                             }
                                         @endphp
                                     </ul>
-
-                                    <a href="wishlist.html" class="wishlist">Add Wishlist</a>
+                                    <form action="{{ url('wishlist') }}" method="post"> @csrf
+                                        <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
+                                        <button class="wishlist">Add Wishlist</button>
+                                    </form>
                                 </div>
 
                                 {{--                                <span class="price">$550.00 <del>$650.00</del></span>--}}
@@ -169,31 +171,35 @@
                                     </div>
                                     <!-- End Product Single Variable -->
 
-                                    <ul class="variable-items">
-                                        <li class="variable-single-items type-select">
-                                            <select>
-                                                <option value="S">Size: S</option>
-                                                <option value="M">Size: M</option>
-                                                <option value="L">Size: L</option>
-                                                <option value="XL" selected>Size: XL</option>
-                                                <option value="XXl">Size: XXL</option>
-                                            </select>
-                                        </li>
-                                        <li class="variable-single-items">
-                                            <div class="num-block skin-2">
-                                                <div class="num-in">
-                                                    <span class="minus dis"></span>
-                                                    <input type="text" class="in-num" value="1" readonly="">
-                                                    <span class="plus"></span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="variable-single-items">
-                                            <a href="cart.html" class="btn btn-sm btn-default">Add To Cart</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <form action="{{url('addingToCart')}}" method="post"> @csrf
+                                        <input type="hidden" name="id" value="{{$barang->id_barang}}">
+                                        <ul class="variable-items">
+                                            <li class="variable-single-items type-select">
+                                                <select>
+                                                    <option value="S">Size: S</option>
+                                                    <option value="M">Size: M</option>
+                                                    <option value="L">Size: L</option>
+                                                    <option value="XL" selected>Size: XL</option>
+                                                    <option value="XXl">Size: XXL</option>
+                                                </select>
+                                            </li>
 
+                                            <li class="variable-single-items">
+                                                <div class="num-block skin-2">
+                                                    <div class="num-in">
+                                                        <span class="minus dis"></span>
+                                                        <input type="text" class="in-num" value="1" readonly=""
+                                                               name="banyak">
+                                                        <span class="plus"></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="variable-single-items">
+                                                <button class="btn btn-sm btn-default">Add To Cart</button>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
                             </div>
                             <!-- End Product Content -->
                         </div>
@@ -224,7 +230,9 @@
                                         <a href="{{ $socialShare["twitter"] }}"><img class="icon-svg"
                                                                                      src="{{ asset('assets/images/icons/icon-twitter-dark.svg') }}"
                                                                                      alt=""></a>
-                                        <a href="{{ $socialShare["whatsapp"] }}"><i class="icon-svg iconify"  style="color: #457b9d;" data-icon="dashicons:whatsapp"></i></a>
+                                        <a href="{{ $socialShare["whatsapp"] }}"><i class="icon-svg iconify"
+                                                                                    style="color: #457b9d;"
+                                                                                    data-icon="dashicons:whatsapp"></i></a>
                                     </div>
                                 </div>
                             </div>

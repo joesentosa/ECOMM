@@ -147,7 +147,9 @@
                                 <button class="header-action-item header-right main-menu-event dropdown-toggle edit-button"
                                         data-bs-toggle="dropdown">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="item-count item-count--light" style="font-size:1rem;padding-left:5px; color:#FFF">Profile</span>
+                                    <span class="item-count item-count--light" style="font-size:1rem;padding-left:5px; color:#FFF">
+                                        {{ \Illuminate\Support\Facades\Auth::user()->firstname }}
+                                    </span>
                                 </button>
                                 <ul class="mainmenu-nav dropdown-menu">
                                     <li class="menu-items">
@@ -402,12 +404,12 @@
                     @if ($cart["id"] == $barang->id_barang)
                         <li class="single-item">
                             <div class="box">
-                                <a href="/user/detailBarang/{{ $barang->id_barang }}" class="image">
-                                    <img src="assets/images/products/small/product-small-1.webp" alt=""
+                                <a href="/detailBarang/{{ $barang->id_barang }}" class="image">
+                                    <img src="{{ $barang->gambar[0]->gambar }}" alt=""
                                     class="offcanvas-wishlist-image">
                                 </a>
                                 <div class="content">
-                                    <a href="/user/detailBarang/{{ $barang->id_barang }}" class="title">{{ $barang->namaBarang }}</a>
+                                    <a href="/detailBarang/{{ $barang->id_barang }}" class="title">{{ $barang->namaBarang }}</a>
                                     <div class="offcanvas-wishlist-item-details">
                                         <span class="offcanvas-wishlist-item-details-quantity">{{ $cart['qty'] }} x</span>
                                         <span class="offcanvas-wishlist-item-details-price">{{ generateFormatRP($barang->harga) }}</span>
@@ -430,7 +432,7 @@
 
         </ul>
         <div class="offcanvas-action-link">
-            <a href="checkout.html" class="btn">Checkout</a>
+            <a href="{{ url('cart') }}" class="btn">Checkout</a>
         </div>
     </div>
 </div>

@@ -46,8 +46,7 @@
                     <h6 class="sidebar-title title-border title-border">Categories</h6>
                     <div class="sidebar-content">
                         <div class="filter-type-select">
-                            <form action="/catalog-filter-category" method="post">
-                                @csrf
+                            <form action="/catalog-filter-category" method="post"> @csrf
                                 <ul>
                                     @isset($data_kategori)
                                         @foreach($data_kategori as $item)
@@ -112,8 +111,7 @@
                 <div class="sidebar-single-widget">
                     <h6 class="sidebar-title title-border">FILTER BY PRICE</h6>
                     <div class="sidebar-content">
-                        <form action="{{route('filter-price')}}" method="post">
-                            @csrf
+                        <form action="{{route('filter-price')}}" method="post"> @csrf
                             <input type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="0" data-max="10000000" data-from="500" data-to="5000" />
                             <input class="btn btn-primary" type="submit" value="Filter by price">
                         </form>

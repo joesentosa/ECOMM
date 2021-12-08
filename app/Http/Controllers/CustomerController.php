@@ -83,12 +83,12 @@ class CustomerController extends Controller
     public function addingToCart(Request $request)
     {
         $barangId = $request->id;
-        $barangQty = $request->banyak;
+        $barangQty = $request->banyak ?? 1;
         if ($request->session()->has('cart_barang')) {
             $cart_barang= session('cart_barang');
             $cekSama = false;
             $indexBarang = -1;
-            for ($i=0; $i < count($cart_barang); $i++) { 
+            for ($i=0; $i < count($cart_barang); $i++) {
                 if ($barangId == $cart_barang[$i]["id"]) {
                     $cekSama = true;
                     $indexBarang = $i;

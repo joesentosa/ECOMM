@@ -293,9 +293,9 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-{{--                                        @foreach($barangs as $index => $barang)--}}
-{{--                                            @include('__User.dashboard.single_item')--}}
-{{--                                        @endforeach--}}
+                                        {{--                                        @foreach($barangs as $index => $barang)--}}
+                                        {{--                                            @include('__User.dashboard.single_item')--}}
+                                        {{--                                        @endforeach--}}
                                     </div>
                                 </div>
                             </div>
@@ -346,21 +346,28 @@
                                                 data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
                                             {{--                                            <img src="--}}
                                             @if($index == 0)
-                                                <i class="fa fa-wpbeginner" style="padding-right: 1em" aria-hidden="true"></i>
+                                                <i class="fa fa-wpbeginner" style="padding-right: 1em"
+                                                   aria-hidden="true"></i>
                                             @elseif($index == 1)
-                                                <i class="fa fa-gamepad" style="padding-right: 1em" aria-hidden="true"></i>
+                                                <i class="fa fa-gamepad" style="padding-right: 1em"
+                                                   aria-hidden="true"></i>
                                             @elseif($index == 2)
-                                                <i class="fa fa-video-camera" style="padding-right: 1em" aria-hidden="true"></i>
+                                                <i class="fa fa-video-camera" style="padding-right: 1em"
+                                                   aria-hidden="true"></i>
                                             @elseif($index == 3)
-                                                <i class="iconify" style="padding-right: 1em" data-icon="si-glyph:chair-2"></i>
+                                                <i class="iconify" style="padding-right: 1em"
+                                                   data-icon="si-glyph:chair-2"></i>
                                             @elseif($index == 4)
                                                 <i class="iconify" style="padding-right: 1em" data-icon="mdi:desk"></i>
                                             @elseif($index == 5)
-                                                <i class="fa fa-headphones" aria-hidden="true" style="padding-right: 1em"></i>
+                                                <i class="fa fa-headphones" aria-hidden="true"
+                                                   style="padding-right: 1em"></i>
                                             @elseif($index == 6)
-                                                <i class="fa fa-keyboard-o" aria-hidden="true" style="padding-right: 1em"></i>
+                                                <i class="fa fa-keyboard-o" aria-hidden="true"
+                                                   style="padding-right: 1em"></i>
                                             @elseif($index == 7)
-                                                <i class="fa fa-desktop" style="padding-right: 1em" aria-hidden="true"></i>
+                                                <i class="fa fa-desktop" style="padding-right: 1em"
+                                                   aria-hidden="true"></i>
                                             @elseif($index == 8)
                                                 <span class="iconify" data-icon="gala:mouse"></span>
                                             @elseif($index == 9)
@@ -460,7 +467,12 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-{{--                                        @include('__User.dashboard.single_item')--}}
+                                        @php
+                                            $barangShuffled = $barangs->shuffle()->take(10)->all();
+                                        @endphp
+                                        @foreach($barangShuffled as $barang)
+                                            @include('__User.dashboard.single_item')
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -481,7 +493,8 @@
                         <div class="newsletter-area newsletter-area-style-1">
                             <div class="content content-left">
                                 <h4 class="title">Newsletter</h4>
-                                <p>Subscribe to our latest news and promostion, and never miss new promotion, Subscribe Now!</p>
+                                <p>Subscribe to our latest news and promostion, and never miss new promotion, Subscribe
+                                    Now!</p>
                                 <div class="newsletter-form">
                                     <input type="email" placeholder="Enter your email" required>
                                     <button type="submit">Subscribe</button>
