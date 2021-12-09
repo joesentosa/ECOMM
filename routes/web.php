@@ -93,10 +93,8 @@ Route::middleware(['customer.auth'])
         Route::get('/profile', [CustomerController::class, 'getDataCustomer'])->name('page.user.profile');
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
-        Route::get('/wishlist',[CustomerController::class,'page_wishlist']);
-
-
-
+        Route::get('/wishlist',[CustomerController::class,'page_wishlist']);   
+        Route::get('/invoice',[CustomerController::class,'page_invoice']);
     });
 //end route customer
 

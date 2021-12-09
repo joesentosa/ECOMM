@@ -15,6 +15,9 @@ use Jorenvh\Share\Share;
 
 class CustomerController extends Controller
 {
+    public function page_invoice(){
+        return view('__User.dashboard.invoice');
+    }
     public function landing()
     {
         $brands = BrandModel::limit(25)->get();
