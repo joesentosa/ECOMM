@@ -4,15 +4,17 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ShareSocialController;
+use App\Http\Controllers\ShopController;
+//use App\Http\Controllers\ShareSocialController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('coba', [\App\Http\Controllers\ShopController::class, 'viewCheckout']);
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/login', [CustomerController::class, 'login'])->name('page.login.customer');
 Route::get('/catalog',[CatalogController::class,'catalog']);
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
-Route::get('/cart',[CatalogController::class,'cart']);
-Route::get('/checkout',[CatalogController::class,'checkout']);
+Route::get('/cart',[ShopController::class,'cart']);
+Route::get('/checkout',[ShopController::class,'checkout']);
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::post('/deleteWL',[CatalogController::class,'deleteWL']);
 //Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
@@ -99,7 +101,7 @@ Route::middleware(['customer.auth'])
 //end route customer
 
 // pragma region Share to social media
-Route::get('share/{platform?}', [ShareSocialController::class, 'share_to_socialMedia']);
+//Route::get('share/{platform?}', [ShareSocialController::class, 'share_to_socialMedia']);
 // pragma endregion Share to social media
 
 // Route::get('/', function(){

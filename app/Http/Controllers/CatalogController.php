@@ -9,6 +9,7 @@ use App\Models\WishlistModel;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Session;
 use Illuminate\Http\Request;
+use Midtrans\Snap;
 
 class CatalogController extends Controller
 {
@@ -119,28 +120,6 @@ class CatalogController extends Controller
         $req->session()->put('cart_barang',$inputSession);
         // dd(session('cart_barang'));
         return back();
-    }
-
-    public function cart(Request $request)
-    {
-        // get barang from session
-        $tmp_data = $request->session()->get('cart_barang');
-        $carts = array();
-        // find each barang and assign to cariable carts
-        foreach($tmp_data as $data){
-            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
-
-            array_push($carts, array(
-                'data' => $data_barang,
-                'qty' => $data['qty']
-            ));
-        }
-        // use compact to serve the data
-        return view('__User.dashboard.cart', compact('carts'));
-    }
-    public function checkout(Request $request)
-    {
-        return view('__User.dashboard.checkout');
     }
 
     public function filterCategory(Request $request)

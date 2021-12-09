@@ -123,7 +123,7 @@
                                     <p class="cart_amount">$215.00</p>
                                 </div>
                                 <div class="checkout_btn">
-                                    <a href="#" class="btn btn-sm btn-radius btn-default">Proceed to Checkout</a>
+                                    <a href="{{ url('checkout') }}" class="btn btn-sm btn-radius btn-default">Proceed to Checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -153,8 +153,4 @@
     <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
     <script src="{{asset('assets/Martup/js/main.js')}}"></script>
-
-    <script>
-        $('#qty').change(function(){});
-    </script>
 @endpush

@@ -145,8 +145,8 @@
 
                 <!-- Start Footer Bottom -->
                 <div class="footer-bottom">
-                    <p class="copyright-text copyright-text--dark">&copy; 2021 Mart Up. Made with <span class="material-icons">favorite</span> by <a href="https://hasthemes.com/" target="_blank" rel="noopener noreferrer">Codecarnival</a></p>
-                    <a href="#" class="payment-logo"><img class="img-fluid" src="assets/images/company-logo/payment-logo.png" alt=""></a>
+                    <p class="copyright-text copyright-text--dark">&copy; 2021 from Jeremy with <span class="material-icons">favorite</span></p>
+                    <a href="#" class="payment-logo"><img class="img-fluid" src="{{ asset('assets/images/dashboard-icons/operator.png') }}" alt=""></a>
                 </div>
                 <!-- End Footer Bottom -->
             </div>
