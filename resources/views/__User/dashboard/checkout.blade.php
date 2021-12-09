@@ -753,17 +753,23 @@
                 // Optional
                 onSuccess: function (result) {
                     /* You may add your own js here, this is just example */
-                    document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    console.log(JSON.stringify(result, null, 2));
+                    //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    //window.location.replace("")
                 },
                 // Optional
                 onPending: function (result) {
                     /* You may add your own js here, this is just example */
-                    document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    console.log(JSON.stringify(result, null, 2));
+                    //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    //window.location.replace("http://www.w3schools.com")
                 },
                 // Optional
                 onError: function (result) {
                     /* You may add your own js here, this is just example */
-                    document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    console.log(JSON.stringify(result, null, 2));
+                    //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
+                    //window.location.replace("http://www.w3schools.com")
                 }
             });
         };
