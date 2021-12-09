@@ -49,14 +49,13 @@
 
 <!-- Start Product Single Item - Style 1 -->
 <div class="product-single-item-style-1 swiper-slide">
-    <a href="product-details-default.html" class="image img-responsive">
+    <a href="{{ url('detailBarang/'. $barang->id_barang) }}" class="image img-responsive">
         <img class="img-fluid"
              src="
              @if($barang->gambar->first())
              {{ $barang->gambar->first()->gambar }}
              @endif
-                 "
-             width="435" height="350" loading="lazy" alt="product-image">
+                 " width="435" height="350" loading="lazy" alt="product-image">
         {{--                                                <ul class="tooltip-tag-items">--}}
         {{--                                                    <li class="color-yellow">15%</li>--}}
         {{--                                                </ul>--}}
@@ -70,13 +69,13 @@
                 </a>
             </h4>
             <span class="price">{{generateFormatRP($barang->harga)}}
-                                                        <del>
-                                                            @php
-                                                                $div = pow(10, strlen((string)$barang->harga) - 1);
-                                                            @endphp
-                                                            {{ generateFormatRP(ceil($barang->harga / $div) * $div) }}
-                                                        </del>
-                                                    </span>
+                <del>
+                    @php
+                        $div = pow(10, strlen((string)$barang->harga) - 1);
+                    @endphp
+                    {{ generateFormatRP(ceil($barang->harga / $div) * $div) }}
+                </del>
+            </span>
         </div>
         <div class="bottom">
             <ul class="review-star">
