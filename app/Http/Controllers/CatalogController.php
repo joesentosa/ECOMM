@@ -15,9 +15,11 @@ class CatalogController extends Controller
 {
     public function catalog(Request $req){
         $dtkategori = new KategoriModel();
+        // data brand buat apa?
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->get();
-        $dtSession   = BarangModel::with(['gambar'])->get();
+        // ====================        
+        $dtSession  = BarangModel::with(['gambar'])->get();
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
@@ -43,7 +45,7 @@ class CatalogController extends Controller
             $cart      = session('cart_barang');
             $cartCount = count($cart);
         }
-        // dd($cart);
+        // dd($cartCount);
         return view('__User.dashboard.catalog',[
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,

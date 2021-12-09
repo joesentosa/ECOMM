@@ -20,7 +20,7 @@ class CreateCustomer extends Migration
             $table->string('username',50);
             $table->string('email',100);
             $table->string('address',100)->nullable();
-            $table->string('kota',50)->nullable();
+            $table->string('kota',50)->nullable();                        
             $table->string('kodeZip',5)->nullable();
             $table->string('password',100);
             $table->string('google_id')->nullable();

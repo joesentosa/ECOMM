@@ -51,7 +51,7 @@
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <div class="default-form-box">
                                         <label for="country">country <span>*</span></label>
                                         <select class="country_option nice-select wide" name="country" id="country">
@@ -309,7 +309,7 @@
                                             <option value="ZW">Zimbabwe</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-12">
                                     <div class="default-form-box">
                                         <label>Street address <span>*</span></label>

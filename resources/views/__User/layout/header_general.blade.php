@@ -127,22 +127,21 @@
                 </div>
                 <div class="col-auto">
                     <div class="header-action">
-                        @if(\Illuminate\Support\Facades\Auth::user())
-                            @isset($WL_count)
-                                <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
-                                        data-bs-target="#wishlistOffcanvas">
-                                    <img src="assets/images/icons/icon-heart-dark.svg" alt="">
-                                    <span class="count-tag">{{ $WL_count }}</span>
-                                </button>
-                            @endisset
-                            @isset($cart_count)
-                                <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
-                                        data-bs-target="#addcartOffcanvas">
-                                    <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
-                                    <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
-                                </button>
-                            @endisset
-
+                        @isset($WL_count)
+                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                    data-bs-target="#wishlistOffcanvas">
+                                <img src="assets/images/icons/icon-heart-dark.svg" alt="">
+                                <span class="count-tag">{{ $WL_count }}</span>
+                            </button>
+                        @endisset                        
+                        @isset($cart_count)
+                            <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
+                                    data-bs-target="#addcartOffcanvas">
+                                <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
+                                <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
+                            </button>
+                        @endisset
+                        @if(\Illuminate\Support\Facades\Auth::user())                            
                             <div class="menu-event dropdown">
                                 <button class="header-action-item header-right main-menu-event dropdown-toggle edit-button"
                                         data-bs-toggle="dropdown">
