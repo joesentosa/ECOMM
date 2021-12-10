@@ -392,7 +392,6 @@
                                     <select class="form-select"
                                             name="cb_pilih_layanan" id="cb_pilih_layanan">
                                         <option selected>Choose Package</option>
-                                        <option value="14000">Rp. 14.000,-</option>
                                     </select>
                                 </div>
                             </div>
@@ -457,6 +456,7 @@
         }
 
         $(document).ready(function () {
+            let tmp_value = undefined;
 
             // populate city
             $('#cb_pilih_provinsi').change(function () {
@@ -494,11 +494,13 @@
                     },
                     success: function (result) {
                         $("#cb_pilih_layanan").empty();
+                        tmp_value = result;
                         for (let i of result) {
                             // append city
                             $("#cb_pilih_layanan").append($('<option>', {
                                 value: i['cost'],
-                                text: i['service'] + " " + i['description'] + " " + formatNum(i['cost']),
+                                text: i['service'] + " " + i['description'] + " (" + i['estimated'] + " hari) " + formatNum(i['cost']),
+                                services: i['service'],
                             }));
                         }
                         $('#cb_pilih_layanan').niceSelect('update');
@@ -518,12 +520,18 @@
                     url: "{{ url('shipping/submit') }}",
                     type: 'POST',
                     data: {
-                        'provinsi': $('#cb_pilih_provinsi').val(),
-                        'kota': $('#cb_pilih_city').val(),
-                        'courier': $('#cb_pilih_kurir').val(),
+                        _token:"{{ csrf_token() }}",
+                        cross_data: tmp_value,
+                        provinsi: $('#cb_pilih_provinsi').val(),
+                        kota: $('#cb_pilih_city').val(),
+                        courier: $('#cb_pilih_kurir').val(),
+                        services: $("#cb_pilih_layanan option:selected").attr('services'),
                     },
-                })
-            })
+                    success: function () {
+                        tmp_value = undefined;
+                    }
+                });
+            });
         });
     </script>
 @endpush

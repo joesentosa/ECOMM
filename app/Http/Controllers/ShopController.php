@@ -52,10 +52,14 @@ class ShopController extends Controller
 
     public function checkout(Request $request)
     {
-        $request->validate([]);
+        if (Auth::guest()) { return redirect()->route('page.login.customer'); }
+
+        $request->validate([]);// todo cek validasi sini bang <3 -jere
 
         // Assuming all the item is in the session
         // check if shipping is needed in the session
+
+        $tmp_shipping = $request->session()->get('price_service');
 
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
@@ -68,14 +72,24 @@ class ShopController extends Controller
 
         $snapToken = Snap::getSnapToken($params);
 
-
-
         return view('__User.dashboard.checkout', compact('snapToken', 'clientKey'));
     }
 
     public function submit_shipping(Request $request)
     {
         // ToDo: Add validation of shipping price
+        $tmp_services = array();
+        foreach($request->cross_data as $service){
+            if ($service["service"] == $request->services)
+            {
+                $tmp_services = $service; break;
+            }
+        }
+        $tmp_services['provinsi'] = $request->provinsi;
+        $tmp_services['kota'] = $request->kota;
+        $tmp_services['courier'] = $request->courier;
+
+        $request->session()->put('price_service', $tmp_services);
     }
 
     public function calculate_shipping(Request $request)
