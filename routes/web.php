@@ -100,6 +100,10 @@ Route::middleware(['customer.auth'])
     });
 //end route customer
 
+// pragma region API
+Route::get('shipping', [ShopController::class, 'calculate_shipping']);
+// pragma endregion API
+
 // pragma region Share to social media
 //Route::get('share/{platform?}', [ShareSocialController::class, 'share_to_socialMedia']);
 // pragma endregion Share to social media

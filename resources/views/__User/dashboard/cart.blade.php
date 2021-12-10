@@ -5,6 +5,10 @@
 
 @section('style')
     <style>
+        select {
+            display: none;
+        }
+
         .nice-select {
             width: 100%;
         }
@@ -282,7 +286,7 @@
                                 </div>
                                 <div class="cart_subtotal mb-3">
                                     <p>Shipping</p>
-                                    <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
+                                    <p class="cart_amount" id="price_amount"><span>Flat Rate:</span> Rp. 00.00,- </p>
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <button type="button" id="edit-shipping" data-bs-toggle="modal"
@@ -313,7 +317,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="">
+                    <form method="post" action=""> @csrf
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
@@ -321,21 +325,9 @@
                                     <select class="form-select" aria-label="Default select example"
                                             name="cb_pilih_kurir" id="cb_pilih_kurir">
                                         <option selected>Choose courier</option>
-                                        <option value="JNE">JNE</option>
-                                        <option value="POS">POS Indonesia</option>
-                                        <option value="TIKI">TIKI</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <label>Kota</label>
-                                    <select class="form-select" aria-label="Default select example" name="cb_pilih_city"
-                                            id="cb_pilih_city">
-                                        <option selected>Choose city</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                        <option value="jne">JNE</option>
+                                        <option value="pos">POS Indonesia</option>
+                                        <option value="tiki">TIKI</option>
                                     </select>
                                 </div>
                             </div>
@@ -345,9 +337,49 @@
                                     <select class="form-select" aria-label="Default select example"
                                             name="cb_pilih_provinsi" id="cb_pilih_provinsi">
                                         <option selected>Choose provinsi</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                        <option value="1">Bali</option>
+                                        <option value="2">Bangka Belitung</option>
+                                        <option value="3">Banten</option>
+                                        <option value="4">Bengkulu</option>
+                                        <option value="5">DI Yogyakarta</option>
+                                        <option value="6">DKI Jakarta</option>
+                                        <option value="7">Gorontalo</option>
+                                        <option value="8">Jambi</option>
+                                        <option value="9">Jawa Barat</option>
+                                        <option value="10">Jawa Tengah</option>
+                                        <option value="11">Jawa Timur</option>
+                                        <option value="12">Kalimantan Barat</option>
+                                        <option value="13">Kalimantan Selatan</option>
+                                        <option value="14">Kalimantan Tengah</option>
+                                        <option value="15">Kalimantan Timur</option>
+                                        <option value="16">Kalimantan Utara</option>
+                                        <option value="17">Kepulauan Riau</option>
+                                        <option value="18">Lampung</option>
+                                        <option value="19">Maluku</option>
+                                        <option value="20">Maluku Utara</option>
+                                        <option value="21">Nanggroe Aceh Darussalam (NAD)</option>
+                                        <option value="22">Nusa Tenggara Barat (NTB)</option>
+                                        <option value="23">Nusa Tenggara Timur (NTT)</option>
+                                        <option value="24">Papua</option>
+                                        <option value="25">Papua Barat</option>
+                                        <option value="26">Riau</option>
+                                        <option value="27">Sulawesi Barat</option>
+                                        <option value="28">Sulawesi Selatan</option>
+                                        <option value="29">Sulawesi Tengah</option>
+                                        <option value="30">Sulawesi Tenggara</option>
+                                        <option value="31">Sulawesi Utara</option>
+                                        <option value="32">Sumatera Barat</option>
+                                        <option value="33">Sumatera Selatan</option>
+                                        <option value="34">Sumatera Utara</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <label>Kota</label>
+                                    <select class="form-select" name="cb_pilih_city"
+                                            id="cb_pilih_city" size="5">
+                                        <option selected>Choose city</option>
                                     </select>
                                 </div>
                             </div>
@@ -393,5 +425,60 @@
     <script src="{{ asset('assets/Martup/js/vendor/vendor.min.js') }}"></script>
     <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
-    <script src="{{asset('assets/Martup/js/main.js')}}"></script>
+    <script src="{{ asset('assets/Martup/js/main.js') }}"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            // populate city
+            $('#cb_pilih_provinsi').change(function(){
+                $.ajax({
+                    url: "{{ url('shipping') }}",
+                    type: 'GET',
+                    datatype: 'json',
+                    data: {
+                        'provinsi': $(this).val(),
+                    },
+                    success: function(data){
+                        $("#cb_pilih_city").empty();
+                        for (let i of data)
+                        {
+                            // append city
+                            $("#cb_pilih_city").append($('<option>', {
+                                value: i['city_id'],
+                                text: i['city_name']
+                            }));
+                        }
+                        $('#cb_pilih_city').niceSelect('update');
+                    }
+                });
+            });
+
+            // populate harga
+            $('#cb_pilih_city').change(function(){
+                $.ajax({
+                    url: "{{ url('shipping') }}",
+                    type: 'GET',
+                    datatype: 'json',
+                    data: {
+                        'provinsi': $('#cb_pilih_provinsi').val(),
+                        'kota': $(this).val(),
+                        'courier': $('#cb_pilih_kurir').val()
+                    },
+                    success: function(result){
+                        $("#cb_pilih_layanan").empty();
+                        for (let i of result)
+                        {
+                            // append city
+                            $("#cb_pilih_layanan").append($('<option>', {
+                                value: i['cost'],
+                                text: i['service'] + " " + i['description'] + " Rp. " + i['cost'] + ",-",
+                            }));
+                        }
+                        $('#cb_pilih_layanan').niceSelect('update');
+                    }
+                });
+            });
+        });
+    </script>
 @endpush

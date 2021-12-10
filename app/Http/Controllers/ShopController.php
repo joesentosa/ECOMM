@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\BarangModel;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 use Midtrans\Config;
 use Midtrans\Snap;
 
@@ -50,7 +53,7 @@ class ShopController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            
+
         ]);
 
         // Assuming all the item is in the session
@@ -71,6 +74,81 @@ class ShopController extends Controller
 
 
         return view('__User.dashboard.checkout', compact('snapToken', 'clientKey'));
+    }
+
+    public function calculate_shipping(Request $request)
+    {
+        $provinsi = $request->provinsi ?? null;
+        $kota = $request->kota ?? null;
+
+        if (!$provinsi) { abort(400); }
+
+        $headers = [
+            'key' => env('RAJA_ONGKIR_API_KEY'),
+            'content-type' => "application/x-www-form-urlencoded"
+        ];
+
+        if (!$kota)
+        {
+            // URL
+            $apiURL = 'https://api.rajaongkir.com/starter/city?province=' . $provinsi;
+
+            $response = Http::withHeaders($headers)->get($apiURL);
+            $statusCode = $response->status();
+            $responseBody = json_decode($response->getBody(), true);
+            if ($statusCode == 200)
+            {
+                $tmp_res = array();
+                foreach($responseBody["rajaongkir"]["results"] as $data)
+                {
+                    array_push($tmp_res, array(
+                        "city_id" => $data['city_id'],
+                        "province" => $data['province'],
+                        "type" => $data['type'],
+                        "city_name" => $data['city_name'],
+                        "postal_code" => $data['postal_code'],
+                    ));
+                }
+                return response()->json($tmp_res, 200);
+            }
+        }
+
+        $courier = $request->courier;
+
+        // URL
+        $apiURL = 'https://api.rajaongkir.com/starter/cost';
+        $postBody = [
+            "form_params" => [
+                "origin" => "444",
+                "destination" => $kota,
+                "weight" => 1700,
+                "courier" => $courier
+            ],
+        ];
+
+        $response = Http::withHeaders($headers)->post($apiURL, $postBody);
+        $statusCode = $response->status();
+        $responseBody = json_decode($response->getBody(), true);
+        dump($responseBody);
+        dd($statusCode);
+        if ($statusCode == 200)
+        {
+            $tmp_res = array();
+            foreach($responseBody["rajaongkir"]["results"]["costs"] as $data)
+            {
+                array_push($tmp_res, array(
+                    "service" => $data['service'],
+                    "description" => $data['description'],
+                    "cost" => $data['cost'][0]['value'],
+                    "estimated" => $data['cost'][0]['etd'],
+                    "note" => $data['cost'][0]['note'],
+                ));
+            }
+            dd($tmp_res);
+            return response()->json($tmp_res, 200);
+        }
+
+        return response()->json(['message' => 'failed to fetch data'], 200);
     }
 
     public function viewCheckout(Request $request)
