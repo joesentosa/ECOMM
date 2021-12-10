@@ -52,13 +52,10 @@ class ShopController extends Controller
 
     public function checkout(Request $request)
     {
-        $request->validate([
-
-        ]);
+        $request->validate([]);
 
         // Assuming all the item is in the session
         // check if shipping is needed in the session
-        //
 
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
@@ -74,6 +71,11 @@ class ShopController extends Controller
 
 
         return view('__User.dashboard.checkout', compact('snapToken', 'clientKey'));
+    }
+
+    public function submit_shipping(Request $request)
+    {
+        // ToDo: Add validation of shipping price
     }
 
     public function calculate_shipping(Request $request)
@@ -118,33 +120,32 @@ class ShopController extends Controller
         // URL
         $apiURL = 'https://api.rajaongkir.com/starter/cost';
         $postBody = [
-            "form_params" => [
-                "origin" => "444",
-                "destination" => $kota,
-                "weight" => 1700,
-                "courier" => $courier
-            ],
+            "origin" => "444",
+            "destination" => $kota,
+            "weight" => 1700,
+            "courier" => $courier
         ];
 
-        $response = Http::withHeaders($headers)->post($apiURL, $postBody);
+        $response = Http::asForm()->withHeaders($headers)->post($apiURL, $postBody);
         $statusCode = $response->status();
         $responseBody = json_decode($response->getBody(), true);
-        dump($responseBody);
-        dd($statusCode);
+
         if ($statusCode == 200)
         {
             $tmp_res = array();
-            foreach($responseBody["rajaongkir"]["results"]["costs"] as $data)
+            foreach($responseBody["rajaongkir"]["results"] as $data)
             {
-                array_push($tmp_res, array(
-                    "service" => $data['service'],
-                    "description" => $data['description'],
-                    "cost" => $data['cost'][0]['value'],
-                    "estimated" => $data['cost'][0]['etd'],
-                    "note" => $data['cost'][0]['note'],
-                ));
+                foreach($data["costs"] as $data_detail)
+                {
+                    array_push($tmp_res, array(
+                        "service" => $data_detail['service'],
+                        "description" => $data_detail['description'],
+                        "cost" => $data_detail['cost'][0]['value'],
+                        "estimated" => $data_detail['cost'][0]['etd'],
+                        "note" => $data_detail['cost'][0]['note'],
+                    ));
+                }
             }
-            dd($tmp_res);
             return response()->json($tmp_res, 200);
         }
 

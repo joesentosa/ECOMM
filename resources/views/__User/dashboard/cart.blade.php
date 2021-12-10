@@ -119,6 +119,7 @@
                                 </table>
                             </div>
                             <div class="cart_submit">
+                                {{-- Todo : Buat Update Data Barang Di Session --}}
                                 <button class="btn btn-sm btn-radius btn-default" type="submit">update cart</button>
                             </div>
                         </div>
@@ -128,14 +129,14 @@
         </div> <!-- End Cart Table -->
 
         <!-- Start Coupon Start -->
-        <div class="coupon_area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="coupon_code right">
-                            <h3>Billing Details</h3>
-                            <div class="coupon_inner">
-                                <form action="#">
+        <form action="{{ url('checkout') }}" method="post"> @csrf
+            <div class="coupon_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="coupon_code right">
+                                <h3>Billing Details</h3>
+                                <div class="coupon_inner">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="default-form-box">
@@ -197,7 +198,7 @@
                                         <div class="col-12">
                                             <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse"
                                                    data-bs-target="#anotherShipping">
-                                                <input type="checkbox" id="newShipping" >
+                                                <input type="checkbox" id="newShipping">
                                                 <span>Ship to a different address?</span>
                                             </label>
 
@@ -272,41 +273,43 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="coupon_code right">
-                            <h3>Cart Totals</h3>
-                            <div class="coupon_inner">
-                                <div class="cart_subtotal">
-                                    <p>Subtotal</p>
-                                    <p class="cart_amount">$215.00</p>
-                                </div>
-                                <div class="cart_subtotal mb-3">
-                                    <p>Shipping</p>
-                                    <p class="cart_amount" id="price_amount"><span>Flat Rate:</span> Rp. 00.00,- </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <button type="button" id="edit-shipping" data-bs-toggle="modal"
-                                            data-bs-target="#form_shipping">Calculate shipping
-                                    </button>
-                                </div>
-                                <div class="cart_subtotal mt-4">
-                                    <p>Total</p>
-                                    <p class="cart_amount">$215.00</p>
-                                </div>
-                                <div class="checkout_btn">
-                                    <a href="{{ url('checkout') }}" class="btn btn-sm btn-radius btn-default">Proceed to
-                                        Checkout</a>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="coupon_code right">
+                                <h3>Cart Totals</h3>
+                                <div class="coupon_inner">
+                                    <div class="cart_subtotal">
+                                        <p>Subtotal</p>
+                                        <p class="cart_amount">$215.00</p>
+                                    </div>
+                                    <div class="cart_subtotal mb-3">
+                                        <p>Shipping</p>
+                                        <p class="cart_amount" id="price_amount"><span>Flat Rate:</span> Rp. 00.00,-</p>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" id="edit-shipping" data-bs-toggle="modal"
+                                                data-bs-target="#form_shipping">Calculate shipping
+                                        </button>
+                                    </div>
+                                    <div class="cart_subtotal mt-4">
+                                        <p>Total</p>
+                                        <p class="cart_amount">$215.00</p>
+                                    </div>
+                                    <div class="checkout_btn">
+                                        <button type="submit" class="btn btn-sm btn-radius btn-default">
+                                            Proceed to
+                                            Checkout
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> <!-- End Coupon Start -->
+            </div> <!-- End Coupon Start -->
+        </form>
     </div> <!-- ...:::: End Cart Section:::... -->
 
     <div class="modal fade" id="form_shipping" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -389,9 +392,7 @@
                                     <select class="form-select"
                                             name="cb_pilih_layanan" id="cb_pilih_layanan">
                                         <option selected>Choose Package</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                        <option value="14000">Rp. 14.000,-</option>
                                     </select>
                                 </div>
                             </div>
@@ -400,7 +401,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-edit-layanan btn-sm">Submit</button>
+                    <button type="button" class="btn btn-edit-layanan btn-sm" id="btn-edit-layanan">Submit</button>
                 </div>
             </div>
         </div>
@@ -428,10 +429,37 @@
     <script src="{{ asset('assets/Martup/js/main.js') }}"></script>
     <script>
 
-        $(document).ready(function(){
+        function formatNum(rawNum) {
+            rawNum = "" + rawNum;
+            let retNum = "";
+            let j = 0;
+            for (let i = rawNum.length; i > 0; i--) {
+                j++;
+                if (((j % 3) == 1) && (j != 1))
+                    retNum = rawNum.substr(i - 1, 1) + "." + retNum;
+                else
+                    retNum = rawNum.substr(i - 1, 1) + retNum;
+            }
+            return "Rp. " + retNum + ",-";
+        }
+
+        function stripText(element) {
+            let item = element[0];
+            let newElement = $('<' + item.nodeName + '/>');
+            for (i = 0; i < item.attributes.length; i++) {
+                newElement.attr(item.attributes[i].name, item.attributes[i].value);
+            }
+            element.children().each(function () {
+                newElement.append(this);
+            });
+            element.replaceWith(newElement);
+            return newElement;
+        }
+
+        $(document).ready(function () {
 
             // populate city
-            $('#cb_pilih_provinsi').change(function(){
+            $('#cb_pilih_provinsi').change(function () {
                 $.ajax({
                     url: "{{ url('shipping') }}",
                     type: 'GET',
@@ -439,10 +467,9 @@
                     data: {
                         'provinsi': $(this).val(),
                     },
-                    success: function(data){
+                    success: function (data) {
                         $("#cb_pilih_city").empty();
-                        for (let i of data)
-                        {
+                        for (let i of data) {
                             // append city
                             $("#cb_pilih_city").append($('<option>', {
                                 value: i['city_id'],
@@ -455,7 +482,7 @@
             });
 
             // populate harga
-            $('#cb_pilih_city').change(function(){
+            $('#cb_pilih_city').change(function () {
                 $.ajax({
                     url: "{{ url('shipping') }}",
                     type: 'GET',
@@ -465,20 +492,38 @@
                         'kota': $(this).val(),
                         'courier': $('#cb_pilih_kurir').val()
                     },
-                    success: function(result){
+                    success: function (result) {
                         $("#cb_pilih_layanan").empty();
-                        for (let i of result)
-                        {
+                        for (let i of result) {
                             // append city
                             $("#cb_pilih_layanan").append($('<option>', {
                                 value: i['cost'],
-                                text: i['service'] + " " + i['description'] + " Rp. " + i['cost'] + ",-",
+                                text: i['service'] + " " + i['description'] + " " + formatNum(i['cost']),
                             }));
                         }
                         $('#cb_pilih_layanan').niceSelect('update');
                     }
                 });
             });
+
+            $("#btn-edit-layanan").click(function () {
+                $("#form_shipping").modal('hide');
+
+                // wtf is this :v
+                let str = "<span>" + stripText($("#price_amount")).text() + "</span> " + formatNum($("#cb_pilih_layanan").val());
+                $("#price_amount").html(str);
+
+                // ajax to submit shipping method and price
+                $.ajax({
+                    url: "{{ url('shipping/submit') }}",
+                    type: 'POST',
+                    data: {
+                        'provinsi': $('#cb_pilih_provinsi').val(),
+                        'kota': $('#cb_pilih_city').val(),
+                        'courier': $('#cb_pilih_kurir').val(),
+                    },
+                })
+            })
         });
     </script>
 @endpush

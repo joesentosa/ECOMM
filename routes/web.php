@@ -14,7 +14,7 @@ Route::get('/login', [CustomerController::class, 'login'])->name('page.login.cus
 Route::get('/catalog',[CatalogController::class,'catalog'])->name('page.catalog.customer');
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
-Route::get('/checkout',[ShopController::class,'checkout']);
+Route::post('/checkout',[ShopController::class,'checkout']);
 Route::get('/invoice',[CustomerController::class,'page_invoice']);
 
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
@@ -102,6 +102,7 @@ Route::middleware(['customer.auth'])
 
 // pragma region API
 Route::get('shipping', [ShopController::class, 'calculate_shipping']);
+Route::post('shipping/submit', [ShopController::class, 'submit_shipping']);
 // pragma endregion API
 
 // pragma region Share to social media
