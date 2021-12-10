@@ -22,96 +22,86 @@
                             </button>
                             <ul class="mainmenu-nav dropdown-menu">
                                 <li class="menu-items">
-                                    <a href="{{ route('page.index.customer') }}">Home <span class="material-icons">arrow_right</span></a>
-                                    <div class="has-dropdown">
-                                        <div class="menu-content">
-                                            <h6 class="title">Home Page</h6>
-                                            <ul class="submenu">
-                                                <li><a href="{{ route('page.index.customer') }}">Home 1</a></li>
-                                                <li><a href="{{ route('page.index.customer') }}">Home 2</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <a href="{{ route('page.index.customer') }}">Home</a>
                                 </li>
                                 <li class="menu-items">
-                                    <a href="shop-grid-sidebar-left.html">Shop <span class="material-icons">arrow_right</span></a>
-                                    <div class="has-dropdown megamenu">
+                                    <a href="{{ route('page.catalog.customer') }}">Shop <span class="material-icons">arrow_right</span></a>
+                                    <div class="has-dropdown">
                                         <div class="menu-content">
                                             <h6 class="title">Shop Page</h6>
                                             <ul class="submenu">
-                                                <li><a href="shop-grid-sidebar-left.html">Left Sidebar</a></li>
-                                                <li><a href="shop-grid-sidebar-right.html">Right Sidebar</a></li>
-                                                <li><a href="shop-grid-sidebar-full-width-3-column.html">Shop Full
-                                                        Width</a></li>
+                                                <li><a href="{{ route('page.catalog.customer') }}">Catalog</a></li>
+                                                <li><a href="{{ route('page.cart.customer') }}">Cart</a></li>
+                                                <li><a href="{{ route('page.wishlist.customer') }}">Wishlist</a></li>
                                             </ul>
                                         </div>
-                                        <div class="menu-content">
-                                            <h6 class="title">Product Details Page</h6>
-                                            <ul class="submenu">
-                                                <li><a href="product-details-default.html">Product Default</a></li>
-                                                <li><a href="product-details-group.html">Product Group</a></li>
-                                                <li><a href="product-details-left-sidebar.html">Product Left
-                                                        Sidebar</a></li>
-                                                <li><a href="product-details-right-sidebar.html">Product Right
-                                                        Sidebar</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-content">
-                                            <h6 class="title">Others Page</h6>
-                                            <ul class="submenu">
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="my-account.html">MyAccount</a></li>
-                                            </ul>
-                                        </div>
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Product Details Page</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="product-details-default.html">Product Default</a></li>--}}
+{{--                                                <li><a href="product-details-group.html">Product Group</a></li>--}}
+{{--                                                <li><a href="product-details-left-sidebar.html">Product Left--}}
+{{--                                                        Sidebar</a></li>--}}
+{{--                                                <li><a href="product-details-right-sidebar.html">Product Right--}}
+{{--                                                        Sidebar</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Others Page</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="cart.html">Cart</a></li>--}}
+{{--                                                <li><a href="wishlist.html">Wishlist</a></li>--}}
+{{--                                                <li><a href="compare.html">Compare</a></li>--}}
+{{--                                                <li><a href="checkout.html">Checkout</a></li>--}}
+{{--                                                <li><a href="login.html">Login</a></li>--}}
+{{--                                                <li><a href="my-account.html">MyAccount</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
                                     </div>
                                 </li>
-                                <li class="menu-items">
-                                    <a href="blog-list-left-sidebar.html">Blog <span class="material-icons">arrow_right</span></a>
-                                    <div class="has-dropdown megamenu">
-                                        <div class="menu-content">
-                                            <h6 class="title">Blog List Full Width</h6>
-                                            <ul class="submenu">
-                                                <li><a href="blog-list-3-grid-full-width.html">Grid 3 Full Width</a>
-                                                </li>
-                                                <li><a href="blog-list-4-grid-full-width.html">Grid 4 Full Width</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-content">
-                                            <h6 class="title">Blog List Sidebar</h6>
-                                            <ul class="submenu">
-                                                <li><a href="blog-list-left-sidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-content">
-                                            <h6 class="title">Blog Details</h6>
-                                            <ul class="submenu">
-                                                <li><a href="blog-details-full-width.html">Full Width</a></li>
-                                                <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-items">
-                                    <a href="#">Pages <span class="material-icons">arrow_right</span></a>
-                                    <div class="has-dropdown">
-                                        <div class="menu-content">
-                                            <h6 class="title">Inner Pages</h6>
-                                            <ul class="submenu">
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="error.html">404-Error</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-items"><a href="contact.html">Contact Us</a></li>
+{{--                                <li class="menu-items">--}}
+{{--                                    <a href="blog-list-left-sidebar.html">Blog <span class="material-icons">arrow_right</span></a>--}}
+{{--                                    <div class="has-dropdown megamenu">--}}
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Blog List Full Width</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="blog-list-3-grid-full-width.html">Grid 3 Full Width</a>--}}
+{{--                                                </li>--}}
+{{--                                                <li><a href="blog-list-4-grid-full-width.html">Grid 4 Full Width</a>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Blog List Sidebar</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="blog-list-left-sidebar.html">Left Sidebar</a></li>--}}
+{{--                                                <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Blog Details</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="blog-details-full-width.html">Full Width</a></li>--}}
+{{--                                                <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>--}}
+{{--                                                <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                                <li class="menu-items">--}}
+{{--                                    <a href="#">Pages <span class="material-icons">arrow_right</span></a>--}}
+{{--                                    <div class="has-dropdown">--}}
+{{--                                        <div class="menu-content">--}}
+{{--                                            <h6 class="title">Inner Pages</h6>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="about.html">About Us</a></li>--}}
+{{--                                                <li><a href="faq.html">FAQ</a></li>--}}
+{{--                                                <li><a href="error.html">404-Error</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                                <li class="menu-items"><a href="contact.html">Contact Us</a></li>--}}
                             </ul>
                         </div>
 
@@ -133,7 +123,7 @@
                                 <img src="assets/images/icons/icon-heart-dark.svg" alt="">
                                 <span class="count-tag">{{ $WL_count }}</span>
                             </button>
-                        @endisset                        
+                        @endisset
                         @isset($cart_count)
                             <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
                                     data-bs-target="#addcartOffcanvas">
@@ -141,7 +131,7 @@
                                 <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
                             </button>
                         @endisset
-                        @if(\Illuminate\Support\Facades\Auth::user())                            
+                        @if(\Illuminate\Support\Facades\Auth::user())
                             <div class="menu-event dropdown">
                                 <button class="header-action-item header-right main-menu-event dropdown-toggle edit-button"
                                         data-bs-toggle="dropdown">
@@ -152,7 +142,7 @@
                                 </button>
                                 <ul class="mainmenu-nav dropdown-menu">
                                     <li class="menu-items">
-                                        <a href="{{ route('page.user.profile') }}">Profile</a>
+                                        <a href="{{ route('page.profile.customer') }}">Profile</a>
                                     </li>
                                     <li class="menu-items">
                                         <a href="{{ route('route.auth.logout') }}">Logout</a>

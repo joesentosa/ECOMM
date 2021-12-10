@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BarangModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Midtrans\Config;
 use Midtrans\Snap;
 
@@ -28,6 +29,8 @@ class ShopController extends Controller
 
     public function cart(Request $request)
     {
+        $customer = Auth::user();
+
         // get barang from session
         $tmp_data = $request->session()->get('cart_barang') ?? [];
         $carts = array();
@@ -41,11 +44,19 @@ class ShopController extends Controller
             ));
         }
         // use compact to serve the data
-        return view('__User.dashboard.cart', compact('carts'));
+        return view('__User.dashboard.cart', compact('carts', 'customer'));
     }
 
     public function checkout(Request $request)
     {
+        $request->validate([
+            
+        ]);
+
+        // Assuming all the item is in the session
+        // check if shipping is needed in the session
+        //
+
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
         $params = array(

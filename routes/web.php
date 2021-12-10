@@ -8,13 +8,15 @@ use App\Http\Controllers\ShopController;
 //use App\Http\Controllers\ShareSocialController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('coba', [\App\Http\Controllers\ShopController::class, 'viewCheckout']);
+
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/login', [CustomerController::class, 'login'])->name('page.login.customer');
-Route::get('/catalog',[CatalogController::class,'catalog']);
+Route::get('/catalog',[CatalogController::class,'catalog'])->name('page.catalog.customer');
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
-Route::get('/cart',[ShopController::class,'cart']);
+Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
 Route::get('/checkout',[ShopController::class,'checkout']);
+Route::get('/invoice',[CustomerController::class,'page_invoice']);
+
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::post('/deleteWL',[CatalogController::class,'deleteWL']);
 //Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
@@ -23,6 +25,7 @@ Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
 Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
 Route::post('/catalog-filter-price', [CatalogController::class, 'filterPrice'])->name('filter-price');
+
 
 // admin route
 Route::middleware('admin.auth')
@@ -90,11 +93,10 @@ Route::prefix('auth')
 Route::middleware(['customer.auth'])
     ->prefix('user')
     ->group(function () {
-        Route::get('/profile', [CustomerController::class, 'getDataCustomer'])->name('page.user.profile');
+        Route::get('/profile', [CustomerController::class, 'getDataCustomer'])->name('page.profile.customer');
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
-        Route::get('/wishlist',[CustomerController::class,'page_wishlist']);   
-        Route::get('/invoice',[CustomerController::class,'page_invoice']);
+        Route::get('/wishlist',[CustomerController::class,'page_wishlist'])->name('page.wishlist.customer');
     });
 //end route customer
 

@@ -19,7 +19,7 @@ class CustomerAuthMiddleware
     {
         if (Auth::guard('web')->guest())
         {
-            abort(401);
+            return redirect()->route('page.login.customer');
         }
         return $next($request);
     }
