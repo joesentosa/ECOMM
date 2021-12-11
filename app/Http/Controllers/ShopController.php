@@ -90,10 +90,10 @@ class ShopController extends Controller
                 'required',
                 'numeric',
                 'regex:/^([0-9\s\-\+\(\)]*)$/',
-                'min:10'            
+                'min:10'
             ],
             'email' => 'required|email:rfc,dns',
-        ]); 
+        ]);
 
         // Assuming all the item is in the session
         // check if shipping is needed in the session
@@ -136,6 +136,7 @@ class ShopController extends Controller
     {
         $provinsi = $request->provinsi ?? null;
         $kota = $request->kota ?? null;
+        $courier = $request->courier;
 
         if (!$provinsi) {
             abort(400);
@@ -166,9 +167,10 @@ class ShopController extends Controller
                 }
                 return response()->json($tmp_res, 200);
             }
+            return response()->json(['message' => 'failed to fetch data'], $statusCode);
         }
 
-        $courier = $request->courier;
+
 
         // URL
         $apiURL = 'https://api.rajaongkir.com/starter/cost';
@@ -199,7 +201,7 @@ class ShopController extends Controller
             return response()->json($tmp_res, 200);
         }
 
-        return response()->json(['message' => 'failed to fetch data'], 200);
+        return response()->json(['message' => 'failed to fetch data'], $statusCode);
     }
 
     public function viewCheckout(Request $request)
