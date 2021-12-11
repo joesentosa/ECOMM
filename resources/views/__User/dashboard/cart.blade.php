@@ -37,6 +37,22 @@
             color: #FFF;
             background-color: #264653d3;
         }
+        .error{
+            color:#d32f48;
+            font-size:14px;
+            width:max-content;
+            padding-left:9px;
+        }
+        .coupon_inner input{
+            border: none;
+            height: 18px;
+            background: none;
+            padding: 0 20px;
+            margin-right: 15px;
+            font-size: 12px;
+            color: #333;
+            width: 20px;
+        }
 
     </style>
 @endsection
@@ -126,8 +142,7 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- End Cart Table -->
-
+        </div> <!-- End Cart Table -->        
         <!-- Start Coupon Start -->
         <form action="{{ url('checkout') }}" method="post"> @csrf
             <div class="coupon_area">
@@ -144,6 +159,9 @@
                                                 <input type="text" placeholder="First Name"
                                                        value="@if($customer){{$customer->firstname}}@endif"
                                                        name="firstname">
+                                                @error('firstname')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -152,12 +170,18 @@
                                                 <input type="text" placeholder="Last Name"
                                                        value="@if($customer){{$customer->lastname}}@endif"
                                                        name="lastname">
+                                                @error('lastname')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="default-form-box">
                                                 <label>Company Name</label>
                                                 <input type="text" placeholder="Company Name" name="company_name">
+                                                @error('company_name')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -166,12 +190,9 @@
                                                 <input placeholder="House number and street name" type="text"
                                                        name="address"
                                                        value="@if($customer){{$customer->address}}@endif">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="default-form-box">
-                                                <input placeholder="Apartment, suite, unit etc. (optional)" type="text"
-                                                       name="address_details">
+                                                @error('address')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -179,28 +200,38 @@
                                                 <label>Town / City <span>*</span></label>
                                                 <input type="text" placeholder="City"
                                                        value="@if($customer){{$customer->kota}}@endif">
+                                                @error('city')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="default-form-box">
                                                 <label>Phone<span>*</span></label>
                                                 <input type="text" placeholder="Phone Number" name="phone">
+                                                @error('phone')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="default-form-box">
                                                 <label> Email Address <span>*</span></label>
                                                 <input type="text" placeholder="Your Email" name="email"
-                                                       value="@if($customer){{$customer->email}}@endif"
-                                                >
+                                                       value="@if($customer){{$customer->email}}@endif">
+                                                @error('phone')
+                                                    <div class="error">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse"
-                                                   data-bs-target="#anotherShipping">
-                                                <input type="checkbox" id="newShipping">
-                                                <span>Ship to a different address?</span>
-                                            </label>
+                                            <div class="d-flex justify-content-center">
+                                                <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse"
+                                                    data-bs-target="#anotherShipping">
+                                                    <input type="checkbox" id="newShipping">
+                                                    <span>Ship to a different address?</span>
+                                                </label>
+                                            </div>
 
                                             <div id="anotherShipping" class="collapse mt-3"
                                                  data-parent="#anotherShipping">
@@ -208,19 +239,19 @@
                                                     <div class="col-lg-6">
                                                         <div class="default-form-box">
                                                             <label>First Name <span>*</span></label>
-                                                            <input type="text">
+                                                            <input type="text" name="first_second">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="default-form-box">
                                                             <label>Last Name <span>*</span></label>
-                                                            <input type="text">
+                                                            <input type="text" name="last_second">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="default-form-box">
                                                             <label>Company Name</label>
-                                                            <input type="text">
+                                                            <input type="text" name="company_second">
                                                         </div>
                                                     </div>
 
@@ -229,37 +260,25 @@
                                                         <div class="default-form-box">
                                                             <label>Street address <span>*</span></label>
                                                             <input placeholder="House number and street name"
-                                                                   type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="default-form-box">
-                                                            <input placeholder="Apartment, suite, unit etc. (optional)"
-                                                                   type="text">
+                                                                   type="text" name="address_second">
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="default-form-box">
                                                             <label>Town / City <span>*</span></label>
-                                                            <input type="text">
+                                                            <input type="text" name="city_second">
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="default-form-box">
-                                                            <label>State / County <span>*</span></label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
+                                                    </div>                                                    
                                                     <div class="col-lg-6">
                                                         <div class="default-form-box">
                                                             <label>Phone<span>*</span></label>
-                                                            <input type="text">
+                                                            <input type="text" name="phone_second">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="default-form-box">
                                                             <label> Email Address <span>*</span></label>
-                                                            <input type="text">
+                                                            <input type="text" name="email_second">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -268,7 +287,7 @@
                                         <div class="col-12 mt-3">
                                             <div class="order-notes">
                                                 <label for="order_note">Order Notes</label>
-                                                <textarea id="order_note"
+                                                <textarea id="order_note" name="order_note"
                                                           placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                             </div>
                                         </div>

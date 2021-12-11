@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Midtrans\Config;
 use Midtrans\Snap;
+use App\Rules\CheckPhone;
 
 class ShopController extends Controller
 {
@@ -54,7 +55,20 @@ class ShopController extends Controller
     {
         if (Auth::guest()) { return redirect()->route('page.login.customer'); }
 
-        $request->validate([]);// todo cek validasi sini bang <3 -jere
+        $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'company_name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'phone' => [
+                'required',
+                'numeric',
+                'regex:/^([0-9\s\-\+\(\)]*)$/',
+                'min:10'            
+            ],
+            'email' => 'required|email:rfc,dns',
+        ]); 
 
         // Assuming all the item is in the session
         // check if shipping is needed in the session
