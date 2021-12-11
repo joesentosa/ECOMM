@@ -13,6 +13,11 @@ use Midtrans\Snap;
 
 class ShopController extends Controller
 {
+    // global variable
+    // price_service -> array (hold data from shipping)
+    // cart_barang -> array (hold barang_id for cart)
+
+
     public function __construct()
     {
         // Set your Merchant Server Key
@@ -37,22 +42,35 @@ class ShopController extends Controller
         // get barang from session
         $tmp_data = $request->session()->get('cart_barang') ?? [];
         $carts = array();
-        // find each barang and assign to cariable carts
-        foreach($tmp_data as $data){
-            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
 
+        $subtotal = 0;
+        $shipping_rate = $request->session()->get('price_service')['cost'] ?? 0;
+
+        // find each barang and assign to cariable carts
+        foreach ($tmp_data as $data) {
+            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
+            $subtotal += $data_barang->harga * $data['qty'];
             array_push($carts, array(
                 'data' => $data_barang,
                 'qty' => $data['qty']
             ));
         }
+
         // use compact to serve the data
-        return view('__User.dashboard.cart', compact('carts', 'customer'));
+        return view('__User.dashboard.cart', compact('carts', 'customer', 'subtotal', 'shipping_rate'));
     }
 
     public function checkout(Request $request)
     {
-        if (Auth::guest()) { return redirect()->route('page.login.customer'); }
+        if (Auth::guest()) {
+            return redirect()->route('page.login.customer');
+        }
+
+        // check if shipping array in session is populated
+        // if not return back with error
+        if (!$request->session()->has('price_service')) {
+            return back()->withErrors(['errors' => 'Please select a shipping service']);
+        }
 
         $request->validate([]);// todo cek validasi sini bang <3 -jere
 
@@ -79,10 +97,10 @@ class ShopController extends Controller
     {
         // ToDo: Add validation of shipping price
         $tmp_services = array();
-        foreach($request->cross_data as $service){
-            if ($service["service"] == $request->services)
-            {
-                $tmp_services = $service; break;
+        foreach ($request->cross_data as $service) {
+            if ($service["service"] == $request->services) {
+                $tmp_services = $service;
+                break;
             }
         }
         $tmp_services['provinsi'] = $request->provinsi;
@@ -97,26 +115,25 @@ class ShopController extends Controller
         $provinsi = $request->provinsi ?? null;
         $kota = $request->kota ?? null;
 
-        if (!$provinsi) { abort(400); }
+        if (!$provinsi) {
+            abort(400);
+        }
 
         $headers = [
             'key' => env('RAJA_ONGKIR_API_KEY'),
             'content-type' => "application/x-www-form-urlencoded"
         ];
 
-        if (!$kota)
-        {
+        if (!$kota) {
             // URL
             $apiURL = 'https://api.rajaongkir.com/starter/city?province=' . $provinsi;
 
             $response = Http::withHeaders($headers)->get($apiURL);
             $statusCode = $response->status();
             $responseBody = json_decode($response->getBody(), true);
-            if ($statusCode == 200)
-            {
+            if ($statusCode == 200) {
                 $tmp_res = array();
-                foreach($responseBody["rajaongkir"]["results"] as $data)
-                {
+                foreach ($responseBody["rajaongkir"]["results"] as $data) {
                     array_push($tmp_res, array(
                         "city_id" => $data['city_id'],
                         "province" => $data['province'],
@@ -144,13 +161,10 @@ class ShopController extends Controller
         $statusCode = $response->status();
         $responseBody = json_decode($response->getBody(), true);
 
-        if ($statusCode == 200)
-        {
+        if ($statusCode == 200) {
             $tmp_res = array();
-            foreach($responseBody["rajaongkir"]["results"] as $data)
-            {
-                foreach($data["costs"] as $data_detail)
-                {
+            foreach ($responseBody["rajaongkir"]["results"] as $data) {
+                foreach ($data["costs"] as $data_detail) {
                     array_push($tmp_res, array(
                         "service" => $data_detail['service'],
                         "description" => $data_detail['description'],

@@ -282,11 +282,12 @@
                                 <div class="coupon_inner">
                                     <div class="cart_subtotal">
                                         <p>Subtotal</p>
-                                        <p class="cart_amount">$215.00</p>
+                                        <p class="cart_amount">{{ generateFormatRP($subtotal) }}</p>
                                     </div>
                                     <div class="cart_subtotal mb-3">
                                         <p>Shipping</p>
-                                        <p class="cart_amount" id="price_amount"><span>Flat Rate:</span> Rp. 00.00,-</p>
+                                        <p class="cart_amount" id="price_amount">
+                                            <span>Flat Rate:</span> {{ $shipping_rate }}</p>
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <button type="button" id="edit-shipping" data-bs-toggle="modal"
@@ -295,7 +296,8 @@
                                     </div>
                                     <div class="cart_subtotal mt-4">
                                         <p>Total</p>
-                                        <p class="cart_amount">$215.00</p>
+                                        <p class="cart_amount"
+                                           id="subtotal_amount">{{ generateFormatRP($subtotal) }}</p>
                                     </div>
                                     <div class="checkout_btn">
                                         <button type="submit" class="btn btn-sm btn-radius btn-default">
@@ -439,7 +441,7 @@
                 else
                     retNum = rawNum.substr(i - 1, 1) + retNum;
             }
-            return "Rp. " + retNum + ",-";
+            return "Rp. " + retNum + ",00";
         }
 
         function stripText(element) {
@@ -455,8 +457,24 @@
             return newElement;
         }
 
+        function refreshRate(num) {
+            // change price amount using js
+            // wtf ??
+            let str = "<span>" + stripText($("#price_amount")).text() + "</span> " + formatNum(num);
+            $("#price_amount").html(str);
+        }
+
+        function refreshSubtotal() {
+            let number = isNaN(parseInt($("#cb_pilih_layanan").val())) ? {{ $shipping_rate }} : parseInt($("#cb_pilih_layanan").val());
+            let subtotal_str = (number) + {{ $subtotal }};
+            $("#subtotal_amount").html(formatNum(subtotal_str));
+        }
+
         $(document).ready(function () {
             let tmp_value = undefined;
+
+            refreshRate({{ $shipping_rate }});
+            refreshSubtotal();
 
             // populate city
             $('#cb_pilih_provinsi').change(function () {
@@ -511,16 +529,14 @@
             $("#btn-edit-layanan").click(function () {
                 $("#form_shipping").modal('hide');
 
-                // wtf is this :v
-                let str = "<span>" + stripText($("#price_amount")).text() + "</span> " + formatNum($("#cb_pilih_layanan").val());
-                $("#price_amount").html(str);
+                refreshRate($("#cb_pilih_layanan").val());
 
                 // ajax to submit shipping method and price
                 $.ajax({
                     url: "{{ url('shipping/submit') }}",
                     type: 'POST',
                     data: {
-                        _token:"{{ csrf_token() }}",
+                        _token: "{{ csrf_token() }}",
                         cross_data: tmp_value,
                         provinsi: $('#cb_pilih_provinsi').val(),
                         kota: $('#cb_pilih_city').val(),
@@ -529,6 +545,7 @@
                     },
                     success: function () {
                         tmp_value = undefined;
+                        refreshSubtotal();
                     }
                 });
             });
