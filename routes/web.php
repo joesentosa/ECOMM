@@ -14,6 +14,7 @@ Route::get('/login', [CustomerController::class, 'login'])->name('page.login.cus
 Route::get('/catalog',[CatalogController::class,'catalog'])->name('page.catalog.customer');
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
+Route::get('/order',[ShopController::class,'order']);
 Route::post('/checkout',[ShopController::class,'checkout']);
 Route::get('/invoice',[CustomerController::class,'page_invoice']);
 
