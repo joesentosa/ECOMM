@@ -16,10 +16,12 @@ class CatalogController extends Controller
     public function catalog(Request $req){
         $dtkategori = new KategoriModel();
         // data brand buat apa?
+        //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->get();
         // ====================        
         $dtSession  = BarangModel::with(['gambar'])->get();
+        // dd($dtSession->gambar[0]);
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
