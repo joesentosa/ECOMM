@@ -41,35 +41,29 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td> Handbag fringilla <strong> × 2</strong></td>
-                                        <td> $165.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td> Handbag justo <strong> × 2</strong></td>
-                                        <td> $50.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td> Handbag elit <strong> × 2</strong></td>
-                                        <td> $50.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td> Handbag Rutrum <strong> × 1</strong></td>
-                                        <td> $50.00</td>
-                                    </tr>
+                                    @forelse($barangs as $barang)
+                                        <tr>
+                                            <td> {{ $barang->namaBarang }} <strong> × 2</strong></td>
+                                            <td> {{ generateFormatRP($barang->harga) }}</td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="2"> No Data </td>
+                                        </tr>
+                                    @endforelse
                                     </tbody>
                                     <tfoot>
                                     <tr>
                                         <th>Cart Subtotal</th>
-                                        <td>$215.00</td>
+                                        <td>{{ generateFormatRP($subtotal) }}</td>
                                     </tr>
                                     <tr>
                                         <th>Shipping</th>
-                                        <td><strong>$5.00</strong></td>
+                                        <td><strong>{{ generateFormatRP($shipping_cost) }}</strong></td>
                                     </tr>
                                     <tr class="order_total">
                                         <th>Order Total</th>
-                                        <td><strong>$220.00</strong></td>
+                                        <td><strong>{{ generateFormatRP($subtotal + $shipping_cost) }}</strong></td>
                                     </tr>
                                     </tfoot>
                                 </table>

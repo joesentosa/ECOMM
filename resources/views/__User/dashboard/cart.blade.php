@@ -142,7 +142,7 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- End Cart Table -->        
+        </div> <!-- End Cart Table -->
         <!-- Start Coupon Start -->
         <form action="{{ url('checkout') }}" method="post"> @csrf
             <div class="coupon_area">
@@ -199,7 +199,9 @@
                                             <div class="default-form-box">
                                                 <label>Town / City <span>*</span></label>
                                                 <input type="text" placeholder="City"
-                                                       value="@if($customer){{$customer->kota}}@endif">
+                                                       value="@if($customer){{$customer->kota}}@endif"
+                                                       name="city">
+
                                                 @error('city')
                                                     <div class="error">{{ $message }}</div>
                                                 @enderror
@@ -268,7 +270,7 @@
                                                             <label>Town / City <span>*</span></label>
                                                             <input type="text" name="city_second">
                                                         </div>
-                                                    </div>                                                    
+                                                    </div>
                                                     <div class="col-lg-6">
                                                         <div class="default-form-box">
                                                             <label>Phone<span>*</span></label>

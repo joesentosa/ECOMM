@@ -17,6 +17,10 @@ class ShopController extends Controller
 {
     // global variable
     // price_service -> array (hold data from shipping)
+    /* contoh prive_service
+     * { "service" => "Paket Kilat Khusus", "description" => "Paket Kilat Khusus", "cost" => "28000",
+     *   "estimated" => "2 HARI", "note" => null, "provinsi" => "6", "kota" => "153", "courier" => "pos" }
+     * */
     // cart_barang -> array (hold barang_id for cart)
 
     public function testRemoveSessionButAuth()
@@ -83,7 +87,7 @@ class ShopController extends Controller
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'company_name' => 'required',
+            'company_name' => 'required', // ini ga perlu required sam wkwkwk
             'address' => 'required',
             'city' => 'required',
             'phone' => [
@@ -97,22 +101,34 @@ class ShopController extends Controller
 
         // Assuming all the item is in the session
         // check if shipping is needed in the session
-
+        // todo Check if null
+        $tmp_items = $request->session()->get('cart_barang');
         $tmp_shipping = $request->session()->get('price_service');
+
+        $subtotal = 0;
+        $shipping_cost = (int)$tmp_shipping["cost"];
+        $barangs = array();
+        foreach ($tmp_items as $items) {
+            $data_barang = BarangModel::where('id_barang', $items['id'])->first();
+            $subtotal += $data_barang->harga * $items['qty'];
+
+            array_push($barangs, $data_barang);
+        }
 
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
         // todo get barang from session into this crap :v
         $params = array(
             'transaction_details' => array(
-                'order_id' => rand(),
-                'gross_amount' => 10000,
+                'order_id' => rand(), // todo change this to get orderid from database
+                'gross_amount' => (int)$subtotal + $shipping_cost, // subtotal
             )
         );
 
         $snapToken = Snap::getSnapToken($params);
 
-        return view('__User.dashboard.checkout', compact('snapToken', 'clientKey'));
+        return view('__User.dashboard.checkout',
+            compact('snapToken', 'clientKey', 'barangs', 'subtotal', 'shipping_cost'));
     }
 
     public function submit_shipping(Request $request)
@@ -169,8 +185,6 @@ class ShopController extends Controller
             }
             return response()->json(['message' => 'failed to fetch data'], $statusCode);
         }
-
-
 
         // URL
         $apiURL = 'https://api.rajaongkir.com/starter/cost';
