@@ -517,7 +517,7 @@
                             // append city
                             $("#cb_pilih_layanan").append($('<option>', {
                                 value: i['cost'],
-                                text: i['service'] + " " + i['description'] + " (" + i['estimated'] + " hari) " + formatNum(i['cost']),
+                                text: i['description'] + " (" + i['estimated'] + " hari) " + formatNum(i['cost']),
                                 services: i['service'],
                             }));
                         }

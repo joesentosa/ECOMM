@@ -39,7 +39,12 @@ class AuthController extends Controller
             "password" => "required"
         ]);
 
-        if (Auth::attempt($credentials, $request->remember_me)) {
+        $login_type = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        if (Auth::attempt([$login_type => $request->username, 'password' => $request->password], $request->remember_me)) {
+            if ($request->session()->has('referer')) {
+                return redirect()->route($request->session()->get('referer'));
+            }
             return redirect()->route('page.index.customer');
         }
 
@@ -98,7 +103,6 @@ class AuthController extends Controller
 
             if ($findUser) {
                 Auth::login($findUser);
-                return redirect('/');
             } else {
                 // TODO JERE CREATE NEW CUSTOMER HERE
                 $user_data = $user->user;
@@ -113,7 +117,10 @@ class AuthController extends Controller
 
                 Auth::login($customer);
             }
-            return redirect('user/profile');
+            if ($request->session()->has('referer')) {
+                return redirect()->route($request->session()->get('referer'));
+            }
+            return redirect()->route('page.index.customer');
         } catch (\Exception $e) {
             dd($e->getMessage());
         }

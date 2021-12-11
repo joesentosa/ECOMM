@@ -8,6 +8,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 use Midtrans\Config;
 use Midtrans\Snap;
 
@@ -17,6 +18,12 @@ class ShopController extends Controller
     // price_service -> array (hold data from shipping)
     // cart_barang -> array (hold barang_id for cart)
 
+    public function testRemoveSessionButAuth()
+    {
+        $user = Auth::user();
+        Session::flush();
+        Auth::login($user);
+    }
 
     public function __construct()
     {
@@ -63,7 +70,7 @@ class ShopController extends Controller
     public function checkout(Request $request)
     {
         if (Auth::guest()) {
-            return redirect()->route('page.login.customer');
+            return redirect()->route('page.login.customer')->with('referer', 'page.cart.customer');
         }
 
         // check if shipping array in session is populated
@@ -81,6 +88,7 @@ class ShopController extends Controller
 
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
+        // todo get barang from session into this crap :v
         $params = array(
             'transaction_details' => array(
                 'order_id' => rand(),
