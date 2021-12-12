@@ -122,7 +122,7 @@ class CustomerController extends Controller
             $request->session()->put('cart_barang',$cart_barang);
             // dd($cart_barang);
         }
-        return redirect("catalog");
+        return back();
         // return back();
     }
 }
