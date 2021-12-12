@@ -110,7 +110,10 @@ class ShopController extends Controller
         $barangs = array();
         foreach ($tmp_items as $items) {
             $data_barang = BarangModel::where('id_barang', $items['id'])->first();
-            $subtotal += $data_barang->harga * $items['qty'];
+            $harga_total = $data_barang->harga * $items['qty'];
+            $subtotal += $harga_total;
+            $data_barang->qty = $items['qty'];
+            $data_barang->harga_total = $harga_total;
 
             array_push($barangs, $data_barang);
         }

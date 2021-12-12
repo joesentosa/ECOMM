@@ -221,7 +221,7 @@
                                                 <label> Email Address <span>*</span></label>
                                                 <input type="text" placeholder="Your Email" name="email"
                                                        value="@if($customer){{$customer->email}}@endif">
-                                                @error('phone')
+                                                @error('email')
                                                     <div class="error">{{ $message }}</div>
                                                 @enderror
                                             </div>
@@ -497,11 +497,7 @@
             refreshSubtotal();
 
             @if($errors->first('errors'))
-            Swal.fire(
-                'Please Choose Shipping Service',
-                'No Shipping Service...',
-                'warning'
-            )
+            Swal.fire('Please Choose Shipping Service', 'No Shipping Service...', 'warning');
             @endif
 
             // populate city
