@@ -167,13 +167,19 @@
                 <!-- Start Pagination -->
                 <div class="d-flex justify-content-center">
                     <ul class="page-pagination">
-                        <li class="icon-direction icon-direction--prev"><a href="#"><span class="material-icons-outlined">arrow_left</span></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li>...</li>
-                        <li><a href="#">10</a></li>
-                        <li class="icon-direction icon-direction--next"><a href="#"><span class="material-icons-outlined">arrow_right</span></a></li>
+                        <form action="beforePage" method="get">
+                            @csrf
+                            <input type="hidden" name="before" value="{{ $halaman }}">
+                            <li class="icon-direction icon-direction--prev"><button><span class="material-icons-outlined">arrow_left</span></button></li>
+                        </form>
+                        <li><a href="">{{ $halaman }}</a></li>
+                        <li><a href="">/</a></li>
+                        <li><a href="">{{ $max_Page }}</a></li>
+                        <form action="nextPage" method="get">
+                            @csrf
+                            <input type="hidden" name="after" value="{{ $halaman }}">
+                            <li class="icon-direction icon-direction--next"><button><span class="material-icons-outlined">arrow_right</span></button></li>
+                        </form>
                     </ul>
                 </div>
                 <!-- End Pagination -->

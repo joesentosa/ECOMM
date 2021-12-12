@@ -14,14 +14,16 @@ use Midtrans\Snap;
 class CatalogController extends Controller
 {
     public function catalog(Request $req){
+        $halaman = 1;
         $dtkategori = new KategoriModel();
         // data brand buat apa?
         //buat ambil filter brandnya
-        $dtbrand    = BrandModel::limit(5)->get();
-        $dtbarang   = BarangModel::with(['gambar'])->get();
-        // ====================        
         $dtSession  = BarangModel::with(['gambar'])->get();
-        // dd($dtSession->gambar[0]);
+        $maxPage = count($dtSession)/8;
+        $dtbrand    = BrandModel::limit(5)->get();
+        $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset(8)->get();
+        // ====================        
+        // dd(count($dtSession));
         $customer   = Auth::user();
         $WLCek      = null;
         $WLCust      = null;
@@ -56,7 +58,9 @@ class CatalogController extends Controller
             'cart_barang'=> $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
-            'WL_count'=>$wishlistCount
+            'WL_count'=>$wishlistCount,
+            'halaman'=>$halaman,
+            'max_Page'=>$maxPage
         ]);
     }
 
@@ -225,4 +229,117 @@ class CatalogController extends Controller
         ];
         return view('__User.dashboard.filter-price', $data);
     }
+
+    public function nextPage(Request $req)
+    {
+        $halaman = $req->after;
+        $halaman = $halaman+1;
+        $dtkategori = new KategoriModel();
+        // data brand buat apa?
+        //buat ambil filter brandnya
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
+        if ($halaman>$maxPage) {
+            $halaman = $maxPage;
+        }
+        $dtbrand    = BrandModel::limit(5)->get();
+        $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
+        // ====================        
+        // dd($dtSession);
+        $customer   = Auth::user();
+        $WLCek      = null;
+        $WLCust      = null;
+        if ($customer == null) {
+            $customer = null;
+        }else{
+            $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
+        }
+        $WishlistCust = null;
+        $wishlistCount = 0;
+        if ($WLCek != null) {
+            $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
+            $wishlistCount = count($WishlistCust);
+            $WL_fk_barang = [];
+            for ($i=0; $i < $wishlistCount; $i++) {
+                array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
+            }
+            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
+        }
+        $cart       = null;
+        $cartCount  = 0;
+        if ($req->session()->has('cart_barang')) {
+            $cart      = session('cart_barang');
+            $cartCount = count($cart);
+        }
+        // dd($cartCount);
+        return view('__User.dashboard.catalog',[
+            'data_kategori'=>$dtkategori->getAll(),
+            'data_brand' => $dtbrand,
+            'data_barang' => $dtbarang,
+            'data_session' => $dtSession,
+            'cart_barang'=> $cart,
+            'cart_count'=>$cartCount,
+            'WL_cust'=>$WLCust,
+            'WL_count'=>$wishlistCount,
+            'halaman'=>$halaman,
+            'max_Page'=>$maxPage
+        ]);
+    }
+
+    public function beforePage(Request $req)
+    {
+        $halaman = $req->before;
+        $halaman = $halaman-1;
+        if ($halaman == 0) {
+            $halaman = 1;
+        }
+        $dtkategori = new KategoriModel();
+        // data brand buat apa?
+        //buat ambil filter brandnya
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
+        $dtbrand    = BrandModel::limit(5)->get();
+        $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
+        // ====================        
+        // dd($dtSession->gambar[0]);
+        $customer   = Auth::user();
+        $WLCek      = null;
+        $WLCust      = null;
+        if ($customer == null) {
+            $customer = null;
+        }else{
+            $WLCek = WishlistModel::where('fk_id_customer',$customer->id_customer)->first();
+        }
+        $WishlistCust = null;
+        $wishlistCount = 0;
+        if ($WLCek != null) {
+            $WishlistCust = WishlistModel::where('fk_id_customer',$customer->id_customer)->get();
+            $wishlistCount = count($WishlistCust);
+            $WL_fk_barang = [];
+            for ($i=0; $i < $wishlistCount; $i++) {
+                array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
+            }
+            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
+        }
+        $cart       = null;
+        $cartCount  = 0;
+        if ($req->session()->has('cart_barang')) {
+            $cart      = session('cart_barang');
+            $cartCount = count($cart);
+        }
+        // dd($cartCount);
+        return view('__User.dashboard.catalog',[
+            'data_kategori'=>$dtkategori->getAll(),
+            'data_brand' => $dtbrand,
+            'data_barang' => $dtbarang,
+            'data_session' => $dtSession,
+            'cart_barang'=> $cart,
+            'cart_count'=>$cartCount,
+            'WL_cust'=>$WLCust,
+            'WL_count'=>$wishlistCount,
+            'halaman'=>$halaman,
+            'max_Page'=>$maxPage
+        ]);
+    }
+
 }

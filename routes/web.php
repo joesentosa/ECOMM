@@ -26,6 +26,8 @@ Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
 Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
 Route::post('/catalog-filter-price', [CatalogController::class, 'filterPrice'])->name('filter-price');
+Route::get('/nextPage', [CatalogController::class, 'nextPage']);
+Route::get('/beforePage', [CatalogController::class, 'beforePage']);
 
 
 // admin route
