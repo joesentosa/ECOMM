@@ -15,11 +15,11 @@ class CatalogController extends Controller
 {
     public function catalog(Request $req){
         $halaman = 1;
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
         $dtkategori = new KategoriModel();
         // data brand buat apa?
         //buat ambil filter brandnya
-        $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset(8)->get();
         // ====================        
@@ -137,14 +137,16 @@ class CatalogController extends Controller
         // dd($category);
         $brg = [];
         for ($i=0; $i < count($category); $i++) {
-            $temp = BarangModel::where('fk_id_kategori',$category[$i])->get();
+            $temp = BarangModel::where('fk_id_kategori',$category[$i])->with(['gambar'])->get();
             array_push($brg, $temp);
         }
 
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $customer   = Auth::user();
-        $dtSession   = BarangModel::get();
+        $halaman = 1;
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
         $WLCek      = null;
         $WLCust      = null;
 
@@ -179,7 +181,9 @@ class CatalogController extends Controller
             'cart_barang' => $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
-            'WL_count'=>$wishlistCount
+            'WL_count'=>$wishlistCount,
+            'halaman'=>$halaman,
+            'max_Page'=>$maxPage
         ];
         return view('__User.dashboard.filter-category', $data);
     }
@@ -189,7 +193,9 @@ class CatalogController extends Controller
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $customer   = Auth::user();
-        $dtSession   = BarangModel::get();
+        $halaman = 1;
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
         $WLCek      = null;
         $WLCust      = null;
 
@@ -209,7 +215,7 @@ class CatalogController extends Controller
             for ($i=0; $i < $wishlistCount; $i++) {
                 array_push($WL_fk_barang, $WishlistCust[$i]->fk_id_barang);
             }
-            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->get();
+            $WLCust = BarangModel::whereIn('id_barang',$WL_fk_barang)->with(['gambar'])->get();
         }
         $cart       = null;
         $cartCount  = 0;
@@ -225,7 +231,9 @@ class CatalogController extends Controller
             'cart_barang' => $cart,
             'cart_count'=>$cartCount,
             'WL_cust'=>$WLCust,
-            'WL_count'=>$wishlistCount
+            'WL_count'=>$wishlistCount,
+            'halaman'=>$halaman,
+            'max_Page'=>$maxPage
         ];
         return view('__User.dashboard.filter-price', $data);
     }
@@ -234,14 +242,14 @@ class CatalogController extends Controller
     {
         $halaman = $req->after;
         $halaman = $halaman+1;
-        $dtkategori = new KategoriModel();
-        // data brand buat apa?
-        //buat ambil filter brandnya
         $dtSession  = BarangModel::with(['gambar'])->get();
         $maxPage = count($dtSession)/8;
         if ($halaman>$maxPage) {
             $halaman = $maxPage;
         }
+        $dtkategori = new KategoriModel();
+        // data brand buat apa?
+        //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
         // ====================        
@@ -290,14 +298,14 @@ class CatalogController extends Controller
     {
         $halaman = $req->before;
         $halaman = $halaman-1;
+        $dtSession  = BarangModel::with(['gambar'])->get();
+        $maxPage = count($dtSession)/8;
         if ($halaman == 0) {
             $halaman = 1;
         }
         $dtkategori = new KategoriModel();
         // data brand buat apa?
         //buat ambil filter brandnya
-        $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
         // ====================        
