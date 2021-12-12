@@ -15,7 +15,7 @@ Route::get('/catalog',[CatalogController::class,'catalog'])->name('page.catalog.
 Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
 Route::get('/order',[ShopController::class,'order']);
-Route::post('/checkout',[ShopController::class,'checkout']);
+Route::post('/checkout',[ShopController::class,'checkout'])->name('page.checkout.customer');
 Route::get('/invoice',[CustomerController::class,'page_invoice']);
 
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);

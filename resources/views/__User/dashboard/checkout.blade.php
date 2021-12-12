@@ -91,21 +91,32 @@
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    //window.location.replace("")
+                    window.location.replace({{ url('invoice') }});
+
+                    // send ajax to place json_data from midtrans to session
+                    // $.ajax({
+                    //     url: '',
+                    //     type: 'POST',
+                    //     data: result,
+                    //     success: function (){
+                    //
+                    //     },
+                    // });
+
                 },
                 // Optional
                 onPending: function (result) {
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    //window.location.replace("http://www.w3schools.com")
+                    window.location.replace({{ url('invoice') }})
                 },
                 // Optional
                 onError: function (result) {
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    //window.location.replace("http://www.w3schools.com")
+                    window.location.replace({{ url('invoice') }})
                 }
             });
         };
