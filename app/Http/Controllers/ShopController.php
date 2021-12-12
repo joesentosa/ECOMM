@@ -74,6 +74,8 @@ class ShopController extends Controller
 
     public function checkout(Request $request)
     {
+        $clientKey = env('MIDTRANS_CLIENT_KEY');
+
         if (Auth::guest()) {
             return redirect()->route('page.login.customer', ['referer' => 'checkout']);
         }
@@ -118,12 +120,20 @@ class ShopController extends Controller
             array_push($barangs, $data_barang);
         }
 
-        $clientKey = env('MIDTRANS_CLIENT_KEY');
+        // Todo : add to database horder and dorder
+        // order_id
+        $order_id = 'H' . quickRandom(11);
+        // set order id to session
+
+        // remove session except auth
+        $user = Auth::user();
+        Session::flush();
+        Auth::login($user);
 
         // todo get barang from session into this crap :v
         $params = array(
             'transaction_details' => array(
-                'order_id' => rand(), // todo change this to get orderid from database
+                'order_id' => $order_id, // todo change this to get orderid from database
                 'gross_amount' => (int)$subtotal + $shipping_cost, // subtotal
             )
         );
@@ -131,7 +141,7 @@ class ShopController extends Controller
         $snapToken = Snap::getSnapToken($params);
 
         return view('__User.dashboard.checkout',
-            compact('snapToken', 'clientKey', 'barangs', 'subtotal', 'shipping_cost'));
+            compact('snapToken', 'clientKey', 'barangs', 'subtotal', 'shipping_cost', 'order_id'));
     }
 
     public function submit_shipping(Request $request)

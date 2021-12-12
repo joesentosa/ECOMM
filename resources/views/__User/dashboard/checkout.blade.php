@@ -91,7 +91,7 @@
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    window.location.replace('{{ url('invoice') }}');
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');
 
                     // send ajax to place json_data from midtrans to session
                     // $.ajax({
@@ -108,14 +108,14 @@
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    window.location.replace('{{ url('invoice') }}');
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');
                 },
                 // Optional
                 onError: function (result) {
                     /* You may add your own js here, this is just example */
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
-                    window.location.replace('{{ url('invoice') }}');
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');
                 }
             });
         };
