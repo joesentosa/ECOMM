@@ -44,8 +44,10 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <!-- end iconify -->
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 {{--    @include('__User.layout.css')--}}
-    @yield('style')    
+    @yield('style')
 </head>
 <body>
 

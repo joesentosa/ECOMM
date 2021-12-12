@@ -450,7 +450,6 @@
 
     <script src="{{ asset('assets/Martup/js/main.js') }}"></script>
     <script>
-
         function formatNum(rawNum) {
             rawNum = "" + rawNum;
             let retNum = "";
@@ -496,6 +495,14 @@
 
             refreshRate({{ $shipping_rate }});
             refreshSubtotal();
+
+            @if($errors->first('errors'))
+            Swal.fire(
+                'Please Choose Shipping Service',
+                'No Shipping Service...',
+                'warning'
+            )
+            @endif
 
             // populate city
             $('#cb_pilih_provinsi').change(function () {

@@ -42,8 +42,8 @@ class AuthController extends Controller
         $login_type = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
         if (Auth::attempt([$login_type => $request->username, 'password' => $request->password], $request->remember_me)) {
-            if ($request->session()->has('referer')) {
-                return redirect()->route($request->session()->get('referer'));
+            if ($request->has('referer')) {
+                return redirect()->route('page.checkout.customer');
             }
             return redirect()->route('page.index.customer');
         }

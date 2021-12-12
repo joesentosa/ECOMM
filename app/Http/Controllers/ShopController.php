@@ -75,7 +75,7 @@ class ShopController extends Controller
     public function checkout(Request $request)
     {
         if (Auth::guest()) {
-            return redirect()->route('page.login.customer')->with('referer', 'page.cart.customer');
+            return redirect()->route('page.login.customer', ['referer' => 'checkout']);
         }
 
         // check if shipping array in session is populated
