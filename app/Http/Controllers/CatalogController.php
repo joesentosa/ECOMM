@@ -16,13 +16,13 @@ class CatalogController extends Controller
     public function catalog(Request $req){
         $halaman = 1;
         $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
+        $maxPage = round(count($dtSession)/8);
         $dtkategori = new KategoriModel();
         // data brand buat apa?
         //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset(8)->get();
-        // ====================        
+        // ====================
         // dd(count($dtSession));
         $customer   = Auth::user();
         $WLCek      = null;
@@ -146,7 +146,7 @@ class CatalogController extends Controller
         $customer   = Auth::user();
         $halaman = 1;
         $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
+        $maxPage = round(count($dtSession)/8);
         $WLCek      = null;
         $WLCust      = null;
 
@@ -195,7 +195,7 @@ class CatalogController extends Controller
         $customer   = Auth::user();
         $halaman = 1;
         $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
+        $maxPage = round(count($dtSession)/8);
         $WLCek      = null;
         $WLCust      = null;
 
@@ -243,7 +243,7 @@ class CatalogController extends Controller
         $halaman = $req->after;
         $halaman = $halaman+1;
         $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
+        $maxPage = round(count($dtSession)/8);
         if ($halaman>$maxPage) {
             $halaman = $maxPage;
         }
@@ -252,7 +252,7 @@ class CatalogController extends Controller
         //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
-        // ====================        
+        // ====================
         // dd($dtSession);
         $customer   = Auth::user();
         $WLCek      = null;
@@ -299,7 +299,7 @@ class CatalogController extends Controller
         $halaman = $req->before;
         $halaman = $halaman-1;
         $dtSession  = BarangModel::with(['gambar'])->get();
-        $maxPage = count($dtSession)/8;
+        $maxPage = round(count($dtSession)/8);
         if ($halaman == 0) {
             $halaman = 1;
         }
@@ -308,7 +308,7 @@ class CatalogController extends Controller
         //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
         $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset($halaman*8)->get();
-        // ====================        
+        // ====================
         // dd($dtSession->gambar[0]);
         $customer   = Auth::user();
         $WLCek      = null;

@@ -5,6 +5,7 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\NotifController;
 //use App\Http\Controllers\ShareSocialController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,9 @@ Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
 Route::get('/order',[ShopController::class,'order']);
 Route::post('/checkout',[ShopController::class,'checkout'])->name('page.checkout.customer');
 Route::get('/invoice',[CustomerController::class,'page_invoice']);
+Route::get('/dapatnotif', [NotifController::class,'dapatnotif']);
+Route::get('/kirimnotif', [NotifController::class,'kirimnotif']);
+Route::get('/bacanotif', [NotifController::class,'bacanotif']);
 
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::post('/deleteWL',[CatalogController::class,'deleteWL']);

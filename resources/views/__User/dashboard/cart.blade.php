@@ -497,11 +497,7 @@
             refreshSubtotal();
 
             @if($errors->first('errors'))
-            Swal.fire(
-                'Please Choose Shipping Service',
-                'No Shipping Service...',
-                'warning'
-            )
+            Swal.fire('Please Choose Shipping Service', 'No Shipping Service...', 'warning');
             @endif
 
             // populate city

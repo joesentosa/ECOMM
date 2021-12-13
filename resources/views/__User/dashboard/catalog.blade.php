@@ -168,7 +168,6 @@
                 <div class="d-flex justify-content-center">
                     <ul class="page-pagination">
                         <form action="beforePage" method="get">
-                            @csrf
                             <input type="hidden" name="before" value="{{ $halaman }}">
                             <li class="icon-direction icon-direction--prev"><button><span class="material-icons-outlined">arrow_left</span></button></li>
                         </form>
@@ -176,7 +175,6 @@
                         <li><a href="">/</a></li>
                         <li><a href="">{{ $max_Page }}</a></li>
                         <form action="nextPage" method="get">
-                            @csrf
                             <input type="hidden" name="after" value="{{ $halaman }}">
                             <li class="icon-direction icon-direction--next"><button><span class="material-icons-outlined">arrow_right</span></button></li>
                         </form>
