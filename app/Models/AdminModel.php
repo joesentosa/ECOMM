@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticates;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
 
 class AdminModel extends Authenticates
 {
     use HasFactory;
     use SoftDeletes;
+    use Notifiable;
 
     public $table       = "admin";
     public $primaryKey  = "id";
