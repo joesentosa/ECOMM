@@ -35,15 +35,7 @@
         </li>
       </ul>
       <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
-    </div>
-    <script id="result-template" type="text/x-handlebars-template">
-      <div class="ProfileCard u-cf">
-      <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
-      <div class="ProfileCard-details">
-      <div class="ProfileCard-realName">{{ @name }}</div>
-      </div>
-      </div>
-    </script>
+    </div>    
     <script id="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
   </div>
 </div>

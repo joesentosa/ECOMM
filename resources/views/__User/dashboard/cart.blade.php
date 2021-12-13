@@ -221,7 +221,7 @@
                                                 <label> Email Address <span>*</span></label>
                                                 <input type="text" placeholder="Your Email" name="email"
                                                        value="@if($customer){{$customer->email}}@endif">
-                                                @error('phone')
+                                                @error('email')
                                                     <div class="error">{{ $message }}</div>
                                                 @enderror
                                             </div>

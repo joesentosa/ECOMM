@@ -14,8 +14,7 @@ class CreateHorder extends Migration
     public function up()
     {
         Schema::create('horder', function (Blueprint $table) {            
-            $table->string('id_horder',12)->primary()->comment('example: H27102021001');
-            $table->string('id_midtrans');
+            $table->string('id_horder',12)->primary()->comment('example: H15754548514');            
             $table->dateTime('tanggal_trans');
             $table->bigInteger('subtotal');
             $table->bigInteger('grandtotal');
