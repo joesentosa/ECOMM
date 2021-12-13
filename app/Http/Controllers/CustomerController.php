@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\BarangModel;
 use App\Models\BrandModel;
 use App\Models\CustomerModel;
+use App\Models\HorderModel;
 use App\Models\KategoriModel;
 use App\Models\PromoModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 // use App\Http\Controllers\Session;
@@ -15,9 +17,6 @@ use Jorenvh\Share\Share;
 
 class CustomerController extends Controller
 {
-    public function page_invoice(){
-        return view('__User.dashboard.invoice');
-    }
     public function landing()
     {
         $brands = BrandModel::limit(25)->get();

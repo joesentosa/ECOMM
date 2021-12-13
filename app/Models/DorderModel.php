@@ -12,20 +12,17 @@ class DorderModel extends Model
     use SoftDeletes;
 
     public $table           = "dorder";
-    public $primaryKey      = "id_dorder";
+    public $primaryKey      = "id_order";
     public $incrementing    = true;
     public $timestamps      = true;
-    protected $fillable     = ['id_dorder','qty', 'total', 'fk_id_barang','created_at','updated_at','deleted_at'];
+    protected $fillable     = ['id_order','qty', 'total', 'fk_id_barang','created_at','updated_at'];
 
     public function saveData($iddorder,$qty,$total,$idbarang){
         $dorder                = new DorderModel();
-        $dorder->id_dorder     = $iddorder;
-        $dorder->qty           = $qty; 
+        $dorder->id_order     = $iddorder;
+        $dorder->qty           = $qty;
         $dorder->total         = $total;
-        $dorder->fk_id_barang  = $idbarang;        
-        $dorder->created_at    = null;
-        $dorder->updated_at    = null;
-        $dorder->deleted_at    = null;
+        $dorder->fk_id_barang  = $idbarang;
         $dorder->save();
     }
 }

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\BarangModel;
+use App\Models\DorderModel;
+use App\Models\HorderModel;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
@@ -77,7 +80,7 @@ class ShopController extends Controller
         $clientKey = env('MIDTRANS_CLIENT_KEY');
 
         if (Auth::guest()) {
-            return redirect()->route('page.login.customer', ['referer' => 'checkout']);
+            return redirect()->route('page.login.customer', ['referer' => 'cart']);
         }
 
         // check if shipping array in session is populated
@@ -107,6 +110,9 @@ class ShopController extends Controller
         $tmp_items = $request->session()->get('cart_barang');
         $tmp_shipping = $request->session()->get('price_service');
 
+        // order_id
+        $order_id = 'H' . quickRandom(11);
+
         $subtotal = 0;
         $shipping_cost = (int)$tmp_shipping["cost"];
         $barangs = array();
@@ -117,18 +123,22 @@ class ShopController extends Controller
             $data_barang->qty = $items['qty'];
             $data_barang->harga_total = $harga_total;
 
+            DorderModel::updateOrCreate(['id_order' => $order_id],[
+                'qty' => $data_barang->qty,
+                'total' => $harga_total,
+                'fk_id_barang' => $items['id']
+            ]);
+
             array_push($barangs, $data_barang);
         }
 
-        // Todo : add to database horder and dorder
-        // order_id
-        $order_id = 'H' . quickRandom(11);
-        // set order id to session
-
-        // remove session except auth
-        $user = Auth::user();
-        Session::flush();
-        Auth::login($user);
+        HorderModel::updateOrCreate(['id_order' => $order_id], [
+                'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
+                'metode_pembayaran' => '', 'statusOrder' => 0,
+                'total_shipping' => $tmp_shipping['cost'],
+                'kurir' => $tmp_shipping['courier'],
+                'jenis_layanan' => $tmp_shipping['service']
+        ]);
 
         // todo get barang from session into this crap :v
         $params = array(
@@ -229,6 +239,39 @@ class ShopController extends Controller
         }
 
         return response()->json(['message' => 'failed to fetch data'], $statusCode);
+    }
+
+    public function page_invoice(Request $request){
+        $orderID = $request->orderID;
+
+//        // remove session except auth
+//        $user = Auth::user();
+//        Session::flush();
+//        Auth::login($user);
+
+        if ($orderID)
+        {
+            $status = \Midtrans\Transaction::status($orderID);
+            $statusOrder = 0;
+
+            switch ($status->transaction_status)
+            {
+                case "capture":
+                case "settlement":
+                    $statusOrder = 1;
+                    break;
+                default:
+                    break;
+            }
+
+            $orderHeader = HorderModel::updateOrCreate(['id_order' => $orderID],[
+                'tanggal_trans' => \Illuminate\Support\Carbon::now(),
+                'metode_pembayaran' => $status->payment_type,
+                'statusOrder' => $statusOrder
+            ]);
+            return view('__User.dashboard.invoice');
+        }
+        return back();
     }
 
     public function viewCheckout(Request $request)
