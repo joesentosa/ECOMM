@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PromoMail;
 use App\Models\BrandModel;
 use App\Models\BarangModel;
 use App\Models\KategoriModel;
@@ -15,6 +16,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -201,13 +203,21 @@ class AdminController extends Controller
     // ==========================================
     public function insertpromo(Request $req){
         $dtpromo = new PromoModel();
-        $splitDate = explode('-',$req->rangedatepromo_insert);                
+        $splitDate = explode('-',$req->rangedatepromo_insert);
         $dtpromo->insertPromo($req->namaPromo_insert,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_insert);
+
+        //kirim email tiap insert promo ke semua user
+        $promo = PromoModel::all();
+        $promo = $promo[sizeof($promo)-1];
+        $customers = CustomerModel::all();
+        foreach ($customers as $customer){
+            Mail::to($customer->email)->send(new PromoMail($customer, $promo));
+        }
         return back();
     }
     public function updatepromo(Request $req){
         $dtpromo = new PromoModel();
-        $splitDate = explode('-',$req->rangedatepromo_update);          
+        $splitDate = explode('-',$req->rangedatepromo_update);
         $dtpromo->updatePromo($req->id_hidden,$req->namaPromo_update,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_update);
         return back();
     }

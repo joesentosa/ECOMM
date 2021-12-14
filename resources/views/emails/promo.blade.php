@@ -41,6 +41,7 @@
                                     <td style="border:none;padding:0;margin:0">
                                         <p style="border:none;padding:0;margin:0;background-color:#4100f5;color:#9bf0e1;font-size:36px;font-family:&quot;helvetica&quot;,&quot;arial&quot;,sans-serif!important;font-weight:400;text-align:left">
                                             <b style="border:none;padding:0;margin:0">Just for you, {{$customer->firstname . " " . $customer->lastname}}.<b style="border:none;padding:0;margin:0"></b></b>
+                                            <br> We are having <b> Promo {{$promo->namaPromo}} </b>.
                                         </p>
                                     </td>
                                     <td style="border:none;padding:0;margin:0;width:24px">
