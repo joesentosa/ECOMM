@@ -20,8 +20,8 @@ Route::get('/order',[ShopController::class,'order']);
 Route::post('/checkout',[ShopController::class,'checkout'])->name('page.checkout.customer');
 Route::get('/invoice',[ShopController::class,'page_invoice']);
 Route::get('/dapatnotif', [NotifController::class,'dapatnotif']);
-Route::get('/kirimnotif', [NotifController::class,'kirimnotif']);
 Route::get('/bacanotif', [NotifController::class,'bacanotif']);
+Route::get('/kirimnotif', [NotifController::class,'kirimnotif']);
 
 Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
 Route::post('/deleteWL',[CatalogController::class,'deleteWL']);
