@@ -7,6 +7,8 @@ use App\Models\BarangModel;
 use App\Models\KategoriModel;
 use App\Models\ShippingModel;
 use App\Models\PromoModel;
+use App\Models\HorderModel;
+use App\Models\DorderModel;
 use App\Models\GambarModel;
 use App\Models\AdminModel;
 use App\Models\CustomerModel;
@@ -47,7 +49,7 @@ class AdminController extends Controller
         return view('__Admin.dashboard.horder',['data'=>$dthorder->getAll()]);
     }
     public function DorderAdmin(){
-        $dtdorder = new DorderModel();
+        $dtdorder = new DorderModel();                
         return view('__Admin.dashboard.dorder',['data'=>$dtdorder->getAll()]);
     }
     public function ShippingAdmin(){

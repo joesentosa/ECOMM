@@ -175,7 +175,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="col-12">
+                                        <!-- <div class="col-12">
                                             <div class="default-form-box">
                                                 <label>Company Name</label>
                                                 <input type="text" placeholder="Company Name" name="company_name">
@@ -183,7 +183,7 @@
                                                     <div class="error">{{ $message }}</div>
                                                 @enderror
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col-12">
                                             <div class="default-form-box">
                                                 <label>Street address <span>*</span></label>
@@ -227,7 +227,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <div class="d-flex justify-content-center">
+                                            <div class="d-flex justify-content-start">
                                                 <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse"
                                                     data-bs-target="#anotherShipping">
                                                     <input type="checkbox" id="newShipping">
@@ -249,15 +249,7 @@
                                                             <label>Last Name <span>*</span></label>
                                                             <input type="text" name="last_second">
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="default-form-box">
-                                                            <label>Company Name</label>
-                                                            <input type="text" name="company_second">
-                                                        </div>
-                                                    </div>
-
-
+                                                    </div>                                                   
                                                     <div class="col-12">
                                                         <div class="default-form-box">
                                                             <label>Street address <span>*</span></label>

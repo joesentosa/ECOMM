@@ -19,13 +19,13 @@ class DorderModel extends Model
 
     public function saveData($iddorder,$qty,$total,$idbarang){
         $dorder                = new DorderModel();
-        $dorder->id_order     = $iddorder;
+        $dorder->id_order      = $iddorder;
         $dorder->qty           = $qty;
         $dorder->total         = $total;
         $dorder->fk_id_barang  = $idbarang;
         $dorder->save();
     }
     public function getAll(){
-        return DorderModel::all();
-    }
+        return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','dorder.id_order as id_dorder', 'barang.namaBarang']);
+    }    
 }

@@ -33,26 +33,23 @@
         <table class="display no-wrap" id="tabledorder" style="width:100%;">
             <thead>
               <tr>
-                <th style="text-align: center;">No</th>
+                <th>Order Id</th>
                 <th>Qty</th>
                 <th>Total</th>
-                <th>Nama Barang</th>                        
-                <th>Tanggal Order</th>       
+                <th>Nama Barang</th>                       
               </tr>
             </thead>
-            <tbody>
-              <!-- @isset($data)
+            <tbody>                      
+              @isset($data)
                 @foreach($data as $item)
-                  <tr>
-                    <td style="text-align: center;">{{$item->id_dorder}}</td>
+                  <tr>                          
+                    <td>{{$item->id_dorder}}</td>
                     <td>{{$item->qty}}</td>
-                    <td>{{$item->total}}</td>
+                    <td>{{generateFormatRP($item->total)}}</td>
                     <td>{{$item->namaBarang}}<td>                    
-                    <td>{{generateFormatRP($item->tarif)}}</td>
-                    <td>-</td>
                   </tr>              
                 @endforeach
-              @endisset               -->
+              @endisset              
             </tbody>
         </table>
       </div>
@@ -81,14 +78,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
 <!-- end table design settings-->
 <script>
-  const settingstable = {    
-    "columnDefs": [                  
-      { "width": "10px", "targets": 0, "orderable": false },
-      { "width": "200px", "targets": 1 },
-      { "width": "200px", "targets": 2 },
-      { "width": "120px", "targets": 3 },            
-      { "width": "100px", "targets": 4 },      
-    ],              
+  const settingstable = {
     'responsive'  : true,
     'paging'      : true,
     'pageLength'  : 10,

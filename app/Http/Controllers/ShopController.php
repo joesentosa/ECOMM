@@ -92,7 +92,6 @@ class ShopController extends Controller
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'company_name' => 'required', // ini ga perlu required sam wkwkwk
             'address' => 'required',
             'city' => 'required',
             'phone' => [

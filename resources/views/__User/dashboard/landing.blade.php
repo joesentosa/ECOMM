@@ -202,7 +202,7 @@
                                 <!-- Start Shipping Single Items -->
                                 <div class="shipping-single-item--style-1">
                                     <div class="icon">
-                                        <img class="img-fluid" src="assets/images/icons/shipping-icon-3.svg" width="46"
+                                        <img class="img-fluid" src="{{asset('assets/images/icons/shipping-icon-3.svg')}}" width="46"
                                              height="33" loading="lazy" alt="shipping-icon-3">
                                     </div>
                                     <div class="content">
@@ -340,7 +340,7 @@
                                         All
                                     </button>
                                 </li>
-                                @foreach($kategories as $index => $kategory)
+                                @foreach($kategories as $index => $kategory)                                
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" data-bs-toggle="tab"
                                                 data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
@@ -355,10 +355,11 @@
                                                 <i class="fa fa-video-camera" style="padding-right: 1em"
                                                    aria-hidden="true"></i>
                                             @elseif($index == 3)
-                                                <i class="iconify" style="padding-right: 1em"
-                                                   data-icon="si-glyph:chair-2"></i>
+                                                <i class="fa iconify" style="padding-right: 3px" style="color: #457b9d;" data-width="25" data-height="25"
+                                                   data-icon="icon-park-outline:massage-chair-one"></i>
                                             @elseif($index == 4)
-                                                <i class="iconify" style="padding-right: 1em" data-icon="mdi:desk"></i>
+                                                <i class="fa iconify" style="padding-right: 3px" style="color: #457b9d;" data-width="25" data-height="25"
+                                                data-icon="mdi:desk"></i>
                                             @elseif($index == 5)
                                                 <i class="fa fa-headphones" aria-hidden="true"
                                                    style="padding-right: 1em"></i>
@@ -369,17 +370,19 @@
                                                 <i class="fa fa-desktop" style="padding-right: 1em"
                                                    aria-hidden="true"></i>
                                             @elseif($index == 8)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                                <i class="fa iconify" style="padding-right: 3px" style="color: #457b9d;" data-width="25" data-height="25"
+                                                data-icon="gala:mouse"></i>
                                             @elseif($index == 9)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                                <i class="faiconify" style="padding-right: 3px">
+                                                    <img src="{{ asset('assets/images/icons/mouse.png') }}" style="margin-left:5%;height:25px; color:#457b9d;">
+                                                </i>
                                             @elseif($index == 10)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                                <i class="fa iconify" style="padding-right: 3px" style="color: #457b9d;" data-width="25" data-height="25"
+                                                data-icon="bi:speaker"></i>
                                             @elseif($index == 11)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
-                                            @elseif($index == 12)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
-                                            @elseif($index == 13)
-                                                <span class="iconify" data-icon="gala:mouse"></span>
+                                                <i class="fa iconify" style="padding-right: 3px" data-icon="bytesize:archive" style="color: #457b9d;" data-width="25" data-height="25">
+                                                    
+                                                </i>
                                             @endif
                                             {{--                                            " alt="">--}}
                                             {{ $kategory->nama_kategori }}

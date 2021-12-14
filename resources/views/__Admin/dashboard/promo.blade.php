@@ -213,8 +213,7 @@
         "data": null,
         "defaultContent": "<button type='button' id='btnupdate_promo' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_promo_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_promo' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
         "orderable": false
-      },
-      { "width": "10px", "targets": 0, "orderable": false }       
+      }       
     ],          
     "order": [[1, 'asc']],
     'responsive'  : false,

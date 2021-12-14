@@ -33,26 +33,30 @@
         <table class="display no-wrap" id="tablehorder" style="width:100%;">
             <thead>
               <tr>
-                <th style="text-align: center;">No</th>
+                <th style="text-align: center;">Order Id</th>
                 <th>Tanggal Transaksi</th>
                 <th>Subtotal</th>
-                <th>Grandtotal</th>                        
-                <th>Metode Pembayaran</th>                            
+                <th>Metode Pembayaran</th>
+                <th>Kurir</th>
+                <th>Jenis Layanan</th>
+                <th>Total Shipping</th>                                         
               </tr>
             </thead>
             <tbody>
-              <!-- @isset($data)
+              @isset($data)
                 @foreach($data as $item)
                   <tr>
-                    <td style="text-align: center;">{{$item->id_dorder}}</td>
-                    <td>{{$item->qty}}</td>
-                    <td>{{$item->total}}</td>
-                    <td>{{$item->namaBarang}}<td>                    
-                    <td>{{generateFormatRP($item->tarif)}}</td>
+                    <td style="text-align: center;">{{$item->id_order}}</td>
+                    <td>{{$item->tanggal_trans}}</td>
+                    <td>{{generateFormatRP($item->subtotal)}}</td>
+                    <td>{{$item->metode_pembayaran}}<td>                    
+                    <td>{{$item->kurir}}</td>
+                    <td>{{$item->jenis_layanan}}</td>
+                    <td>{{$item->total_shipping}}</td>
                     <td>-</td>
                   </tr>              
                 @endforeach
-              @endisset               -->
+              @endisset              
             </tbody>
         </table>
       </div>
@@ -81,14 +85,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
 <!-- end table design settings-->
 <script>
-  const settingstable = {    
-    "columnDefs": [                  
-      { "width": "10px", "targets": 0, "orderable": false },
-      { "width": "200px", "targets": 1 },
-      { "width": "200px", "targets": 2 },
-      { "width": "120px", "targets": 3 },            
-      { "width": "100px", "targets": 4 },      
-    ],              
+  const settingstable = {                 
     'responsive'  : true,
     'paging'      : true,
     'pageLength'  : 10,
