@@ -130,7 +130,7 @@
       <div class="ProfileCard u-cf">
       <div class="ProfileCard-avatar"><i class="pe-7s-home"></i></div>
       <div class="ProfileCard-details">
-      <div class="ProfileCard-realName">{{ @name }}</div>
+      <div class="ProfileCard-realName"></div>
       </div>
       </div>
     </script>
