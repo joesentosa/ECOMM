@@ -32,4 +32,7 @@ class HorderModel extends Model
         $horder->deleted_at        = null;
         $horder->save();
     }
+    public function getAll(){
+        return HorderModel::all();
+    }
 }

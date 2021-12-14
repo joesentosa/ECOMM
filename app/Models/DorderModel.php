@@ -28,4 +28,7 @@ class DorderModel extends Model
         $dorder->deleted_at    = null;
         $dorder->save();
     }
+    public function getAll(){
+        return DorderModel::all();
+    }
 }

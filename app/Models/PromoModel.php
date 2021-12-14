@@ -15,21 +15,23 @@ class PromoModel extends Model
     public $primaryKey  = "id_promo";
     public $incrementing= true;
     public $timestamps  = true;
-    protected $fillable = ['firstDate','expiredDate','hargaPromo','created_at','updated_at'];
+    protected $fillable = ['firstDate','expiredDate','potonganHarga','created_at','updated_at'];
 
-    public function insertPromo($firstDate,$expiredDate,$harga){
-        $promo               = new PromoModel();
-        $promo->firstDate    = $firstDate;
-        $promo->expiredDate  = $expiredDate;
-        $promo->hargaPromo   = $harga;
+    public function insertPromo($namaPromo,$firstDate,$expiredDate,$harga){
+        $promo                  = new PromoModel();
+        $promo->namaPromo       = $namaPromo;
+        $promo->firstDate       = $firstDate;
+        $promo->expiredDate     = $expiredDate;
+        $promo->potonganHarga   = $harga;
         $promo->save();
     }
-    public function updatePromo($id_promo,$firstDate_update,$expiredDate_update,$harga_update){
+    public function updatePromo($id_promo,$namaPromo,$firstDate_update,$expiredDate_update,$harga_update){
 
         $data = PromoModel::find($id_promo);
-        $data->firstDate    = $firstDate_update;
-        $data->expiredDate  = $expiredDate_update;
-        $data->hargaPromo   = $harga_update;
+        $data->namaPromo       = $namaPromo;
+        $data->firstDate       = $firstDate_update;
+        $data->expiredDate     = $expiredDate_update;
+        $data->potonganHarga   = $harga_update;
         $data->save();
     }
     public function deletePromo($id_promo){

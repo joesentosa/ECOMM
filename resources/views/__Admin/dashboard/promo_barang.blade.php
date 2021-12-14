@@ -51,7 +51,7 @@
                   <tr>
                     <td style="text-align: center;">{{$item->id_promo_barang}}</td>
                     <td  data-idbarang="{{$item->barang->id_barang}}" class="idbarang_hidden">{{$item->barang->namaBarang}}</td>
-                    <td  data-idpromo="{{$item->promo->id_promo}}" class="idpromo_hidden">{{generateFormatRP($item->promo->hargaPromo)}}</td>                    
+                    <td  data-idpromo="{{$item->promo->id_promo}}" class="idpromo_hidden">{{generateFormatRP($item->promo->potonganHarga)}}</td>                    
                     <td></td>
                   </tr>              
                 @endforeach
@@ -167,7 +167,7 @@
               <input type="submit" value="insert" class="btn btn-primary">
             </div>
           </div>
-          <input type="text" name="id_hidden" id="id_hidden">
+          <input type="hidden" name="id_hidden" id="id_hidden">
         </form>
         <!-- end form -->
       </div>

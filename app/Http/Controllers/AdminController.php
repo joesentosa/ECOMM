@@ -42,8 +42,14 @@ class AdminController extends Controller
         $dtcustomer = new CustomerModel();
         return view('__Admin.dashboard.customer',['data'=>$dtcustomer->getAll()]);
     }
-    public function HorderAdmin(){return view('__Admin.dashboard.horder');}
-    public function DorderAdmin(){return view('__Admin.dashboard.dorder');}
+    public function HorderAdmin(){
+        $dthorder = new HorderModel();
+        return view('__Admin.dashboard.horder',['data'=>$dthorder->getAll()]);
+    }
+    public function DorderAdmin(){
+        $dtdorder = new DorderModel();
+        return view('__Admin.dashboard.dorder',['data'=>$dtdorder->getAll()]);
+    }
     public function ShippingAdmin(){
         $dtshipping = new ShippingModel();
         return view('__Admin.dashboard.shipping',['data' => $dtshipping->getAll()]);
@@ -196,14 +202,13 @@ class AdminController extends Controller
     public function insertpromo(Request $req){
         $dtpromo = new PromoModel();
         $splitDate = explode('-',$req->rangedatepromo_insert);                
-        $dtpromo->insertPromo(date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_insert);
+        $dtpromo->insertPromo($req->namaPromo_insert,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_insert);
         return back();
     }
     public function updatepromo(Request $req){
         $dtpromo = new PromoModel();
-        $splitDate = explode('-',$req->rangedatepromo_update);  
-        // dd($req->harga_update);
-        $dtpromo->updatePromo($req->id_hidden,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_update);
+        $splitDate = explode('-',$req->rangedatepromo_update);          
+        $dtpromo->updatePromo($req->id_hidden,$req->namaPromo_update,date('Y-m-d',strtotime($splitDate[0])),date('Y-m-d',strtotime($splitDate[1])),$req->hargapromo_update);
         return back();
     }
     public function deletepromo(Request $req){

@@ -46,6 +46,7 @@
           <thead>
             <tr>
               <th style="text-align: center;">No</th>
+              <th>Nama Promo</th>
               <th>Tanggal Awal</th>                         
               <th>Tanggal Akhir</th>
               <th>Harga Promo</th>
@@ -56,10 +57,11 @@
             @isset($data)
               @foreach($data as $item)
                 <tr>
-                  <td style="text-align: center;">{{$item->id_promo}}</td>                  
+                  <td style="text-align: center;">{{$item->id_promo}}</td>      
+                  <td>{{$item->namaPromo}}</td>            
                   <td>{{$item->firstDate}}</td>                  
                   <td>{{$item->expiredDate}}</td>                                                     
-                  <td>{{generateFormatRP($item->hargaPromo)}}</td>
+                  <td>{{generateFormatRP($item->potonganHarga)}}</td>
                   <td></td>
                 </tr>              
               @endforeach
@@ -88,6 +90,14 @@
         <!-- form -->
         <form method="POST" id="promo_insert" action="/admin/insertpromo" class="form theme-form">
           @csrf
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="namaPromo_insert">Nama Promo</label>
+                <input class="form-control" type="text" name="namaPromo_insert" id="namaPromo_insert" placeholder="Masukkan Nama Promo">
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
@@ -132,6 +142,14 @@
           <!-- form -->
           <form method="POST" id="promo_update" action="/admin/updatepromo" class="form theme-form">
             @csrf
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="namaPromo_update">Nama Promo</label>
+                  <input class="form-control" type="text" name="namaPromo_update" id="namaPromo_update" placeholder="Masukkan Nama Promo">
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
@@ -196,11 +214,7 @@
         "defaultContent": "<button type='button' id='btnupdate_promo' class='btn-edit mr-1' style='color:white;' data-toggle='modal' data-target='#form_promo_update'><i class='fas fa-edit'></i></button><button type='button' id='btndelete_promo' class='btn-edit mt-1' style='color:white;'><i class='fas fa-trash'></i></button>",
         "orderable": false
       },
-      { "width": "10px", "targets": 0, "orderable": false },
-      { "width": "100px", "targets": 1 },
-      { "width": "100px", "targets": 2 },        
-      { "width": "70px", "targets": 3 },  
-      { "width": "60px", "targets": 4 },  
+      { "width": "10px", "targets": 0, "orderable": false }       
     ],          
     "order": [[1, 'asc']],
     'responsive'  : false,
@@ -222,21 +236,17 @@
 
   $('#tablePromo tbody').on('click','#btnupdate_promo',function(){
     const data = settingsPromo.row($(this).parents('tr')).data();
-    // Object { 0: "1", 1: "2021-11-20", 2: "2021-11-25", 3: "5000" }   
-    console.log(data[2] + data[1]);
-    // $('#rangedatepromo_update').datepicker({
-    //   dateFormat: "Y-m-d",
-    //   maxDate:data[2],
-    //   minDate: data[1]
-    // });    
-    var sDate = new Date(data[2]);
-    var minDate = new Date(data[1]);         
+    // Object { 0: "6", 1: "beli 1 gratis 1", 2: "2021-12-01", 3: "2021-12-05", 4: "Rp 10.000,00" }      
+    var sDate = new Date(data[3]);
+    var minDate = new Date(data[2]);         
     const changeFormat = (sDate.getMonth() + 1) + '/' + sDate.getDate() + '/' +  sDate.getFullYear()+" - "+(minDate.getMonth() + 1) + '/' + minDate.getDate() + '/' +  minDate.getFullYear();
+
     $('#rangedatepromo_update').datepicker({
       dateFormat: 'm/d/yyyy',              
     });
+    $('input[name=namaPromo_update]').val(data[1]);
     $('#rangedatepromo_update').val(changeFormat);
-    $('input[name=hargapromo_update]').val(data[3]);
+    $('input[name=hargapromo_update]').val(data[4].replace('Rp ','').replace('.','').replace(',00',''));
     $('input[name=id_hidden]').val(data[0]);
   });
 
