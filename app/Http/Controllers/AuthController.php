@@ -43,7 +43,7 @@ class AuthController extends Controller
 
         if (Auth::attempt([$login_type => $request->username, 'password' => $request->password], $request->remember_me)) {
             if ($request->has('referer')) {
-                return redirect()->route('page.checkout.customer');
+                return redirect()->route('page.cart.customer');
             }
             return redirect()->route('page.index.customer');
         }

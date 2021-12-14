@@ -21,13 +21,13 @@ class AdminController extends Controller
     public function loginAdmin(){return view('__Admin.dashboard.login_admin');}
     public function IndexAdmin(){return view('__Admin.dashboard.index');}
     public function BarangAdmin(){
-        $dtbarang = new BarangModel();        
+        $dtbarang = new BarangModel();
         $dtbrand = new BrandModel();
-        $dtkategori = new KategoriModel();                
+        $dtkategori = new KategoriModel();
         return view('__Admin.dashboard.barang',['data' => $dtbarang->getAllById(),'brand' => $dtbrand->getAll(),'kategori' => $dtkategori->getAll()]);
     }
     public function BrandAdmin(){
-        $dtbrand = new BrandModel();                
+        $dtbrand = new BrandModel();
         return view('__Admin.dashboard.brand',['data' => $dtbrand->getAll()]);
     }
     public function KategoriAdmin(){
@@ -57,14 +57,14 @@ class AdminController extends Controller
     public function PromoAdmin(){
         $dtpromo = new PromoModel();
         return view('__Admin.dashboard.promo',['data' => $dtpromo->getAll()]);
-    }    
+    }
     public function PromoBarangAdmin(){
-        $dtpromobarang = new PromoBarangModel();     
+        $dtpromobarang = new PromoBarangModel();
         $dtpromo = new PromoModel();
-        $dtbarang = new BarangModel();        
+        $dtbarang = new BarangModel();
         return view('__Admin.dashboard.promo_barang',['data' => $dtpromobarang->getAll(),'promo' => $dtpromo->getAll(),'barang'=> $dtbarang->getAll()]);
     }
-    
+
     // ==========================================
     // BRAND
     // ==========================================
@@ -74,11 +74,11 @@ class AdminController extends Controller
         else{
             if ($req->hasFile('upload_imgs_update')) {
                 $file = $req->file('upload_imgs_update');
-                $extension = $file->getClientOriginalExtension();            
-                $filename = 'uploads/brand/'.time().'.'.$extension;            
+                $extension = $file->getClientOriginalExtension();
+                $filename = 'uploads/brand/'.time().'.'.$extension;
                 $file->move('uploads/brand',$filename);
             }
-        }                
+        }
         $dtbrand->updateBrand($filename,$req->nmbrand_update,$req->id_hidden);
         return back();
     }
@@ -88,19 +88,19 @@ class AdminController extends Controller
         else{
             if ($req->hasFile('upload_imgs_insert')) {
                 $file = $req->file('upload_imgs_insert');
-                $extension = $file->getClientOriginalExtension();            
-                $filename = 'uploads/brand/'.time().'.'.$extension;            
+                $extension = $file->getClientOriginalExtension();
+                $filename = 'uploads/brand/'.time().'.'.$extension;
                 $file->move('uploads/brand',$filename);
             }
-        }     
+        }
         $dtbrand->insertBrand($filename,$req->nmbrand_insert);
-        return back();           
+        return back();
     }
     public function deletebrand(Request $req){
         $dtbrand = new BrandModel();
         $dtbrand->deleteBrand($req->id_brand);
         return response()->json([
-            'status' => 200,            
+            'status' => 200,
         ]);
     }
     // ==========================================
@@ -111,42 +111,42 @@ class AdminController extends Controller
 
     public function insertbarang(Request $req){
         $dtbarang = new BarangModel();
-        $dtgambar = new GambarModel();                  
-        $idbarang = $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert, $req->cb_brand,$req->cb_kategori);        
-        if ($req->hasFile('upload_imgs_insert')) {                        
+        $dtgambar = new GambarModel();
+        $idbarang = $dtbarang->insertBarang($req->nmbarang_insert, $req->stokbarang_insert, $req->hargaBarang_insert, $req->beratbarang_insert, $req->reviewbarang_insert, $req->cb_brand,$req->cb_kategori);
+        if ($req->hasFile('upload_imgs_insert')) {
             foreach ($req->file('upload_imgs_insert') as $image) {
-                $extension = $image->getClientOriginalExtension();            
-                $filename = $this->generateFileName('gambar_barang',$extension);                   
+                $extension = $image->getClientOriginalExtension();
+                $filename = $this->generateFileName('gambar_barang',$extension);
                 $image->move('uploads/barang',$filename);
-            
+
                 $dtgambar->insertGambar($idbarang,'uploads/barang/'.$filename);
-            }  
-        }                
+            }
+        }
         return back();
     }
 
     public function updatebarang(Request $req){
         $dtbarang = new BarangModel();
-        $dtgambar = new GambarModel();                       
+        $dtgambar = new GambarModel();
         if ($req->hasFile('upload_imgs_update')) {
             foreach ($req->file('upload_imgs_update') as $image) {
-                $extension = $image->getClientOriginalExtension();            
-                $filename = $this->generateFileName('gambar_barang',$extension);            
+                $extension = $image->getClientOriginalExtension();
+                $filename = $this->generateFileName('gambar_barang',$extension);
                 $image->move('uploads/barang',$filename);
                 $dtgambar->insertGambar($req->id_hidden,'uploads/barang/'.$filename);
-            }                                
-        }                               
+            }
+        }
         $dtbarang->updateBarang($req->id_hidden,$req->nmbarang_update, $req->stokbarang_update, $req->hargaBarang_update, $req->beratbarang_update, $req->reviewbarang_update, $req->cb_brand,$req->cb_kategori);
         return back();
     }
-    public function deletebarang($id){        
+    public function deletebarang($id){
         $dtbarang = new BarangModel();
         $dtbarang->deleteBarangItems($id);
         if ($dtbarang) {
             return response()->json([
                 'status' => 200
             ]);
-        }      
+        }
         return response()->json([
             'status' => 400
         ]);
@@ -156,20 +156,20 @@ class AdminController extends Controller
     // KATEGORI
     // ==========================================
     public function insertkategori(Request $req){
-        $dtkategori = new KategoriModel();        
-        $dtkategori->insertKategori($req->nmkategori_insert);        
+        $dtkategori = new KategoriModel();
+        $dtkategori->insertKategori($req->nmkategori_insert);
         return back();
     }
     public function updatekategori(Request $req){
-        $dtkategori = new KategoriModel();        
-        $dtkategori->updateKategori($req->nmkategori_update,$req->id_hidden);        
+        $dtkategori = new KategoriModel();
+        $dtkategori->updateKategori($req->nmkategori_update,$req->id_hidden);
         return back();
     }
     public function deletekategori(Request $req){
         $dtkategori = new KategoriModel();
         $dtkategori->deleteKategori($req->id_kategori);
         return response()->json([
-            'status' => 200,            
+            'status' => 200,
         ]);
     }
     // ==========================================

@@ -4,6 +4,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\NotifController;
 //use App\Http\Controllers\ShareSocialController;
@@ -17,7 +18,7 @@ Route::get('/wishlist',[CatalogController::class,'wishlistData']);
 Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
 Route::get('/order',[ShopController::class,'order']);
 Route::post('/checkout',[ShopController::class,'checkout'])->name('page.checkout.customer');
-Route::get('/invoice',[CustomerController::class,'page_invoice']);
+Route::get('/invoice',[ShopController::class,'page_invoice']);
 Route::get('/dapatnotif', [NotifController::class,'dapatnotif']);
 Route::get('/kirimnotif', [NotifController::class,'kirimnotif']);
 Route::get('/bacanotif', [NotifController::class,'bacanotif']);
@@ -79,6 +80,10 @@ Route::middleware('admin.auth')
         Route::post('/deletepromobarang', [AdminController::class, 'deletepromobarang']);
 
         Route::get('login', [AdminController::class, "loginAdmin"])->name('page.admin.login')->withoutMiddleware('admin.auth');
+
+        //Routing tes email
+        Route::get('/email', [MailController::class, 'preview']);
+        Route::get('/email/kirim', [MailController::class, 'kirim']);
     });
 // end admin route
 
@@ -110,7 +115,11 @@ Route::middleware(['customer.auth'])
 // pragma region API
 Route::get('shipping', [ShopController::class, 'calculate_shipping']);
 Route::post('shipping/submit', [ShopController::class, 'submit_shipping']);
+Route::post('payment/submit', [ShopController::class, 'submit_payment']);
 // pragma endregion API
+
+
+
 
 // pragma region Share to social media
 //Route::get('share/{platform?}', [ShareSocialController::class, 'share_to_socialMedia']);

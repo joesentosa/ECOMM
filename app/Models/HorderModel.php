@@ -11,26 +11,25 @@ class HorderModel extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public $table           = "horder";
-    public $primaryKey      = "id_horder";
-    public $incrementing    = true;
-    public $timestamps      = true;
-    protected $fillable     = ['id_horder','tanggal_trans', 'subtotal', 'grandtotal', 'metode_pembayaran', 'statusOrder', 'fk_id_shipping', 'fk_id_dorder','created_at','updated_at','deleted_at'];
+    public $table = "horder";
+    public $primaryKey = "id_order";
+    public $incrementing = true;
+    public $timestamps = true;
+    protected $fillable = ['id_order', 'tanggal_trans', 'subtotal', 'metode_pembayaran', 'statusOrder', 'kurir', 'jenis_layanan', 'total_shipping', 'created_at', 'updated_at'];
 
-    public function saveData($idhorder,$tgltrans,$subtotal,$grandtotal,$metodePay,$statusorder,$idshipping,$iddorder){
-        $horder                    = new HorderModel();
-        $horder->id_horder         = $idhorder;
-        $horder->tgltrans          = $tgltrans; 
-        $horder->subtotal          = $subtotal;
-        $horder->grandtotal        = $grandtotal;
+    public function saveData($id_order, $tgltrans, $subtotal, $metodePay, $statusorder, $kurir, $jenisLayanan, $shipping)
+    {
+        $horder = new HorderModel();
+        $horder->id_order = $id_order;
+        $horder->tanggal_trans = $tgltrans;
+        $horder->subtotal = $subtotal;
         $horder->metode_pembayaran = $metodePay;
-        $horder->statusOrder       = $statusorder;        
-        $horder->fk_id_shipping    = $idshipping;
-        $horder->fk_id_dorder      = $iddorder;
-        $horder->created_at        = null;
-        $horder->updated_at        = null;
-        $horder->deleted_at        = null;
+        $horder->statusOrder = $statusorder;
+        $horder->kurir = $kurir;
+        $horder->jenis_layanan = $jenisLayanan;
+        $horder->total_shipping = $shipping;
         $horder->save();
+        return $horder;
     }
     public function getAll(){
         return HorderModel::all();
