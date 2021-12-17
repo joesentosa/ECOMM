@@ -92,7 +92,7 @@
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
 
-                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + result['order_id']);
                 },
                 // Optional
                 onPending: function (result) {
@@ -100,6 +100,7 @@
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
                     {{--window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');--}}
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + result['order_id']);
                 },
                 // Optional
                 onError: function (result) {
@@ -107,6 +108,7 @@
                     console.log(JSON.stringify(result, null, 2));
                     //document.getElementById('result-json').innerHTML += JSON.stringify(result, null, 2);
                     {{--window.location.replace('{{ url('invoice') }}' + '?orderID=' + '{{ $order_id }}');--}}
+                    window.location.replace('{{ url('invoice') }}' + '?orderID=' + result['order_id']);
                 }
             });
         };
