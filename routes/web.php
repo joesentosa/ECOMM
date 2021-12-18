@@ -50,6 +50,9 @@ Route::middleware('admin.auth')
         Route::get('/shipping', [AdminController::class, 'ShippingAdmin'])->name('page.shipping.admin');
         Route::get('/promo', [AdminController::class, 'PromoAdmin'])->name('page.promo.admin');
         Route::get('/promoBarang', [AdminController::class, 'PromoBarangAdmin'])->name('page.promo_barang.admin');
+        Route::get('/LaporanPenjualan', [AdminController::class, 'LapPenjualan'])->name('page.laporan_penjualan.admin');
+        Route::get('/LaporanInvoice', [AdminController::class, 'LapInvoice'])->name('page.laporan_invoice.admin');
+        // Route::get('/LaporanTerlaris', [AdminController::class, 'LapTerlaris'])->name('page.laporan_terlaris.admin');
 
         Route::post('/insertuseradmin',[AdminController::class,'insertuseradmin']);
         Route::post('/updateuseradmin',[AdminController::class,'updateuseradmin']);

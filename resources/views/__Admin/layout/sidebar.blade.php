@@ -57,10 +57,10 @@
             </a>
             <ul class="iconbar-mainmenu custom-scrollbar">
                <li class="iconbar-header">Laporan</li>
-               <li><a href="{{route('page.promo.admin')}}">Penjualan</a></li>
-               <li><a href="{{route('page.promo.admin')}}">Barang Terlaris</a></li>
+               <li><a href="{{route('page.laporan_penjualan.admin')}}">Penjualan</a></li>
+               {{-- <li><a href="{{route('page.laporan_terlaris.admin')}}">Barang Terlaris</a></li> --}}
                <li><a href="{{route('page.promo.admin')}}">Pendapatan per Bulan</a></li>
-               <li><a href="{{route('page.promo.admin')}}">Invoice</a></li>
+               <li><a href="{{route('page.laporan_invoice.admin')}}">Invoice</a></li>
                <li><a href="{{route('page.promo.admin')}}">Barang Terlaris</a></li>
             </ul>
          </li>
