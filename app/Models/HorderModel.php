@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class HorderModel extends Model
 {
@@ -40,4 +41,11 @@ class HorderModel extends Model
     public function getAll(){
         return HorderModel::all();
     }    
+    // tanggal transaksi, id_order, subtotal
+    public static function pendapatanPerBulan(){
+        return DB::table('horder')
+                        ->select(DB::raw('MONTHNAME(horder.tanggal_trans) as Bulan'),DB::raw('COUNT(*) as count_per_bulan'),DB::raw('SUM(horder.subtotal) as subperbulan'))
+                        ->groupBy(DB::raw('MONTHNAME(horder.tanggal_trans)'))                                                
+                        ->get();  
+    }
 }
