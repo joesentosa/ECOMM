@@ -414,30 +414,28 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td><a class="text-inherit" href="#">Untrammelled prevents </a></td>
-                                        <td>28 May 2018</td>
-                                        <td><span class="status-icon bg-success"></span> Completed</td>
-                                        <td>$56,908</td>
-                                        <td class="text-center">
-                                            <a class="icon" href="javascript:void(0)"></a>
-                                            <a class="btn btn-primary btn-sm btn-pill" href="javascript:void(0)">
-                                                <i class="fa fa-link"></i> View
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="text-inherit" href="#">Untrammelled prevents </a></td>
-                                        <td>28 May 2018</td>
-                                        <td><span class="status-icon bg-success"></span> On Going</td>
-                                        <td>$56,908</td>
-                                        <td class="text-center">
-                                            <a class="icon" href="javascript:void(0)"></a>
-                                            <a class="btn btn-primary btn-sm btn-pill" href="javascript:void(0)">
-                                                <i class="fa fa-link"></i> View
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @foreach($orderHistory as $order_item)
+                                        <tr>
+                                            <td><a class="text-inherit" href="{{ url('invoice' . "?orderID=" . $order_item->id_order) }}">{{ $order_item->id_order }}</a></td>
+                                            <td>{{ (new DateTime($order_item->tanggal_trans))->format('d/m/y H:i') }}</td>
+                                            <td>
+                                                @if($order_item->statusOrder != 1)
+                                                    <span class="status-icon bg-danger"></span>Waiting...
+                                                @else
+                                                    <span class="status-icon bg-success"></span> Completed
+                                                @endif
+                                            </td>
+                                            <td>{{ generateFormatRP($order_item->subtotal) }}</td>
+                                            @if($order_item->statusOrder == 1)
+                                                <td class="text-center">
+                                                    <a class="icon" href="javascript:void(0)"></a>
+                                                    <a class="btn btn-primary btn-sm btn-pill" href="{{ url('invoice' . "?orderID=" . $order_item->id_order) }}">
+                                                        <i class="fa fa-link"></i> View
+                                                    </a>
+                                                </td>
+                                            @endif
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
