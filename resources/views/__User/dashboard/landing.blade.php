@@ -259,108 +259,104 @@
     <!-- ...::: Strat Company Logo Section Section :::... -->
 
     <!-- ...::: Strat BEST SELLER Product Section :::... -->
-    <div class="product-item-section  section-fluid-270 section-top-gap-100">
-        <div class="box-wrapper">
-            <div class="section-wrapper">
-                <div class="container-fluid">
-                    <div class="row justify-content-between align-items-center flex-warp section-content-gap-60">
-                        <div class="col-xxl-4 col-lg-5 col-md-6 col-sm-8 col-auto me-5">
-                            <div class="section-content">
-                                <h2 class="section-title">Best Seller</h2>
-                                <p>Here lies our hopes and dreams to make this project successfull</p>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="top-slider-buttons">
-                                <!-- If we need navigation buttons -->
-                                <div class="slider-buttons">
-                                    <div class="slider-button button-prev"><span
-                                            class="material-icons">arrow_left</span></div>
-                                    <div class="slider-button button-next"><span
-                                            class="material-icons">arrow_right</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-item-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Slider main container -->
-                            <div class="product-slider-3grids-1row">
-                                <div class="swiper-container">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        @isset($databaranglaris)
-                                            @foreach($databaranglaris as $item)
-                                                <div class="product-single-item-style-1 swiper-slide">
-                                                <a href="{{ url('detailBarang/'. $barang->id_barang) }}" class="image img-responsive">
-                                                    <img class="img-fluid"
-                                                        src="
-                                                        @if($barang->gambar->first())
-                                                        {{ $barang->gambar->first()->gambar }}
-                                                        @endif
-                                                            " width="435" height="350" loading="lazy" alt="product-image">
-                                                </a>
-                                                <div class="content">
-                                                    <div class="top">
-                                                        <span class="catagory">{{ $barang->kategori->namaKategori }}</span>
-                                                        <h4 class="title">
-                                                            <a href="{{ url('detailBarang/'. $barang->id_barang) }}">
-                                                                {{ $barang->namaBarang }}
-                                                            </a>
-                                                        </h4>
-                                                        <span class="price">
-                                                            @if(isset($barang->promos[0]))
-                                                                {{generateFormatRP($barang->harga - $barang->promos[0]->potonganHarga)}}
-                                                            <del>
-                                                                @php
-                                                                    $div = pow(10, strlen((string)$barang->harga) - 1);
-                                                                    generateFormatRP(ceil($barang->harga / $div) * $div);
-                                                                @endphp
-                                                                {{generateFormatRP($barang->harga)}}
-                                                            </del>
-                                                            @else
-                                                                {{generateFormatRP($barang->harga)}}
-                                                            @endif
-                                                        </span>
-                                                    </div>
-                                                    <div class="bottom">
-                                                        <ul class="review-star">
-                                                            @for ($i = 0; $i < floor($barang->rating); $i++)
-                                                                <li class="fill"><span class="material-icons">star</span></li>
-                                                            @endfor
-                                                            @if ($barang->rating * 10 % 10 != 0)
-                                                                <li class="fill"><span class="material-icons">star_half</span></li>
-                                                            @endif
-                                                        </ul>
-                                                        <div class="product-event-items">
-                                                            <form action="{{url('addingToCart')}}" method="post"> @csrf
-                                                                <input type="hidden" name="id" value="{{$barang->id_barang}}">
-                                                                <button class="btn cart-btn">Add to cart</button>
-                                                            </form>
-                                                            <form action="/wishlist" method="get">
-                                                                @csrf
-                                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
-                                                                <button class="btn wishlist-btn"><span class="material-icons">favorite_border</span></button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>                                            
-                                            @endforeach
-                                        @endisset
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="product-item-section  section-fluid-270 section-top-gap-100">--}}
+{{--        <div class="box-wrapper">--}}
+{{--            <div class="section-wrapper">--}}
+{{--                <div class="container-fluid">--}}
+{{--                    <div class="row justify-content-between align-items-center flex-warp section-content-gap-60">--}}
+{{--                        <div class="col-xxl-4 col-lg-5 col-md-6 col-sm-8 col-auto me-5">--}}
+{{--                            <div class="section-content">--}}
+{{--                                <h2 class="section-title">Best Seller</h2>--}}
+{{--                                <p>Here lies our hopes and dreams to make this project successfull</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-auto">--}}
+{{--                            <div class="top-slider-buttons">--}}
+{{--                                <!-- If we need navigation buttons -->--}}
+{{--                                <div class="slider-buttons">--}}
+{{--                                    <div class="slider-button button-prev"><span--}}
+{{--                                            class="material-icons">arrow_left</span></div>--}}
+{{--                                    <div class="slider-button button-next"><span--}}
+{{--                                            class="material-icons">arrow_right</span></div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="product-item-wrapper">--}}
+{{--                <div class="container-fluid">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-12">--}}
+{{--                            <!-- Slider main container -->--}}
+{{--                            <div class="product-slider-3grids-1row">--}}
+{{--                                <div class="swiper-container">--}}
+{{--                                    <!-- Additional required wrapper -->--}}
+{{--                                    <div class="swiper-wrapper">--}}
+{{--                                        @isset($databaranglaris[0])--}}
+{{--                                            @foreach($databaranglaris as $item)--}}
+{{--                                                <div class="product-single-item-style-1 swiper-slide">--}}
+{{--                                                <a href="{{ url('detailBarang/'. $item->id_barang }}" class="image img-responsive">--}}
+{{--                                                    <img class="img-fluid"--}}
+{{--                                                        src="--}}
+{{--                                                        @if($item->gambar->first())--}}
+{{--                                                        {{ $item->gambar->first()->gambar }}--}}
+{{--                                                        @endif--}}
+{{--                                                            " width="435" height="350" loading="lazy" alt="product-image">--}}
+{{--                                                </a>--}}
+{{--                                                <div class="content">--}}
+{{--                                                    <div class="top">--}}
+{{--                                                        <span class="catagory">{{ $item->kategori->namaKategori }}</span>--}}
+{{--                                                        <h4 class="title">--}}
+{{--                                                            <a href="{{ url('detailBarang/'. $item->id_barang) }}">--}}
+{{--                                                                {{ $item->namaBarang }}--}}
+{{--                                                            </a>--}}
+{{--                                                        </h4>--}}
+{{--                                                        <span class="price">--}}
+{{--                                                            @if(isset($item->promos[0]))--}}
+{{--                                                                {{generateFormatRP($item->harga - $item->promos[0]->potonganHarga)}}--}}
+{{--                                                            <del>--}}
+{{--                                                                {{generateFormatRP($item->harga)}}--}}
+{{--                                                            </del>--}}
+{{--                                                            @else--}}
+{{--                                                                {{generateFormatRP($item->harga)}}--}}
+{{--                                                            @endif--}}
+{{--                                                        </span>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="bottom">--}}
+{{--                                                        <ul class="review-star">--}}
+{{--                                                            @for ($i = 0; $i < floor($item->rating); $i++)--}}
+{{--                                                                <li class="fill"><span class="material-icons">star</span></li>--}}
+{{--                                                            @endfor--}}
+{{--                                                            @if ($item->rating * 10 % 10 != 0)--}}
+{{--                                                                <li class="fill"><span class="material-icons">star_half</span></li>--}}
+{{--                                                            @endif--}}
+{{--                                                        </ul>--}}
+{{--                                                        <div class="product-event-items">--}}
+{{--                                                            <form action="{{url('addingToCart')}}" method="post"> @csrf--}}
+{{--                                                                <input type="hidden" name="id" value="{{$item->id_barang}}">--}}
+{{--                                                                <button class="btn cart-btn">Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                            <form action="/wishlist" method="get">--}}
+{{--                                                                @csrf--}}
+{{--                                                                <input type="hidden" name="barangId" value="{{ $item->id_barang }}">--}}
+{{--                                                                <button class="btn wishlist-btn"><span class="material-icons">favorite_border</span></button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            @endforeach--}}
+{{--                                        @endisset--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- ...::: Strat BEST SELLER  Product Section :::... -->
 
     <div class="d-flex justify-content-center">
@@ -396,7 +392,7 @@
                                         All
                                     </button>
                                 </li>
-                                @foreach($kategories as $index => $kategory)                                
+                                @foreach($kategories as $index => $kategory)
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" data-bs-toggle="tab"
                                                 data-bs-target="#kat-{{$kategory->id_kategori}}" type="button">
@@ -437,7 +433,7 @@
                                                 data-icon="bi:speaker"></i>
                                             @elseif($index == 11)
                                                 <i class="fa iconify" style="padding-right: 3px" data-icon="bytesize:archive" style="color: #457b9d;" data-width="25" data-height="25">
-                                                    
+
                                                 </i>
                                             @endif
                                             {{--                                            " alt="">--}}

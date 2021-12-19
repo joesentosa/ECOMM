@@ -13,7 +13,7 @@ class DorderModel extends Model
     use SoftDeletes;
 
     public $table           = "dorder";
-    public $primaryKey      = "id_order";
+    public $primaryKey      = null;
     public $incrementing    = false;
     public $timestamps      = true;
     protected $fillable     = ['id_order','qty', 'total', 'fk_id_barang','created_at','updated_at'];
@@ -28,7 +28,7 @@ class DorderModel extends Model
     }
     public function getAll(){
         return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','barang.namaBarang']);
-    }  
+    }
 
     public static function barangLaris(){
         return DB::table('dorder')
@@ -37,7 +37,7 @@ class DorderModel extends Model
                         ->groupBy('dorder.fk_id_barang','barang.harga','barang.namaBarang','barang.id_barang')
                         ->orderBy('dorder.qty','desc')
                         ->limit(6)
-                        ->get();  
+                        ->get();
     }
 
 }

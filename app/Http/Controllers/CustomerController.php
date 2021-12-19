@@ -19,17 +19,17 @@ use Jorenvh\Share\Share;
 class CustomerController extends Controller
 {
     public function landing()
-    {               
-        $databaranglaris = array(); 
+    {
         $brands = BrandModel::limit(25)->get();
         $barangs = BarangModel::getAll();
         $promos = PromoModel::with('barang')->get();
         $kategories = KategoriModel::with(['barang'])->get();
         $baranglaris = DorderModel::barangLaris();
-        foreach ($baranglaris as $key) {            
-            array_push($databaranglaris,BarangModel::getBarangLaris($key->id_barang));            
-        }
-        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos','databaranglaris'));
+//        $databaranglaris = array();
+//        foreach ($baranglaris as $key) {
+//            array_push($databaranglaris,BarangModel::getBarangLaris($key->id_barang));
+//        }
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos'));
     }
 
     public function homepage()
@@ -61,7 +61,8 @@ class CustomerController extends Controller
     {
         $customer = Auth::user();
         $customer = CustomerModel::find($customer->id_customer);
-        return view('__User.dashboard.user_profile', ['customer' => $customer]);
+        $orderHistory = HorderModel::where('email', $customer->email)->get();
+        return view('__User.dashboard.user_profile', ['customer' => $customer, 'orderHistory' => $orderHistory]);
     }
 
     public function getDataForUpdate(Request $request)
