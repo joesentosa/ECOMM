@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class DorderModel extends Model
 {
@@ -27,5 +28,5 @@ class DorderModel extends Model
     }
     public function getAll(){
         return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','barang.namaBarang']);
-    }    
+    }
 }

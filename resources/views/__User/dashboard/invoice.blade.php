@@ -10,9 +10,9 @@
 @section('content')
 <div class="row">
   <div class="col-lg-12 d-flex justify-content-center mt-5">
-    <div class="contact-form text-center">    
+    <div class="contact-form text-center">
       <h3>Your items being processed</h3>
-      <h5>id order - {{ $dataOrder->id_order }}</h5>   
+      <h5>id order - {{ $dataOrder->id_order }}</h5>
       @if($dataOrder->statusOrder == 0)
       <div class="group mt-5">
         <div class="bigSqr">
@@ -71,6 +71,10 @@
                             <div class="swiper-container">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    @foreach($related_barang[0] as $barang)
+                                        @include('__User.dashboard.single_item')
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
