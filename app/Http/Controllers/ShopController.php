@@ -283,12 +283,12 @@ class ShopController extends Controller
                     break;
             }
 
-            $orderHeader = HorderModel::updateOrCreate(['id_order' => $orderID],[
+            $dataOrder = HorderModel::updateOrCreate(['id_order' => $orderID],[
                 'tanggal_trans' => \Illuminate\Support\Carbon::now(),
                 'metode_pembayaran' => $status->payment_type,
                 'statusOrder' => $statusOrder
             ]);
-            return view('__User.dashboard.invoice');
+            return view('__User.dashboard.invoice', compact('dataOrder'));
         }
         return back();
     }
