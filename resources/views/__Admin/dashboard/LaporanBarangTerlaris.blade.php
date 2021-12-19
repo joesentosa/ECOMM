@@ -33,23 +33,21 @@
                 <table class="display no-wrap" id="tabledorder" style="width:100%;">
                     <thead>
                         <tr>
-                            <th>Order Id</th>
-                            <th>Qty</th>
-                            <th>Total</th>
                             <th>Nama Barang</th>
+                            <th>Qty</th>
+                            <th>Harga</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- @isset($data)
-                @foreach($data as $item)
-                  <tr>                          
-                    <td>{{$item->id_dorder}}</td>
-                    <td>{{$item->qty}}</td>
-                    <td>{{generateFormatRP($item->total)}}</td>
-                    <td>{{$item->namaBarang}}<td>                    
-                  </tr>              
-                @endforeach
-              @endisset               -->
+                        @isset($data)                        
+                            @foreach($data as $item)
+                            <tr>
+                                <td>{{$item->namaBarang}}</td>
+                                <td>{{$item->TOTAL}}</td>
+                                <td>{{generateFormatRP($item->harga)}}</td>
+                            </tr>
+                            @endforeach
+                        @endisset              
                     </tbody>
                 </table>
             </div>

@@ -56,6 +56,14 @@ class BarangModel extends Model
                         ->where('barang.namaBarang',$name)
                         ->get();
     }
+    public static function getBarangLaris($id){
+        return BarangModel::join('brand','brand.id_brand','=','barang.fk_id_brand')                        
+                        ->with(['gambar','promos','kategori'])
+                        ->where('barang.id_barang',$id)
+                        ->get();
+    }
+    
+
     public static function getAll(){
         return BarangModel::with(['gambar','promos','kategori'])->get();
     }

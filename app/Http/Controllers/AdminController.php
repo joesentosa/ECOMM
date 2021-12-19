@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 
+
 class AdminController extends Controller
 {
     public function loginAdmin()
@@ -343,7 +344,8 @@ class AdminController extends Controller
 
     public function LapBarangLaris()
     {
-        return view('__Admin.dashboard.LaporanBarangTerlaris');
+        $dtbaranglaris = DorderModel::barangLaris();
+        return view('__Admin.dashboard.LaporanBarangTerlaris',['data' => $dtbaranglaris]);
     }
 
     public function LapPerBulan()
@@ -352,7 +354,7 @@ class AdminController extends Controller
     }
 
     public function LapInvoice()
-    {
+    {        
         $dthorder = new HorderModel();
         return view('__Admin.dashboard.LaporanInvoice', ['data' => $dthorder->getAll()]);
     }

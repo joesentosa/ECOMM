@@ -6,6 +6,7 @@ use App\Models\BarangModel;
 use App\Models\BrandModel;
 use App\Models\CustomerModel;
 use App\Models\HorderModel;
+use App\Models\DorderModel;
 use App\Models\KategoriModel;
 use App\Models\PromoModel;
 use Illuminate\Http\Request;
@@ -18,12 +19,17 @@ use Jorenvh\Share\Share;
 class CustomerController extends Controller
 {
     public function landing()
-    {
+    {               
+        $databaranglaris = array(); 
         $brands = BrandModel::limit(25)->get();
         $barangs = BarangModel::getAll();
         $promos = PromoModel::with('barang')->get();
         $kategories = KategoriModel::with(['barang'])->get();
-        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos'));
+        $baranglaris = DorderModel::barangLaris();
+        foreach ($baranglaris as $key) {            
+            array_push($databaranglaris,BarangModel::getBarangLaris($key->id_barang));            
+        }
+        return view('__User.dashboard.landing', compact('brands', 'barangs', 'kategories','promos','databaranglaris'));
     }
 
     public function homepage()

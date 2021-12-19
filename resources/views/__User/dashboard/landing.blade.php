@@ -293,9 +293,65 @@
                                 <div class="swiper-container">
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
-                                        {{--                                        @foreach($barangs as $index => $barang)--}}
-                                        {{--                                            @include('__User.dashboard.single_item')--}}
-                                        {{--                                        @endforeach--}}
+                                        @isset($databaranglaris)
+                                            @foreach($databaranglaris as $item)
+                                                <div class="product-single-item-style-1 swiper-slide">
+                                                <a href="{{ url('detailBarang/'. $barang->id_barang) }}" class="image img-responsive">
+                                                    <img class="img-fluid"
+                                                        src="
+                                                        @if($barang->gambar->first())
+                                                        {{ $barang->gambar->first()->gambar }}
+                                                        @endif
+                                                            " width="435" height="350" loading="lazy" alt="product-image">
+                                                </a>
+                                                <div class="content">
+                                                    <div class="top">
+                                                        <span class="catagory">{{ $barang->kategori->namaKategori }}</span>
+                                                        <h4 class="title">
+                                                            <a href="{{ url('detailBarang/'. $barang->id_barang) }}">
+                                                                {{ $barang->namaBarang }}
+                                                            </a>
+                                                        </h4>
+                                                        <span class="price">
+                                                            @if(isset($barang->promos[0]))
+                                                                {{generateFormatRP($barang->harga - $barang->promos[0]->potonganHarga)}}
+                                                            <del>
+                                                                @php
+                                                                    $div = pow(10, strlen((string)$barang->harga) - 1);
+                                                                    generateFormatRP(ceil($barang->harga / $div) * $div);
+                                                                @endphp
+                                                                {{generateFormatRP($barang->harga)}}
+                                                            </del>
+                                                            @else
+                                                                {{generateFormatRP($barang->harga)}}
+                                                            @endif
+                                                        </span>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <ul class="review-star">
+                                                            @for ($i = 0; $i < floor($barang->rating); $i++)
+                                                                <li class="fill"><span class="material-icons">star</span></li>
+                                                            @endfor
+                                                            @if ($barang->rating * 10 % 10 != 0)
+                                                                <li class="fill"><span class="material-icons">star_half</span></li>
+                                                            @endif
+                                                        </ul>
+                                                        <div class="product-event-items">
+                                                            <form action="{{url('addingToCart')}}" method="post"> @csrf
+                                                                <input type="hidden" name="id" value="{{$barang->id_barang}}">
+                                                                <button class="btn cart-btn">Add to cart</button>
+                                                            </form>
+                                                            <form action="/wishlist" method="get">
+                                                                @csrf
+                                                                <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
+                                                                <button class="btn wishlist-btn"><span class="material-icons">favorite_border</span></button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                            @endforeach
+                                        @endisset
                                     </div>
                                 </div>
                             </div>

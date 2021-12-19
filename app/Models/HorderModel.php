@@ -39,5 +39,5 @@ class HorderModel extends Model
     }
     public function getAll(){
         return HorderModel::all();
-    }
+    }    
 }

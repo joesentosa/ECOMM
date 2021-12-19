@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class DorderModel extends Model
 {
@@ -27,5 +28,16 @@ class DorderModel extends Model
     }
     public function getAll(){
         return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','barang.namaBarang']);
-    }    
+    }  
+
+    public static function barangLaris(){
+        return DB::table('dorder')
+                        ->select('barang.id_barang','barang.namaBarang','barang.harga','dorder.fk_id_barang',DB::raw('SUM(dorder.qty) as TOTAL'))
+                        ->join('barang','barang.id_barang','=','dorder.fk_id_barang')
+                        ->groupBy('dorder.fk_id_barang','barang.harga','barang.namaBarang','barang.id_barang')
+                        ->orderBy('dorder.qty','desc')
+                        ->limit(6)
+                        ->get();  
+    }
+
 }

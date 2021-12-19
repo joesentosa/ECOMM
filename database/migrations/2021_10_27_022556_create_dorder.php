@@ -14,7 +14,7 @@ class CreateDorder extends Migration
     public function up()
     {
         Schema::create('dorder', function (Blueprint $table) {
-            $table->string('id_order',12)->primary()->comment('example: D27102021001');
+            $table->string('id_order',12);
             $table->bigInteger('qty');
             $table->bigInteger('total');
             $table->bigInteger('fk_id_barang');
