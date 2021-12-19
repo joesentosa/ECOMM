@@ -26,6 +26,6 @@ class DorderModel extends Model
         $dorder->save();
     }
     public function getAll(){
-        return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','dorder.id_order as id_dorder', 'barang.namaBarang']);
+        return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*', 'barang.namaBarang']);
     }    
 }
