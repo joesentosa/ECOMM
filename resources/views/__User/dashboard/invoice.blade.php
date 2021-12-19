@@ -13,7 +13,7 @@
     <div class="contact-form text-center">
       <h3>Your items being processed</h3>
       <h5>id order - 185768541244</h5>
-      <div class="group mt-5"> 
+      <div class="group mt-5">
         <div class="bigSqr">
           <div class="square first"></div>
           <div class="square second"></div>
@@ -25,10 +25,10 @@
       <p>
         Thank you for your order <br>
         I hope you enjoy shopping on our website.
-      </p>      
+      </p>
     </div>
   </div>
-</div>  
+</div>
 <!-- ...::: Strat Product Section :::... -->
 <div class="product-item-section  section-fluid-270 section-top-gap-100">
     <div class="box-wrapper">
@@ -63,7 +63,7 @@
                         <div class="product-slider-3grids-1row">
                             <div class="swiper-container">
                                 <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">                                    
+                                <div class="swiper-wrapper">
                                 </div>
                             </div>
                         </div>
@@ -81,5 +81,5 @@
     <script src="{{ asset('assets/Martup/js/vendor/vendor.min.js') }}"></script>
     <script src="{{ asset('assets/Martup/js/plugins/plugins.min.js') }}"></script>
 
-    <script src="{{asset('assets/Martup/js/main.js')}}"></script>    
+    <script src="{{asset('assets/Martup/js/main.js')}}"></script>
 @endpush

@@ -144,7 +144,7 @@ class ShopController extends Controller
 
             array_push($barangs, $data_barang);
         }
-
+        $customer  = Auth::user();
         HorderModel::updateOrCreate(['id_order' => $order_id], [
             'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
             'metode_pembayaran' => '', 'statusOrder' => 0,
