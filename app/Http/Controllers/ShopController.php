@@ -47,7 +47,7 @@ class ShopController extends Controller
         // Add new notification url(s) alongside the settings on Midtrans Dashboard Portal (MAP)
         Config::$appendNotifUrl = "http://127.0.0.1:8000/test1";
         // Use new notification url(s) disregarding the settings on Midtrans Dashboard Portal (MAP)
-//        Config::$overrideNotifUrl = "https://example.com/test1";
+        // Config::$overrideNotifUrl = "https://example.com/test1";
     }
 
     public function cart(Request $request)
@@ -123,8 +123,15 @@ class ShopController extends Controller
         $shipping_cost = (int)$tmp_shipping["cost"];
         $barangs = array();
         foreach ($tmp_items as $items) {
-            $data_barang = BarangModel::where('id_barang', $items['id'])->first();
-            $harga_total = $data_barang->harga * $items['qty'];
+            $data_barang = BarangModel::where('id_barang', $items['id'])->with(['promos'])->first();
+            if (isset($data_barang->promos[0]))
+            {
+                $harga_total = ($data_barang->harga - $data_barang->promos[0]->potonganHarga) * $items['qty'];
+            }
+            else
+            {
+                $harga_total = $data_barang->harga * $items['qty'];
+            }
             $subtotal += $harga_total;
             $data_barang->qty = $items['qty'];
             $data_barang->harga_total = $harga_total;

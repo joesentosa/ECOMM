@@ -76,6 +76,6 @@ class BarangModel extends Model
 
     public function promos()
     {
-        return $this->belongsToMany(PromoModel::class, 'promo_barang', 'fk_id_barang', 'fk_id_barang');
+        return $this->belongsToMany(PromoModel::class, 'promo_barang', 'fk_id_barang', 'fk_id_promo');
     }
 }
