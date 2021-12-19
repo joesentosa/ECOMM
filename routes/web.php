@@ -18,7 +18,7 @@ Route::get('/wishlist', [CatalogController::class, 'wishlistData']);
 Route::get('/cart', [ShopController::class, 'cart'])->name('page.cart.customer');
 Route::get('/order', [ShopController::class, 'order']);
 Route::post('/checkout', [ShopController::class, 'checkout'])->name('page.checkout.customer');
-Route::get('/invoice', [ShopController::class, 'page_invoice']);
+Route::get('/invoice', [ShopController::class, 'page_invoice'])->middleware(['customer.auth']);
 Route::get('/dapatnotif', [NotifController::class, 'dapatnotif']);
 Route::get('/bacanotif', [NotifController::class, 'bacanotif']);
 Route::get('/kirimnotif', [NotifController::class, 'kirimnotif']);

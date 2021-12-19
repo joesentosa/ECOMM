@@ -261,13 +261,13 @@ class ShopController extends Controller
     }
 
     public function page_invoice(Request $request){
-        $orderID = $request->orderID;        
+        $orderID = $request->orderID;
 
         if ($orderID)
         {
-            $checkid = HorderModel::where('id_order',$orderID)->first();            
+            $checkid = HorderModel::where('id_order',$orderID)->first();
             if (!$checkid) {
-                return abort(400);
+                abort(400);
             }
             $status = \Midtrans\Transaction::status($orderID);
             $statusOrder = 0;
@@ -288,12 +288,22 @@ class ShopController extends Controller
                 'statusOrder' => $statusOrder
             ]);
 
+            // get related barang query
+
+            $related_barang = [];
+            $tmp_dorder = DorderModel::select('fk_id_barang')->where('id_order', '=', $orderID)->get();
+            foreach ($tmp_dorder as $data) {
+                $tmp_barang = BarangModel::where('id_barang', $data->fk_id_barang)->first();
+                $tmp_related_barang = BarangModel::where('fk_id_kategori', $tmp_barang->fk_id_kategori)->limit(5)->get();
+                array_push($related_barang, $tmp_related_barang);
+            }
+
             // remove session except auth
             $user = Auth::user();
             Session::flush();
             Auth::login($user);
 
-            return view('__User.dashboard.invoice', compact('dataOrder'));
+            return view('__User.dashboard.invoice', compact('dataOrder','related_barang'));
         }
         return back();
     }
