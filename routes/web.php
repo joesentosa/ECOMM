@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CustomerController::class, 'landing'])->name('page.index.customer');
 Route::get('/login', [CustomerController::class, 'login'])->name('page.login.customer');
-Route::get('/catalog',[CatalogController::class,'catalog'])->name('page.catalog.customer');
-Route::get('/wishlist',[CatalogController::class,'wishlistData']);
-Route::get('/cart',[ShopController::class,'cart'])->name('page.cart.customer');
-Route::get('/order',[ShopController::class,'order']);
-Route::post('/checkout',[ShopController::class,'checkout'])->name('page.checkout.customer');
-Route::get('/invoice',[ShopController::class,'page_invoice']);
-Route::get('/dapatnotif', [NotifController::class,'dapatnotif']);
-Route::get('/bacanotif', [NotifController::class,'bacanotif']);
-Route::get('/kirimnotif', [NotifController::class,'kirimnotif']);
+Route::get('/catalog', [CatalogController::class, 'catalog'])->name('page.catalog.customer');
+Route::get('/wishlist', [CatalogController::class, 'wishlistData']);
+Route::get('/cart', [ShopController::class, 'cart'])->name('page.cart.customer');
+Route::get('/order', [ShopController::class, 'order']);
+Route::post('/checkout', [ShopController::class, 'checkout'])->name('page.checkout.customer');
+Route::get('/invoice', [ShopController::class, 'page_invoice']);
+Route::get('/dapatnotif', [NotifController::class, 'dapatnotif']);
+Route::get('/bacanotif', [NotifController::class, 'bacanotif']);
+Route::get('/kirimnotif', [NotifController::class, 'kirimnotif']);
 
-Route::get('/deleteCart',[CatalogController::class,'deleteCart']);
-Route::post('/deleteWL',[CatalogController::class,'deleteWL']);
+Route::get('/deleteCart', [CatalogController::class, 'deleteCart']);
+Route::post('/deleteWL', [CatalogController::class, 'deleteWL']);
 //Route::get('/detailBarang/{id}', [CustomerController::class, 'getDataBarang']);
-Route::get('/detailBarang/{barang}',[CustomerController::class,'detailBarang']);
+Route::get('/detailBarang/{barang}', [CustomerController::class, 'detailBarang']);
 Route::view('button-builder', 'perk-ui.button-builder')->name('button-builder');
 Route::post('/addingToCart', [CustomerController::class, 'addingToCart']);
 Route::post('/catalog-filter-category', [CatalogController::class, 'filterCategory']);
@@ -52,11 +52,13 @@ Route::middleware('admin.auth')
         Route::get('/promoBarang', [AdminController::class, 'PromoBarangAdmin'])->name('page.promo_barang.admin');
         Route::get('/LaporanPenjualan', [AdminController::class, 'LapPenjualan'])->name('page.laporan_penjualan.admin');
         Route::get('/LaporanInvoice', [AdminController::class, 'LapInvoice'])->name('page.laporan_invoice.admin');
+        Route::get('/LaporanPerBulan', [AdminController::class, 'LapPerBulan'])->name('page.laporan_perbulan.admin');
+        Route::get('/LaporanBarangTerlaris', [AdminController::class, 'LapBarangLaris'])->name('page.laporan_BarangLaris.admin');
         // Route::get('/LaporanTerlaris', [AdminController::class, 'LapTerlaris'])->name('page.laporan_terlaris.admin');
 
-        Route::post('/insertuseradmin',[AdminController::class,'insertuseradmin']);
-        Route::post('/updateuseradmin',[AdminController::class,'updateuseradmin']);
-        Route::post('/deleteuseradmin',[AdminController::class,'deleteuseradmin']);
+        Route::post('/insertuseradmin', [AdminController::class, 'insertuseradmin']);
+        Route::post('/updateuseradmin', [AdminController::class, 'updateuseradmin']);
+        Route::post('/deleteuseradmin', [AdminController::class, 'deleteuseradmin']);
 
         Route::post('/updatebrand', [AdminController::class, "updatebrand"]);
         Route::post('/insertbrand', [AdminController::class, "insertbrand"]);
@@ -111,7 +113,7 @@ Route::middleware(['customer.auth'])
         Route::get('/profile', [CustomerController::class, 'getDataCustomer'])->name('page.profile.customer');
         Route::get('/profile/update', [CustomerController::class, 'getDataForUpdate']);
         Route::post('/profile/doUpdate', [CustomerController::class, 'doUpdate']);
-        Route::get('/wishlist',[CustomerController::class,'page_wishlist'])->name('page.wishlist.customer');
+        Route::get('/wishlist', [CustomerController::class, 'page_wishlist'])->name('page.wishlist.customer');
     });
 //end route customer
 
