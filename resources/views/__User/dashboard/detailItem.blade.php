@@ -139,51 +139,9 @@
                                 <span class="price">{{ generateFormatRP($barang->harga) }}</span>
 
                                 <div class="product-variables">
-                                    <!-- Start Product Single Variable -->
-                                    <div class="product-variable-color">
-                                        <h6 class="title">Color</h6>
-                                        <ul class="color-select">
-                                            <li>
-                                                <label class="checkbox-default" for="color-red">
-                                                    <input type="checkbox" id="color-red">
-                                                    <span>Red</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox-default" for="color-green">
-                                                    <input type="checkbox" id="color-green">
-                                                    <span>Green</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox-default" for="color-blue">
-                                                    <input type="checkbox" id="color-blue">
-                                                    <span>Blue</span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="checkbox-default" for="color-black">
-                                                    <input type="checkbox" id="color-black">
-                                                    <span>Black</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Product Single Variable -->
-
                                     <form action="{{url('addingToCart')}}" method="post"> @csrf
                                         <input type="hidden" name="id" value="{{$barang->id_barang}}">
                                         <ul class="variable-items">
-                                            <li class="variable-single-items type-select">
-                                                <select>
-                                                    <option value="S">Size: S</option>
-                                                    <option value="M">Size: M</option>
-                                                    <option value="L">Size: L</option>
-                                                    <option value="XL" selected>Size: XL</option>
-                                                    <option value="XXl">Size: XXL</option>
-                                                </select>
-                                            </li>
-
                                             <li class="variable-single-items">
                                                 <div class="num-block skin-2">
                                                     <div class="num-in">

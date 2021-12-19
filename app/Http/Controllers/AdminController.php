@@ -350,7 +350,8 @@ class AdminController extends Controller
 
     public function LapPerBulan()
     {
-        return view('__Admin.dashboard.LaporanPerBulan');
+        $dtperbulan = HorderModel::pendapatanPerBulan();        
+        return view('__Admin.dashboard.LaporanPerBulan',['data'=>$dtperbulan]);
     }
 
     public function LapInvoice()

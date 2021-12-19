@@ -33,23 +33,25 @@
                 <table class="display no-wrap" id="tabledorder" style="width:100%;">
                     <thead>
                         <tr>
-                            <th>Order Id</th>
-                            <th>Qty</th>
-                            <th>Total</th>
-                            <th>Nama Barang</th>
+                            <th>no</th>
+                            <th>Bulan Transaksi</th>
+                            <th>Jumlah tranksaksi</th>
+                            <th>Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- @isset($data)
-                @foreach($data as $item)
-                  <tr>                          
-                    <td>{{$item->id_dorder}}</td>
-                    <td>{{$item->qty}}</td>
-                    <td>{{generateFormatRP($item->total)}}</td>
-                    <td>{{$item->namaBarang}}<td>                    
-                  </tr>              
-                @endforeach
-              @endisset               -->
+                        @isset($data)
+                            <?php $ctr = 1;?>
+                            @foreach($data as $item)
+                            <tr>                          
+                                <td>{{$ctr}}</td>
+                                <td>{{$item->Bulan}}</td>
+                                <td>{{$item->count_per_bulan}}</td>
+                                <td>{{generateFormatRP($item->subperbulan)}}</td>
+                            </tr>          
+                            <?php $ctr = $ctr+1;?>    
+                            @endforeach
+                        @endisset
                     </tbody>
                 </table>
             </div>
