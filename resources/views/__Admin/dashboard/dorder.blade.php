@@ -43,7 +43,7 @@
               @isset($data)
                 @foreach($data as $item)
                   <tr>                          
-                    <td>{{$item->id_dorder}}</td>
+                    <td>{{$item->id_order}}</td>
                     <td>{{$item->qty}}</td>
                     <td>{{generateFormatRP($item->total)}}</td>
                     <td>{{$item->namaBarang}}<td>                    

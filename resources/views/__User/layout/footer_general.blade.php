@@ -145,7 +145,7 @@
 
                 <!-- Start Footer Bottom -->
                 <div class="footer-bottom">
-                    <p class="copyright-text copyright-text--dark">&copy; 2021 from Jeremy and Samuel with <span class="material-icons">favorite</span></p>
+                    <p class="copyright-text copyright-text--dark">&copy; 2021 with <span class="material-icons">favorite</span></p>
                     <a href="#" class="payment-logo"><img class="img-fluid" src="{{ asset('assets/images/dashboard-icons/operator.png') }}" alt=""></a>
                 </div>
                 <div>

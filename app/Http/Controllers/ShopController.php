@@ -47,7 +47,7 @@ class ShopController extends Controller
         // Add new notification url(s) alongside the settings on Midtrans Dashboard Portal (MAP)
         Config::$appendNotifUrl = "http://127.0.0.1:8000/test1";
         // Use new notification url(s) disregarding the settings on Midtrans Dashboard Portal (MAP)
-//        Config::$overrideNotifUrl = "https://example.com/test1";
+        // Config::$overrideNotifUrl = "https://example.com/test1";
     }
 
     public function cart(Request $request)
@@ -63,8 +63,15 @@ class ShopController extends Controller
 
         // find each barang and assign to cariable carts
         foreach ($tmp_data as $data) {
-            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
-            $subtotal += $data_barang->harga * $data['qty'];
+            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar','promos'])->first();
+            if (isset($data_barang->promos[0]))
+            {
+                $subtotal += ($data_barang->harga - $data_barang->promos[0]->potonganHarga) * $data['qty'];
+            }
+            else
+            {
+                $subtotal += $data_barang->harga * $data['qty'];
+            }
             array_push($carts, array(
                 'data' => $data_barang,
                 'qty' => $data['qty']
@@ -116,8 +123,15 @@ class ShopController extends Controller
         $shipping_cost = (int)$tmp_shipping["cost"];
         $barangs = array();
         foreach ($tmp_items as $items) {
-            $data_barang = BarangModel::where('id_barang', $items['id'])->first();
-            $harga_total = $data_barang->harga * $items['qty'];
+            $data_barang = BarangModel::where('id_barang', $items['id'])->with(['promos'])->first();
+            if (isset($data_barang->promos[0]))
+            {
+                $harga_total = ($data_barang->harga - $data_barang->promos[0]->potonganHarga) * $items['qty'];
+            }
+            else
+            {
+                $harga_total = $data_barang->harga * $items['qty'];
+            }
             $subtotal += $harga_total;
             $data_barang->qty = $items['qty'];
             $data_barang->harga_total = $harga_total;
@@ -130,13 +144,19 @@ class ShopController extends Controller
 
             array_push($barangs, $data_barang);
         }
-
+        $customer  = Auth::user();
         HorderModel::updateOrCreate(['id_order' => $order_id], [
-                'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
-                'metode_pembayaran' => '', 'statusOrder' => 0,
-                'total_shipping' => $tmp_shipping['cost'],
-                'kurir' => $tmp_shipping['courier'],
-                'jenis_layanan' => $tmp_shipping['service']
+            'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
+            'metode_pembayaran' => '', 'statusOrder' => 0,
+            'total_shipping' => $tmp_shipping['cost'],
+            'kurir' => $tmp_shipping['courier'],
+            'jenis_layanan' => $tmp_shipping['service'],
+            'fullname' => $request->firstname . " " . $request->lastname,
+            'address' => $request->address,
+            'city' => $request->city,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'order_notes' => $request->order_note,
         ]);
 
         // todo get barang from session into this crap :v
@@ -263,12 +283,12 @@ class ShopController extends Controller
                     break;
             }
 
-            $orderHeader = HorderModel::updateOrCreate(['id_order' => $orderID],[
+            $dataOrder = HorderModel::updateOrCreate(['id_order' => $orderID],[
                 'tanggal_trans' => \Illuminate\Support\Carbon::now(),
                 'metode_pembayaran' => $status->payment_type,
                 'statusOrder' => $statusOrder
             ]);
-            return view('__User.dashboard.invoice');
+            return view('__User.dashboard.invoice', compact('dataOrder'));
         }
         return back();
     }

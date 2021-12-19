@@ -123,12 +123,24 @@
                                                     {{ $item['data']['namaBarang'] }}
                                                 </a>
                                             </td>
-                                            <td class="product-price">{{ generateFormatRP($item['data']['harga']) }}</td>
+                                            <td class="product-price">
+                                                @if(isset($item['data']['promos'][0]))
+                                                    {{ generateFormatRP( ($item['data']['harga'] - $item['data']['promos'][0]['potonganHarga']) ) }}
+                                                @else
+                                                    {{ generateFormatRP( ($item['data']['harga']) ) }}
+                                                @endif
+                                            </td>
                                             <td class="product_quantity"><label>Quantity</label>
                                                 <input min="1" max="100" value="{{ $item['qty'] }}" type="number"
                                                        id="qty">
                                             </td>
-                                            <td class="product_total">{{ generateFormatRP( ($item['data']['harga']) * $item['qty'] ) }}</td>
+                                            <td class="product_total">
+                                                @if(isset($item['data']['promos'][0]))
+                                                    {{ generateFormatRP( ($item['data']['harga'] - $item['data']['promos'][0]['potonganHarga']) * $item['qty'] ) }}
+                                                @else
+                                                    {{ generateFormatRP( ($item['data']['harga']) * $item['qty'] ) }}
+                                                @endif
+                                            </td>
                                         </tr> <!-- End Cart Single Item-->
                                     @endforeach
                                     </tbody>
@@ -249,7 +261,7 @@
                                                             <label>Last Name <span>*</span></label>
                                                             <input type="text" name="last_second">
                                                         </div>
-                                                    </div>                                                   
+                                                    </div>
                                                     <div class="col-12">
                                                         <div class="default-form-box">
                                                             <label>Street address <span>*</span></label>

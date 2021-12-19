@@ -13,7 +13,7 @@ class DorderModel extends Model
 
     public $table           = "dorder";
     public $primaryKey      = "id_order";
-    public $incrementing    = true;
+    public $incrementing    = false;
     public $timestamps      = true;
     protected $fillable     = ['id_order','qty', 'total', 'fk_id_barang','created_at','updated_at'];
 
@@ -26,6 +26,6 @@ class DorderModel extends Model
         $dorder->save();
     }
     public function getAll(){
-        return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*','dorder.id_order as id_dorder', 'barang.namaBarang']);
+        return DorderModel::join('barang','barang.id_barang','=','dorder.fk_id_barang')->get(['dorder.*', 'barang.namaBarang']);
     }    
 }

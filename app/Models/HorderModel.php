@@ -13,9 +13,15 @@ class HorderModel extends Model
 
     public $table = "horder";
     public $primaryKey = "id_order";
-    public $incrementing = true;
+    public $incrementing = false;
     public $timestamps = true;
-    protected $fillable = ['id_order', 'tanggal_trans', 'subtotal', 'metode_pembayaran', 'statusOrder', 'kurir', 'jenis_layanan', 'total_shipping', 'created_at', 'updated_at'];
+    protected $fillable = [
+        'id_order', 'tanggal_trans', 'subtotal',
+        'metode_pembayaran', 'statusOrder', 'kurir',
+        'jenis_layanan', 'total_shipping', 'fullname',
+        'address', 'city', 'phone', 'email', 'order_notes',
+        'created_at', 'updated_at'
+    ];
 
     public function saveData($id_order, $tgltrans, $subtotal, $metodePay, $statusorder, $kurir, $jenisLayanan, $shipping)
     {
