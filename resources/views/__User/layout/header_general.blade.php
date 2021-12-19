@@ -127,7 +127,7 @@
                         @isset($cart_count)
                             <button class="header-action-item header-action-wishlist" data-bs-toggle="offcanvas"
                                     data-bs-target="#addcartOffcanvas">
-                                <img src="assets/images/icons/icon-shopping-bag-dark.svg" alt="">
+                                <img src="{{ asset('assets/images/icons/icon-shopping-bag-dark.svg') }}" alt="">
                                 <span class="item-count item-count--light">{{ $cart_count }} ITEMS</span>
                             </button>
                         @endisset
@@ -197,12 +197,12 @@
             <div class="d-flex justify-content-center ">
                 @isset($WL_count)
                     <a href="wishlist.html" class="header-action-item header-action-wishlist"><img
-                            src="assets/images/icons/icon-heart-dark.svg" alt=""><span
+                            src="{{ asset('assets/images/icons/icon-heart-dark.svg') }}" alt=""><span
                             class="count-tag">{{ $WL_count }}</span></a>
                 @endisset
                 @isset($cart_count)
                     <a href="cart.html" class="header-action-item header-action-wishlist"><img
-                            src="assets/images/icons/icon-shopping-bag-dark.svg" alt=""><span
+                            src="{{ asset('assets/images/icons/icon-shopping-bag-dark.svg') }}" alt=""><span
                             class="item-count item-count--light">{{ $cart_count }}</span></a>
                 @endisset
             </div>
@@ -213,7 +213,7 @@
                 <div class="search-event">
                     <input class="header-search" type="search" name="name">
                     <button class="header-search-btn" type="submit">
-                        <img src="assets/images/icons/icon-search.svg" alt="">
+                        <img src="{{ asset('assets/images/icons/icon-search.svg') }}" alt="">
                     </button>
                 </div>
             </div>
@@ -228,10 +228,6 @@
                     <ul>
                         <li>
                             <a href="#"><span>Home</span></a>
-                            <ul class="mobile-sub-menu">
-                                <li><a href="index.html">Home 1</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="#"><span>Shop</span></a>
@@ -239,99 +235,16 @@
                                 <li>
                                     <a href="#">Shop Page</a>
                                     <ul class="mobile-sub-menu">
-                                        <li><a href="shop-grid-sidebar-left.html">Left Sidebar</a></li>
-                                        <li><a href="shop-grid-sidebar-right.html">Right Sidebar</a></li>
-                                        <li><a href="shop-grid-sidebar-full-width-3-column.html">Shop Full Width</a>
-                                        </li>
+                                        <li><a href="{{ route('page.catalog.customer') }}">Catalog</a></li>
+                                        <li><a href="{{ route('page.cart.customer') }}">Cart</a></li>
+                                        <li><a href="{{ route('page.wishlist.customer') }}">Wishlist</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                            <ul class="mobile-sub-menu">
-                                <li>
-                                    <a href="#">Product Page</a>
-                                    <ul class="mobile-sub-menu">
-                                        <li><a href="product-details-default.html">Product Default</a></li>
-                                        <li><a href="product-details-group.html">Product Group</a></li>
-                                        <li><a href="product-details-left-sidebar.html">Product Left Sidebar</a>
-                                        </li>
-                                        <li><a href="product-details-right-sidebar.html">Product Right Sidebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mobile-sub-menu">
-                                <li>
-                                    <a href="#">Others Page</a>
-                                    <ul class="mobile-sub-menu">
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="compare.html">Compare</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="my-account.html">MyAccount</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>Blogs</span></a>
-                            <ul class="mobile-sub-menu">
-                                <li>
-                                    <a href="#">Blog List</a>
-                                    <ul class="mobile-sub-menu">
-                                        <li><a href="blog-list-3-grid-full-width.html">Grid 3 Full Width</a></li>
-                                        <li><a href="blog-list-4-grid-full-width.html">Grid 4 Full Width</a></li>
-                                        <li><a href="blog-list-left-sidebar.html">Left Sidebar</a></li>
-                                        <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mobile-sub-menu">
-                                <li>
-                                    <a href="#">Blog Details</a>
-                                    <ul class="mobile-sub-menu">
-                                        <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                        <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>Pages</span></a>
-                            <ul class="mobile-sub-menu">
-                                <li><a href="about.html"><span>About Us</span></a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="error.html">404 Page</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html"><span>Contact</span></a>
                         </li>
                     </ul>
                 </div> <!-- End Mobile Menu Nav -->
             </div> <!-- End Mobile Menu -->
-
-            <!-- Start Mobile contact Info -->
-            <div class="mobile-contact-info text-center">
-                <ul class="social-link">
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                                src="assets/images/icons/icon-facebook-f-dark.svg"
-                                                                                                alt=""></a>
-                    </li>
-                    <li><a href="https://twitter.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                            src="assets/images/icons/icon-twitter-dark.svg"
-                                                                                            alt=""></a>
-                    </li>
-                    <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                                  src="assets/images/icons/icon-pinterest-p-dark.svg"
-                                                                                                  alt=""></a></li>
-                    <li><a href="https://dribbble.com/" target="_blank" rel="noopener"><img class="icon-svg"
-                                                                                            src="assets/images/icons/icon-dribbble-dark.svg"
-                                                                                            alt=""></a></li>
-                </ul>
-            </div>
-            <!-- End Mobile contact Info -->
-
         </div> <!-- End Offcanvas Mobile Menu Wrapper -->
     </div>
 </div>
@@ -350,20 +263,26 @@
                     <li class="single-item">
                         <div class="box">
                             <a href="" class="image">
-                                <img src="assets/images/products/small/product-small-1.webp" alt=""
+                                <img src="{{ asset('assets/images/products/small/product-small-1.webp') }}" alt=""
                                     class="offcanvas-wishlist-image">
                             </a>
                             <div class="content">
                                 <a href="" class="title">{{ $item->namaBarang }}</a>
                                 <div class="offcanvas-wishlist-item-details">
-                                    <span class="offcanvas-wishlist-item-details-price">{{ generateFormatRP($item->harga) }}</span>
+                                    <span class="offcanvas-wishlist-item-details-price">
+                                        @if(isset($item->promos[0]))
+                                            {{ generateFormatRP($item->harga - $item->promos[0]->potonganHarga) }}
+                                        @else
+                                            {{ generateFormatRP($item->harga) }}
+                                        @endif
+                                    </span>
                                 </div>
                             </div>
                         </div>
                         <form action="/deleteWL" method="post"> @csrf
                             <div class="item-delete text-right">
                                 <input type="hidden" name="barangId" value="{{ $item->id_barang }}">
-                                <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>
+                                <button><img src="{{ asset('assets/images/icons/icon-trash.svg') }}" alt=""></button>
                             </div>
                         </form>
                     </li>
@@ -401,7 +320,13 @@
                                     <a href="/detailBarang/{{ $barang->id_barang }}" class="title">{{ $barang->namaBarang }}</a>
                                     <div class="offcanvas-wishlist-item-details">
                                         <span class="offcanvas-wishlist-item-details-quantity">{{ $cart['qty'] }} x</span>
-                                        <span class="offcanvas-wishlist-item-details-price">{{ generateFormatRP($barang->harga) }}</span>
+                                        <span class="offcanvas-wishlist-item-details-price">
+                                            @if(isset($barang->promos[0]))
+                                                {{ generateFormatRP($barang->harga - $barang->promos[0]->potonganHarga) }}
+                                            @else
+                                                {{ generateFormatRP($barang->harga) }}
+                                            @endif
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +334,7 @@
                                 <form action="/deleteCart" method="get">
                                     @csrf
                                     <input type="hidden" name="barangId" value="{{ $barang->id_barang }}">
-                                    <button><img src="assets/images/icons/icon-trash.svg" alt=""></button>
+                                    <button><img src="{{ asset('assets/images/icons/icon-trash.svg') }}" alt=""></button>
                                 </form>
                             </div>
                         </li>

@@ -68,13 +68,19 @@
                     {{ $barang->namaBarang }}
                 </a>
             </h4>
-            <span class="price">{{generateFormatRP($barang->harga)}}
+            <span class="price">
+                @if(isset($barang->promos[0]))
+                    {{generateFormatRP($barang->harga - $barang->promos[0]->potonganHarga)}}
                 <del>
                     @php
                         $div = pow(10, strlen((string)$barang->harga) - 1);
+                        generateFormatRP(ceil($barang->harga / $div) * $div);
                     @endphp
-                    {{ generateFormatRP(ceil($barang->harga / $div) * $div) }}
+                    {{generateFormatRP($barang->harga)}}
                 </del>
+                @else
+                    {{generateFormatRP($barang->harga)}}
+                @endif
             </span>
         </div>
         <div class="bottom">

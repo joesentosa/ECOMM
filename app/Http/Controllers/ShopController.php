@@ -63,8 +63,15 @@ class ShopController extends Controller
 
         // find each barang and assign to cariable carts
         foreach ($tmp_data as $data) {
-            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar'])->first();
-            $subtotal += $data_barang->harga * $data['qty'];
+            $data_barang = BarangModel::where('id_barang', $data['id'])->with(['gambar','promos'])->first();
+            if (isset($data_barang->promos[0]))
+            {
+                $subtotal += ($data_barang->harga - $data_barang->promos[0]->potonganHarga) * $data['qty'];
+            }
+            else
+            {
+                $subtotal += $data_barang->harga * $data['qty'];
+            }
             array_push($carts, array(
                 'data' => $data_barang,
                 'qty' => $data['qty']
@@ -132,11 +139,17 @@ class ShopController extends Controller
         }
 
         HorderModel::updateOrCreate(['id_order' => $order_id], [
-                'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
-                'metode_pembayaran' => '', 'statusOrder' => 0,
-                'total_shipping' => $tmp_shipping['cost'],
-                'kurir' => $tmp_shipping['courier'],
-                'jenis_layanan' => $tmp_shipping['service']
+            'tanggal_trans' => Carbon::now(), 'subtotal' => $subtotal,
+            'metode_pembayaran' => '', 'statusOrder' => 0,
+            'total_shipping' => $tmp_shipping['cost'],
+            'kurir' => $tmp_shipping['courier'],
+            'jenis_layanan' => $tmp_shipping['service'],
+            'fullname' => $request->firstname . " " . $request->lastname,
+            'address' => $request->address,
+            'city' => $request->city,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'order_notes' => $request->order_note,
         ]);
 
         // todo get barang from session into this crap :v

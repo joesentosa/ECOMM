@@ -15,13 +15,13 @@ class CatalogController extends Controller
 {
     public function catalog(Request $req){
         $halaman = 1;
-        $dtSession  = BarangModel::with(['gambar'])->get();
+        $dtSession  = BarangModel::with(['gambar','promos'])->get();
         $maxPage = round(count($dtSession)/8);
         $dtkategori = new KategoriModel();
         // data brand buat apa?
         //buat ambil filter brandnya
         $dtbrand    = BrandModel::limit(5)->get();
-        $dtbarang   = BarangModel::with(['gambar'])->limit(8)->offset(8)->get();
+        $dtbarang   = BarangModel::with(['gambar','promos'])->limit(8)->offset(8)->get();
         // ====================
         // dd(count($dtSession));
         $customer   = Auth::user();
@@ -137,7 +137,7 @@ class CatalogController extends Controller
         // dd($category);
         $brg = [];
         for ($i=0; $i < count($category); $i++) {
-            $temp = BarangModel::where('fk_id_kategori',$category[$i])->with(['gambar'])->get();
+            $temp = BarangModel::where('fk_id_kategori',$category[$i])->with(['gambar','promos'])->get();
             array_push($brg, $temp);
         }
 

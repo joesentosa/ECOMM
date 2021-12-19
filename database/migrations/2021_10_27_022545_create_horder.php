@@ -22,6 +22,12 @@ class CreateHorder extends Migration
             $table->string('kurir',20);
             $table->string('jenis_layanan',20);
             $table->bigInteger('total_shipping');
+            $table->string('fullname')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->longText('order_notes')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
