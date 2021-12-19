@@ -46,7 +46,7 @@
                     <td>{{$item->id_order}}</td>
                     <td>{{$item->qty}}</td>
                     <td>{{generateFormatRP($item->total)}}</td>
-                    <td>{{$item->namaBarang}}<td>                    
+                    <td>{{$item->namaBarang}}</td>                    
                   </tr>              
                 @endforeach
               @endisset              

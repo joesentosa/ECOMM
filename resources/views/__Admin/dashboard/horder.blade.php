@@ -49,11 +49,10 @@
                     <td style="text-align: center;">{{$item->id_order}}</td>
                     <td>{{$item->tanggal_trans}}</td>
                     <td>{{generateFormatRP($item->subtotal)}}</td>
-                    <td>{{$item->metode_pembayaran}}<td>                    
+                    <td>{{$item->metode_pembayaran}}</td>                    
                     <td>{{$item->kurir}}</td>
                     <td>{{$item->jenis_layanan}}</td>
-                    <td>{{$item->total_shipping}}</td>
-                    <td>-</td>
+                    <td>{{$item->total_shipping}}</td>                    
                   </tr>              
                 @endforeach
               @endisset              

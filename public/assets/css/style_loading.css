@@ -57,6 +57,17 @@
   margin: 10px auto;
   padding: 3px;
 }
+.edit-text-payment{
+  background-color: #a0dc7a;
+  color: #FFF;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: max-content;
+  height: 35px;
+  line-height: 1.75;
+  border-radius: 20px;
+}
 
 @-webkit-keyframes bigSqrShrink {
   0% {
