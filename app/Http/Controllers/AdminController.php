@@ -292,4 +292,18 @@ class AdminController extends Controller
         ]);
     }
     // ==========================================
+    // LAPORAN
+    // ==========================================
+    public function LapPenjualan()
+    {
+        $dtdorder = new DorderModel();                
+        return view('__Admin.dashboard.LaporanPenjualan',['data'=>$dtdorder->getAll()]);
+    }
+
+    public function LapInvoice()
+    {
+        $dthorder = new HorderModel();
+        return view('__Admin.dashboard.LaporanInvoice',['data'=>$dthorder->getAll()]);
+    }
+
 }
