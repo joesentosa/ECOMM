@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Notifications\NewNotif;
 use App\Models\AdminModel;
 use App\Models\CustomerModel;
 use Carbon\Carbon;
@@ -11,17 +12,18 @@ class NotifController extends Controller
 {
     public function dapatnotif(Request $request)
     {
-        echo count(getAuthUser()->unreadNotifications);
+        $notifications = auth()->user()->unreadNotifications;
+        return view('__Admin.dashboard.bacanotif', compact('notifications'));
     }
     public function kirimnotif(Request $request)
     {
-        $penerima = AdminModel::find(0);
-        $penerima->notify(new NewMessageNotif($penerima));
+        $penerima = AdminModel::find(1);
+        $penerima->notify(new NewNotif($penerima));
         return redirect('/');
     }
     public function bacanotif(Request $request)
     {
-        $penerima = AdminModel::find(0);
+        $penerima = auth()->user();
         $daftarNotif = [];
         foreach ($penerima->notifications as $notif) {
             $notif->markAsRead();
@@ -30,8 +32,8 @@ class NotifController extends Controller
             $hasil = "[".$notif->created_at->diffForHumans()."] Pada tanggal $tanggal, si $namaPengirim mengirimkan : hai";
             $daftarNotif[] = $hasil;
         }
-        return view('__Admin.dashboard.bacanotif',[
-            'daftarNotif' => $daftarNotif
-        ]);
+        // return view('__Admin.dashboard.bacanotif',[
+        //     'daftarNotif' => $daftarNotif
+        // ]);
     }
 }

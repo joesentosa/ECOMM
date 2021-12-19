@@ -1,5 +1,5 @@
 @extends('__Admin.layout.master')
-@section('title', 'Master Barang')
+@section('title', 'Baca Notif')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/datatables.css') }}">
@@ -40,9 +40,22 @@
 
 @section('content')
 <ul>
-    @foreach ($daftarNotif as $item)
-        <li>{{ $item }}</li>
-    @endforeach
+    @forelse($notifications as $notification)
+        <div class="alert alert-success" role="alert">
+            [{{ $notification->created_at }}] User {{ $notification->data['username'] }} ({{ $notification->data['email'] }}) has just registered.
+            <a href="#" class="float-right mark-as-read" data-id="{{ $notification->id }}">
+                Mark as read
+            </a>
+        </div>
+
+        @if($loop->last)
+            <a href="#" id="mark-all">
+                Mark all as read
+            </a>
+        @endif
+    @empty
+        There are no new notifications
+    @endforelse
 </ul>
 @endsection
 

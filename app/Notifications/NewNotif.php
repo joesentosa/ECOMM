@@ -16,7 +16,7 @@ class NewNotif extends Notification
      *
      * @return void
      */
-    protected $penerima;
+    protected $username;
     public function __construct($penerima)
     {
         $this->penerima = $penerima;
@@ -30,12 +30,14 @@ class NewNotif extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail', 'database'];
+        return ['database'];
     }
 
     public function toDatabase($notifiable)
     {
-        return "test";
+        return [
+            'penerima' => $this->penerima,
+        ];
     }
 
     /**
@@ -61,7 +63,8 @@ class NewNotif extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'name' => $this->penerima->username,
+            'email' => $this->penerima->email,
         ];
     }
 }

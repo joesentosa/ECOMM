@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticates;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Notifications\Notifiable;
 
 class CustomerModel extends Authenticates
 {
     use HasFactory;
+    use Notifiable;
     use SoftDeletes;
 
     public $table       = "customer";
