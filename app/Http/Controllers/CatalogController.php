@@ -135,12 +135,14 @@ class CatalogController extends Controller
         //Masih bug
         $category = $request->category;
         // dd($category);
+        $temp;
         $brg = [];
         for ($i=0; $i < count($category); $i++) {
             $temp = BarangModel::where('fk_id_kategori',$category[$i])->with(['gambar','promos'])->get();
+            // dd($temp);
             array_push($brg, $temp);
         }
-
+        // dd($brg);
         $dtkategori = new KategoriModel();
         $dtbrand    = BrandModel::limit(5)->get();
         $customer   = Auth::user();
@@ -176,7 +178,7 @@ class CatalogController extends Controller
         $data = [
             'data_kategori'=>$dtkategori->getAll(),
             'data_brand' => $dtbrand,
-            'data_barang' => $brg,
+            'data_barang' => $brg[0],
             'data_session' => $dtSession,
             'cart_barang' => $cart,
             'cart_count'=>$cartCount,
@@ -185,7 +187,7 @@ class CatalogController extends Controller
             'halaman'=>$halaman,
             'max_Page'=>$maxPage
         ];
-        return view('__User.dashboard.filter-category', $data);
+        return view('__User.dashboard.catalog', $data);
     }
 
     public function filterPrice(Request $request)
@@ -235,7 +237,7 @@ class CatalogController extends Controller
             'halaman'=>$halaman,
             'max_Page'=>$maxPage
         ];
-        return view('__User.dashboard.filter-price', $data);
+        return view('__User.dashboard.catalog', $data);
     }
 
     public function nextPage(Request $req)

@@ -1,3 +1,4 @@
+{{-- {{ dd($data_barang) }} --}}
 @extends('__User.layout.butler')
 
 @section('css')
@@ -150,6 +151,7 @@
                     <div class="row mb-n25">
                         @isset($data_barang)
                             @foreach($data_barang as $barang)
+                                {{-- {{ dd($barang->id_barang) }} --}}
                                 <div class="col-md-6 col-12 mb-25">
                                     @include('__User.dashboard.single_item')
                                 </div>
