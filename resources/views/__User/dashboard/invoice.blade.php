@@ -12,7 +12,7 @@
   <div class="col-lg-12 d-flex justify-content-center mt-5">
     <div class="contact-form text-center">
       <h3>Your items being processed</h3>
-      <h5>id order - 185768541244</h5>
+      <h5>id order - {{ $dataOrder->id_order }}</h5>
       <div class="group mt-5">
         <div class="bigSqr">
           <div class="square first"></div>

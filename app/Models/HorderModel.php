@@ -13,7 +13,7 @@ class HorderModel extends Model
 
     public $table = "horder";
     public $primaryKey = "id_order";
-    public $incrementing = true;
+    public $incrementing = false;
     public $timestamps = true;
     protected $fillable = [
         'id_order', 'tanggal_trans', 'subtotal',
