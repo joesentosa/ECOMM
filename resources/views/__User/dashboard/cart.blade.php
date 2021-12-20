@@ -95,7 +95,7 @@
                                     <!-- Start Cart Table Head -->
                                     <thead>
                                     <tr>
-                                        <th class="product_remove">Delete</th>
+                                        <!-- <th class="product_remove">Delete</th> -->
                                         <th class="product_thumb">Image</th>
                                         <th class="product_name">Product</th>
                                         <th class="product-price">Price</th>
@@ -107,11 +107,11 @@
                                     @foreach($carts as $item)
                                         <!-- Start Cart Single Item-->
                                         <tr>
-                                            <td class="product_remove">
+                                            <!-- <td class="product_remove">
                                                 <a href="#"><img
                                                         src="{{ asset('assets/images/icons/icon-trash.svg') }}">
                                                 </a>
-                                            </td>
+                                            </td> -->
                                             <td class="product_thumb">
                                                 <a href="{{ url('detailBarang/' . $item['data']['id_barang']) }}">
                                                     <img src="{{ $item['data']['gambar'][0]->gambar }}" alt=""
@@ -146,10 +146,10 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="cart_submit">
+                            <!-- <div class="cart_submit"> -->
                                 {{-- Todo : Buat Update Data Barang Di Session --}}
-                                <button class="btn btn-sm btn-radius btn-default" type="submit">update cart</button>
-                            </div>
+                                <!-- <button class="btn btn-sm btn-radius btn-default" type="submit">update cart</button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
