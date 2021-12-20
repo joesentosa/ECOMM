@@ -53,7 +53,7 @@
         <img class="img-fluid"
              src="
              @if($barang->gambar->first())
-             {{ $barang->gambar->first()->gambar }}
+             {{ asset($barang->gambar->first()->gambar) }}
              @endif
                  " width="435" height="350" loading="lazy" alt="product-image">
         {{--                                                <ul class="tooltip-tag-items">--}}
