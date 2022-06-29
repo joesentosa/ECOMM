@@ -451,6 +451,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="center-slider-nav product-slider-3grids-2rows">
+
                                                 <!-- Slider main container -->
                                                 <div class="swiper-container">
                                                     <!-- Additional required wrapper -->
@@ -461,6 +462,7 @@
                                                         @endforeach
                                                     </div>
                                                 </div>
+                                                
                                                 <!-- If we need navigation buttons -->
                                                 <div class="center-slider-nav-buttons slider-buttons">
                                                     <div class="slider-button button-prev"><span class="material-icons">arrow_left</span>
